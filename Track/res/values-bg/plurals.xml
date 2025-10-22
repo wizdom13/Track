@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="adapty_day">
+        <item quantity="other">%d дни</item>
+        <item quantity="one">%d ден</item>
+    </plurals>
+    <plurals name="adapty_month">
+        <item quantity="other">%d месеца</item>
+        <item quantity="one">%d месец</item>
+    </plurals>
+    <plurals name="adapty_week">
+        <item quantity="other">%d седмици</item>
+        <item quantity="one">%d седмица</item>
+    </plurals>
+    <plurals name="adapty_year">
+        <item quantity="other">%d години</item>
+        <item quantity="one">%d година</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d нови известия</item>
+        <item quantity="one">%d ново известие</item>
+    </plurals>
+</resources>

@@ -1,0 +1,111 @@
+.class public final Lcom/fyber/inneractive/sdk/video/IAVideoKit$c;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/fyber/inneractive/sdk/factories/c$a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/fyber/inneractive/sdk/video/IAVideoKit;->onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lcom/fyber/inneractive/sdk/external/InneractiveAdSpot;)Z
+    .locals 1
+
+    invoke-interface {p1}, Lcom/fyber/inneractive/sdk/external/InneractiveAdSpot;->getAdContent()Lcom/fyber/inneractive/sdk/flow/q;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Lcom/fyber/inneractive/sdk/external/InneractiveAdSpot;->getAdContent()Lcom/fyber/inneractive/sdk/flow/q;
+
+    move-result-object p1
+
+    instance-of p1, p1, Lcom/fyber/inneractive/sdk/flow/g0;
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final b(Lcom/fyber/inneractive/sdk/external/InneractiveAdSpot;)Lcom/fyber/inneractive/sdk/interfaces/c;
+    .locals 1
+
+    invoke-interface {p1}, Lcom/fyber/inneractive/sdk/external/InneractiveAdSpot;->getAdContent()Lcom/fyber/inneractive/sdk/flow/q;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/fyber/inneractive/sdk/flow/q;->a:Lcom/fyber/inneractive/sdk/external/InneractiveAdRequest;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lcom/fyber/inneractive/sdk/flow/i0;->getAllowFullscreen()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    invoke-interface {p1}, Lcom/fyber/inneractive/sdk/external/InneractiveAdSpot;->getAdContent()Lcom/fyber/inneractive/sdk/flow/q;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/fyber/inneractive/sdk/flow/q;->e()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    if-eqz v0, :cond_2
+
+    new-instance p1, Lcom/fyber/inneractive/sdk/renderers/n;
+
+    invoke-direct {p1}, Lcom/fyber/inneractive/sdk/renderers/n;-><init>()V
+
+    return-object p1
+
+    :cond_2
+    new-instance p1, Lcom/fyber/inneractive/sdk/renderers/k;
+
+    invoke-direct {p1}, Lcom/fyber/inneractive/sdk/renderers/k;-><init>()V
+
+    return-object p1
+.end method

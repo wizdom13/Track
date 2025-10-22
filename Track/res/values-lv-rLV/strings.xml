@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backButtonTitle">Atpakaļ</string>
+    <string name="ccpaSalesDisclosure">Ņemiet vērā, ka dažas no šīm datu apmaiņām ar mūsu partneriem saskaņā ar piemērojamiem likumdošanas aktiem veido personas datu pārdošanu.</string>
+    <string name="changeInSettings">Ja pārdomājat, jūs varat mainīt izvēli, dodoties uz šīs lietotnes iestatījumiem.</string>
+    <string name="confirmChoiceButtonText">Es apstiprinu</string>
+    <string name="customiseChoicesTitle">Pielāgojiet Izvēles</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText1">Google un citiem partneriem</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText2">Uzziniet sīkāk.</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText3">Noteikumi un nosacījumi</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText4">Konfidencialitātes politika</string>
+    <string name="dialogPersonalizedAdsBodyPart1">Šī lietotne personalizē jūsu reklāmas pieredzi, pateicoties Google un citiem partneriem. Ja piekritīsiet, jūs redzēsiet reklāmas, kas jums ir vairāk piemērotas. Atkarībā no jūsu privātuma iestatījumiem mūsu partneri var apkopot un apstrādāt personīgos datus. Uzziniet sīkāk.</string>
+    <string name="dialogPersonalizedAdsBodyPart2Sentence1">Ar piekrišanu jūs apstiprināt, ka esat vecāks(-a) par 16 gadiem.</string>
+    <string name="dialogPersonalizedAdsBodyPart2Sentence2">Turpinot, jūs piekrītat Noteikumiem un nosacījumiem un Konfidencialitātes politikai.</string>
+    <string name="explanationTitle">Paskaidrojums</string>
+    <string name="generalTitle">Konfidencialitātes iestatījumi</string>
+    <string name="payChoiceButtonText">Pirkt versiju bez reklāmas</string>
+    <string name="personalTitle">Personalizētas reklāmas</string>
+    <string name="saveAndConfirmButtonTitle">Saglabāt un Apstiprināt</string>
+</resources>

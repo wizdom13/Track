@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@id/first">
+        <item android:icon="@drawable/ic_camera_alt_black_24dp" android:id="@id/trip_details_changephoto" android:visible="false" android:title="@string/trip_details_menu_changephoto" />
+        <item android:icon="@drawable/ic_edit_black_24dp" android:id="@id/trip_details_renametrip" android:title="@string/trip_details_menu_renametrip" />
+        <item android:icon="@drawable/ic_my_flight" android:id="@id/trip_details_addflight" android:title="@string/myFlights.add.flight.title" />
+    </group>
+    <group android:id="@id/second">
+        <item android:icon="@drawable/ic_delete_black_24dp" android:id="@id/trip_details_deletetrip" android:title="@string/trip_details_menu_deletetrip" />
+    </group>
+</menu>

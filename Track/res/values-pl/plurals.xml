@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="adapty_day">
+        <item quantity="other">%d doby</item>
+        <item quantity="one">%d doba</item>
+        <item quantity="few">%d doby</item>
+        <item quantity="many">%d dób</item>
+    </plurals>
+    <plurals name="adapty_month">
+        <item quantity="other">%d miesiąca</item>
+        <item quantity="one">%d miesiąc</item>
+        <item quantity="few">%d miesiące</item>
+        <item quantity="many">%d miesięcy</item>
+    </plurals>
+    <plurals name="adapty_week">
+        <item quantity="other">%d tygodnia</item>
+        <item quantity="one">%d tydzień</item>
+        <item quantity="few">%d tygodnie</item>
+        <item quantity="many">%d tygodni</item>
+    </plurals>
+    <plurals name="adapty_year">
+        <item quantity="other">%d roku</item>
+        <item quantity="one">%d rok</item>
+        <item quantity="few">%d lata</item>
+        <item quantity="many">%d lat</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nowego powiadomienia</item>
+        <item quantity="one">%d nowe powiadomienie</item>
+        <item quantity="few">%d nowe powiadomienia</item>
+        <item quantity="many">%d nowych powiadomień</item>
+    </plurals>
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="PrivacySettings_CCPAPermissionFootnote">"Me ja kumppanimme voimme kerätä laitetietoja, kun käytät tätä sovellusta. Tiedot saattavat olla henkilökohtaisia ja niihin voivat sisältyä mobiilimainonnan tunnisteet ja sijaintitiedot henkilökohtaisten mainosten tarjoamiseksi, kuitenkaan niihin rajoittumatta. Tämä tietojen jakaminen voidaan luokitella \"myynniksi\" Kalifornian kuluttajansuojalaissa, ja sinulla on oikeus kieltäytyä siitä. 
+
+Jos haluat kieltää tietojesi jakamisen, napauta Henkilökohtaiset mainokset -vaihtoehtoa poistaaksesi sen käytöstä. Huomaa, että näet edelleen mainoksia, mutta ne eivät välttämättä ole yhtä kiinnostavia. Tutustu tietosuojakäytäntöömme, jos haluat lisätietoja tietojen käyttöä koskevista käytännöistämme."</string>
+    <string name="PrivacySettings_CCPAPermissionNavigationTitle">Älä myy tietojani</string>
+    <string name="PrivacySettings_DataPermission">Tietojenkäsittelyn lupa</string>
+    <string name="PrivacySettings_DataPermissionDetail">EU:n yksityisyyden suoja</string>
+    <string name="PrivacySettings_ForgetMeActionSheetCancel">Peruuta</string>
+    <string name="PrivacySettings_ForgetMeActionSheetTitle">Haluatko varmasti, että sinut unohdetaan?</string>
+    <string name="PrivacySettings_ForgetMeCellTitle">Unohda minut</string>
+    <string name="PrivacySettings_ForgetMeDataDeletedToastMessage">Tiedot poistettu</string>
+    <string name="PrivacySettings_ForgetMeDataDeletingFailedPopUpActionTitle">OK</string>
+    <string name="PrivacySettings_ForgetMeDataDeletingFailedPopUpMessage">Jokin meni vikaan. Yritä myöhemmin uudelleen.</string>
+    <string name="PrivacySettings_ForgetMeDataDeletingFailedPopUpTitle">Tietojen poisto ei onnistu</string>
+    <string name="PrivacySettings_ForgetMeFootnote">"Napauttaessasi Unohda minut -painiketta tähän laitteeseen yhdistetyt henkilökohtaiset tietosi poistetaan omilta palvelimiltamme, mutta ei mainoskumppaniemme palvelimilta. 
+
+Lue tietosuojakäytäntömme kumppanilistalta ohjeet kumppaniemme kanssa jakamiemme henkilökohtaisten tietojesi poistamiseksi."</string>
+    <string name="PrivacySettings_GDPRPermissionFootnote">Yleinen tietosuoja-asetus tarjoaa käyttäjille mahdollisuuden kieltää henkilökohtainen mainonta.</string>
+    <string name="PrivacySettings_GDPRPermissionNavigationTitle">Tietojenkäsittelyn luvat</string>
+    <string name="PrivacySettings_PermissionCellTitle">Henkilökohtaiset mainokset</string>
+    <string name="PrivacySettings_PersonalInformation">Älä myy tietojani</string>
+    <string name="PrivacySettings_PersonalInformationDetail">Kalifornian yksityisyyden suoja</string>
+    <string name="PrivacySettings_PrivacyCellTitle">Yksityisyys</string>
+    <string name="PrivacySettings_PrivacyNavigationTitle">Yksityisyys</string>
+    <string name="PrivacySettings_PrivacyPolicy">Tietosuojakäytäntö</string>
+    <string name="PrivacySettings_SectionHeader">Yksityisyys</string>
+    <string name="PrivacySettings_SectionHeaderMiscellaneous">Satunnaiset</string>
+    <string name="PrivacySettings_SectionHeaderPermissions">Luvat</string>
+    <string name="PrivacySettings_SectionHeaderPersonal">Henkilökohtainen</string>
+    <string name="PrivacySettings_SectionHeaderPrivacy">Yksityisyys</string>
+    <string name="PrivacySettings_TermsAndConditions">Käyttöehdot</string>
+    <string name="backButtonTitle">Takaisin</string>
+    <string name="ccpaSalesDisclosure">Huomaa, että osa näistä tietojenvaihdoista kumppaneidemme kanssa on sovellettavan lain mukaista henkilötietojen myyntiä.</string>
+    <string name="changeInSettings">Jos joskus muutat mielesi, voit muuttaa valintojasi menemällä tämän sovelluksen asetuksiin.</string>
+    <string name="confirmChoiceButtonText">Vahvistan</string>
+    <string name="customiseChoicesTitle">Muokkaa valintoja</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText1">Googlen ja muiden kumppanien kautta</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText2">Lue lisää.</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText3">Käyttöehdot</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText4">Tietosuojakäytäntö</string>
+    <string name="dialogPersonalizedAdsBodyPart1">Tämä sovellus personoi mainoskokemuksesi Googlen ja muiden kumppanien kautta. Hyväksymällä näet sinuun paremmin kohdistettuja mainoksia. Yksityisyysasetuksistasi riippuen kumppanimme saattavat kerätä ja käsitellä henkilökohtaisia tietoja. Lue lisää.</string>
+    <string name="dialogPersonalizedAdsBodyPart2Sentence1">Hyväksymällä vahvistat, että olet yli 16-vuotias.</string>
+    <string name="dialogPersonalizedAdsBodyPart2Sentence2">Jatkamalla hyväksyt käyttöehdot ja tietosuojakäytännön.</string>
+    <string name="explanationTitle">Selitys</string>
+    <string name="generalTitle">Yksityisyysasetukset</string>
+    <string name="payChoiceButtonText">Osta mainokseton versio</string>
+    <string name="personalTitle">Kohdistetut mainokset</string>
+    <string name="saveAndConfirmButtonTitle">Tallenna ja vahvista</string>
+</resources>

@@ -1,0 +1,353 @@
+.class Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;
+.super Ljava/lang/Object;
+.source "DefaultAdvancedMarkersClusterRenderer.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x2
+    name = "CreateMarkerTask"
+.end annotation
+
+
+# instance fields
+.field private final animateFrom:Lcom/google/android/gms/maps/model/LatLng;
+
+.field private final cluster:Lcom/google/maps/android/clustering/Cluster;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/maps/android/clustering/Cluster<",
+            "TT;>;"
+        }
+    .end annotation
+.end field
+
+.field private final newMarkers:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set<",
+            "Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerWithPosition;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field final synthetic this$0:Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;
+
+
+# direct methods
+.method static bridge synthetic -$$Nest$mperform(Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerModifier;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->perform(Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerModifier;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;Lcom/google/maps/android/clustering/Cluster;Ljava/util/Set;Lcom/google/android/gms/maps/model/LatLng;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/maps/android/clustering/Cluster<",
+            "TT;>;",
+            "Ljava/util/Set<",
+            "Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerWithPosition;",
+            ">;",
+            "Lcom/google/android/gms/maps/model/LatLng;",
+            ")V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->this$0:Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->cluster:Lcom/google/maps/android/clustering/Cluster;
+
+    iput-object p3, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->newMarkers:Ljava/util/Set;
+
+    iput-object p4, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->animateFrom:Lcom/google/android/gms/maps/model/LatLng;
+
+    return-void
+.end method
+
+.method private perform(Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerModifier;)V
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer<",
+            "TT;>.MarkerModifier;)V"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->this$0:Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;
+
+    iget-object v1, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->cluster:Lcom/google/maps/android/clustering/Cluster;
+
+    invoke-virtual {v0, v1}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;->shouldRenderAsCluster(Lcom/google/maps/android/clustering/Cluster;)Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_5
+
+    iget-object v0, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->cluster:Lcom/google/maps/android/clustering/Cluster;
+
+    invoke-interface {v0}, Lcom/google/maps/android/clustering/Cluster;->getItems()Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/google/maps/android/clustering/ClusterItem;
+
+    iget-object v3, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->this$0:Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;
+
+    invoke-static {v3}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;->-$$Nest$fgetmMarkerCache(Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;)Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerCache;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerCache;->get(Ljava/lang/Object;)Lcom/google/android/gms/maps/model/Marker;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/google/android/gms/maps/model/AdvancedMarker;
+
+    if-nez v3, :cond_2
+
+    new-instance v3, Lcom/google/android/gms/maps/model/AdvancedMarkerOptions;
+
+    invoke-direct {v3}, Lcom/google/android/gms/maps/model/AdvancedMarkerOptions;-><init>()V
+
+    iget-object v4, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->animateFrom:Lcom/google/android/gms/maps/model/LatLng;
+
+    if-eqz v4, :cond_0
+
+    invoke-virtual {v3, v4}, Lcom/google/android/gms/maps/model/AdvancedMarkerOptions;->position(Lcom/google/android/gms/maps/model/LatLng;)Lcom/google/android/gms/maps/model/AdvancedMarkerOptions;
+
+    goto :goto_1
+
+    :cond_0
+    invoke-interface {v2}, Lcom/google/maps/android/clustering/ClusterItem;->getPosition()Lcom/google/android/gms/maps/model/LatLng;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Lcom/google/android/gms/maps/model/AdvancedMarkerOptions;->position(Lcom/google/android/gms/maps/model/LatLng;)Lcom/google/android/gms/maps/model/AdvancedMarkerOptions;
+
+    invoke-interface {v2}, Lcom/google/maps/android/clustering/ClusterItem;->getZIndex()Ljava/lang/Float;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_1
+
+    invoke-interface {v2}, Lcom/google/maps/android/clustering/ClusterItem;->getZIndex()Ljava/lang/Float;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/Float;->floatValue()F
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Lcom/google/android/gms/maps/model/AdvancedMarkerOptions;->zIndex(F)Lcom/google/android/gms/maps/model/AdvancedMarkerOptions;
+
+    :cond_1
+    :goto_1
+    iget-object v4, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->this$0:Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;
+
+    invoke-virtual {v4, v2, v3}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;->onBeforeClusterItemRendered(Lcom/google/maps/android/clustering/ClusterItem;Lcom/google/android/gms/maps/model/AdvancedMarkerOptions;)V
+
+    iget-object v4, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->this$0:Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;
+
+    invoke-static {v4}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;->-$$Nest$fgetmClusterManager(Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;)Lcom/google/maps/android/clustering/ClusterManager;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/google/maps/android/clustering/ClusterManager;->getMarkerCollection()Lcom/google/maps/android/collections/MarkerManager$Collection;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v3}, Lcom/google/maps/android/collections/MarkerManager$Collection;->addMarker(Lcom/google/android/gms/maps/model/AdvancedMarkerOptions;)Lcom/google/android/gms/maps/model/Marker;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/google/android/gms/maps/model/AdvancedMarker;
+
+    new-instance v4, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerWithPosition;
+
+    invoke-direct {v4, v3, v1}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerWithPosition;-><init>(Lcom/google/android/gms/maps/model/Marker;Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer-IA;)V
+
+    iget-object v5, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->this$0:Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;
+
+    invoke-static {v5}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;->-$$Nest$fgetmMarkerCache(Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;)Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerCache;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v2, v3}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerCache;->put(Ljava/lang/Object;Lcom/google/android/gms/maps/model/Marker;)V
+
+    iget-object v5, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->animateFrom:Lcom/google/android/gms/maps/model/LatLng;
+
+    if-eqz v5, :cond_3
+
+    invoke-interface {v2}, Lcom/google/maps/android/clustering/ClusterItem;->getPosition()Lcom/google/android/gms/maps/model/LatLng;
+
+    move-result-object v6
+
+    invoke-virtual {p1, v4, v5, v6}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerModifier;->animate(Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerWithPosition;Lcom/google/android/gms/maps/model/LatLng;Lcom/google/android/gms/maps/model/LatLng;)V
+
+    goto :goto_2
+
+    :cond_2
+    new-instance v4, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerWithPosition;
+
+    invoke-direct {v4, v3, v1}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerWithPosition;-><init>(Lcom/google/android/gms/maps/model/Marker;Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer-IA;)V
+
+    iget-object v5, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->this$0:Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;
+
+    invoke-virtual {v5, v2, v3}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;->onClusterItemUpdated(Lcom/google/maps/android/clustering/ClusterItem;Lcom/google/android/gms/maps/model/Marker;)V
+
+    :cond_3
+    :goto_2
+    iget-object v5, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->this$0:Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;
+
+    invoke-virtual {v5, v2, v3}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;->onClusterItemRendered(Lcom/google/maps/android/clustering/ClusterItem;Lcom/google/android/gms/maps/model/Marker;)V
+
+    iget-object v2, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->newMarkers:Ljava/util/Set;
+
+    invoke-interface {v2, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    goto/16 :goto_0
+
+    :cond_4
+    return-void
+
+    :cond_5
+    iget-object v0, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->this$0:Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;
+
+    invoke-static {v0}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;->-$$Nest$fgetmClusterMarkerCache(Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;)Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerCache;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->cluster:Lcom/google/maps/android/clustering/Cluster;
+
+    invoke-virtual {v0, v2}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerCache;->get(Ljava/lang/Object;)Lcom/google/android/gms/maps/model/Marker;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/maps/model/AdvancedMarker;
+
+    if-nez v0, :cond_7
+
+    new-instance v0, Lcom/google/android/gms/maps/model/AdvancedMarkerOptions;
+
+    invoke-direct {v0}, Lcom/google/android/gms/maps/model/AdvancedMarkerOptions;-><init>()V
+
+    iget-object v2, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->animateFrom:Lcom/google/android/gms/maps/model/LatLng;
+
+    if-nez v2, :cond_6
+
+    iget-object v2, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->cluster:Lcom/google/maps/android/clustering/Cluster;
+
+    invoke-interface {v2}, Lcom/google/maps/android/clustering/Cluster;->getPosition()Lcom/google/android/gms/maps/model/LatLng;
+
+    move-result-object v2
+
+    :cond_6
+    invoke-virtual {v0, v2}, Lcom/google/android/gms/maps/model/AdvancedMarkerOptions;->position(Lcom/google/android/gms/maps/model/LatLng;)Lcom/google/android/gms/maps/model/AdvancedMarkerOptions;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->this$0:Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;
+
+    iget-object v3, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->cluster:Lcom/google/maps/android/clustering/Cluster;
+
+    invoke-virtual {v2, v3, v0}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;->onBeforeClusterRendered(Lcom/google/maps/android/clustering/Cluster;Lcom/google/android/gms/maps/model/AdvancedMarkerOptions;)V
+
+    iget-object v2, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->this$0:Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;
+
+    invoke-static {v2}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;->-$$Nest$fgetmClusterManager(Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;)Lcom/google/maps/android/clustering/ClusterManager;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/google/maps/android/clustering/ClusterManager;->getClusterMarkerCollection()Lcom/google/maps/android/collections/MarkerManager$Collection;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Lcom/google/maps/android/collections/MarkerManager$Collection;->addMarker(Lcom/google/android/gms/maps/model/AdvancedMarkerOptions;)Lcom/google/android/gms/maps/model/Marker;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/maps/model/AdvancedMarker;
+
+    iget-object v2, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->this$0:Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;
+
+    invoke-static {v2}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;->-$$Nest$fgetmClusterMarkerCache(Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;)Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerCache;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->cluster:Lcom/google/maps/android/clustering/Cluster;
+
+    invoke-virtual {v2, v3, v0}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerCache;->put(Ljava/lang/Object;Lcom/google/android/gms/maps/model/Marker;)V
+
+    new-instance v2, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerWithPosition;
+
+    invoke-direct {v2, v0, v1}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerWithPosition;-><init>(Lcom/google/android/gms/maps/model/Marker;Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer-IA;)V
+
+    iget-object v1, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->animateFrom:Lcom/google/android/gms/maps/model/LatLng;
+
+    if-eqz v1, :cond_8
+
+    iget-object v3, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->cluster:Lcom/google/maps/android/clustering/Cluster;
+
+    invoke-interface {v3}, Lcom/google/maps/android/clustering/Cluster;->getPosition()Lcom/google/android/gms/maps/model/LatLng;
+
+    move-result-object v3
+
+    invoke-virtual {p1, v2, v1, v3}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerModifier;->animate(Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerWithPosition;Lcom/google/android/gms/maps/model/LatLng;Lcom/google/android/gms/maps/model/LatLng;)V
+
+    goto :goto_3
+
+    :cond_7
+    new-instance v2, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerWithPosition;
+
+    invoke-direct {v2, v0, v1}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$MarkerWithPosition;-><init>(Lcom/google/android/gms/maps/model/Marker;Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer-IA;)V
+
+    iget-object p1, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->this$0:Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;
+
+    iget-object v1, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->cluster:Lcom/google/maps/android/clustering/Cluster;
+
+    invoke-virtual {p1, v1, v0}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;->onClusterUpdated(Lcom/google/maps/android/clustering/Cluster;Lcom/google/android/gms/maps/model/AdvancedMarker;)V
+
+    :cond_8
+    :goto_3
+    iget-object p1, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->this$0:Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;
+
+    iget-object v1, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->cluster:Lcom/google/maps/android/clustering/Cluster;
+
+    invoke-virtual {p1, v1, v0}, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer;->onClusterRendered(Lcom/google/maps/android/clustering/Cluster;Lcom/google/android/gms/maps/model/Marker;)V
+
+    iget-object p1, p0, Lcom/google/maps/android/clustering/view/DefaultAdvancedMarkersClusterRenderer$CreateMarkerTask;->newMarkers:Ljava/util/Set;
+
+    invoke-interface {p1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method

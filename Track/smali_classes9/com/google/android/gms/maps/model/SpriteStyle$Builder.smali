@@ -1,0 +1,66 @@
+.class public final Lcom/google/android/gms/maps/model/SpriteStyle$Builder;
+.super Lcom/google/android/gms/maps/model/StampStyle$Builder;
+.source "com.google.android.gms:play-services-maps@@19.0.0"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/gms/maps/model/SpriteStyle;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "Builder"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/google/android/gms/maps/model/StampStyle$Builder<",
+        "Lcom/google/android/gms/maps/model/SpriteStyle$Builder;",
+        ">;"
+    }
+.end annotation
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    throw v0
+.end method
+
+.method synthetic constructor <init>(Lcom/google/android/gms/maps/model/zzv;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/gms/maps/model/StampStyle$Builder;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public build()Lcom/google/android/gms/maps/model/SpriteStyle;
+    .locals 2
+
+    new-instance v0, Lcom/google/android/gms/maps/model/SpriteStyle;
+
+    iget-object v1, p0, Lcom/google/android/gms/maps/model/SpriteStyle$Builder;->zza:Lcom/google/android/gms/maps/model/BitmapDescriptor;
+
+    invoke-direct {v0, v1}, Lcom/google/android/gms/maps/model/SpriteStyle;-><init>(Lcom/google/android/gms/maps/model/BitmapDescriptor;)V
+
+    return-object v0
+.end method
+
+.method protected self()Lcom/google/android/gms/maps/model/SpriteStyle$Builder;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method protected final bridge synthetic self()Lcom/google/android/gms/maps/model/StampStyle$Builder;
+    .locals 0
+
+    return-object p0
+.end method

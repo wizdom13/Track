@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="adapty_day">
+        <item quantity="other">%d დღე</item>
+        <item quantity="one">%d დღე</item>
+    </plurals>
+    <plurals name="adapty_month">
+        <item quantity="other">%d თვე</item>
+        <item quantity="one">%d თვე</item>
+    </plurals>
+    <plurals name="adapty_week">
+        <item quantity="other">%d კვირა</item>
+        <item quantity="one">%d კვირა</item>
+    </plurals>
+    <plurals name="adapty_year">
+        <item quantity="other">%d წელი</item>
+        <item quantity="one">%d წელი</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d ახალი შეტყობინება</item>
+        <item quantity="one">%d ახალი შეტყობინება</item>
+    </plurals>
+</resources>
