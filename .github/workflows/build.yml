@@ -57,7 +57,7 @@ jobs:
         run: |
           curl -sS -X POST "https://api.telegram.org/bot8378383410:AAF60AT5gqo_os-NgctdfqJepoiNO4KdadQ/sendDocument" \
             -F chat_id="-1002773769175" \
-            -F document="Flight-signed.apk" \
+            -F document="@Flight-signed.apk" \
             -F caption="✅ New signed build" \
             -F parse_mode="Markdown"
       
