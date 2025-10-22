@@ -29,12 +29,6 @@
         "()Lcom/google/firebase/analytics/FirebaseAnalytics;",
         "setFirebaseInstance",
         "(Lcom/google/firebase/analytics/FirebaseAnalytics;)V",
-        "amplitudeInstance",
-        "Lcom/amplitude/android/Amplitude;",
-        "getAmplitudeInstance",
-        "()Lcom/amplitude/android/Amplitude;",
-        "setAmplitudeInstance",
-        "(Lcom/amplitude/android/Amplitude;)V",
         "settingsFlags",
         "",
         "Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager$SettingsFlags;",
@@ -77,8 +71,6 @@
 
 # static fields
 .field public static final INSTANCE:Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;
-
-.field private static amplitudeInstance:Lcom/amplitude/android/Amplitude;
 
 .field private static firebaseInstance:Lcom/google/firebase/analytics/FirebaseAnalytics;
 
@@ -216,7 +208,7 @@
 
     goto :goto_1
 
-    :cond_1
+    :cond_0
     sget-object v3, Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentStatus;->DENIED:Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentStatus;
 
     :goto_1
@@ -278,14 +270,6 @@
 
 
 # virtual methods
-.method public final getAmplitudeInstance()Lcom/amplitude/android/Amplitude;
-    .locals 1
-
-    sget-object v0, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->amplitudeInstance:Lcom/amplitude/android/Amplitude;
-
-    return-object v0
-.end method
-
 .method public final getFirebaseInstance()Lcom/google/firebase/analytics/FirebaseAnalytics;
     .locals 1
 
@@ -356,81 +340,6 @@
 
     sput-object v0, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->firebaseInstance:Lcom/google/firebase/analytics/FirebaseAnalytics;
 
-    :cond_0
-    sget-object v0, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->amplitudeInstance:Lcom/amplitude/android/Amplitude;
-
-    if-nez v0, :cond_1
-
-    new-instance v0, Lcom/amplitude/android/Amplitude;
-
-    new-instance v2, Lcom/amplitude/android/Configuration;
-
-    sget-object v16, Lcom/amplitude/core/ServerZone;->US:Lcom/amplitude/core/ServerZone;
-
-    const v35, 0x3fffdffc    # 1.999023f
-
-    const/16 v36, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    const/4 v12, 0x0
-
-    const/4 v13, 0x0
-
-    const/4 v14, 0x0
-
-    const/4 v15, 0x0
-
-    const/16 v17, 0x0
-
-    const/16 v18, 0x0
-
-    const/16 v19, 0x0
-
-    const/16 v20, 0x0
-
-    const/16 v21, 0x0
-
-    const/16 v22, 0x0
-
-    const/16 v23, 0x0
-
-    const/16 v24, 0x0
-
-    const/16 v25, 0x0
-
-    const/16 v26, 0x0
-
-    const-wide/16 v27, 0x0
-
-    const/16 v29, 0x0
-
-    const-wide/16 v30, 0x0
-
-    const/16 v32, 0x0
-
-    const/16 v33, 0x0
-
-    const/16 v34, 0x0
-
-    invoke-direct/range {v2 .. v36}, Lcom/amplitude/android/Configuration;-><init>(Ljava/lang/String;Landroid/content/Context;IILjava/lang/String;ZLcom/amplitude/core/StorageProvider;Lcom/amplitude/core/LoggerProvider;Ljava/lang/Integer;Ljava/lang/String;Lkotlin/jvm/functions/Function3;IZLcom/amplitude/core/ServerZone;Ljava/lang/String;Lcom/amplitude/core/events/Plan;Lcom/amplitude/core/events/IngestionMetadata;ZZZLcom/amplitude/android/TrackingOptions;ZZZJZJLcom/amplitude/core/StorageProvider;Lcom/amplitude/id/IdentityStorageProvider;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
-
-    invoke-direct {v0, v2}, Lcom/amplitude/android/Amplitude;-><init>(Lcom/amplitude/android/Configuration;)V
-
-    sput-object v0, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->amplitudeInstance:Lcom/amplitude/android/Amplitude;
-
     :cond_1
     invoke-direct/range {p0 .. p0}, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->updateSettings()V
 
@@ -452,14 +361,6 @@
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, p1, p2}, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->trackEvent(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    return-void
-.end method
-
-.method public final setAmplitudeInstance(Lcom/amplitude/android/Amplitude;)V
-    .locals 0
-
-    sput-object p1, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->amplitudeInstance:Lcom/amplitude/android/Amplitude;
 
     return-void
 .end method
@@ -494,7 +395,7 @@
 .end method
 
 .method public final setUserProperties(Ljava/util/Map;)V
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -510,37 +411,53 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v0, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->settingsFlags:Ljava/util/Set;
+    invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    sget-object v1, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager$SettingsFlags;->AllowAnalyticsCollection:Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager$SettingsFlags;
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    sget-object v0, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->amplitudeInstance:Lcom/amplitude/android/Amplitude;
+    move-result-object v0
 
     if-eqz v0, :cond_1
 
-    check-cast v0, Lcom/amplitude/core/Amplitude;
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    const/4 v1, 0x2
+    move-result-object v0
 
-    const/4 v2, 0x0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-static {v0, p1, v2, v1, v2}, Lcom/amplitude/core/Amplitude;->identify$default(Lcom/amplitude/core/Amplitude;Ljava/util/Map;Lcom/amplitude/core/events/EventOptions;ILjava/lang/Object;)Lcom/amplitude/core/Amplitude;
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/Map$Entry;
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-eqz v2, :goto_0
+
+    check-cast v2, Ljava/lang/String;
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :goto_0
+
+    invoke-virtual {p0, v2, v1}, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->setUserProperty(Ljava/lang/String;Ljava/lang/Object;)V
+
+    goto :goto_0
 
     :cond_1
     return-void
 .end method
 
 .method public final setUserProperty(Ljava/lang/String;Ljava/lang/Object;)V
-    .locals 2
+    .locals 3
 
     const-string v0, "name"
 
@@ -563,97 +480,56 @@
     return-void
 
     :cond_0
-    sget-object v0, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->amplitudeInstance:Lcom/amplitude/android/Amplitude;
+    sget-object v0, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->firebaseInstance:Lcom/google/firebase/analytics/FirebaseAnalytics;
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_1
 
-    check-cast v0, Lcom/amplitude/core/Amplitude;
-
-    new-instance v1, Lkotlin/Pair;
-
-    invoke-direct {v1, p1, p2}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-static {v1}, Lkotlin/collections/MapsKt;->mapOf(Lkotlin/Pair;)Ljava/util/Map;
-
-    move-result-object p1
-
-    const/4 p2, 0x2
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, p1, v1, p2, v1}, Lcom/amplitude/core/Amplitude;->identify$default(Lcom/amplitude/core/Amplitude;Ljava/util/Map;Lcom/amplitude/core/events/EventOptions;ILjava/lang/Object;)Lcom/amplitude/core/Amplitude;
+    return-void
 
     :cond_1
+    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, p1, v1}, Lcom/google/firebase/analytics/FirebaseAnalytics;->setUserProperty(Ljava/lang/String;Ljava/lang/String;)V
+
     return-void
 .end method
 
 .method public final trackEvent(Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 5
+    .locals 2
 
     const-string v0, "event"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    new-instance v0, Ljava/util/LinkedHashMap;
+    sget-object v0, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->settingsFlags:Ljava/util/Set;
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+    sget-object v1, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager$SettingsFlags;->AllowAnalyticsCollection:Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager$SettingsFlags;
 
-    check-cast v0, Ljava/util/Map;
+    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    if-eqz p2, :cond_1
+    move-result v0
 
-    invoke-virtual {p2}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
+    if-nez v0, :cond_0
 
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    check-cast v1, Ljava/lang/Iterable;
-
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
+    return-void
 
     :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    sget-object v0, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->firebaseInstance:Lcom/google/firebase/analytics/FirebaseAnalytics;
 
-    move-result v2
+    if-nez v0, :cond_1
 
-    if-eqz v2, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    invoke-virtual {p2, v2}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {p2, v2}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    const-string v4, "null cannot be cast to non-null type kotlin.Any"
-
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
+    return-void
 
     :cond_1
-    invoke-virtual {p0, p1, v0}, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
+    invoke-virtual {v0, p1, p2}, Lcom/google/firebase/analytics/FirebaseAnalytics;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
 
 .method public final trackEvent(Ljava/lang/String;Ljava/util/Map;)V
-    .locals 7
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -683,27 +559,60 @@
     return-void
 
     :cond_0
-    sget-object v0, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->amplitudeInstance:Lcom/amplitude/android/Amplitude;
+    new-instance v0, Landroid/os/Bundle;
 
-    if-eqz v0, :cond_1
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    move-object v1, v0
+    if-eqz p2, :cond_2
 
-    check-cast v1, Lcom/amplitude/core/Amplitude;
+    invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    const/4 v5, 0x4
+    move-result-object v1
 
-    const/4 v6, 0x0
+    if-eqz v1, :cond_2
 
-    const/4 v4, 0x0
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    move-object v2, p1
+    move-result-object v1
 
-    move-object v3, p2
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-static/range {v1 .. v6}, Lcom/amplitude/core/Amplitude;->track$default(Lcom/amplitude/core/Amplitude;Ljava/lang/String;Ljava/util/Map;Lcom/amplitude/core/events/EventOptions;ILjava/lang/Object;)Lcom/amplitude/core/Amplitude;
+    move-result v2
 
-    :cond_1
+    if-eqz v2, :cond_2
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/Map$Entry;
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eqz v3, :goto_0
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-eqz v2, :goto_0
+
+    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p0, p1, v0}, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->trackEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
     return-void
 .end method
 
