@@ -21,7 +21,13 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
         with:
-          build-tools-version: 34.0.0
+          # optional: pin or use 'latest'
+          cmdline-tools-version: 12266719
+          accept-android-sdk-licenses: true
+          packages: |
+            platform-tools
+            platforms;android-34
+            build-tools;34.0.0
           
       - name: Build APK
         run: java -jar apktool.jar b Track -o Flight.apk
@@ -42,7 +48,7 @@ jobs:
       - name: Sign APK
         run: |
           apksigner sign \
-            --ks Keystore/wissam.jks \
+            --ks wissam.jks \
             --ks-key-alias wisso \
             --ks-pass pass:qw1234QW## \
             --key-pass pass:qw1234QW## \
