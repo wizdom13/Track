@@ -239,12 +239,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v1, "com.applovin.mediation.adapters.AdColonyMediationAdapter"
-
-    const-string v3, "AdColony"
-
-    invoke-virtual {v0, v1, v3}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     const-string v1, "com.applovin.mediation.adapters.AmazonMediationAdapter"
 
     const-string v3, "Amazon"
