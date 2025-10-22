@@ -340,7 +340,7 @@
 
     sput-object v0, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->firebaseInstance:Lcom/google/firebase/analytics/FirebaseAnalytics;
 
-    :cond_1
+    :cond_0
     invoke-direct/range {p0 .. p0}, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->updateSettings()V
 
     return-void
