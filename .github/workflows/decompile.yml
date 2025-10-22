@@ -1,0 +1,44 @@
+# .github/workflows/decompile.yml
+
+name: Decompile APK and Commit
+
+# This allows you to run this workflow manually from the Actions tab
+on:
+  workflow_dispatch:
+
+jobs:
+  decompile-and-commit:
+    runs-on: ubuntu-latest
+    
+    # These permissions are needed for the auto-commit action to push to your repo
+    permissions:
+      contents: write
+
+    steps:
+      # 1. Checks out your repository's code
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      # 2. Sets up Java (JDK 17)
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      # 3. Clean up any previous 'Track' directory to avoid conflicts
+      - name: Clean previous output
+        run: rm -rf Track
+
+      # 4. Runs your decompile command
+      #    This assumes 'apktool.jar' and 'TheFlightTracker.apk' are in the root of your repo
+      - name: Decompile APK
+        run: java -jar apktool.jar d TheFlightTracker.apk -o Track
+
+      # 5. Commits the 'Track' directory back to your repository
+      - name: Commit decompiled files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Automated: Update decompiled APK output"
+          # Tell the action to only add and commit the 'Track' directory
+          file_pattern: Track
