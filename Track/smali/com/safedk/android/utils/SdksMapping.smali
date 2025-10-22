@@ -4,8 +4,6 @@
 
 
 # static fields
-.field private static final AD_COLONY_ADAPTER_CLASS_NAME:Ljava/lang/String; = "com.applovin.mediation.adapters.AdColonyMediationAdapter"
-
 .field public static final KEY_INSTALLED_MEDIATION_ADAPTERS:Ljava/lang/String; = "installed_mediation_adapters"
 
 .field public static final KEY_INSTALLED_MEDIATION_ADAPTERS_CLASS:Ljava/lang/String; = "class"
@@ -301,46 +299,6 @@
     const-string v1, "com.applovin.mediation.adapters.IronSourceMediationAdapter"
 
     const-string v2, "b9b88d70c3d018bfbda46cd93ba3ddca"
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcom/safedk/android/utils/SdksMapping;->sdkPackageToName:Ljava/util/TreeMap;
-
-    const-string v1, "com.jirbo.adcolony"
-
-    const-string v2, "AdColony"
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcom/safedk/android/utils/SdksMapping;->sdkPackages:Ljava/util/TreeMap;
-
-    const-string v1, "com.adcolony"
-
-    const-string v2, "com.jirbo.adcolony"
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcom/safedk/android/utils/SdksMapping;->sdkPackageToUUID:Ljava/util/TreeMap;
-
-    const-string v1, "com.jirbo.adcolony"
-
-    const-string v2, "54551cf1122b1b38927009d5151f1fea"
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcom/safedk/android/utils/SdksMapping;->sdkPackages:Ljava/util/TreeMap;
-
-    const-string v1, "com.jirbo.adcolony"
-
-    const-string v2, "com.jirbo.adcolony"
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcom/safedk/android/utils/SdksMapping;->sdkAdaptersUUID:Ljava/util/TreeMap;
-
-    const-string v1, "com.applovin.mediation.adapters.AdColonyMediationAdapter"
-
-    const-string v2, "54551cf1122b1b38927009d5151f1fea"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1625,43 +1583,7 @@
 
     :cond_0
     :try_start_1
-    const-string v3, "com.applovin.mediation.adapters.AdColonyMediationAdapter"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    const-string/jumbo v3, "version"
-
-    invoke-virtual {v0, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v3, "SdksMapping"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "get max adapter versions, ad colony adapter version special handling. version is "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-static {v2, v0}, Lcom/safedk/android/utils/SdksMapping;->updateSdkVersionIfNeeded(Ljava/lang/String;Ljava/lang/String;)V
+    if-nez v2, :cond_1
 
     goto :goto_1
 
