@@ -208,7 +208,7 @@
 
     goto :goto_1
 
-    :cond_0
+    :cond_1
     sget-object v3, Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentStatus;->DENIED:Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentStatus;
 
     :goto_1
