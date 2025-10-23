@@ -474,40 +474,18 @@
 .end method
 
 .method public static initializeSdk(Landroid/content/Context;Lcom/applovin/sdk/AppLovinSdk$SdkInitializationListener;)V
-    .locals 0
+    .locals 1
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    if-eqz p0, :cond_1
+    if-eqz p1, :cond_0
 
-    invoke-static {p0}, Lcom/applovin/sdk/AppLovinSdk;->getInstance(Landroid/content/Context;)Lcom/applovin/sdk/AppLovinSdk;
+    const/4 v0, 0x0
 
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0, p1}, Lcom/applovin/sdk/AppLovinSdk;->initializeSdk(Lcom/applovin/sdk/AppLovinSdk$SdkInitializationListener;)V
-
-    goto :goto_0
+    invoke-interface {p1, v0}, Lcom/applovin/sdk/AppLovinSdk$SdkInitializationListener;->onSdkInitialized(Lcom/applovin/sdk/AppLovinSdkConfiguration;)V
 
     :cond_0
-    const-string p0, "AppLovinSdk"
-
-    const-string p1, "Unable to initialize AppLovin SDK: SDK object not created"
-
-    invoke-static {p0, p1}, Lcom/applovin/impl/sdk/t;->h(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_0
     return-void
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "No context specified"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 .method private reinitialize(Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;)V
@@ -941,10 +919,13 @@
 .method public initialize(Lcom/applovin/sdk/AppLovinSdkInitializationConfiguration;Lcom/applovin/sdk/AppLovinSdk$SdkInitializationListener;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/applovin/sdk/AppLovinSdk;->coreSdk:Lcom/applovin/impl/sdk/k;
+    if-eqz p2, :cond_0
 
-    invoke-virtual {v0, p1, p2}, Lcom/applovin/impl/sdk/k;->a(Lcom/applovin/sdk/AppLovinSdkInitializationConfiguration;Lcom/applovin/sdk/AppLovinSdk$SdkInitializationListener;)V
+    const/4 v0, 0x0
 
+    invoke-interface {p2, v0}, Lcom/applovin/sdk/AppLovinSdk$SdkInitializationListener;->onSdkInitialized(Lcom/applovin/sdk/AppLovinSdkConfiguration;)V
+
+    :cond_0
     return-void
 .end method
 
@@ -961,10 +942,13 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    iget-object v0, p0, Lcom/applovin/sdk/AppLovinSdk;->coreSdk:Lcom/applovin/impl/sdk/k;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/applovin/impl/sdk/k;->a(Lcom/applovin/sdk/AppLovinSdk$SdkInitializationListener;)V
+    const/4 v0, 0x0
 
+    invoke-interface {p1, v0}, Lcom/applovin/sdk/AppLovinSdk$SdkInitializationListener;->onSdkInitialized(Lcom/applovin/sdk/AppLovinSdkConfiguration;)V
+
+    :cond_0
     return-void
 .end method
 

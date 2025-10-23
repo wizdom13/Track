@@ -41,25 +41,7 @@
 .method public onCreate()Z
     .locals 1
 
-    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/applovin/impl/d5;->a(Landroid/content/Context;)V
-
-    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/applovin/impl/sdk/k;->a(Landroid/content/Context;)Lcom/applovin/impl/q;
-
-    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/applovin/impl/sdk/k;->b(Landroid/content/Context;)V
-
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     return v0
 .end method
