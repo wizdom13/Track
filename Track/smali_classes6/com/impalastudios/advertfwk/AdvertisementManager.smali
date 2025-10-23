@@ -222,22 +222,6 @@
 
     invoke-interface {p2, v0}, Landroid/content/SharedPreferences;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
-    new-instance p2, Lcom/google/android/gms/ads/RequestConfiguration$Builder;
-
-    invoke-direct {p2}, Lcom/google/android/gms/ads/RequestConfiguration$Builder;-><init>()V
-
-    sget-object v0, Lcom/impalastudios/advertfwk/AdvertisementManager;->testDevices:Ljava/util/List;
-
-    invoke-virtual {p2, v0}, Lcom/google/android/gms/ads/RequestConfiguration$Builder;->setTestDeviceIds(Ljava/util/List;)Lcom/google/android/gms/ads/RequestConfiguration$Builder;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Lcom/google/android/gms/ads/RequestConfiguration$Builder;->build()Lcom/google/android/gms/ads/RequestConfiguration;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lcom/google/android/gms/ads/MobileAds;->setRequestConfiguration(Lcom/google/android/gms/ads/RequestConfiguration;)V
-
     sget-object p2, Lcom/impalastudios/advertfwk/AdvertisementManager$AppLovinStuff;->INSTANCE:Lcom/impalastudios/advertfwk/AdvertisementManager$AppLovinStuff;
 
     invoke-virtual {p2, p1}, Lcom/impalastudios/advertfwk/AdvertisementManager$AppLovinStuff;->init(Landroid/content/Context;)V
@@ -338,28 +322,10 @@
 
     if-eq p3, p4, :cond_0
 
-    new-instance p3, Lcom/impalastudios/advertfwk/DFPBannerLoader;
+    return-void
 
-    move-object p4, p0
-
-    check-cast p4, Lcom/impalastudios/advertfwk/AdReceiver;
-
-    invoke-direct {p3, p4, v2, p1, p2}, Lcom/impalastudios/advertfwk/DFPBannerLoader;-><init>(Lcom/impalastudios/advertfwk/AdReceiver;Lcom/google/android/gms/ads/admanager/AdManagerAdView;Landroid/content/Context;Ljava/lang/String;)V
-
-    check-cast p3, Lcom/impalastudios/advertfwk/AdLoader;
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p3, Lcom/impalastudios/advertfwk/NativeAdLoader;
-
-    move-object p4, p0
-
-    check-cast p4, Lcom/impalastudios/advertfwk/AdReceiver;
-
-    invoke-direct {p3, p4, p1, p2}, Lcom/impalastudios/advertfwk/NativeAdLoader;-><init>(Lcom/impalastudios/advertfwk/AdReceiver;Landroid/content/Context;Ljava/lang/String;)V
-
-    check-cast p3, Lcom/impalastudios/advertfwk/AdLoader;
+:cond_0
+    return-void
 
     :goto_0
     move-object v5, p2
@@ -395,32 +361,8 @@
 
     goto :goto_1
 
-    :cond_2
-    move-object v4, p1
-
-    move-object v5, p2
-
-    new-instance v2, Lcom/impalastudios/advertfwk/DFPInterstitialLoader;
-
-    move-object v3, p0
-
-    check-cast v3, Lcom/impalastudios/advertfwk/AdReceiver;
-
-    iget-object v6, p0, Lcom/impalastudios/advertfwk/AdvertisementManager;->activityContainer:Lcom/impalastudios/advertfwk/ActivityContainer;
-
-    const/16 v8, 0x10
-
-    const/4 v9, 0x0
-
-    const/4 v7, 0x0
-
-    invoke-direct/range {v2 .. v9}, Lcom/impalastudios/advertfwk/DFPInterstitialLoader;-><init>(Lcom/impalastudios/advertfwk/AdReceiver;Landroid/content/Context;Ljava/lang/String;Lcom/impalastudios/advertfwk/ActivityContainer;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
-
-    move-object p3, v2
-
-    check-cast p3, Lcom/impalastudios/advertfwk/AdLoader;
-
-    goto :goto_1
+:cond_2
+    return-void
 
     :cond_3
     move-object v4, p1
@@ -447,22 +389,8 @@
 
     goto :goto_1
 
-    :cond_4
-    move-object v4, p1
-
-    move-object v5, p2
-
-    new-instance p1, Lcom/impalastudios/advertfwk/DFPBannerLoader;
-
-    move-object p2, p0
-
-    check-cast p2, Lcom/impalastudios/advertfwk/AdReceiver;
-
-    invoke-direct {p1, p2, v2, v4, v5}, Lcom/impalastudios/advertfwk/DFPBannerLoader;-><init>(Lcom/impalastudios/advertfwk/AdReceiver;Lcom/google/android/gms/ads/admanager/AdManagerAdView;Landroid/content/Context;Ljava/lang/String;)V
-
-    move-object p3, p1
-
-    check-cast p3, Lcom/impalastudios/advertfwk/AdLoader;
+:cond_4
+    return-void
 
     :goto_1
     invoke-interface {v0, v5, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -910,7 +838,7 @@
 .end method
 
 .method public final requestAds(Ljava/lang/String;I)V
-    .locals 0
+    .locals 1
 
     const-string p2, "adId"
 
@@ -922,11 +850,23 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/impalastudios/advertfwk/NativeAdLoader;
+    check-cast p1, Lcom/impalastudios/advertfwk/AdLoader;
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+    if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/impalastudios/advertfwk/NativeAdLoader;->loadAd()V
+    invoke-interface {p1}, Lcom/impalastudios/advertfwk/AdLoader;->getType()Lcom/impalastudios/advertfwk/AdType;
+
+    move-result-object v0
+
+    sget-object p2, Lcom/impalastudios/advertfwk/AdType;->NativeAd:Lcom/impalastudios/advertfwk/AdType;
+
+    if-ne v0, p2, :cond_0
+
+    invoke-interface {p1}, Lcom/impalastudios/advertfwk/AdLoader;->loadAd()V
+
+    :cond_0
+
+    :cond_1
 
     return-void
 .end method
