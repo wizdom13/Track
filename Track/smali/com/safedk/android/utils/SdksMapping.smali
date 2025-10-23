@@ -144,36 +144,6 @@
 
     sget-object v0, Lcom/safedk/android/utils/SdksMapping;->sdkPackageToName:Ljava/util/TreeMap;
 
-    const-string v1, "com.vungle"
-
-    const-string v2, "LiftoffMonetize"
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcom/safedk/android/utils/SdksMapping;->sdkPackageToUUID:Ljava/util/TreeMap;
-
-    const-string v1, "com.vungle"
-
-    const-string v2, "217e8f437c9fc4244d6e74653ac8a8c7"
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcom/safedk/android/utils/SdksMapping;->sdkPackages:Ljava/util/TreeMap;
-
-    const-string v1, "com.vungle"
-
-    const-string v2, "com.vungle"
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcom/safedk/android/utils/SdksMapping;->sdkAdaptersUUID:Ljava/util/TreeMap;
-
-    const-string v1, "com.applovin.mediation.adapters.VungleMediationAdapter"
-
-    const-string v2, "217e8f437c9fc4244d6e74653ac8a8c7"
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     sget-object v0, Lcom/safedk/android/utils/SdksMapping;->sdkPackageToName:Ljava/util/TreeMap;
 
     const-string v1, "com.unity3d.ads"

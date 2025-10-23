@@ -5,12 +5,12 @@
 
 # annotations
 .annotation runtime Lcom/safedk/android/utils/annotations/AdNetworkIdentifier;
-    packageName = "com.vungle"
+    packageName = ""
 .end annotation
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "vungle_mraid"
+.field public static final a:Ljava/lang/String; = ""
 
 .field private static final serialVersionUID:J = -0x69e5a1840d07ccebL
 
@@ -23,7 +23,7 @@
 .method public constructor <init>(Lcom/safedk/android/analytics/brandsafety/BrandSafetyUtils$AdType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;)V
     .locals 11
 
-    const-string v4, "com.vungle"
+    const-string v4, ""
 
     move-object v2, p0
 

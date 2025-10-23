@@ -74,7 +74,7 @@
 
     new-instance v0, Lcom/safedk/android/internal/partials/NetworkBridge$RequestInfo;
 
-    const-string v3, "com.vungle"
+    const-string v3, ""
 
     invoke-direct {v0, v3, v2}, Lcom/safedk/android/internal/partials/NetworkBridge$RequestInfo;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -248,7 +248,7 @@
 
     new-instance v0, Lcom/safedk/android/internal/partials/NetworkBridge$RequestInfo;
 
-    const-string v3, "com.vungle"
+    const-string v3, ""
 
     invoke-direct {v0, v3, v2}, Lcom/safedk/android/internal/partials/NetworkBridge$RequestInfo;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -833,7 +833,7 @@
 
     move-result-object v2
 
-    const-string v3, "com.vungle"
+    const-string v3, ""
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -849,11 +849,11 @@
 
     const/4 v0, 0x0
 
-    const-string v1, "com.vungle"
+    const-string v1, ""
 
     invoke-static {v0, p1, p0, v1}, Lcom/safedk/android/analytics/brandsafety/creatives/CreativeInfoManager;->a(Ljava/lang/String;Ljava/lang/String;Landroid/webkit/WebView;Ljava/lang/String;)V
 
-    const-string v0, "com.vungle"
+    const-string v0, ""
 
     invoke-static {v0, p0, p1}, Lcom/safedk/android/internal/SafeDKWebAppInterface;->a(Ljava/lang/String;Landroid/webkit/WebView;Ljava/lang/String;)V
 
@@ -917,7 +917,7 @@
 
     move-result-object v1
 
-    const-string v2, "com.vungle"
+    const-string v2, ""
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -989,11 +989,11 @@
     return-void
 
     :cond_2
-    const-string v0, "com.vungle"
+    const-string v0, ""
 
     invoke-static {v0, p0, p1}, Lcom/safedk/android/internal/partials/NetworkBridge;->logWebviewLoadURLRequest(Ljava/lang/String;Landroid/webkit/WebView;Ljava/lang/String;)V
 
-    const-string v0, "com.vungle"
+    const-string v0, ""
 
     invoke-static {v0}, Lcom/safedk/android/analytics/brandsafety/creatives/CreativeInfoManager;->h(Ljava/lang/String;)Lcom/safedk/android/analytics/brandsafety/creatives/AdNetworkDiscovery;
 
@@ -1015,12 +1015,12 @@
 
     const/4 v0, 0x0
 
-    const-string v1, "com.vungle"
+    const-string v1, ""
 
     invoke-static {p1, v0, p0, v1}, Lcom/safedk/android/analytics/brandsafety/creatives/CreativeInfoManager;->a(Ljava/lang/String;Ljava/lang/String;Landroid/webkit/WebView;Ljava/lang/String;)V
 
     :cond_3
-    const-string v0, "com.vungle"
+    const-string v0, ""
 
     invoke-static {v0, p0, p1}, Lcom/safedk/android/internal/SafeDKWebAppInterface;->a(Ljava/lang/String;Landroid/webkit/WebView;Ljava/lang/String;)V
 

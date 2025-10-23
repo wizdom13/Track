@@ -213,12 +213,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v1, "com.applovin.mediation.adapters.VungleMediationAdapter"
-
-    const-string v3, "Vungle"
-
-    invoke-virtual {v0, v1, v3}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     const-string v1, "com.applovin.mediation.adapters.YandexMediationAdapter"
 
     const-string v3, "Yandex"
