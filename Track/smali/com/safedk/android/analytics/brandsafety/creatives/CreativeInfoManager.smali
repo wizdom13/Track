@@ -6690,14 +6690,6 @@
 
     sget-object v0, Lcom/safedk/android/analytics/brandsafety/creatives/CreativeInfoManager;->q:Ljava/util/Map;
 
-    const-string v1, "BIDMACHINE_BIDDING"
-
-    const-string v2, "io.bidmachine"
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcom/safedk/android/analytics/brandsafety/creatives/CreativeInfoManager;->q:Ljava/util/Map;
-
     const-string v1, "MOLOCO_BIDDING"
 
     const-string v2, "com.moloco"
@@ -7430,16 +7422,6 @@
     sget-object v0, Lcom/safedk/android/analytics/brandsafety/creatives/CreativeInfoManager;->adNetworkDiscoveries:Ljava/util/TreeMap;
 
     const-string v1, "com.applovin"
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v2, Lcom/safedk/android/analytics/brandsafety/creatives/discoveries/e;
-
-    invoke-direct {v2}, Lcom/safedk/android/analytics/brandsafety/creatives/discoveries/e;-><init>()V
-
-    sget-object v0, Lcom/safedk/android/analytics/brandsafety/creatives/CreativeInfoManager;->adNetworkDiscoveries:Ljava/util/TreeMap;
-
-    const-string v1, "io.bidmachine"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

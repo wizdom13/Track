@@ -9315,44 +9315,13 @@
 .end method
 
 .method public static onBidMachineOnClose()V
-    .locals 2
+    .locals 0
 
-    const-string v0, "BrandSafetyUtils"
-
-    const-string v1, "on bidMachine on close - calling handle redirect"
-
-    invoke-static {v0, v1}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-static {}, Lcom/safedk/android/SafeDK;->X()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "io.bidmachine"
-
-    invoke-static {v0}, Lcom/safedk/android/analytics/brandsafety/BrandSafetyUtils;->q(Ljava/lang/String;)Lcom/safedk/android/analytics/brandsafety/e;
-
-    :cond_0
     return-void
 .end method
 
 .method public static onBidMachineOnExpanded()V
-    .locals 3
-
-    const/4 v2, 0x0
-
-    const-string v0, "BrandSafetyUtils"
-
-    const-string v1, "on bidMachine on expanded - calling handle redirect (intent)"
-
-    invoke-static {v0, v1}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    const-string v0, "io.bidmachine"
-
-    const-string v1, "internal"
-
-    invoke-static {v0, v2, v2, v1}, Lcom/safedk/android/analytics/brandsafety/BrandSafetyUtils;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
     return-void
 .end method
