@@ -783,7 +783,7 @@
 
     invoke-virtual {p1, p2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    invoke-static {p0, p1}, Lcom/impalastudios/theflighttracker/features/search/SearchFragment;->safedk_SearchFragment_startActivity_15f1174d4e33a77adb846dd2c50884f0(Lcom/impalastudios/theflighttracker/features/search/SearchFragment;Landroid/content/Intent;)V
+    invoke-virtual {p0, p1}, Lcom/impalastudios/theflighttracker/features/search/SearchFragment;->startActivity(Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -2746,20 +2746,6 @@
 
     return v0
 .end method
-
-.method public static safedk_SearchFragment_startActivity_15f1174d4e33a77adb846dd2c50884f0(Lcom/impalastudios/theflighttracker/features/search/SearchFragment;Landroid/content/Intent;)V
-    .locals 1
-
-    const-string v0, "SafeDK-Special|SafeDK: Call> Lcom/impalastudios/theflighttracker/features/search/SearchFragment;->startActivity(Landroid/content/Intent;)V"
-
-    invoke-static {v0}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;)I
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lcom/impalastudios/theflighttracker/features/search/SearchFragment;->startActivity(Landroid/content/Intent;)V
 
     return-void
 .end method

@@ -88,22 +88,6 @@
     return-void
 .end method
 
-.method public static safedk_JourneyComponentFragment_startActivity_13b36d1037c3474474e5fee927cba16e(Lcom/impalastudios/theflighttracker/features/flightdetails/journeycomponent/JourneyComponentFragment;Landroid/content/Intent;)V
-    .locals 1
-
-    const-string v0, "SafeDK-Special|SafeDK: Call> Lcom/impalastudios/theflighttracker/features/flightdetails/journeycomponent/JourneyComponentFragment;->startActivity(Landroid/content/Intent;)V"
-
-    invoke-static {v0}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;)I
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lcom/impalastudios/theflighttracker/features/flightdetails/journeycomponent/JourneyComponentFragment;->startActivity(Landroid/content/Intent;)V
-
-    return-void
-.end method
 
 
 # virtual methods
@@ -235,7 +219,7 @@
 
     iget-object p1, p0, Lcom/impalastudios/theflighttracker/features/flightdetails/journeycomponent/JourneyComponentFragment$tapAirlineSite$1$1;->this$0:Lcom/impalastudios/theflighttracker/features/flightdetails/journeycomponent/JourneyComponentFragment;
 
-    invoke-static {p1, v0}, Lcom/impalastudios/theflighttracker/features/flightdetails/journeycomponent/JourneyComponentFragment$tapAirlineSite$1$1;->safedk_JourneyComponentFragment_startActivity_13b36d1037c3474474e5fee927cba16e(Lcom/impalastudios/theflighttracker/features/flightdetails/journeycomponent/JourneyComponentFragment;Landroid/content/Intent;)V
+    invoke-virtual {p1, v0}, Lcom/impalastudios/theflighttracker/features/flightdetails/journeycomponent/JourneyComponentFragment;->startActivity(Landroid/content/Intent;)V
 
     sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 

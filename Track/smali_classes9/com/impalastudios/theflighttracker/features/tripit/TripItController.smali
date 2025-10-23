@@ -610,7 +610,7 @@
 
     invoke-virtual {p2, p1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    invoke-static {p0, p2}, Lcom/impalastudios/theflighttracker/features/tripit/TripItController;->safedk_Context_startActivity_97cb3195734cf5c9cc3418feeafa6dd6(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-virtual {p0, p2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     :cond_0
     const/4 p0, 0x0
@@ -618,22 +618,6 @@
     return-object p0
 .end method
 
-.method public static safedk_Context_startActivity_97cb3195734cf5c9cc3418feeafa6dd6(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 1
-
-    const-string v0, "SafeDK-Special|SafeDK: Call> Landroid/content/Context;->startActivity(Landroid/content/Intent;)V"
-
-    invoke-static {v0}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;)I
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    return-void
-.end method
 
 
 # virtual methods

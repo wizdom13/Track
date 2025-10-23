@@ -290,108 +290,11 @@
 .end method
 
 .method public static Z()Z
-    .locals 4
+    .locals 1
 
-    sget-object v0, Lcom/safedk/android/SafeDK;->q:Lcom/safedk/android/SafeDK;
-
-    if-eqz v0, :cond_1
-
-    sget-object v0, Lcom/safedk/android/SafeDK;->s:Lcom/safedk/android/internal/d;
-
-    if-eqz v0, :cond_1
-
-    sget-object v0, Lcom/safedk/android/SafeDK;->s:Lcom/safedk/android/internal/d;
-
-    invoke-virtual {v0}, Lcom/safedk/android/internal/d;->B()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    sget-object v0, Lcom/safedk/android/SafeDK;->B:Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x1
-
-    :goto_0
-    if-nez v0, :cond_0
-
-    const-string v1, "SafeDKMain"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "isSafeDKFullyInitialized returned false , instance = "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    sget-object v3, Lcom/safedk/android/SafeDK;->q:Lcom/safedk/android/SafeDK;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ",config = "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    sget-object v3, Lcom/safedk/android/SafeDK;->s:Lcom/safedk/android/internal/d;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ", config.isActive() = "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    sget-object v3, Lcom/safedk/android/SafeDK;->s:Lcom/safedk/android/internal/d;
-
-    invoke-virtual {v3}, Lcom/safedk/android/internal/d;->B()Z
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ", SafeDK.isMaxInitialized = "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    sget-object v3, Lcom/safedk/android/SafeDK;->B:Ljava/lang/Boolean;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    return v0
-
-    :cond_1
     const/4 v0, 0x0
 
-    goto :goto_0
+    return v0
 .end method
 
 .method static synthetic a(Lcom/safedk/android/SafeDK;)Lcom/safedk/android/SafeDK;
@@ -1744,7 +1647,7 @@
 .method public static getInstance()Lcom/safedk/android/SafeDK;
     .locals 1
 
-    sget-object v0, Lcom/safedk/android/SafeDK;->q:Lcom/safedk/android/SafeDK;
+    const/4 v0, 0x0
 
     return-object v0
 .end method
@@ -1760,7 +1663,7 @@
 .method public static getSdkKey()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "6QnkP5_htbgimKqRXxBLZ64hrneRdTqlzaTMgS3X3kFq33Fa_QxTX0FMnupORc8PBbns2qO6Tdwbg9BgZ7E57T"
+    const-string v0, ""
 
     return-object v0
 .end method
@@ -1768,7 +1671,7 @@
 .method public static getVersion()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "5.7.3"
+    const-string v0, ""
 
     return-object v0
 .end method
@@ -3500,11 +3403,7 @@
 .method public o()Z
     .locals 1
 
-    sget-object v0, Lcom/safedk/android/SafeDK;->s:Lcom/safedk/android/internal/d;
-
-    invoke-virtual {v0}, Lcom/safedk/android/internal/d;->B()Z
-
-    move-result v0
+    const/4 v0, 0x0
 
     return v0
 .end method
