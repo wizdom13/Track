@@ -353,41 +353,25 @@
 .end method
 
 .method public final logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/firebase/analytics/FirebaseAnalytics;->zzb:Lcom/google/android/gms/internal/measurement/zzdy;
-
-    invoke-virtual {v0, p1, p2}, Lcom/google/android/gms/internal/measurement/zzdy;->zza(Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 0
 
     return-void
 .end method
 
 .method public final resetAnalyticsData()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/firebase/analytics/FirebaseAnalytics;->zzb:Lcom/google/android/gms/internal/measurement/zzdy;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/measurement/zzdy;->zzj()V
+    .locals 0
 
     return-void
 .end method
 
 .method public final setAnalyticsCollectionEnabled(Z)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/firebase/analytics/FirebaseAnalytics;->zzb:Lcom/google/android/gms/internal/measurement/zzdy;
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/measurement/zzdy;->zza(Ljava/lang/Boolean;)V
+    .locals 0
 
     return-void
 .end method
 
 .method public final setConsent(Ljava/util/Map;)V
-    .locals 6
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -397,209 +381,37 @@
             ">;)V"
         }
     .end annotation
-
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    sget-object v1, Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentType;->AD_STORAGE:Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentType;
-
-    invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentStatus;
-
-    const-string v2, "denied"
-
-    const-string v3, "granted"
-
-    const/4 v4, 0x1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1}, Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentStatus;->ordinal()I
-
-    move-result v1
-
-    const-string v5, "ad_storage"
-
-    if-eqz v1, :cond_1
-
-    if-eq v1, v4, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0, v5, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0, v5, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_2
-    :goto_0
-    sget-object v1, Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentType;->ANALYTICS_STORAGE:Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentType;
-
-    invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentStatus;
-
-    if-eqz v1, :cond_5
-
-    invoke-virtual {v1}, Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentStatus;->ordinal()I
-
-    move-result v1
-
-    const-string v5, "analytics_storage"
-
-    if-eqz v1, :cond_4
-
-    if-eq v1, v4, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {v0, v5, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :cond_4
-    invoke-virtual {v0, v5, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_5
-    :goto_1
-    sget-object v1, Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentType;->AD_USER_DATA:Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentType;
-
-    invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentStatus;
-
-    if-eqz v1, :cond_8
-
-    invoke-virtual {v1}, Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentStatus;->ordinal()I
-
-    move-result v1
-
-    const-string v5, "ad_user_data"
-
-    if-eqz v1, :cond_7
-
-    if-eq v1, v4, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    invoke-virtual {v0, v5, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_2
-
-    :cond_7
-    invoke-virtual {v0, v5, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_8
-    :goto_2
-    sget-object v1, Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentType;->AD_PERSONALIZATION:Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentType;
-
-    invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentStatus;
-
-    if-eqz p1, :cond_b
-
-    invoke-virtual {p1}, Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentStatus;->ordinal()I
-
-    move-result p1
-
-    const-string v1, "ad_personalization"
-
-    if-eqz p1, :cond_a
-
-    if-eq p1, v4, :cond_9
-
-    goto :goto_3
-
-    :cond_9
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_3
-
-    :cond_a
-    invoke-virtual {v0, v1, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_b
-    :goto_3
-    iget-object p1, p0, Lcom/google/firebase/analytics/FirebaseAnalytics;->zzb:Lcom/google/android/gms/internal/measurement/zzdy;
-
-    invoke-virtual {p1, v0}, Lcom/google/android/gms/internal/measurement/zzdy;->zzc(Landroid/os/Bundle;)V
-
     return-void
 .end method
 
 .method public final setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+    .locals 0
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
-
-    iget-object v0, p0, Lcom/google/firebase/analytics/FirebaseAnalytics;->zzb:Lcom/google/android/gms/internal/measurement/zzdy;
-
-    invoke-virtual {v0, p1, p2, p3}, Lcom/google/android/gms/internal/measurement/zzdy;->zza(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public final setDefaultEventParameters(Landroid/os/Bundle;)V
-    .locals 1
-
-    if-eqz p1, :cond_0
-
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0, p1}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
-
-    move-object p1, v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/google/firebase/analytics/FirebaseAnalytics;->zzb:Lcom/google/android/gms/internal/measurement/zzdy;
-
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/measurement/zzdy;->zzd(Landroid/os/Bundle;)V
+    .locals 0
 
     return-void
 .end method
 
 .method public final setSessionTimeoutDuration(J)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/firebase/analytics/FirebaseAnalytics;->zzb:Lcom/google/android/gms/internal/measurement/zzdy;
-
-    invoke-virtual {v0, p1, p2}, Lcom/google/android/gms/internal/measurement/zzdy;->zza(J)V
+    .locals 0
 
     return-void
 .end method
 
 .method public final setUserId(Ljava/lang/String;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/firebase/analytics/FirebaseAnalytics;->zzb:Lcom/google/android/gms/internal/measurement/zzdy;
-
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/measurement/zzdy;->zzd(Ljava/lang/String;)V
+    .locals 0
 
     return-void
 .end method
 
 .method public final setUserProperty(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/firebase/analytics/FirebaseAnalytics;->zzb:Lcom/google/android/gms/internal/measurement/zzdy;
-
-    invoke-virtual {v0, p1, p2}, Lcom/google/android/gms/internal/measurement/zzdy;->zzb(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
     return-void
 .end method

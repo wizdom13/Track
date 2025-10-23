@@ -86,7 +86,7 @@
 
 # virtual methods
 .method public trackEvent(Ljava/lang/String;Ljava/util/Map;Lkotlin/jvm/functions/Function2;Lcom/adapty/utils/ErrorCallback;)V
-    .locals 2
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -111,31 +111,11 @@
         }
     .end annotation
 
-    const-string v0, "eventName"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "onEventRegistered"
-
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iget-object p3, p0, Lcom/adapty/internal/data/cloud/AnalyticsManager;->eventRecorder:Lcom/adapty/internal/data/cloud/AnalyticsTracker;
-
-    new-instance v0, Lcom/adapty/internal/data/cloud/AnalyticsManager$trackEvent$1;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lcom/adapty/internal/data/cloud/AnalyticsManager$trackEvent$1;-><init>(Lcom/adapty/internal/data/cloud/AnalyticsManager;Lkotlin/coroutines/Continuation;)V
-
-    check-cast v0, Lkotlin/jvm/functions/Function2;
-
-    invoke-interface {p3, p1, p2, v0, p4}, Lcom/adapty/internal/data/cloud/AnalyticsTracker;->trackEvent(Ljava/lang/String;Ljava/util/Map;Lkotlin/jvm/functions/Function2;Lcom/adapty/utils/ErrorCallback;)V
-
     return-void
 .end method
 
 .method public trackSystemEvent(Lcom/adapty/internal/data/models/AnalyticsEvent$CustomData;Lkotlin/jvm/functions/Function2;)V
-    .locals 2
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -152,26 +132,6 @@
             ">;)V"
         }
     .end annotation
-
-    const-string v0, "customData"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "onEventRegistered"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iget-object p2, p0, Lcom/adapty/internal/data/cloud/AnalyticsManager;->eventRecorder:Lcom/adapty/internal/data/cloud/AnalyticsTracker;
-
-    new-instance v0, Lcom/adapty/internal/data/cloud/AnalyticsManager$trackSystemEvent$1;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lcom/adapty/internal/data/cloud/AnalyticsManager$trackSystemEvent$1;-><init>(Lcom/adapty/internal/data/cloud/AnalyticsManager;Lkotlin/coroutines/Continuation;)V
-
-    check-cast v0, Lkotlin/jvm/functions/Function2;
-
-    invoke-interface {p2, p1, v0}, Lcom/adapty/internal/data/cloud/AnalyticsTracker;->trackSystemEvent(Lcom/adapty/internal/data/models/AnalyticsEvent$CustomData;Lkotlin/jvm/functions/Function2;)V
 
     return-void
 .end method
