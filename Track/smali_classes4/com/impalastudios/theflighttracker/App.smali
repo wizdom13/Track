@@ -221,13 +221,6 @@
     return-object p0
 .end method
 
-.method public static synthetic $r8$lambda$8CeGf8s7PGje2LGHIllsNEJyst8(Lcom/google/android/gms/ads/initialization/InitializationStatus;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/impalastudios/theflighttracker/App;->advertisementManager_delegate$lambda$14$lambda$11(Lcom/google/android/gms/ads/initialization/InitializationStatus;)V
-
-    return-void
-.end method
 
 .method public static synthetic $r8$lambda$BQazs-ddZezZD0QTNGxCeZo6HyE()Lretrofit2/Retrofit;
     .locals 1
@@ -635,26 +628,6 @@
     .locals 12
 
     sget-object v0, Lcom/impalastudios/theflighttracker/App;->Companion:Lcom/impalastudios/theflighttracker/App$Companion;
-
-    invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/App$Companion;->getApp()Lcom/impalastudios/theflighttracker/App;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/content/Context;
-
-    new-instance v2, Lcom/impalastudios/theflighttracker/App$$ExternalSyntheticLambda0;
-
-    invoke-direct {v2}, Lcom/impalastudios/theflighttracker/App$$ExternalSyntheticLambda0;-><init>()V
-
-    invoke-static {v1, v2}, Lcom/google/android/gms/ads/MobileAds;->initialize(Landroid/content/Context;Lcom/google/android/gms/ads/initialization/OnInitializationCompleteListener;)V
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Lcom/google/android/gms/ads/MobileAds;->setAppVolume(F)V
-
-    const/4 v1, 0x1
-
-    invoke-static {v1}, Lcom/google/android/gms/ads/MobileAds;->setAppMuted(Z)V
 
     new-instance v1, Lcom/applovin/mediation/ads/MaxAdView;
 
@@ -1085,15 +1058,6 @@
     return-object v5
 .end method
 
-.method private static final advertisementManager_delegate$lambda$14$lambda$11(Lcom/google/android/gms/ads/initialization/InitializationStatus;)V
-    .locals 1
-
-    const-string v0, "it"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    return-void
-.end method
 
 .method private static final consentAnalytics_delegate$lambda$17()Lcom/impalastudios/impalaanalyticsframework/ImpalaConsentAnalyticsInterface;
     .locals 2

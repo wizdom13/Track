@@ -84,7 +84,7 @@
         "setEnabledModules",
         "nativeAds",
         "",
-        "Lcom/google/android/gms/ads/nativead/NativeAd;",
+        "Ljava/lang/Object;",
         "liveFlightInfo",
         "Lcom/impalastudios/theflighttracker/bll/flights/flightsapiv2/LiveFlightInfo;",
         "getLiveFlightInfo",
@@ -253,7 +253,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/google/android/gms/ads/nativead/NativeAd;",
+            "Ljava/lang/Object;",
             ">;"
         }
     .end annotation
@@ -1254,34 +1254,12 @@
 .end method
 
 .method public final destroyAds()V
-    .locals 2
+    .locals 1
 
     iget-object v0, p0, Lcom/impalastudios/theflighttracker/features/flightdetails/FlightDetailsV2Adapter;->nativeAds:Ljava/util/List;
 
-    check-cast v0, Ljava/lang/Iterable;
+    invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/google/android/gms/ads/nativead/NativeAd;
-
-    invoke-virtual {v1}, Lcom/google/android/gms/ads/nativead/NativeAd;->destroy()V
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 
@@ -1711,16 +1689,11 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    instance-of p2, p1, Lcom/google/android/gms/ads/nativead/NativeAd;
+    iget-object p2, p0, Lcom/impalastudios/theflighttracker/features/flightdetails/FlightDetailsV2Adapter;->nativeAds:Ljava/util/List;
 
-    if-eqz p2, :cond_0
+    invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcom/impalastudios/theflighttracker/features/flightdetails/FlightDetailsV2Adapter;->nativeAds:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    xor-int/lit8 p1, p2, 0x1
+    const/4 p1, 0x0
 
     iput-boolean p1, p0, Lcom/impalastudios/theflighttracker/features/flightdetails/FlightDetailsV2Adapter;->failedToLoadAds:Z
 

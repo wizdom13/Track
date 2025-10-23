@@ -41,7 +41,7 @@
         "setFlightCodes",
         "(Ljava/util/List;)V",
         "nativeAds",
-        "Lcom/google/android/gms/ads/nativead/NativeAd;",
+        "Ljava/lang/Object;",
         "onCreateViewHolder",
         "parent",
         "Landroid/view/ViewGroup;",
@@ -91,8 +91,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "+",
-            "Lcom/google/android/gms/ads/nativead/NativeAd;",
+            "Ljava/lang/Object;",
             ">;"
         }
     .end annotation
@@ -425,8 +424,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "+",
-            "Lcom/google/android/gms/ads/nativead/NativeAd;",
+            "Ljava/lang/Object;",
             ">;)V"
         }
     .end annotation
