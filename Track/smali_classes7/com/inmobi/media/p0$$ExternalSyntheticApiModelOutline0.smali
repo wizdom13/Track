@@ -92,16 +92,6 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic m(Lcom/unity3d/services/ads/adunit/AdUnitRelativeLayout;)Landroid/view/WindowInsets;
-    .locals 0
-
-    invoke-virtual {p0}, Lcom/unity3d/services/ads/adunit/AdUnitRelativeLayout;->getRootWindowInsets()Landroid/view/WindowInsets;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method public static bridge synthetic m(Ljava/lang/Object;)Landroid/webkit/WebViewRenderProcessClient;
     .locals 0
 
@@ -672,14 +662,6 @@
     .locals 0
 
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/AnimatedImageDrawable;->registerAnimationCallback(Landroid/graphics/drawable/Animatable2$AnimationCallback;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic m(Lcom/unity3d/services/ads/video/VideoPlayerView;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lcom/unity3d/services/ads/video/VideoPlayerView;->setAudioFocusRequest(I)V
 
     return-void
 .end method
