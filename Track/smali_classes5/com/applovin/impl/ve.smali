@@ -47,12 +47,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v1, "com.applovin.mediation.adapters.BidMachineMediationAdapter"
-
-    const-string v3, "BidMachine"
-
-    invoke-virtual {v0, v1, v3}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     const-string v1, "com.applovin.mediation.adapters.BigoAdsMediationAdapter"
 
     const-string v3, "Bigo Ads"
