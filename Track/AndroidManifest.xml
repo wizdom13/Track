@@ -82,7 +82,6 @@
     <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="true" android:fullBackupContent="@xml/adapty_backup_rules" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.impalastudios.theflighttracker.App" android:networkSecurityConfig="@xml/securityconfig" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme">
         <property android:name="android.adservices.AD_SERVICES_CONFIG" android:resource="@xml/gma_ad_services_config"/>
         <meta-data android:name="applovin.sdk.key" android:value="6QnkP5_htbgimKqRXxBLZ64hrneRdTqlzaTMgS3X3kFq33Fa_QxTX0FMnupORc8PBbns2qO6Tdwbg9BgZ7E57T"/>
-        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-9818124194278416~4721424215"/>
         <meta-data android:name="com.google.android.gms.ads.AD_MANAGER_APP" android:value="true"/>
         <meta-data android:name="google_analytics_ssaid_collection_enabled" android:value="false"/>
         <meta-data android:name="google_analytics_adid_collection_enabled" android:value="false"/>
@@ -157,7 +156,7 @@
             <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
             <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
         </provider>
-        <provider android:authorities="com.flistholding.flightplus.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider"/>
+        <provider android:authorities="com.flistholding.flightplus.mobileadsinitprovider" android:enabled="false" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider"/>
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.ads.AdService"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:exported="false" android:name="com.google.android.gms.ads.OutOfContextTestingActivity"/>
         <activity android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTask" android:name="com.google.android.gms.ads.NotificationHandlerActivity" android:taskAffinity="" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
