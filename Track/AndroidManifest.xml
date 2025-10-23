@@ -46,7 +46,6 @@
             <action android:name="com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND"/>
         </intent>
         <package android:name="com.android.vending"/>
-        <package android:name="com.amazon.venezia"/>
         <package android:name="com.sec.android.app.samsungapps"/>
         <package android:name="com.huawei.appmarket"/>
         <intent>
@@ -311,9 +310,6 @@
         <activity android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:name="com.ironsource.mediationsdk.testSuite.TestSuiteActivity" android:theme="@android:style/Theme.NoTitleBar"/>
         <provider android:authorities="com.flistholding.flightplus.IronsourceLifecycleProvider" android:exported="false" android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider"/>
         <activity android:exported="false" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:stateNotNeeded="true" android:theme="@style/Theme.PlayCore.Transparent"/>
-        <activity android:configChanges="orientation|screenSize" android:exported="true" android:name="com.amazon.aps.ads.activity.ApsInterstitialActivity" android:theme="@style/NoWindow"/>
-        <activity android:configChanges="orientation|screenSize" android:exported="true" android:name="com.amazon.device.ads.DTBInterstitialActivity"/>
-        <activity android:name="com.amazon.device.ads.DTBAdActivity"/>
         <provider android:authorities="com.flistholding.flightplus.bidmachineinitprovider" android:exported="false" android:name="io.bidmachine.BidMachineInitProvider"/>
         <activity android:name="io.bidmachine.nativead.view.VideoPlayerActivity" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
         <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:hardwareAccelerated="true" android:name="com.fyber.inneractive.sdk.activities.InneractiveInternalBrowserActivity" android:screenOrientation="fullUser"/>

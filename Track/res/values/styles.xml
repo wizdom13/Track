@@ -6802,15 +6802,13 @@
         <item name="android:textColor">#ffeeeeee</item>
     </style>
     <style name="aps_match_parent">
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">0.0dip</item>
     </style>
     <style name="aps_mraid_close_indicator_style">
         <item name="android:orientation">vertical</item>
-        <item name="android:layout_width">@dimen/aps_mraid_layout_width</item>
-        <item name="android:layout_height">@dimen/aps_mraid_layout_height</item>
-        <item name="android:layout_alignParentTop">true</item>
-        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">0.0dip</item>
     </style>
     <style name="com.applovin.creative.CreativeDebuggerActivity.ActionBar" parent="@android:style/Widget.Material.Light.ActionBar">
         <item name="android:background">@color/applovin_sdk_brand_color</item>

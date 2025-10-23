@@ -142,8 +142,8 @@
     <dimen name="applovin_sdk_mediationDebuggerSectionTextSize">13.0sp</dimen>
     <dimen name="applovin_sdk_mrec_height">250.0dip</dimen>
     <dimen name="applovin_sdk_mrec_width">300.0dip</dimen>
-    <dimen name="aps_mraid_layout_height">50.0dip</dimen>
-    <dimen name="aps_mraid_layout_width">50.0dip</dimen>
+    <dimen name="aps_mraid_layout_height">0.0dip</dimen>
+    <dimen name="aps_mraid_layout_width">0.0dip</dimen>
     <dimen name="browser_actions_context_menu_max_width">500.0dip</dimen>
     <dimen name="browser_actions_context_menu_min_padding">20.0dip</dimen>
     <dimen name="cardview_compat_inset_shadow">1.0dip</dimen>

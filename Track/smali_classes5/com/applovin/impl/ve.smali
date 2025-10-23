@@ -2,7 +2,6 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
 # static fields
 .field private static final a:Ljava/util/TreeMap;
 
@@ -13,7 +12,6 @@
 .field private static final d:Ljava/lang/Object;
 
 .field private static final e:Ljava/util/Map;
-
 
 # direct methods
 .method static constructor <clinit>()V
@@ -42,12 +40,6 @@
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
     sput-object v0, Lcom/applovin/impl/ve;->a:Ljava/util/TreeMap;
-
-    const-string v1, "com.applovin.mediation.adapters.AmazonAdMarketplaceMediationAdapter"
-
-    const-string v2, "Amazon Publisher Services"
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v1, "com.applovin.mediation.adapters.AppLovinMediationAdapter"
 
@@ -238,16 +230,6 @@
     const-string v3, "Yandex"
 
     invoke-virtual {v0, v1, v3}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "com.applovin.mediation.adapters.AmazonMediationAdapter"
-
-    const-string v3, "Amazon"
-
-    invoke-virtual {v0, v1, v3}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "com.applovin.mediation.adapters.AmazonPublisherServicesMediationAdapter"
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v1, "com.applovin.mediation.adapters.CriteoMediationAdapter"
 
