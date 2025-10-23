@@ -326,7 +326,7 @@
 
     invoke-virtual {p1, p2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    invoke-static {p0, p1}, Lcom/impalastudios/theflighttracker/features/myflights/CustomBottomSheetFragment;->safedk_CustomBottomSheetFragment_startActivity_1d64b7966f4938be23db6b9383327930(Lcom/impalastudios/theflighttracker/features/myflights/CustomBottomSheetFragment;Landroid/content/Intent;)V
+    invoke-virtual {p0, p1}, Lcom/impalastudios/theflighttracker/features/myflights/CustomBottomSheetFragment;->startActivity(Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -337,22 +337,6 @@
     return-void
 .end method
 
-.method public static safedk_CustomBottomSheetFragment_startActivity_1d64b7966f4938be23db6b9383327930(Lcom/impalastudios/theflighttracker/features/myflights/CustomBottomSheetFragment;Landroid/content/Intent;)V
-    .locals 1
-
-    const-string v0, "SafeDK-Special|SafeDK: Call> Lcom/impalastudios/theflighttracker/features/myflights/CustomBottomSheetFragment;->startActivity(Landroid/content/Intent;)V"
-
-    invoke-static {v0}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;)I
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lcom/impalastudios/theflighttracker/features/myflights/CustomBottomSheetFragment;->startActivity(Landroid/content/Intent;)V
-
-    return-void
-.end method
 
 .method private static final setupIntegrations$lambda$6(Landroid/view/ViewGroup;Lcom/impalastudios/theflighttracker/features/myflights/CustomBottomSheetFragment;Landroid/view/View;)V
     .locals 2

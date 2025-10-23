@@ -640,7 +640,7 @@
 
     invoke-virtual {p1, p2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    invoke-static {p0, p1}, Lcom/impalastudios/theflighttracker/features/settings/SettingsPreferenceFragment;->safedk_SettingsPreferenceFragment_startActivity_db44e985af8031e40c5fc022a8dea285(Lcom/impalastudios/theflighttracker/features/settings/SettingsPreferenceFragment;Landroid/content/Intent;)V
+    invoke-virtual {p0, p1}, Lcom/impalastudios/theflighttracker/features/settings/SettingsPreferenceFragment;->startActivity(Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -1172,7 +1172,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-static {p0, p2}, Lcom/impalastudios/theflighttracker/features/settings/SettingsPreferenceFragment;->safedk_FragmentActivity_startActivity_d3edafe57f96ad3eaceffb43aee7b6ff(Landroidx/fragment/app/FragmentActivity;Landroid/content/Intent;)V
+    invoke-virtual {p0, p2}, Landroidx/fragment/app/FragmentActivity;->startActivity(Landroid/content/Intent;)V
 
     :cond_0
     return-void
@@ -1195,7 +1195,7 @@
 
     invoke-direct {p1, v0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-static {p0, p1}, Lcom/impalastudios/theflighttracker/features/settings/SettingsPreferenceFragment;->safedk_SettingsPreferenceFragment_startActivity_db44e985af8031e40c5fc022a8dea285(Lcom/impalastudios/theflighttracker/features/settings/SettingsPreferenceFragment;Landroid/content/Intent;)V
+    invoke-virtual {p0, p1}, Lcom/impalastudios/theflighttracker/features/settings/SettingsPreferenceFragment;->startActivity(Landroid/content/Intent;)V
 
     const/4 p0, 0x1
 
@@ -1658,39 +1658,6 @@
     return p0
 .end method
 
-.method public static safedk_FragmentActivity_startActivity_d3edafe57f96ad3eaceffb43aee7b6ff(Landroidx/fragment/app/FragmentActivity;Landroid/content/Intent;)V
-    .locals 1
-
-    const-string v0, "SafeDK-Special|SafeDK: Call> Landroidx/fragment/app/FragmentActivity;->startActivity(Landroid/content/Intent;)V"
-
-    invoke-static {v0}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;)I
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1}, Landroidx/fragment/app/FragmentActivity;->startActivity(Landroid/content/Intent;)V
-
-    return-void
-.end method
-
-.method public static safedk_SettingsPreferenceFragment_startActivity_db44e985af8031e40c5fc022a8dea285(Lcom/impalastudios/theflighttracker/features/settings/SettingsPreferenceFragment;Landroid/content/Intent;)V
-    .locals 1
-
-    const-string v0, "SafeDK-Special|SafeDK: Call> Lcom/impalastudios/theflighttracker/features/settings/SettingsPreferenceFragment;->startActivity(Landroid/content/Intent;)V"
-
-    invoke-static {v0}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;)I
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lcom/impalastudios/theflighttracker/features/settings/SettingsPreferenceFragment;->startActivity(Landroid/content/Intent;)V
-
-    return-void
-.end method
 
 
 # virtual methods

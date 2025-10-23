@@ -155,22 +155,6 @@
     return-void
 .end method
 
-.method public static safedk_IABDetailLayer_startActivity_3bffee3f864313d8f3fb6ab3a3065630(Lcom/impalastudios/iab/IABDetailLayer;Landroid/content/Intent;)V
-    .locals 1
-
-    const-string v0, "SafeDK-Special|SafeDK: Call> Lcom/impalastudios/iab/IABDetailLayer;->startActivity(Landroid/content/Intent;)V"
-
-    invoke-static {v0}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;)I
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lcom/impalastudios/iab/IABDetailLayer;->startActivity(Landroid/content/Intent;)V
-
-    return-void
-.end method
 
 
 # virtual methods
@@ -250,7 +234,7 @@
 
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-static {p0, v0}, Lcom/impalastudios/iab/IABDetailLayer;->safedk_IABDetailLayer_startActivity_3bffee3f864313d8f3fb6ab3a3065630(Lcom/impalastudios/iab/IABDetailLayer;Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/impalastudios/iab/IABDetailLayer;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_4
 

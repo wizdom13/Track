@@ -382,7 +382,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    invoke-static {p0, p1}, Lcom/impalastudios/theflighttracker/features/widget/WidgetConfigurationActivity;->safedk_WidgetConfigurationActivity_startActivity_e6885849d35dfd7950c3e91622d50926(Lcom/impalastudios/theflighttracker/features/widget/WidgetConfigurationActivity;Landroid/content/Intent;)V
+    invoke-virtual {p0, p1}, Lcom/impalastudios/theflighttracker/features/widget/WidgetConfigurationActivity;->startActivity(Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -409,22 +409,6 @@
     return-void
 .end method
 
-.method public static safedk_WidgetConfigurationActivity_startActivity_e6885849d35dfd7950c3e91622d50926(Lcom/impalastudios/theflighttracker/features/widget/WidgetConfigurationActivity;Landroid/content/Intent;)V
-    .locals 1
-
-    const-string v0, "SafeDK-Special|SafeDK: Call> Lcom/impalastudios/theflighttracker/features/widget/WidgetConfigurationActivity;->startActivity(Landroid/content/Intent;)V"
-
-    invoke-static {v0}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;)I
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lcom/impalastudios/theflighttracker/features/widget/WidgetConfigurationActivity;->startActivity(Landroid/content/Intent;)V
-
-    return-void
-.end method
 
 
 # virtual methods

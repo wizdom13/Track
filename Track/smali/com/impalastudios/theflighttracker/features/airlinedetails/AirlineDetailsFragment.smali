@@ -348,39 +348,6 @@
     return-void
 .end method
 
-.method public static safedk_AirlineDetailsFragment_startActivity_0bfa2464af613b955939cccc531e3018(Lcom/impalastudios/theflighttracker/features/airlinedetails/AirlineDetailsFragment;Landroid/content/Intent;)V
-    .locals 1
-
-    const-string v0, "SafeDK-Special|SafeDK: Call> Lcom/impalastudios/theflighttracker/features/airlinedetails/AirlineDetailsFragment;->startActivity(Landroid/content/Intent;)V"
-
-    invoke-static {v0}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;)I
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lcom/impalastudios/theflighttracker/features/airlinedetails/AirlineDetailsFragment;->startActivity(Landroid/content/Intent;)V
-
-    return-void
-.end method
-
-.method public static safedk_FragmentActivity_startActivity_d3edafe57f96ad3eaceffb43aee7b6ff(Landroidx/fragment/app/FragmentActivity;Landroid/content/Intent;)V
-    .locals 1
-
-    const-string v0, "SafeDK-Special|SafeDK: Call> Landroidx/fragment/app/FragmentActivity;->startActivity(Landroid/content/Intent;)V"
-
-    invoke-static {v0}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;)I
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1}, Landroidx/fragment/app/FragmentActivity;->startActivity(Landroid/content/Intent;)V
-
-    return-void
-.end method
 
 .method private final updateConstraints(Landroid/view/View;)V
     .locals 5
@@ -643,7 +610,7 @@
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    invoke-static {p0, p1}, Lcom/impalastudios/theflighttracker/features/airlinedetails/AirlineDetailsFragment;->safedk_AirlineDetailsFragment_startActivity_0bfa2464af613b955939cccc531e3018(Lcom/impalastudios/theflighttracker/features/airlinedetails/AirlineDetailsFragment;Landroid/content/Intent;)V
+    invoke-virtual {p0, p1}, Lcom/impalastudios/theflighttracker/features/airlinedetails/AirlineDetailsFragment;->startActivity(Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -681,7 +648,7 @@
 
     if-eqz p0, :cond_1
 
-    invoke-static {p0, v0}, Lcom/impalastudios/theflighttracker/features/airlinedetails/AirlineDetailsFragment;->safedk_FragmentActivity_startActivity_d3edafe57f96ad3eaceffb43aee7b6ff(Landroidx/fragment/app/FragmentActivity;Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Landroidx/fragment/app/FragmentActivity;->startActivity(Landroid/content/Intent;)V
 
     :cond_1
     return-void

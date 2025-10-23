@@ -738,7 +738,7 @@
 
     if-eqz p2, :cond_0
 
-    invoke-static {p1, p0}, Lcom/impalastudios/theflighttracker/features/airportdetails/AirportDetailsFragment;->safedk_AirportDetailsFragment_startActivity_ecb0b07bb62cd4a549b08a5b993253b7(Lcom/impalastudios/theflighttracker/features/airportdetails/AirportDetailsFragment;Landroid/content/Intent;)V
+    invoke-virtual {p1, p0}, Lcom/impalastudios/theflighttracker/features/airportdetails/AirportDetailsFragment;->startActivity(Landroid/content/Intent;)V
 
     :cond_0
     return-void
@@ -769,7 +769,7 @@
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    invoke-static {p0, p1}, Lcom/impalastudios/theflighttracker/features/airportdetails/AirportDetailsFragment;->safedk_AirportDetailsFragment_startActivity_ecb0b07bb62cd4a549b08a5b993253b7(Lcom/impalastudios/theflighttracker/features/airportdetails/AirportDetailsFragment;Landroid/content/Intent;)V
+    invoke-virtual {p0, p1}, Lcom/impalastudios/theflighttracker/features/airportdetails/AirportDetailsFragment;->startActivity(Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -800,22 +800,6 @@
     return-void
 .end method
 
-.method public static safedk_AirportDetailsFragment_startActivity_ecb0b07bb62cd4a549b08a5b993253b7(Lcom/impalastudios/theflighttracker/features/airportdetails/AirportDetailsFragment;Landroid/content/Intent;)V
-    .locals 1
-
-    const-string v0, "SafeDK-Special|SafeDK: Call> Lcom/impalastudios/theflighttracker/features/airportdetails/AirportDetailsFragment;->startActivity(Landroid/content/Intent;)V"
-
-    invoke-static {v0}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;)I
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lcom/impalastudios/theflighttracker/features/airportdetails/AirportDetailsFragment;->startActivity(Landroid/content/Intent;)V
-
-    return-void
-.end method
 
 .method private final updateConstraints(Landroid/view/View;)V
     .locals 6

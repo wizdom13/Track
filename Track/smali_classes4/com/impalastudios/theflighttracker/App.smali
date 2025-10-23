@@ -1998,7 +1998,7 @@
     return-object v0
 .end method
 
-.method public static safedk_App_onCreate_b64024e8b531ca022a9b96c3f2a27b9c(Lcom/impalastudios/theflighttracker/App;)V
+.method private static performOnCreate(Lcom/impalastudios/theflighttracker/App;)V
     .locals 17
 
     move-object/from16 v0, p0
@@ -2626,15 +2626,9 @@
 .end method
 
 .method public onCreate()V
-    .locals 1
+    .locals 0
 
-    const-string v0, "SafeDK|SafeDK: App> Lcom/impalastudios/theflighttracker/App;->onCreate()V"
-
-    invoke-static {v0}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;)I
-
-    invoke-static {p0}, Lcom/safedk/android/internal/DexBridge;->appClassOnCreateBefore(Landroid/app/Application;)V
-
-    invoke-static {p0}, Lcom/impalastudios/theflighttracker/App;->safedk_App_onCreate_b64024e8b531ca022a9b96c3f2a27b9c(Lcom/impalastudios/theflighttracker/App;)V
+    invoke-static {p0}, Lcom/impalastudios/theflighttracker/App;->performOnCreate(Lcom/impalastudios/theflighttracker/App;)V
 
     return-void
 .end method

@@ -58,22 +58,6 @@
     return-void
 .end method
 
-.method public static safedk_TerminalMapsFragment_startActivity_c3aafd68683eb753b02dcaadfeef87ec(Lcom/impalastudios/theflighttracker/features/airportdetails/TerminalMapsFragment;Landroid/content/Intent;)V
-    .locals 1
-
-    const-string v0, "SafeDK-Special|SafeDK: Call> Lcom/impalastudios/theflighttracker/features/airportdetails/TerminalMapsFragment;->startActivity(Landroid/content/Intent;)V"
-
-    invoke-static {v0}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;)I
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lcom/impalastudios/theflighttracker/features/airportdetails/TerminalMapsFragment;->startActivity(Landroid/content/Intent;)V
-
-    return-void
-.end method
 
 
 # virtual methods
@@ -155,7 +139,7 @@
 
     iget-object p2, p0, Lcom/impalastudios/theflighttracker/features/airportdetails/TerminalMapsFragment$onViewCreated$2;->this$0:Lcom/impalastudios/theflighttracker/features/airportdetails/TerminalMapsFragment;
 
-    invoke-static {p2, p1}, Lcom/impalastudios/theflighttracker/features/airportdetails/TerminalMapsFragment$onViewCreated$2;->safedk_TerminalMapsFragment_startActivity_c3aafd68683eb753b02dcaadfeef87ec(Lcom/impalastudios/theflighttracker/features/airportdetails/TerminalMapsFragment;Landroid/content/Intent;)V
+    invoke-virtual {p2, p1}, Lcom/impalastudios/theflighttracker/features/airportdetails/TerminalMapsFragment;->startActivity(Landroid/content/Intent;)V
 
     return-void
 .end method
