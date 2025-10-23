@@ -636,6 +636,26 @@
 
     sget-object v0, Lcom/impalastudios/theflighttracker/App;->Companion:Lcom/impalastudios/theflighttracker/App$Companion;
 
+    invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/App$Companion;->getApp()Lcom/impalastudios/theflighttracker/App;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/content/Context;
+
+    new-instance v2, Lcom/impalastudios/theflighttracker/App$$ExternalSyntheticLambda0;
+
+    invoke-direct {v2}, Lcom/impalastudios/theflighttracker/App$$ExternalSyntheticLambda0;-><init>()V
+
+    invoke-static {v1, v2}, Lcom/google/android/gms/ads/MobileAds;->initialize(Landroid/content/Context;Lcom/google/android/gms/ads/initialization/OnInitializationCompleteListener;)V
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Lcom/google/android/gms/ads/MobileAds;->setAppVolume(F)V
+
+    const/4 v1, 0x1
+
+    invoke-static {v1}, Lcom/google/android/gms/ads/MobileAds;->setAppMuted(Z)V
+
     new-instance v1, Lcom/applovin/mediation/ads/MaxAdView;
 
     invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/App$Companion;->getApp()Lcom/impalastudios/theflighttracker/App;
