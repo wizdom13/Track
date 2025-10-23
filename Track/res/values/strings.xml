@@ -175,7 +175,7 @@ To remove your personal data shared with our advertising partners, please view o
     <string name="applovin_privacy_policy_text">Privacy Policy</string>
     <string name="applovin_terms_of_service_text">Terms &amp; Conditions</string>
     <string name="applovin_terms_of_use_text">Terms of Use</string>
-    <string name="aps_mraid_close_button">Interstitial close button</string>
+    <string name="aps_mraid_close_button">Amazon APS disabled</string>
     <string name="backButtonTitle">Back</string>
     <string name="bagageClaim.title">Baggage Claim</string>
     <string name="beta_feedback_chooser">Send e-mail</string>
