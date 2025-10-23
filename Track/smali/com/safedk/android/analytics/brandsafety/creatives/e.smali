@@ -5705,11 +5705,11 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v1, "com.vungle"
+    const-string v1, ""
 
     new-array v2, v9, [Ljava/lang/String;
 
-    const-string v3, ".vungle.com"
+    const-string v3, ""
 
     aput-object v3, v2, v5
 

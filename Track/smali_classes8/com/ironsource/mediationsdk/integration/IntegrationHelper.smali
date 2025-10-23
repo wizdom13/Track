@@ -534,7 +534,7 @@
 
     const-string v10, "IronSource"
 
-    const-string v11, "Vungle"
+    const-string v11, ""
 
     const-string v12, "Maio"
 

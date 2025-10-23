@@ -5321,7 +5321,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "Regex VUNGLE_HTML_ENDCARD_PATTERN initialized, operation took "
+    const-string v4, "Regex HTML_ENDCARD_PATTERN initialized, operation took "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

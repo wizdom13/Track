@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final N:Ljava/lang/String; = "VungleDiscovery"
+.field private static final N:Ljava/lang/String; = ""
 
 .field private static final O:Ljava/lang/String; = "id"
 
@@ -30,9 +30,9 @@
 
 .field private static final Z:I = 0x270f
 
-.field private static final aA:Ljava/lang/String; = "https://privacy.vungle.com/"
+.field private static final aA:Ljava/lang/String; = ""
 
-.field private static final aB:Ljava/lang/String; = "vungle.com"
+.field private static final aB:Ljava/lang/String; = ""
 
 .field private static final aC:Ljava/lang/String; = "adunit"
 
@@ -52,7 +52,7 @@
 
 .field private static final aK:Ljava/lang/String; = "APP_ICON"
 
-.field private static final aL:Ljava/lang/String; = "vungle_playable"
+.field private static final aL:Ljava/lang/String; = ""
 
 .field private static aM:Lcom/safedk/android/utils/PersistentConcurrentHashMap; = null
     .annotation system Ldalvik/annotation/Signature;
@@ -174,7 +174,7 @@
 
 .field public static final c:Ljava/lang/String; = "ad_markup"
 
-.field public static final d:Ljava/lang/String; = "com.vungle.warren.BuildConfig"
+.field public static final d:Ljava/lang/String; = ""
 
 .field public static final e:Ljava/lang/String; = "VERSION_NAME"
 
@@ -182,13 +182,13 @@
 
 .field public static final g:Ljava/lang/String; = "EC_HTML"
 
-.field public static final h:Ljava/lang/String; = "adx.ads.vungle.com/api/v"
+.field public static final h:Ljava/lang/String; = ""
 
-.field public static final i:Ljava/lang/String; = "api.vungle.com/api/v"
+.field public static final i:Ljava/lang/String; = ""
 
-.field public static final j:Ljava/lang/String; = "adx-stage.ads.vungle.com/api/v"
+.field public static final j:Ljava/lang/String; = ""
 
-.field public static final k:Ljava/lang/String; = "api.vungle.com/config"
+.field public static final k:Ljava/lang/String; = ""
 
 .field public static final l:Ljava/lang/String; = "(function(){var sdkId=\"{{SDK_ID}}\";var address=\"{{ADDRESS}}\";var log=function(message){try{console.log(\"log Vungle privacy policy sdkId : \"+sdkId+\",address = \"+address+\", msg : \"+message);if(typeof window.webkit.messageHandlers.safedkDebug.postMessage===\"function\"){window.webkit.messageHandlers.safedkDebug.postMessage(\"Vungle-Liftoff detect privacy ,address \"+address+\", message : \"+message)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkDebug object missing\")}}catch(error){console.log(\"log : \"+error)}};log(\"script started sdkId = \"+sdkId+\", address = \"+address);var dialogboxElement=null;var addPrivacyObservers=function(){try{log(\"addPrivacyObservers started, trying with DIALOGBOX\");dialogboxElement=document.getElementById(\"DIALOGBOX\");if(!dialogboxElement){log(\"addPrivacyObservers trying again with privacy-dialog\");dialogboxElement=document.getElementById(\"privacy-dialog\")}if(!dialogboxElement){log(\"addPrivacyObservers trying again with privacy-popup\");dialogboxElement=document.getElementById(\"privacy-popup\")}log(\"addPrivacyObservers privacy-popup : \"+dialogboxElement);if(!dialogboxElement){log(\"addPrivacyObservers trying again with privacy-page\");dialogboxElement=document.getElementById(\"privacy-page\")}log(\"privacy-popup : \"+dialogboxElement);if(!dialogboxElement){log(\"addPrivacyObservers trying again with privacy-popup by class \");var elements=document.querySelectorAll(\"div#privacy-popup\");if(elements&&elements.length>0){log(\"found by class : \"+JSON.stringify(elements[0]));dialogboxElement=elements[0]}}log(\"dialogboxElement = \"+dialogboxElement);try{log(\"dialogboxElement (json) = \"+JSON.stringify(dialogboxElement))}catch(error){log(\"dialogboxElement error \"+error)}if(dialogboxElement&&dialogboxElement.hasAttribute(\"id\")){log(\"dialogboxElement.id ? \"+dialogboxElement.id)}if(dialogboxElement&&dialogboxElement.hasAttribute(\"aria-hidden\")){log(\"dialogboxElement.aria-hidden ? \"+dialogboxElement.getAttribute(\"aria-hidden\"))}if(dialogboxElement&&(dialogboxElement.style&&dialogboxElement.style.visibility||dialogboxElement.hasAttribute(\"id\")&&dialogboxElement.id==\"privacy-popup\")){log(\"addPrivacyObservers found element \"+JSON.stringify(dialogboxElement));var element_style_visibility=dialogboxElement.style&&dialogboxElement.style.visibility||dialogboxElement&&dialogboxElement.hasAttribute(\"id\")&&dialogboxElement.id==\"privacy-popup\"&&dialogboxElement.classList.contains(\"ytoTpW_show\");if(element_style_visibility){if(typeof window.webkit.messageHandlers.safedkNoSampling.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSampling.postMessage(sdkId,address,window.outerHeight,window.outerWidth)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSampling object missing\")}log(\"addPrivacyObservers element is visible\")}else{log(\"addPrivacyObservers element is not visible\");{dialogboxElement.safedkPrivacyDialogObserver=true;try{var MutationObserver=window.WebKitMutationObserver||window.MutationObserver;var observer=new MutationObserver(function(mutations){mutations.forEach(function(mutation){switch(mutation.type){case\"attributes\":log(\"addPrivacyObservers Attribute name \"+mutation.attributeName+\" changed to \"+getComputedStyle(mutation.target).visibility+\" (was \"+mutation.oldValue+\")\");if(getComputedStyle(mutation.target).visibility==\"visible\"||mutation.target.classList.contains(\"ytoTpW_show\")){log(\"privacy dialog is visible \");if(typeof window.webkit.messageHandlers.safedkNoSampling.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSampling.postMessage(sdkId,address,window.outerHeight,window.outerWidth)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSampling object missing\")}}break}})});var config={attributes:true,attributeOldValue:true};observer.observe(dialogboxElement,config)}catch(error){if(typeof window.webkit.messageHandlers.safedkNoSamplingExc.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSamplingExc.postMessage(\"address = \"+address+\" \"+error.message+\"\\n\"+error.stack)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSamplingExc object missing\")}}}}}else{var privacyPageElement=document.getElementById(\"privacy-page\");if(privacyPageElement){var privacyPageParentElement=privacyPageElement.parentElement;if(privacyPageParentElement){var computedStyle=getComputedStyle(privacyPageParentElement);if(computedStyle){var displayState=computedStyle.display;if(displayState!=\"none\"){if(typeof window.webkit.messageHandlers.safedkNoSampling.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSampling.postMessage(sdkId,address,window.outerHeight,window.outerWidth)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSampling object missing\")}}else{{privacyPageParentElement.safedkPrivacyDialogObserver=true;try{var MutationObserver=window.WebKitMutationObserver||window.MutationObserver;var observer=new MutationObserver(function(mutations){mutations.forEach(function(mutation){switch(mutation.type){case\"attributes\":if(mutation.target.style.display!=\"none\"){if(typeof window.webkit.messageHandlers.safedkNoSampling.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSampling.postMessage(sdkId,address,window.outerHeight,window.outerWidth)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSampling object missing\")}}break}})});var config={attributes:true,attributeOldValue:true,childList:true,subtree:true};observer.observe(privacyPageParentElement,config)}catch(error){if(typeof window.webkit.messageHandlers.safedkNoSamplingExc.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSamplingExc.postMessage(\"address = \"+address+\" \"+error.message+\"\\n\"+error.stack)}else{console.log(\"SafeDKWebApInterface Vungle pp object missing\")}}}}}}}}}catch(error){log(\"caught exception with error = \"+error+\", stack : \"+error.stack);if(typeof window.webkit.messageHandlers.safedkNoSampling.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSamplingExc.postMessage(\"address = \"+address+\" \"+error.message+\"\\n\"+error.stack)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSamplingExc object missing\")}}return dialogboxElement};var addAdClosureObservers=function(){try{log(\"addAdClosureObservers trying with incentivized-dialog\");var dialogboxElement=document.getElementById(\"incentivized-dialog\");if(dialogboxElement&&dialogboxElement.style&&dialogboxElement.style.visibility){log(\"addAdClosureObservers found element : \"+dialogboxElement);var element_style_visibility=dialogboxElement.style.visibility;if(element_style_visibility==\"visible\"){if(typeof window.webkit.messageHandlers.safedkNoSampling.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSampling.postMessage(sdkId,address,window.outerHeight,window.outerWidth)}else{console.log(\"SafeDKWebApInterface Vungle pp object missing\")}log(\"addAdClosureObservers element is visible\")}else{log(\"addAdClosureObservers element is not visible\");if(dialogboxElement.safedkPrivacyDialogObserver!=true){dialogboxElement.safedkPrivacyDialogObserver=true;try{var MutationObserver=window.WebKitMutationObserver||window.MutationObserver;var observer=new MutationObserver(function(mutations){mutations.forEach(function(mutation){switch(mutation.type){case\"attributes\":if(getComputedStyle(mutation.target).visibility==\"visible\"){if(typeof window.webkit.messageHandlers.safedkNoSampling.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSampling.postMessage(sdkId,address,window.outerHeight,window.outerWidth)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSampling object missing\")}}log(\"addAdClosureObservers Attribute name \"+mutation.attributeName+\" changed to \"+getComputedStyle(mutation.target).visibility+\" (was \"+mutation.oldValue+\")\");break}})});var config={attributes:true,attributeOldValue:true,attributeFilter:[\"style\"]};observer.observe(dialogboxElement,config)}catch(error){if(typeof window.webkit.messageHandlers.safedkNoSamplingExc.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSamplingExc.postMessage(\"address = \"+address+\" \"+error.message+\"\\n\"+error.stack)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSamplingExc object missing\")}log(\"addAdClosureObservers Error : \"+\"address = \"+address+\" \"+error.message+\"\\n\"+error.stack)}}}}}catch(error){log(\"caught exception with error = \"+error);if(typeof window.webkit.messageHandlers.safedkNoSamplingExc.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSamplingExc.postMessage(\"address = \"+address+\" \"+error.message+\"\\n\"+error.stack)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSamplingExc object missing\")}}};var monitorNotifications=function(){try{var divIds=[\"ad-notification-modal\",\"gdpr-notification-view\"];for(var divId of divIds){var element=document.getElementById(divId);if(element){var className=element.className;if(element.className.endsWith(\"show\")){log(\"element.className = \"+element.className);if(typeof window.webkit.messageHandlers.safedkNoSampling.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSampling.postMessage(sdkId,address,window.outerHeight,window.outerWidth)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSampling object missing\")}}else{if(element.safedkVisibilityObserver!=true){element.safedkVisibilityObserver=true;try{var MutationObserver=window.WebKitMutationObserver||window.MutationObserver;var observer=new MutationObserver(function(mutations){mutations.forEach(function(mutation){if(mutation.type==\"attributes\"){if(mutation.target.className.endsWith(\"show\")){if(typeof window.webkit.messageHandlers.safedkNoSampling.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSampling.postMessage(sdkId,address,window.outerHeight,window.outerWidth)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSampling object missing\")}}}})});var config={attributes:true,attributeOldValue:true,attributeFilter:[\"class\"]};observer.observe(element,config)}catch(error){if(typeof window.webkit.messageHandlers.safedkNoSamplingExc.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSamplingExc.postMessage(\"address = \"+address+\" \"+error.message+\"\\n\"+error.stack)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSampling object missing\")}}}}}}}catch(error){log(\"caught exception with error = \"+error);if(typeof window.webkit.messageHandlers.safedkNoSamplingExc.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSamplingExc.postMessage(\"address = \"+address+\" \"+error.message+\"\\n\"+error.stack)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSampling object missing\")}}};var counter=0;setTimeout(()=>{if(!dialogboxElement&&counter<4){counter++;log(\"calling addPrivacyObservers() \"+counter);addPrivacyObservers()}},500);try{var MutationObserver=window.WebKitMutationObserver||window.MutationObserver;var observer=new MutationObserver(function(mutations){for(const mutation of mutations){if(mutation.type===\"childList\"){}else if(mutation.type===\"attributes\"){log(mutation.attributeName+\" attribute was modified to \"+mutation.target.getAttribute(mutation.attributeName))}}mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){var node=mutation.addedNodes[i];log(\"node iteration \"+i+\" : \"+JSON.stringify(node));if(node&&node.nodeName!=\"#text\"){addPrivacyObservers();addAdClosureObservers();monitorNotifications()}}})});var config={attributes:true,childList:true,subtree:true};observer.observe(document,config)}catch(error){if(typeof window.webkit.messageHandlers.safedkNoSamplingExc.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSamplingExc.postMessage(\"address = \"+address+\" \"+error.message+\"\\n\"+error.stack)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSampling object missing\")}}})();\n"
 
@@ -215,22 +215,22 @@
 
     const/4 v4, 0x1
 
-    const-string v0, "com.vungle"
+    const-string v0, ""
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     invoke-direct {p0, v0, v1, v4}, Lcom/safedk/android/analytics/brandsafety/creatives/discoveries/d;-><init>(Ljava/lang/String;Ljava/lang/String;Z)V
 
     :try_start_0
     new-instance v0, Lcom/safedk/android/utils/PersistentConcurrentHashMap;
 
-    const-string v1, "VungleDiscoverycreativeToIdMap"
+    const-string v1, ""
 
     invoke-direct {v0, v1}, Lcom/safedk/android/utils/PersistentConcurrentHashMap;-><init>(Ljava/lang/String;)V
 
     sput-object v0, Lcom/safedk/android/analytics/brandsafety/creatives/discoveries/r;->aM:Lcom/safedk/android/utils/PersistentConcurrentHashMap;
 
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -260,13 +260,13 @@
 
     new-instance v0, Lcom/safedk/android/utils/PersistentConcurrentHashMap;
 
-    const-string v1, "VungleDiscoverymediaPlayerIdToCreativeInfo"
+    const-string v1, ""
 
     invoke-direct {v0, v1}, Lcom/safedk/android/utils/PersistentConcurrentHashMap;-><init>(Ljava/lang/String;)V
 
     sput-object v0, Lcom/safedk/android/analytics/brandsafety/creatives/discoveries/r;->aN:Lcom/safedk/android/utils/PersistentConcurrentHashMap;
 
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -296,13 +296,13 @@
 
     new-instance v0, Lcom/safedk/android/utils/PersistentConcurrentHashMap;
 
-    const-string v1, "VungleDiscoveryadToIdMap"
+    const-string v1, ""
 
     invoke-direct {v0, v1}, Lcom/safedk/android/utils/PersistentConcurrentHashMap;-><init>(Ljava/lang/String;)V
 
     sput-object v0, Lcom/safedk/android/analytics/brandsafety/creatives/discoveries/r;->aO:Lcom/safedk/android/utils/PersistentConcurrentHashMap;
 
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -332,13 +332,13 @@
 
     new-instance v0, Lcom/safedk/android/utils/PersistentConcurrentHashMap;
 
-    const-string v1, "VungleDiscoveryplacementData"
+    const-string v1, ""
 
     invoke-direct {v0, v1}, Lcom/safedk/android/utils/PersistentConcurrentHashMap;-><init>(Ljava/lang/String;)V
 
     sput-object v0, Lcom/safedk/android/analytics/brandsafety/creatives/discoveries/r;->aP:Lcom/safedk/android/utils/PersistentConcurrentHashMap;
 
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -385,7 +385,7 @@
 
     sget-object v1, Lcom/safedk/android/analytics/brandsafety/creatives/AdNetworkConfiguration;->q:Lcom/safedk/android/analytics/brandsafety/creatives/AdNetworkConfiguration;
 
-    const-string v2, "(function(){var sdkId=\"{{SDK_ID}}\";var address=\"{{ADDRESS}}\";var log=function(message){try{console.log(\"log Vungle privacy policy sdkId : \"+sdkId+\",address = \"+address+\", msg : \"+message);if(typeof window.webkit.messageHandlers.safedkDebug.postMessage===\"function\"){window.webkit.messageHandlers.safedkDebug.postMessage(\"Vungle-Liftoff detect privacy ,address \"+address+\", message : \"+message)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkDebug object missing\")}}catch(error){console.log(\"log : \"+error)}};log(\"script started sdkId = \"+sdkId+\", address = \"+address);var dialogboxElement=null;var addPrivacyObservers=function(){try{log(\"addPrivacyObservers started, trying with DIALOGBOX\");dialogboxElement=document.getElementById(\"DIALOGBOX\");if(!dialogboxElement){log(\"addPrivacyObservers trying again with privacy-dialog\");dialogboxElement=document.getElementById(\"privacy-dialog\")}if(!dialogboxElement){log(\"addPrivacyObservers trying again with privacy-popup\");dialogboxElement=document.getElementById(\"privacy-popup\")}log(\"addPrivacyObservers privacy-popup : \"+dialogboxElement);if(!dialogboxElement){log(\"addPrivacyObservers trying again with privacy-page\");dialogboxElement=document.getElementById(\"privacy-page\")}log(\"privacy-popup : \"+dialogboxElement);if(!dialogboxElement){log(\"addPrivacyObservers trying again with privacy-popup by class \");var elements=document.querySelectorAll(\"div#privacy-popup\");if(elements&&elements.length>0){log(\"found by class : \"+JSON.stringify(elements[0]));dialogboxElement=elements[0]}}log(\"dialogboxElement = \"+dialogboxElement);try{log(\"dialogboxElement (json) = \"+JSON.stringify(dialogboxElement))}catch(error){log(\"dialogboxElement error \"+error)}if(dialogboxElement&&dialogboxElement.hasAttribute(\"id\")){log(\"dialogboxElement.id ? \"+dialogboxElement.id)}if(dialogboxElement&&dialogboxElement.hasAttribute(\"aria-hidden\")){log(\"dialogboxElement.aria-hidden ? \"+dialogboxElement.getAttribute(\"aria-hidden\"))}if(dialogboxElement&&(dialogboxElement.style&&dialogboxElement.style.visibility||dialogboxElement.hasAttribute(\"id\")&&dialogboxElement.id==\"privacy-popup\")){log(\"addPrivacyObservers found element \"+JSON.stringify(dialogboxElement));var element_style_visibility=dialogboxElement.style&&dialogboxElement.style.visibility||dialogboxElement&&dialogboxElement.hasAttribute(\"id\")&&dialogboxElement.id==\"privacy-popup\"&&dialogboxElement.classList.contains(\"ytoTpW_show\");if(element_style_visibility){if(typeof window.webkit.messageHandlers.safedkNoSampling.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSampling.postMessage(sdkId,address,window.outerHeight,window.outerWidth)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSampling object missing\")}log(\"addPrivacyObservers element is visible\")}else{log(\"addPrivacyObservers element is not visible\");{dialogboxElement.safedkPrivacyDialogObserver=true;try{var MutationObserver=window.WebKitMutationObserver||window.MutationObserver;var observer=new MutationObserver(function(mutations){mutations.forEach(function(mutation){switch(mutation.type){case\"attributes\":log(\"addPrivacyObservers Attribute name \"+mutation.attributeName+\" changed to \"+getComputedStyle(mutation.target).visibility+\" (was \"+mutation.oldValue+\")\");if(getComputedStyle(mutation.target).visibility==\"visible\"||mutation.target.classList.contains(\"ytoTpW_show\")){log(\"privacy dialog is visible \");if(typeof window.webkit.messageHandlers.safedkNoSampling.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSampling.postMessage(sdkId,address,window.outerHeight,window.outerWidth)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSampling object missing\")}}break}})});var config={attributes:true,attributeOldValue:true};observer.observe(dialogboxElement,config)}catch(error){if(typeof window.webkit.messageHandlers.safedkNoSamplingExc.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSamplingExc.postMessage(\"address = \"+address+\" \"+error.message+\"\\n\"+error.stack)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSamplingExc object missing\")}}}}}else{var privacyPageElement=document.getElementById(\"privacy-page\");if(privacyPageElement){var privacyPageParentElement=privacyPageElement.parentElement;if(privacyPageParentElement){var computedStyle=getComputedStyle(privacyPageParentElement);if(computedStyle){var displayState=computedStyle.display;if(displayState!=\"none\"){if(typeof window.webkit.messageHandlers.safedkNoSampling.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSampling.postMessage(sdkId,address,window.outerHeight,window.outerWidth)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSampling object missing\")}}else{{privacyPageParentElement.safedkPrivacyDialogObserver=true;try{var MutationObserver=window.WebKitMutationObserver||window.MutationObserver;var observer=new MutationObserver(function(mutations){mutations.forEach(function(mutation){switch(mutation.type){case\"attributes\":if(mutation.target.style.display!=\"none\"){if(typeof window.webkit.messageHandlers.safedkNoSampling.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSampling.postMessage(sdkId,address,window.outerHeight,window.outerWidth)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSampling object missing\")}}break}})});var config={attributes:true,attributeOldValue:true,childList:true,subtree:true};observer.observe(privacyPageParentElement,config)}catch(error){if(typeof window.webkit.messageHandlers.safedkNoSamplingExc.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSamplingExc.postMessage(\"address = \"+address+\" \"+error.message+\"\\n\"+error.stack)}else{console.log(\"SafeDKWebApInterface Vungle pp object missing\")}}}}}}}}}catch(error){log(\"caught exception with error = \"+error+\", stack : \"+error.stack);if(typeof window.webkit.messageHandlers.safedkNoSampling.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSamplingExc.postMessage(\"address = \"+address+\" \"+error.message+\"\\n\"+error.stack)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSamplingExc object missing\")}}return dialogboxElement};var addAdClosureObservers=function(){try{log(\"addAdClosureObservers trying with incentivized-dialog\");var dialogboxElement=document.getElementById(\"incentivized-dialog\");if(dialogboxElement&&dialogboxElement.style&&dialogboxElement.style.visibility){log(\"addAdClosureObservers found element : \"+dialogboxElement);var element_style_visibility=dialogboxElement.style.visibility;if(element_style_visibility==\"visible\"){if(typeof window.webkit.messageHandlers.safedkNoSampling.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSampling.postMessage(sdkId,address,window.outerHeight,window.outerWidth)}else{console.log(\"SafeDKWebApInterface Vungle pp object missing\")}log(\"addAdClosureObservers element is visible\")}else{log(\"addAdClosureObservers element is not visible\");if(dialogboxElement.safedkPrivacyDialogObserver!=true){dialogboxElement.safedkPrivacyDialogObserver=true;try{var MutationObserver=window.WebKitMutationObserver||window.MutationObserver;var observer=new MutationObserver(function(mutations){mutations.forEach(function(mutation){switch(mutation.type){case\"attributes\":if(getComputedStyle(mutation.target).visibility==\"visible\"){if(typeof window.webkit.messageHandlers.safedkNoSampling.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSampling.postMessage(sdkId,address,window.outerHeight,window.outerWidth)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSampling object missing\")}}log(\"addAdClosureObservers Attribute name \"+mutation.attributeName+\" changed to \"+getComputedStyle(mutation.target).visibility+\" (was \"+mutation.oldValue+\")\");break}})});var config={attributes:true,attributeOldValue:true,attributeFilter:[\"style\"]};observer.observe(dialogboxElement,config)}catch(error){if(typeof window.webkit.messageHandlers.safedkNoSamplingExc.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSamplingExc.postMessage(\"address = \"+address+\" \"+error.message+\"\\n\"+error.stack)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSamplingExc object missing\")}log(\"addAdClosureObservers Error : \"+\"address = \"+address+\" \"+error.message+\"\\n\"+error.stack)}}}}}catch(error){log(\"caught exception with error = \"+error);if(typeof window.webkit.messageHandlers.safedkNoSamplingExc.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSamplingExc.postMessage(\"address = \"+address+\" \"+error.message+\"\\n\"+error.stack)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSamplingExc object missing\")}}};var monitorNotifications=function(){try{var divIds=[\"ad-notification-modal\",\"gdpr-notification-view\"];for(var divId of divIds){var element=document.getElementById(divId);if(element){var className=element.className;if(element.className.endsWith(\"show\")){log(\"element.className = \"+element.className);if(typeof window.webkit.messageHandlers.safedkNoSampling.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSampling.postMessage(sdkId,address,window.outerHeight,window.outerWidth)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSampling object missing\")}}else{if(element.safedkVisibilityObserver!=true){element.safedkVisibilityObserver=true;try{var MutationObserver=window.WebKitMutationObserver||window.MutationObserver;var observer=new MutationObserver(function(mutations){mutations.forEach(function(mutation){if(mutation.type==\"attributes\"){if(mutation.target.className.endsWith(\"show\")){if(typeof window.webkit.messageHandlers.safedkNoSampling.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSampling.postMessage(sdkId,address,window.outerHeight,window.outerWidth)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSampling object missing\")}}}})});var config={attributes:true,attributeOldValue:true,attributeFilter:[\"class\"]};observer.observe(element,config)}catch(error){if(typeof window.webkit.messageHandlers.safedkNoSamplingExc.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSamplingExc.postMessage(\"address = \"+address+\" \"+error.message+\"\\n\"+error.stack)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSampling object missing\")}}}}}}}catch(error){log(\"caught exception with error = \"+error);if(typeof window.webkit.messageHandlers.safedkNoSamplingExc.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSamplingExc.postMessage(\"address = \"+address+\" \"+error.message+\"\\n\"+error.stack)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSampling object missing\")}}};var counter=0;setTimeout(()=>{if(!dialogboxElement&&counter<4){counter++;log(\"calling addPrivacyObservers() \"+counter);addPrivacyObservers()}},500);try{var MutationObserver=window.WebKitMutationObserver||window.MutationObserver;var observer=new MutationObserver(function(mutations){for(const mutation of mutations){if(mutation.type===\"childList\"){}else if(mutation.type===\"attributes\"){log(mutation.attributeName+\" attribute was modified to \"+mutation.target.getAttribute(mutation.attributeName))}}mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){var node=mutation.addedNodes[i];log(\"node iteration \"+i+\" : \"+JSON.stringify(node));if(node&&node.nodeName!=\"#text\"){addPrivacyObservers();addAdClosureObservers();monitorNotifications()}}})});var config={attributes:true,childList:true,subtree:true};observer.observe(document,config)}catch(error){if(typeof window.webkit.messageHandlers.safedkNoSamplingExc.postMessage===\"function\"){window.webkit.messageHandlers.safedkNoSamplingExc.postMessage(\"address = \"+address+\" \"+error.message+\"\\n\"+error.stack)}else{console.log(\"SafeDKWebApInterface Vungle pp safedkNoSampling object missing\")}}})();\n"
+    const-string v2, ""{{SDK_ID}}\""{{ADDRESS}}\""log Vungle privacy policy sdkId : \"",address = \"", msg : \""function\""Vungle-Liftoff detect privacy ,address \"", message : \""SafeDKWebApInterface Vungle pp safedkDebug object missing\""log : \""script started sdkId = \"", address = \""addPrivacyObservers started, trying with DIALOGBOX\""DIALOGBOX\""addPrivacyObservers trying again with privacy-dialog\""privacy-dialog\""addPrivacyObservers trying again with privacy-popup\""privacy-popup\""addPrivacyObservers privacy-popup : \""addPrivacyObservers trying again with privacy-page\""privacy-page\""privacy-popup : \""addPrivacyObservers trying again with privacy-popup by class \""div#privacy-popup\""found by class : \""dialogboxElement = \""dialogboxElement (json) = \""dialogboxElement error \""id\""dialogboxElement.id ? \""aria-hidden\""dialogboxElement.aria-hidden ? \""aria-hidden\""id\""privacy-popup\""addPrivacyObservers found element \""id\""privacy-popup\""ytoTpW_show\""function\""SafeDKWebApInterface Vungle pp safedkNoSampling object missing\""addPrivacyObservers element is visible\""addPrivacyObservers element is not visible\""attributes\""addPrivacyObservers Attribute name \"" changed to \"" (was \"")\""visible\""ytoTpW_show\""privacy dialog is visible \""function\""SafeDKWebApInterface Vungle pp safedkNoSampling object missing\""function\""address = \"" \""\\n\""SafeDKWebApInterface Vungle pp safedkNoSamplingExc object missing\""privacy-page\""none\""function\""SafeDKWebApInterface Vungle pp safedkNoSampling object missing\""attributes\""none\""function\""SafeDKWebApInterface Vungle pp safedkNoSampling object missing\""function\""address = \"" \""\\n\""SafeDKWebApInterface Vungle pp object missing\""caught exception with error = \"", stack : \""function\""address = \"" \""\\n\""SafeDKWebApInterface Vungle pp safedkNoSamplingExc object missing\""addAdClosureObservers trying with incentivized-dialog\""incentivized-dialog\""addAdClosureObservers found element : \""visible\""function\""SafeDKWebApInterface Vungle pp object missing\""addAdClosureObservers element is visible\""addAdClosureObservers element is not visible\""attributes\""visible\""function\""SafeDKWebApInterface Vungle pp safedkNoSampling object missing\""addAdClosureObservers Attribute name \"" changed to \"" (was \"")\""style\""function\""address = \"" \""\\n\""SafeDKWebApInterface Vungle pp safedkNoSamplingExc object missing\""addAdClosureObservers Error : \""address = \"" \""\\n\""caught exception with error = \""function\""address = \"" \""\\n\""SafeDKWebApInterface Vungle pp safedkNoSamplingExc object missing\""ad-notification-modal\""gdpr-notification-view\""show\""element.className = \""function\""SafeDKWebApInterface Vungle pp safedkNoSampling object missing\""attributes\""show\""function\""SafeDKWebApInterface Vungle pp safedkNoSampling object missing\""class\""function\""address = \"" \""\\n\""SafeDKWebApInterface Vungle pp safedkNoSampling object missing\""caught exception with error = \""function\""address = \"" \""\\n\""SafeDKWebApInterface Vungle pp safedkNoSampling object missing\""calling addPrivacyObservers() \""childList\""attributes\"" attribute was modified to \""node iteration \"" : \""#text\""function\""address = \"" \""\\n\""SafeDKWebApInterface Vungle pp safedkNoSampling object missing\""
 
     invoke-virtual {v0, v1, v2}, Lcom/safedk/android/analytics/brandsafety/creatives/a;->b(Lcom/safedk/android/analytics/brandsafety/creatives/AdNetworkConfiguration;Ljava/lang/String;)V
 
@@ -468,9 +468,9 @@
     :catch_0
     move-exception v0
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
-    const-string v2, "Error initializing VungleDiscovery, caching will not be available"
+    const-string v2, ""
 
     invoke-static {v1, v2, v0}, Lcom/safedk/android/utils/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -514,7 +514,7 @@
 
     aget-object v0, v0, v1
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -540,7 +540,7 @@
     return-object v0
 
     :cond_0
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -575,7 +575,7 @@
     .locals 25
 
     :try_start_0
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -607,7 +607,7 @@
 
     move-result-object v5
 
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -680,7 +680,7 @@
     if-eqz v2, :cond_2
 
     :cond_0
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     const-string v3, "get CI from Json No fill, exiting"
 
@@ -815,7 +815,7 @@
     :goto_3
     if-eqz v8, :cond_6
 
-    const-string v7, "VungleDiscovery"
+    const-string v7, ""
 
     const-string v11, "found EC_HTML content"
 
@@ -825,7 +825,7 @@
 
     :cond_6
     :goto_4
-    const-string v11, "VungleDiscovery"
+    const-string v11, ""
 
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -861,7 +861,7 @@
 
     move-result-object v3
 
-    const-string v11, "VungleDiscovery"
+    const-string v11, ""
 
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -1013,7 +1013,7 @@
     move-result-object v3
 
     :cond_a
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1041,7 +1041,7 @@
 
     if-eqz v2, :cond_b
 
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1118,7 +1118,7 @@
 
     :goto_8
     :try_start_2
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1213,7 +1213,7 @@
     if-eqz v3, :cond_13
 
     :cond_e
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     const-string v3, "get CI from Json Campaign is null, exiting"
 
@@ -1292,7 +1292,7 @@
     :catch_0
     move-exception v2
 
-    const-string v3, "VungleDiscovery"
+    const-string v3, ""
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1326,7 +1326,7 @@
     move-exception v2
 
     :try_start_3
-    const-string v4, "VungleDiscovery"
+    const-string v4, ""
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -1367,7 +1367,7 @@
 
     :cond_14
     :goto_9
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1431,7 +1431,7 @@
 
     move-result-object v15
 
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1536,7 +1536,7 @@
 
     add-long v12, v2, v10
 
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1580,7 +1580,7 @@
 
     mul-long v12, v2, v10
 
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1615,7 +1615,7 @@
 
     move-result-object v3
 
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -1692,7 +1692,7 @@
     move-result-object v9
 
     :goto_d
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -1742,7 +1742,7 @@
 
     if-nez v2, :cond_2f
 
-    const-string/jumbo v2, "vungle.com"
+    const-string/jumbo v2, ""
 
     invoke-virtual {v7, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -1750,7 +1750,7 @@
 
     if-nez v2, :cond_2f
 
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -1828,7 +1828,7 @@
     move-result-object v14
 
     :cond_1c
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1850,7 +1850,7 @@
 
     invoke-static {v2, v3}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v3, "VungleDiscovery"
+    const-string v3, ""
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1979,7 +1979,7 @@
 
     new-instance v2, Lcom/safedk/android/analytics/brandsafety/FileUploadManager$FileUploadData;
 
-    const-string/jumbo v4, "vungle_playable"
+    const-string/jumbo v4, ""
 
     invoke-virtual {v3}, Lcom/safedk/android/analytics/brandsafety/creatives/infos/VungleCreativeInfo;->M()Ljava/lang/String;
 
@@ -1996,7 +1996,7 @@
     invoke-virtual {v4, v2}, Lcom/safedk/android/analytics/brandsafety/FileUploadManager;->a(Lcom/safedk/android/analytics/brandsafety/FileUploadManager$FileUploadData;)V
 
     :cond_1f
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -2059,7 +2059,7 @@
 
     if-nez p3, :cond_21
 
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -2136,7 +2136,7 @@
 
     if-eqz v5, :cond_22
 
-    const-string v5, "VungleDiscovery"
+    const-string v5, ""
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -2225,7 +2225,7 @@
 
     move-result-object v15
 
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2262,7 +2262,7 @@
     goto/16 :goto_b
 
     :cond_26
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     const-string v3, "get CI from Json zip files bundle not present in prefetch data."
 
@@ -2325,7 +2325,7 @@
     goto/16 :goto_d
 
     :cond_2b
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -2424,7 +2424,7 @@
     :cond_2f
     const/4 v7, 0x0
 
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -2575,7 +2575,7 @@
 
     invoke-virtual {v3, v2}, Lcom/safedk/android/analytics/brandsafety/creatives/infos/VungleCreativeInfo;->p(Ljava/lang/String;)V
 
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -2865,7 +2865,7 @@
 
     if-nez p1, :cond_0
 
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     const-string v2, "get ad ID by video file - file is null"
 
@@ -2885,7 +2885,7 @@
 
     move-result-object v2
 
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2943,7 +2943,7 @@
 
     if-eqz v0, :cond_1
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -3009,7 +3009,7 @@
 
     if-eqz v4, :cond_2
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -3034,7 +3034,7 @@
     goto/16 :goto_0
 
     :cond_3
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     const-string v2, "get ad ID by video file - creative not found"
 
@@ -3117,7 +3117,7 @@
 
     move-result-object v0
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -3147,7 +3147,7 @@
     :catch_0
     move-exception v0
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -3170,7 +3170,7 @@
     invoke-static {v1, v0}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     const-string v1, "get ad id from prefetch - could not find ad id"
 
@@ -3248,7 +3248,7 @@
 
     move-result-object v5
 
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -3341,7 +3341,7 @@
 
     invoke-virtual {v1, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v6, "VungleDiscovery"
+    const-string v6, ""
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -3373,7 +3373,7 @@
     goto :goto_1
 
     :cond_1
-    const-string v6, "VungleDiscovery"
+    const-string v6, ""
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -3406,7 +3406,7 @@
     :catch_0
     move-exception v0
 
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     const-string v3, "Error collecting urls under tpat key"
 
@@ -3418,7 +3418,7 @@
 
     :cond_3
     :try_start_1
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -3449,7 +3449,7 @@
     goto/16 :goto_0
 
     :cond_4
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     const-string/jumbo v2, "tpat key does not exist, exiting"
 
@@ -3683,7 +3683,7 @@
 .method private a(Ljava/lang/String;Lcom/safedk/android/analytics/brandsafety/creatives/infos/VungleCreativeInfo;Ljava/lang/String;)V
     .locals 3
 
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3716,7 +3716,7 @@
 
     invoke-virtual {p2, p1}, Lcom/safedk/android/analytics/brandsafety/creatives/infos/VungleCreativeInfo;->p(Ljava/lang/String;)V
 
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3752,7 +3752,7 @@
     return-void
 
     :cond_1
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3821,13 +3821,13 @@
 
     move-result-object v0
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "found vungle endcard url: "
+    const-string v3, ""
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3854,9 +3854,9 @@
     :catch_0
     move-exception v0
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
-    const-string v2, "extract vungle endcard url - exception occurred: "
+    const-string v2, ""
 
     invoke-static {v1, v2, v0}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -3901,7 +3901,7 @@
         }
     .end annotation
 
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3992,7 +3992,7 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/safedk/android/utils/PersistentConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v3, "VungleDiscovery"
+    const-string v3, ""
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -4042,7 +4042,7 @@
     goto :goto_0
 
     :cond_0
-    const-string v3, "VungleDiscovery"
+    const-string v3, ""
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -4067,7 +4067,7 @@
     goto :goto_1
 
     :cond_1
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     const-string v1, "process placements no placements array"
 
@@ -4082,7 +4082,7 @@
 .method public a(Ljava/lang/Object;)Lcom/safedk/android/analytics/brandsafety/creatives/infos/CreativeInfo;
     .locals 5
 
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -4104,7 +4104,7 @@
 
     invoke-static {v0, v1}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -4159,7 +4159,7 @@
 
     :cond_0
     :goto_0
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -4195,7 +4195,7 @@
 
     check-cast v0, Lcom/safedk/android/analytics/brandsafety/creatives/infos/CreativeInfo;
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -4233,7 +4233,7 @@
     :catch_0
     move-exception v1
 
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -4304,7 +4304,7 @@
 
     const/4 v2, 0x0
 
-    const-string v3, "VungleDiscovery"
+    const-string v3, ""
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -4355,7 +4355,7 @@
 
     invoke-direct {v4, p2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    const-string v5, "api.vungle.com/config"
+    const-string v5, ""
 
     invoke-virtual {p1, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -4363,7 +4363,7 @@
 
     if-eqz v5, :cond_0
 
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -4406,7 +4406,7 @@
     if-eqz v1, :cond_2
 
     :cond_1
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     const-string v5, "Url is a mediation url"
 
@@ -4420,7 +4420,7 @@
 
     if-eqz v1, :cond_2
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     const-string v5, "content contains an AdUnit field"
 
@@ -4442,7 +4442,7 @@
 
     move-result-object v5
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -4474,7 +4474,7 @@
 
     invoke-direct {v1, v5}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    const-string v4, "VungleDiscovery"
+    const-string v4, ""
 
     const-string v5, "decodedAdUnitContent new JSONObject created"
 
@@ -4540,7 +4540,7 @@
 
     invoke-virtual {v4, v5, v1}, Lcom/safedk/android/utils/PersistentConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -4603,7 +4603,7 @@
 
     invoke-virtual {v4, v5, v1}, Lcom/safedk/android/utils/PersistentConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -4657,7 +4657,7 @@
     goto/16 :goto_1
 
     :cond_5
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -4686,7 +4686,7 @@
     :catch_0
     move-exception v1
 
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -4783,7 +4783,7 @@
 
     invoke-virtual {v7, v8, v1}, Lcom/safedk/android/utils/PersistentConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -4844,7 +4844,7 @@
 .method public a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 4
 
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -4903,7 +4903,7 @@
 
     invoke-interface {v1, v0, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -4944,7 +4944,7 @@
     :catch_0
     move-exception v0
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -4983,7 +4983,7 @@
     const/4 v2, 0x0
 
     :try_start_0
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -5037,7 +5037,7 @@
 
     if-nez v1, :cond_0
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -5070,7 +5070,7 @@
     invoke-static {v1, v3}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -5110,7 +5110,7 @@
     return-object v0
 
     :cond_0
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -5159,7 +5159,7 @@
     :catch_0
     move-exception v0
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -5191,7 +5191,7 @@
 
     :cond_1
     :try_start_1
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     const-string v1, "get CI after media player start call - cannot find creative in media player ID to CI map"
 
@@ -5208,7 +5208,7 @@
     .locals 4
 
     :try_start_0
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -5242,7 +5242,7 @@
 
     check-cast p2, Landroid/net/Uri;
 
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -5298,7 +5298,7 @@
 
     if-nez v1, :cond_0
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     const-string v2, "handle media player set data source call, adding CI to map"
 
@@ -5325,13 +5325,13 @@
     :catch_0
     move-exception v0
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "exception when trying to add mediaPlayer id and VungleCreativeInfo "
+    const-string v3, ""
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5357,7 +5357,7 @@
 .method protected b(Ljava/lang/String;Landroid/os/Bundle;)Z
     .locals 4
 
-    const-string v0, "adx.ads.vungle.com/api/v"
+    const-string v0, ""
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -5365,7 +5365,7 @@
 
     if-nez v0, :cond_0
 
-    const-string v0, "api.vungle.com/api/v"
+    const-string v0, ""
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -5373,7 +5373,7 @@
 
     if-nez v0, :cond_0
 
-    const-string v0, "adx-stage.ads.vungle.com/api/v"
+    const-string v0, ""
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -5381,7 +5381,7 @@
 
     if-nez v0, :cond_0
 
-    const-string v0, "api.vungle.com/config"
+    const-string v0, ""
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -5395,7 +5395,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -5442,7 +5442,7 @@
     :cond_0
     if-eqz v0, :cond_1
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -5495,7 +5495,7 @@
 .method public f()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "com.applovin.mediation.adapters.VungleMediationAdapter"
+    const-string v0, ""
 
     return-object v0
 .end method
@@ -5527,19 +5527,19 @@
 
     sget-object v0, Lcom/safedk/android/analytics/brandsafety/creatives/discoveries/r;->aM:Lcom/safedk/android/utils/PersistentConcurrentHashMap;
 
-    const-string v1, "VungleDiscovery:creativeToIdMap"
+    const-string v1, ""
 
     invoke-static {v0, v1, v2}, Lcom/safedk/android/utils/e;->a(Ljava/util/Map;Ljava/lang/String;Z)V
 
     sget-object v0, Lcom/safedk/android/analytics/brandsafety/creatives/discoveries/r;->aN:Lcom/safedk/android/utils/PersistentConcurrentHashMap;
 
-    const-string v1, "VungleDiscovery:mediaPlayerIdToCreativeInfo"
+    const-string v1, ""
 
     invoke-static {v0, v1, v2}, Lcom/safedk/android/utils/e;->a(Ljava/util/Map;Ljava/lang/String;Z)V
 
     sget-object v0, Lcom/safedk/android/analytics/brandsafety/creatives/discoveries/r;->aO:Lcom/safedk/android/utils/PersistentConcurrentHashMap;
 
-    const-string v1, "VungleDiscovery:adToIdMap"
+    const-string v1, ""
 
     invoke-static {v0, v1, v2}, Lcom/safedk/android/utils/e;->a(Ljava/util/Map;Ljava/lang/String;Z)V
 
@@ -5625,7 +5625,7 @@
 
     check-cast v1, Ljava/lang/ref/WeakReference;
 
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -5679,7 +5679,7 @@
 
     if-eqz v1, :cond_0
 
-    const-string v0, "com.vungle"
+    const-string v0, ""
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -5698,7 +5698,7 @@
 
     const/4 v0, 0x1
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -5736,7 +5736,7 @@
 
     if-eqz v1, :cond_0
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -5762,7 +5762,7 @@
     return v0
 
     :cond_0
-    const-string v1, "https://privacy.vungle.com/"
+    const-string v1, ""
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5770,13 +5770,13 @@
 
     if-eqz v1, :cond_1
 
-    const-string v1, "VungleDiscovery"
+    const-string v1, ""
 
-    const-string v2, "Vungle privacy policy url invoked"
+    const-string v2, ""
 
     invoke-static {v1, v2}, Lcom/safedk/android/utils/Logger;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v1, "com.vungle"
+    const-string v1, ""
 
     const/4 v2, 0x0
 
@@ -5803,7 +5803,7 @@
 
     if-eqz v2, :cond_2
 
-    const-string v2, "VungleDiscovery"
+    const-string v2, ""
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -5834,7 +5834,7 @@
     goto :goto_0
 
     :cond_2
-    const-string v0, "VungleDiscovery"
+    const-string v0, ""
 
     new-instance v2, Ljava/lang/StringBuilder;
 

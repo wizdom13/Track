@@ -20,7 +20,7 @@
 
 .field public static final c:Ljava/lang/String; = "com.chartboost"
 
-.field public static final d:Ljava/lang/String; = "com.vungle"
+.field public static final d:Ljava/lang/String; = ""
 
 .field public static final e:Ljava/lang/String; = "com.facebook.ads"
 

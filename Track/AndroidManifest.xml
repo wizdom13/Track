@@ -276,8 +276,6 @@
         <uses-library android:name="androidx.window.extensions" android:required="false"/>
         <uses-library android:name="androidx.window.sidecar" android:required="false"/>
         <uses-library android:name="android.ext.adservices" android:required="false"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:hardwareAccelerated="true" android:launchMode="singleTop" android:name="com.vungle.ads.internal.ui.VungleActivity"/>
-        <provider android:authorities="com.flistholding.flightplus.vungle-provider" android:exported="false" android:name="com.vungle.ads.internal.util.VungleProvider"/>
         <provider android:authorities="com.flistholding.flightplus.com.squareup.picasso" android:exported="false" android:name="com.squareup.picasso.PicassoProvider"/>
         <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
             <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>

@@ -206,9 +206,9 @@
 
 .field private static final t:Ljava/lang/String; = "IRONSOURCE_BIDDING"
 
-.field private static final u:Ljava/lang/String; = "VUNGLE_NETWORK"
+.field private static final u:Ljava/lang/String; = ""
 
-.field private static final v:Ljava/lang/String; = "VUNGLE_BIDDING"
+.field private static final v:Ljava/lang/String; = ""
 
 .field private static final w:Ljava/lang/String; = "UNITY_NETWORK"
 
@@ -6306,17 +6306,17 @@
 
     sget-object v0, Lcom/safedk/android/analytics/brandsafety/creatives/CreativeInfoManager;->q:Ljava/util/Map;
 
-    const-string v1, "VUNGLE_NETWORK"
+    const-string v1, ""
 
-    const-string v2, "com.vungle"
+    const-string v2, ""
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/safedk/android/analytics/brandsafety/creatives/CreativeInfoManager;->q:Ljava/util/Map;
 
-    const-string v1, "VUNGLE_BIDDING"
+    const-string v1, ""
 
-    const-string v2, "com.vungle"
+    const-string v2, ""
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -7467,7 +7467,7 @@
 
     sget-object v0, Lcom/safedk/android/analytics/brandsafety/creatives/CreativeInfoManager;->adNetworkDiscoveries:Ljava/util/TreeMap;
 
-    const-string v1, "com.vungle"
+    const-string v1, ""
 
     invoke-virtual {v0, v1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
