@@ -2747,9 +2747,6 @@
     return v0
 .end method
 
-    return-void
-.end method
-
 .method private final toggleToolbar(Landroid/view/View;Lcom/impalastudios/theflighttracker/features/search/SearchFragment$ToolbarState;)V
     .locals 11
 
