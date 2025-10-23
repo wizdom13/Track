@@ -3038,10 +3038,10 @@
     goto/16 :goto_0
 .end method
 
-.method static synthetic a(Ljava/lang/String;Lcom/unity3d/services/core/webview/bridge/WebViewBridgeInterface;)V
+.method static synthetic a(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/safedk/android/analytics/brandsafety/creatives/CreativeInfoManager;->b(Ljava/lang/String;Lcom/unity3d/services/core/webview/bridge/WebViewBridgeInterface;)V
+    invoke-static {p0, p1}, Lcom/safedk/android/analytics/brandsafety/creatives/CreativeInfoManager;->b(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -4940,7 +4940,7 @@
     return-void
 .end method
 
-.method private static b(Ljava/lang/String;Lcom/unity3d/services/core/webview/bridge/WebViewBridgeInterface;)V
+.method private static b(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 4
 
     sget-boolean v0, Lcom/safedk/android/analytics/brandsafety/creatives/CreativeInfoManager;->av:Z
@@ -7655,7 +7655,7 @@
     return-void
 .end method
 
-.method public static onHandleInvocation(Ljava/lang/String;Lcom/unity3d/services/core/webview/bridge/WebViewBridgeInterface;Ljava/lang/String;)V
+.method public static onHandleInvocation(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
     .locals 3
 
     sget-boolean v0, Lcom/safedk/android/analytics/brandsafety/creatives/CreativeInfoManager;->av:Z
@@ -8489,7 +8489,7 @@
     goto :goto_0
 .end method
 
-.method public static onWebviewInterfaceConstruction(Ljava/lang/String;Lcom/unity3d/services/core/webview/bridge/WebViewBridgeInterface;)V
+.method public static onWebviewInterfaceConstruction(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 2
 
     invoke-static {}, Lcom/safedk/android/utils/m;->c()Z
@@ -8502,7 +8502,7 @@
 
     new-instance v1, Lcom/safedk/android/analytics/brandsafety/creatives/CreativeInfoManager$8;
 
-    invoke-direct {v1, p0, p1}, Lcom/safedk/android/analytics/brandsafety/creatives/CreativeInfoManager$8;-><init>(Ljava/lang/String;Lcom/unity3d/services/core/webview/bridge/WebViewBridgeInterface;)V
+    invoke-direct {v1, p0, p1}, Lcom/safedk/android/analytics/brandsafety/creatives/CreativeInfoManager$8;-><init>(Ljava/lang/String;Ljava/lang/Object;)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
@@ -8510,7 +8510,7 @@
     return-void
 
     :cond_0
-    invoke-static {p0, p1}, Lcom/safedk/android/analytics/brandsafety/creatives/CreativeInfoManager;->b(Ljava/lang/String;Lcom/unity3d/services/core/webview/bridge/WebViewBridgeInterface;)V
+    invoke-static {p0, p1}, Lcom/safedk/android/analytics/brandsafety/creatives/CreativeInfoManager;->b(Ljava/lang/String;Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
