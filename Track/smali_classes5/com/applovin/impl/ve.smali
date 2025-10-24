@@ -113,12 +113,6 @@
 
     invoke-virtual {v0, v1, v4}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v1, "com.applovin.mediation.adapters.IronSourceMediationAdapter"
-
-    const-string v4, "ironSource"
-
-    invoke-virtual {v0, v1, v4}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     const-string v1, "com.applovin.mediation.adapters.LineMediationAdapter"
 
     const-string v4, "LINE"
