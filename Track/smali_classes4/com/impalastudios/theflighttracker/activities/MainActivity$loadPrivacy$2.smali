@@ -199,45 +199,7 @@
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
     :cond_2
-    sget-object p1, Lcom/impalastudios/iab/ImpalaIABUtils;->INSTANCE:Lcom/impalastudios/iab/ImpalaIABUtils;
-
-    invoke-virtual {p1}, Lcom/impalastudios/iab/ImpalaIABUtils;->isInitialized()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    invoke-static {}, Lkotlinx/coroutines/Dispatchers;->getMain()Lkotlinx/coroutines/MainCoroutineDispatcher;
-
-    move-result-object p1
-
-    check-cast p1, Lkotlin/coroutines/CoroutineContext;
-
-    new-instance v1, Lcom/impalastudios/theflighttracker/activities/MainActivity$loadPrivacy$2$1;
-
-    iget-object v3, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity$loadPrivacy$2;->$showConsent:Lkotlin/jvm/internal/Ref$BooleanRef;
-
-    iget-object v4, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity$loadPrivacy$2;->this$0:Lcom/impalastudios/theflighttracker/activities/MainActivity;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v1, v3, v4, v5}, Lcom/impalastudios/theflighttracker/activities/MainActivity$loadPrivacy$2$1;-><init>(Lkotlin/jvm/internal/Ref$BooleanRef;Lcom/impalastudios/theflighttracker/activities/MainActivity;Lkotlin/coroutines/Continuation;)V
-
-    check-cast v1, Lkotlin/jvm/functions/Function2;
-
-    move-object v3, p0
-
-    check-cast v3, Lkotlin/coroutines/Continuation;
-
-    iput v2, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity$loadPrivacy$2;->label:I
-
-    invoke-static {p1, v1, v3}, Lkotlinx/coroutines/BuildersKt;->withContext(Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v0, :cond_3
-
-    return-object v0
+    goto :cond_3
 
     :cond_3
     :goto_0
