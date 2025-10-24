@@ -1380,7 +1380,6 @@
     <public type="attr" name="spinBars" id="0x7f0404f2" />
     <public type="attr" name="spinnerDropDownItemStyle" id="0x7f0404f3" />
     <public type="attr" name="spinnerStyle" id="0x7f0404f4" />
-    <public type="attr" name="splashScreenIconSize" id="0x7f0404f5" />
     <public type="attr" name="splitLayoutDirection" id="0x7f0404f6" />
     <public type="attr" name="splitMinSmallestWidth" id="0x7f0404f7" />
     <public type="attr" name="splitMinWidth" id="0x7f0404f8" />
@@ -3754,13 +3753,6 @@
     <public type="dimen" name="segmentedViewProgressBarWidth" id="0x7f0703a3" />
     <public type="dimen" name="settings_icons_size" id="0x7f0703a4" />
     <public type="dimen" name="sliding_pane_detail_pane_width" id="0x7f0703a5" />
-    <public type="dimen" name="splashscreen_icon_mask_size_no_background" id="0x7f0703a6" />
-    <public type="dimen" name="splashscreen_icon_mask_size_with_background" id="0x7f0703a7" />
-    <public type="dimen" name="splashscreen_icon_mask_stroke_no_background" id="0x7f0703a8" />
-    <public type="dimen" name="splashscreen_icon_mask_stroke_with_background" id="0x7f0703a9" />
-    <public type="dimen" name="splashscreen_icon_size" id="0x7f0703aa" />
-    <public type="dimen" name="splashscreen_icon_size_no_background" id="0x7f0703ab" />
-    <public type="dimen" name="splashscreen_icon_size_with_background" id="0x7f0703ac" />
     <public type="dimen" name="subscribe_popup_height" id="0x7f0703ad" />
     <public type="dimen" name="subscribe_popup_width" id="0x7f0703ae" />
     <public type="dimen" name="subtitle_corner_radius" id="0x7f0703af" />
@@ -4145,8 +4137,6 @@
     <public type="drawable" name="common_google_signin_btn_text_light_focused" id="0x7f08016c" />
     <public type="drawable" name="common_google_signin_btn_text_light_normal" id="0x7f08016d" />
     <public type="drawable" name="common_google_signin_btn_text_light_normal_background" id="0x7f08016e" />
-    <public type="drawable" name="compat_splash_screen" id="0x7f08016f" />
-    <public type="drawable" name="compat_splash_screen_no_icon_background" id="0x7f080170" />
     <public type="drawable" name="contact_icon" id="0x7f080171" />
     <public type="drawable" name="cr_calendar_widget_button_drawable" id="0x7f080172" />
     <public type="drawable" name="cr_calendar_widget_selected_day" id="0x7f080173" />
@@ -4355,7 +4345,6 @@
     <public type="drawable" name="ic_keyboard_black_24dp" id="0x7f08023e" />
     <public type="drawable" name="ic_launcher_background" id="0x7f08023f" />
     <public type="drawable" name="ic_launcher_foreground" id="0x7f080240" />
-    <public type="drawable" name="ic_launcher_splash" id="0x7f080241" />
     <public type="drawable" name="ic_layover_clock" id="0x7f080242" />
     <public type="drawable" name="ic_location_fd" id="0x7f080243" />
     <public type="drawable" name="ic_location_on_black_24dp" id="0x7f080244" />
@@ -4476,8 +4465,6 @@
     <public type="drawable" name="image_no_ads" id="0x7f0802b7" />
     <public type="drawable" name="image_seat_map" id="0x7f0802b8" />
     <public type="drawable" name="image_widget" id="0x7f0802b9" />
-    <public type="drawable" name="impalastudios_splashscreen_globe" id="0x7f0802ba" />
-    <public type="drawable" name="impalastudios_splashscreen_phone" id="0x7f0802bb" />
     <public type="drawable" name="indeterminate_static" id="0x7f0802bc" />
     <public type="drawable" name="input_field_rounded_background" id="0x7f0802bd" />
     <public type="drawable" name="itemdecoratorgray" id="0x7f0802be" />
@@ -4681,7 +4668,6 @@
     <public type="drawable" name="sleet_night" id="0x7f080384" />
     <public type="drawable" name="snow_day" id="0x7f080385" />
     <public type="drawable" name="snow_night" id="0x7f080386" />
-    <public type="drawable" name="splash_screen" id="0x7f080387" />
     <public type="drawable" name="stars" id="0x7f080388" />
     <public type="drawable" name="statistics_calendar" id="0x7f080389" />
     <public type="drawable" name="sub_gradient1" id="0x7f08038a" />
@@ -5988,8 +5974,6 @@
     <public type="id" name="speedInfo" id="0x7f0a04da" />
     <public type="id" name="spherical_gl_surface_view" id="0x7f0a04db" />
     <public type="id" name="spinner" id="0x7f0a04dc" />
-    <public type="id" name="splashscreen_animation" id="0x7f0a04dd" />
-    <public type="id" name="splashscreen_icon_view" id="0x7f0a04de" />
     <public type="id" name="spline" id="0x7f0a04df" />
     <public type="id" name="split_action_bar" id="0x7f0a04e0" />
     <public type="id" name="spread" id="0x7f0a04e1" />
@@ -6734,8 +6718,6 @@
     <public type="layout" name="select_dialog_singlechoice_material" id="0x7f0d0178" />
     <public type="layout" name="settings_import_oldflights" id="0x7f0d0179" />
     <public type="layout" name="skip_rewarded_dialog" id="0x7f0d017a" />
-    <public type="layout" name="splash_screen_view" id="0x7f0d017b" />
-    <public type="layout" name="splashscreen" id="0x7f0d017c" />
     <public type="layout" name="subscription_layout_012025_card" id="0x7f0d017d" />
     <public type="layout" name="subscription_month_item" id="0x7f0d017e" />
     <public type="layout" name="subscription_month_item_popover" id="0x7f0d017f" />
@@ -7982,9 +7964,6 @@
     <public type="style" name="Base.Theme.MaterialComponents.Light.Dialog.FixedSize" id="0x7f150098" />
     <public type="style" name="Base.Theme.MaterialComponents.Light.Dialog.MinWidth" id="0x7f150099" />
     <public type="style" name="Base.Theme.MaterialComponents.Light.DialogWhenLarge" id="0x7f15009a" />
-    <public type="style" name="Base.Theme.SplashScreen" id="0x7f15009b" />
-    <public type="style" name="Base.Theme.SplashScreen.DayNight" id="0x7f15009c" />
-    <public type="style" name="Base.Theme.SplashScreen.Light" id="0x7f15009d" />
     <public type="style" name="Base.ThemeOverlay.AppCompat" id="0x7f15009e" />
     <public type="style" name="Base.ThemeOverlay.AppCompat.ActionBar" id="0x7f15009f" />
     <public type="style" name="Base.ThemeOverlay.AppCompat.Dark" id="0x7f1500a0" />
@@ -8152,10 +8131,6 @@
     <public type="style" name="Base.Widget.MaterialComponents.TextInputEditText" id="0x7f150142" />
     <public type="style" name="Base.Widget.MaterialComponents.TextInputLayout" id="0x7f150143" />
     <public type="style" name="Base.Widget.MaterialComponents.TextView" id="0x7f150144" />
-    <public type="style" name="Base.v21.Theme.SplashScreen" id="0x7f150145" />
-    <public type="style" name="Base.v21.Theme.SplashScreen.Light" id="0x7f150146" />
-    <public type="style" name="Base.v27.Theme.SplashScreen" id="0x7f150147" />
-    <public type="style" name="Base.v27.Theme.SplashScreen.Light" id="0x7f150148" />
     <public type="style" name="BasePreferenceThemeOverlay" id="0x7f150149" />
     <public type="style" name="CardView" id="0x7f15014a" />
     <public type="style" name="CardView.Dark" id="0x7f15014b" />
@@ -8449,7 +8424,6 @@
     <public type="style" name="TextAppearance.Widget.AppCompat.ExpandedMenu.Item" id="0x7f15026b" />
     <public type="style" name="TextAppearance.Widget.AppCompat.Toolbar.Subtitle" id="0x7f15026c" />
     <public type="style" name="TextAppearance.Widget.AppCompat.Toolbar.Title" id="0x7f15026d" />
-    <public type="style" name="Theme.App.Starting" id="0x7f15026e" />
     <public type="style" name="Theme.AppCompat" id="0x7f15026f" />
     <public type="style" name="Theme.AppCompat.CompactMenu" id="0x7f150270" />
     <public type="style" name="Theme.AppCompat.DayNight" id="0x7f150271" />
@@ -8558,9 +8532,6 @@
     <public type="style" name="Theme.MaterialComponents.NoActionBar" id="0x7f1502d8" />
     <public type="style" name="Theme.MaterialComponents.NoActionBar.Bridge" id="0x7f1502d9" />
     <public type="style" name="Theme.PlayCore.Transparent" id="0x7f1502da" />
-    <public type="style" name="Theme.SplashScreen" id="0x7f1502db" />
-    <public type="style" name="Theme.SplashScreen.Common" id="0x7f1502dc" />
-    <public type="style" name="Theme.SplashScreen.IconBackground" id="0x7f1502dd" />
     <public type="style" name="ThemeOverlay.AppCompat" id="0x7f1502de" />
     <public type="style" name="ThemeOverlay.AppCompat.ActionBar" id="0x7f1502df" />
     <public type="style" name="ThemeOverlay.AppCompat.Dark" id="0x7f1502e0" />

@@ -2552,7 +2552,6 @@
 
 .field public static final spinnerStyle:I = 0x7f0404f4
 
-.field public static final splashScreenIconSize:I = 0x7f0404f5
 
 .field public static final splitLayoutDirection:I = 0x7f0404f6
 

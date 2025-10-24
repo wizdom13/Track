@@ -2324,67 +2324,7 @@
 
     invoke-super/range {p0 .. p1}, Landroidx/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
 
-    new-instance v1, Lcom/impalastudios/theflighttracker/features/splashscreen/SplashScreenFragment;
-
-    invoke-direct {v1}, Lcom/impalastudios/theflighttracker/features/splashscreen/SplashScreenFragment;-><init>()V
-
-    invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
-
-    move-result-object v2
-
-    move-object v3, v1
-
-    check-cast v3, Landroidx/fragment/app/Fragment;
-
-    const-string v4, ""
-
-    invoke-virtual {v2, v3, v4}, Landroidx/fragment/app/FragmentTransaction;->add(Landroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
-
-    move-object v2, v0
-
-    check-cast v2, Landroidx/lifecycle/LifecycleOwner;
-
-    invoke-static {v2}, Landroidx/lifecycle/LifecycleOwnerKt;->getLifecycleScope(Landroidx/lifecycle/LifecycleOwner;)Landroidx/lifecycle/LifecycleCoroutineScope;
-
-    move-result-object v3
-
-    move-object v4, v3
-
-    check-cast v4, Lkotlinx/coroutines/CoroutineScope;
-
-    invoke-static {}, Lkotlinx/coroutines/Dispatchers;->getIO()Lkotlinx/coroutines/CoroutineDispatcher;
-
-    move-result-object v3
-
-    move-object v5, v3
-
-    check-cast v5, Lkotlin/coroutines/CoroutineContext;
-
-    new-instance v3, Lcom/impalastudios/theflighttracker/activities/MainActivity$onCreate$1;
-
     const/4 v10, 0x0
-
-    invoke-direct {v3, v1, v10}, Lcom/impalastudios/theflighttracker/activities/MainActivity$onCreate$1;-><init>(Lcom/impalastudios/theflighttracker/features/splashscreen/SplashScreenFragment;Lkotlin/coroutines/Continuation;)V
-
-    move-object v7, v3
-
-    check-cast v7, Lkotlin/jvm/functions/Function2;
-
-    const/4 v8, 0x2
-
-    const/4 v9, 0x0
-
-    const/4 v6, 0x0
-
-    invoke-static/range {v4 .. v9}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
 
     invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 

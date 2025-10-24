@@ -2504,9 +2504,6 @@
 
 .field public static final spinner:I = 0x7f0a04dc
 
-.field public static final splashscreen_animation:I = 0x7f0a04dd
-
-.field public static final splashscreen_icon_view:I = 0x7f0a04de
 
 .field public static final spline:I = 0x7f0a04df
 

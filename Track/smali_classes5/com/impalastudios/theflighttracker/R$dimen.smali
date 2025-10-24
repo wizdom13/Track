@@ -1882,19 +1882,6 @@
 
 .field public static final sliding_pane_detail_pane_width:I = 0x7f0703a5
 
-.field public static final splashscreen_icon_mask_size_no_background:I = 0x7f0703a6
-
-.field public static final splashscreen_icon_mask_size_with_background:I = 0x7f0703a7
-
-.field public static final splashscreen_icon_mask_stroke_no_background:I = 0x7f0703a8
-
-.field public static final splashscreen_icon_mask_stroke_with_background:I = 0x7f0703a9
-
-.field public static final splashscreen_icon_size:I = 0x7f0703aa
-
-.field public static final splashscreen_icon_size_no_background:I = 0x7f0703ab
-
-.field public static final splashscreen_icon_size_with_background:I = 0x7f0703ac
 
 .field public static final subscribe_popup_height:I = 0x7f0703ad
 

@@ -772,9 +772,6 @@
 
 .field public static final skip_rewarded_dialog:I = 0x7f0d017a
 
-.field public static final splash_screen_view:I = 0x7f0d017b
-
-.field public static final splashscreen:I = 0x7f0d017c
 
 .field public static final subscription_layout_012025_card:I = 0x7f0d017d
 

@@ -502,9 +502,6 @@
         <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
     </style>
     <style name="Base.Theme.MaterialComponents.Light.DialogWhenLarge" parent="@style/Theme.MaterialComponents.Light" />
-    <style name="Base.Theme.SplashScreen" parent="@style/Base.v21.Theme.SplashScreen" />
-    <style name="Base.Theme.SplashScreen.DayNight" parent="@style/Base.Theme.SplashScreen.Light" />
-    <style name="Base.Theme.SplashScreen.Light" parent="@style/Base.v21.Theme.SplashScreen.Light" />
     <style name="Base.ThemeOverlay.AppCompat" parent="@style/Platform.ThemeOverlay.AppCompat" />
     <style name="Base.ThemeOverlay.AppCompat.ActionBar" parent="@style/Base.ThemeOverlay.AppCompat">
         <item name="colorControlNormal">?android:textColorPrimary</item>
@@ -3020,10 +3017,6 @@
         <item name="suffixTextColor">@color/mtrl_indicator_text_color</item>
     </style>
     <style name="Base.Widget.MaterialComponents.TextView" parent="@style/Widget.AppCompat.TextView" />
-    <style name="Base.v21.Theme.SplashScreen" parent="@android:style/Theme.DeviceDefault.NoActionBar" />
-    <style name="Base.v21.Theme.SplashScreen.Light" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar">
-        <item name="isLightTheme">true</item>
-    </style>
     <style name="BasePreferenceThemeOverlay">
         <item name="android:scrollbars">vertical</item>
         <item name="checkBoxPreferenceStyle">@style/Preference.CheckBoxPreference.Material</item>
@@ -4016,11 +4009,6 @@
     <style name="TextAppearance.Widget.AppCompat.ExpandedMenu.Item" parent="@style/Base.TextAppearance.Widget.AppCompat.ExpandedMenu.Item" />
     <style name="TextAppearance.Widget.AppCompat.Toolbar.Subtitle" parent="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle" />
     <style name="TextAppearance.Widget.AppCompat.Toolbar.Title" parent="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title" />
-    <style name="Theme.App.Starting" parent="@style/Theme.SplashScreen">
-        <item name="postSplashScreenTheme">@style/AppTheme</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_screen</item>
-        <item name="windowSplashScreenBackground">@color/backgroundcolor</item>
-    </style>
     <style name="Theme.AppCompat" parent="@style/Base.Theme.AppCompat" />
     <style name="Theme.AppCompat.CompactMenu" parent="@style/Base.Theme.AppCompat.CompactMenu" />
     <style name="Theme.AppCompat.DayNight" parent="@style/Theme.AppCompat.Light" />
@@ -4237,27 +4225,6 @@
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:backgroundDimEnabled">false</item>
-    </style>
-    <style name="Theme.SplashScreen" parent="@style/Theme.SplashScreen.Common">
-        <item name="postSplashScreenTheme">?android:theme</item>
-        <item name="windowSplashScreenAnimatedIcon">@android:drawable/sym_def_app_icon</item>
-        <item name="windowSplashScreenAnimationDuration">@integer/default_icon_animation_duration</item>
-        <item name="windowSplashScreenBackground">?android:colorBackground</item>
-    </style>
-    <style name="Theme.SplashScreen.Common" parent="@style/Base.Theme.SplashScreen.DayNight">
-        <item name="android:windowBackground">@drawable/compat_splash_screen_no_icon_background</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:fitsSystemWindows">false</item>
-        <item name="android:windowActionBar">false</item>
-        <item name="android:opacity">opaque</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="splashScreenIconSize">@dimen/splashscreen_icon_size_no_background</item>
-    </style>
-    <style name="Theme.SplashScreen.IconBackground" parent="@style/Theme.SplashScreen">
-        <item name="android:windowBackground">@drawable/compat_splash_screen</item>
-        <item name="splashScreenIconSize">@dimen/splashscreen_icon_size_with_background</item>
     </style>
     <style name="ThemeOverlay.AppCompat" parent="@style/Base.ThemeOverlay.AppCompat" />
     <style name="ThemeOverlay.AppCompat.ActionBar" parent="@style/Base.ThemeOverlay.AppCompat.ActionBar" />

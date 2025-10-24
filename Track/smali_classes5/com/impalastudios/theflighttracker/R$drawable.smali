@@ -630,9 +630,6 @@
 
 .field public static final common_google_signin_btn_text_light_normal_background:I = 0x7f08016e
 
-.field public static final compat_splash_screen:I = 0x7f08016f
-
-.field public static final compat_splash_screen_no_icon_background:I = 0x7f080170
 
 .field public static final contact_icon:I = 0x7f080171
 
@@ -1050,7 +1047,6 @@
 
 .field public static final ic_launcher_foreground:I = 0x7f080240
 
-.field public static final ic_launcher_splash:I = 0x7f080241
 
 .field public static final ic_layover_clock:I = 0x7f080242
 
@@ -1292,9 +1288,6 @@
 
 .field public static final image_widget:I = 0x7f0802b9
 
-.field public static final impalastudios_splashscreen_globe:I = 0x7f0802ba
-
-.field public static final impalastudios_splashscreen_phone:I = 0x7f0802bb
 
 .field public static final indeterminate_static:I = 0x7f0802bc
 
@@ -1702,7 +1695,6 @@
 
 .field public static final snow_night:I = 0x7f080386
 
-.field public static final splash_screen:I = 0x7f080387
 
 .field public static final stars:I = 0x7f080388
 

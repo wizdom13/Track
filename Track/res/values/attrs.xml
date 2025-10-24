@@ -1973,7 +1973,6 @@
     <attr name="spinBars" format="boolean" />
     <attr name="spinnerDropDownItemStyle" format="reference" />
     <attr name="spinnerStyle" format="reference" />
-    <attr name="splashScreenIconSize" format="dimension" />
     <attr name="splitLayoutDirection">
         <enum name="locale" value="0" />
         <enum name="ltr" value="1" />

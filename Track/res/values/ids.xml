@@ -995,8 +995,6 @@
     <item type="id" name="speedImage" />
     <item type="id" name="speedInfo" />
     <item type="id" name="spinner" />
-    <item type="id" name="splashscreen_animation" />
-    <item type="id" name="splashscreen_icon_view" />
     <item type="id" name="split_action_bar" />
     <item type="id" name="statsbadge" />
     <item type="id" name="statusTextBarrier" />

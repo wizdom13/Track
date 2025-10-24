@@ -360,11 +360,6 @@
 
 .field public static final Base_Theme_MaterialComponents_Light_Dialog_MinWidth:I = 0x7f150099
 
-.field public static final Base_Theme_SplashScreen:I = 0x7f15009b
-
-.field public static final Base_Theme_SplashScreen_DayNight:I = 0x7f15009c
-
-.field public static final Base_Theme_SplashScreen_Light:I = 0x7f15009d
 
 .field public static final Base_V14_ThemeOverlay_Material3_BottomSheetDialog:I = 0x7f1500c0
 
@@ -666,13 +661,6 @@
 
 .field public static final Base_Widget_MaterialComponents_TextView:I = 0x7f150144
 
-.field public static final Base_v21_Theme_SplashScreen:I = 0x7f150145
-
-.field public static final Base_v21_Theme_SplashScreen_Light:I = 0x7f150146
-
-.field public static final Base_v27_Theme_SplashScreen:I = 0x7f150147
-
-.field public static final Base_v27_Theme_SplashScreen_Light:I = 0x7f150148
 
 .field public static final CardView:I = 0x7f15014a
 
@@ -1532,7 +1520,6 @@
 
 .field public static final Theme_AppCompat_Translucent_NoTitleBar:I = 0x7f150285
 
-.field public static final Theme_App_Starting:I = 0x7f15026e
 
 .field public static final Theme_Design:I = 0x7f150286
 
@@ -1704,11 +1691,6 @@
 
 .field public static final Theme_PlayCore_Transparent:I = 0x7f1502da
 
-.field public static final Theme_SplashScreen:I = 0x7f1502db
-
-.field public static final Theme_SplashScreen_Common:I = 0x7f1502dc
-
-.field public static final Theme_SplashScreen_IconBackground:I = 0x7f1502dd
 
 .field public static final TrueFullScreenDialog:I = 0x7f150350
 
