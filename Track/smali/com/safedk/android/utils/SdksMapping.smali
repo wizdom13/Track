@@ -200,38 +200,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lcom/safedk/android/utils/SdksMapping;->sdkPackages:Ljava/util/TreeMap;
-
-    const-string v1, "com.ironsource"
-
-    const-string v2, "com.supersonicads"
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcom/safedk/android/utils/SdksMapping;->sdkPackageToUUID:Ljava/util/TreeMap;
-
-    const-string v1, "com.supersonicads"
-
-    const-string v2, "b9b88d70c3d018bfbda46cd93ba3ddca"
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcom/safedk/android/utils/SdksMapping;->sdkPackages:Ljava/util/TreeMap;
-
-    const-string v1, "com.supersonicads"
-
-    const-string v2, "com.supersonicads"
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcom/safedk/android/utils/SdksMapping;->sdkAdaptersUUID:Ljava/util/TreeMap;
-
-    const-string v1, "com.applovin.mediation.adapters.IronSourceMediationAdapter"
-
-    const-string v2, "b9b88d70c3d018bfbda46cd93ba3ddca"
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     sget-object v0, Lcom/safedk/android/utils/SdksMapping;->sdkPackageToName:Ljava/util/TreeMap;
 
     const-string v1, "com.inneractive"
