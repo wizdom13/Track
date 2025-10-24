@@ -169,20 +169,6 @@
 
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    sget-object p1, Lcom/impalastudios/iab/ImpalaIABUtils;->INSTANCE:Lcom/impalastudios/iab/ImpalaIABUtils;
-
-    iget-object v0, p0, Lcom/impalastudios/theflighttracker/App$onCreate$8;->this$0:Lcom/impalastudios/theflighttracker/App;
-
-    invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/App;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const-string v1, "getApplicationContext(...)"
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {p1, v0}, Lcom/impalastudios/iab/ImpalaIABUtils;->getLatestIAB(Landroid/content/Context;)V
-
     sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1

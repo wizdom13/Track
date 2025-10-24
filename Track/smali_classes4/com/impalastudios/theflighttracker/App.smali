@@ -2423,14 +2423,6 @@
 
     invoke-virtual {v0, v2}, Lcom/impalastudios/theflighttracker/App;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
-    sget-object v2, Lcom/impalastudios/iab/ImpalaIABUtils;->INSTANCE:Lcom/impalastudios/iab/ImpalaIABUtils;
-
-    invoke-virtual {v1}, Lcom/impalastudios/theflighttracker/App$Companion;->getNewClient()Lokhttp3/OkHttpClient;
-
-    move-result-object v1
-
-    invoke-virtual {v2, v1, v10}, Lcom/impalastudios/iab/ImpalaIABUtils;->setup(Lokhttp3/OkHttpClient;Lcom/fasterxml/jackson/databind/ObjectMapper;)V
-
     invoke-static {}, Lkotlinx/coroutines/CoroutineScopeKt;->MainScope()Lkotlinx/coroutines/CoroutineScope;
 
     move-result-object v4
