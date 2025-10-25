@@ -1203,38 +1203,20 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/applovin/mediation/ads/MaxAdView;
-
-    const-string v1, "allow_pause_auto_refresh_immediately"
-
-    const-string v2, "true"
-
-    invoke-virtual {v0, v1, v2}, Lcom/applovin/mediation/ads/MaxAdView;->setExtraParameter(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lcom/applovin/mediation/ads/MaxAdView;->stopAutoRefresh()V
+    check-cast v0, Landroid/view/View;
 
     const/16 v1, 0x8
 
-    invoke-virtual {v0, v1}, Lcom/applovin/mediation/ads/MaxAdView;->setVisibility(I)V
+    if-eqz v0, :cond_0
 
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_0
     iget-object v0, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
 
     const/4 v2, 0x0
 
     const-string v3, "binding"
-
-    if-nez v0, :cond_0
-
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object v0, v2
-
-    :cond_0
-    iget-object v0, v0, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->adClose:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
 
     if-nez v0, :cond_1
 
@@ -1243,6 +1225,19 @@
     move-object v0, v2
 
     :cond_1
+    iget-object v0, v0, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->adClose:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    iget-object v0, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
+
+    if-nez v0, :cond_2
+
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    move-object v0, v2
+
+    :cond_2
     iget-object v0, v0, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->adClose2:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
@@ -1253,13 +1248,13 @@
 
     iget-object v1, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_3
 
     invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
     move-object v1, v2
 
-    :cond_2
+    :cond_3
     iget-object v1, v1, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->container:Landroidx/constraintlayout/widget/ConstraintLayout;
 
     invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintSet;->clone(Landroidx/constraintlayout/widget/ConstraintLayout;)V
@@ -1286,13 +1281,13 @@
 
     iget-object v0, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_4
 
     invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     move-object v2, v0
 
     :goto_0
@@ -3428,8 +3423,6 @@
 
     move-result p1
 
-    invoke-static {p1, p2}, Lcom/applovin/sdk/AppLovinPrivacySettings;->setHasUserConsent(ZLandroid/content/Context;)V
-
     sget-object p1, Lcom/impalastudios/privacy/PrivacyManager;->INSTANCE:Lcom/impalastudios/privacy/PrivacyManager;
 
     sget-object v0, Lcom/impalastudios/privacy/Regulation;->CCPA:Lcom/impalastudios/privacy/Regulation;
@@ -3439,8 +3432,6 @@
     move-result p1
 
     xor-int/lit8 p1, p1, 0x1
-
-    invoke-static {p1, p2}, Lcom/applovin/sdk/AppLovinPrivacySettings;->setDoNotSell(ZLandroid/content/Context;)V
 
     sget-object p1, Lcom/impalastudios/privacy/PrivacyManager;->INSTANCE:Lcom/impalastudios/privacy/PrivacyManager;
 
@@ -3819,184 +3810,8 @@
     :cond_2
     invoke-virtual {p0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->invalidateOptionsMenu()V
 
-    const p1, 0x7f0a0089
+    invoke-virtual {p0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->hideBanner()V
 
-    invoke-virtual {p0, p1}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/applovin/mediation/ads/MaxAdView;
-
-    const-string p4, "getString(...)"
-
-    if-eqz p1, :cond_f
-
-    invoke-virtual {p1}, Lcom/applovin/mediation/ads/MaxAdView;->getVisibility()I
-
-    move-result v1
-
-    const/16 v4, 0x8
-
-    if-ne v1, v4, :cond_3
-
-    if-nez p3, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    const/4 v2, 0x0
-
-    :goto_1
-    if-eqz p3, :cond_4
-
-    const/16 v1, 0x8
-
-    goto :goto_2
-
-    :cond_4
-    const/4 v1, 0x0
-
-    :goto_2
-    invoke-virtual {p1, v1}, Lcom/applovin/mediation/ads/MaxAdView;->setVisibility(I)V
-
-    if-eqz v2, :cond_5
-
-    :cond_5
-    invoke-virtual {p1}, Lcom/applovin/mediation/ads/MaxAdView;->getAdFormat()Lcom/applovin/mediation/MaxAdFormat;
-
-    move-result-object p1
-
-    move-object v1, p0
-
-    check-cast v1, Landroid/app/Activity;
-
-    invoke-virtual {p1, v1}, Lcom/applovin/mediation/MaxAdFormat;->getAdaptiveSize(Landroid/app/Activity;)Lcom/applovin/sdk/AppLovinSdkUtils$Size;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/applovin/sdk/AppLovinSdkUtils$Size;->getWidth()I
-
-    move-result p1
-
-    const-string v1, "binding"
-
-    if-nez p3, :cond_c
-
-    invoke-virtual {p0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    sub-int/2addr v2, p1
-
-    iget-object p1, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
-
-    if-nez p1, :cond_6
-
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object p1, v0
-
-    :cond_6
-    iget-object p1, p1, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->adClose2:Landroid/widget/FrameLayout;
-
-    invoke-virtual {p1}, Landroid/widget/FrameLayout;->getWidth()I
-
-    move-result p1
-
-    if-lt v2, p1, :cond_9
-
-    iget-object p1, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
-
-    if-nez p1, :cond_7
-
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object p1, v0
-
-    :cond_7
-    iget-object p1, p1, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->adClose2:Landroid/widget/FrameLayout;
-
-    invoke-virtual {p1, v3}, Landroid/widget/FrameLayout;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
-
-    if-nez p1, :cond_8
-
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object p1, v0
-
-    :cond_8
-    iget-object p1, p1, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->adClose:Landroid/widget/LinearLayout;
-
-    invoke-virtual {p1, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    goto :goto_3
-
-    :cond_9
-    iget-object p1, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
-
-    if-nez p1, :cond_a
-
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object p1, v0
-
-    :cond_a
-    iget-object p1, p1, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->adClose2:Landroid/widget/FrameLayout;
-
-    invoke-virtual {p1, v4}, Landroid/widget/FrameLayout;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
-
-    if-nez p1, :cond_b
-
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object p1, v0
-
-    :cond_b
-    iget-object p1, p1, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->adClose:Landroid/widget/LinearLayout;
-
-    invoke-virtual {p1, v3}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    goto :goto_3
-
-    :cond_c
-    iget-object p1, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
-
-    if-nez p1, :cond_d
-
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object p1, v0
-
-    :cond_d
-    iget-object p1, p1, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->adClose2:Landroid/widget/FrameLayout;
-
-    invoke-virtual {p1, v4}, Landroid/widget/FrameLayout;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
-
-    if-nez p1, :cond_e
-
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object p1, v0
-
-    :cond_e
-    iget-object p1, p1, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->adClose:Landroid/widget/LinearLayout;
-
-    invoke-virtual {p1, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    :cond_f
-    :goto_3
     if-eqz p3, :cond_10
 
     :cond_10
@@ -4303,189 +4118,9 @@
 .end method
 
 .method public final showBanner(Z)V
-    .locals 7
+    .locals 0
 
-    const v0, 0x7f0a0089
-
-    invoke-virtual {p0, v0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/applovin/mediation/ads/MaxAdView;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {v1}, Lcom/applovin/mediation/ads/MaxAdView;->startAutoRefresh()V
-
-    :cond_0
-    const/4 p1, 0x0
-
-    invoke-virtual {v1, p1}, Lcom/applovin/mediation/ads/MaxAdView;->setVisibility(I)V
-
-    invoke-virtual {v1}, Lcom/applovin/mediation/ads/MaxAdView;->getAdFormat()Lcom/applovin/mediation/MaxAdFormat;
-
-    move-result-object v2
-
-    move-object v3, p0
-
-    check-cast v3, Landroid/app/Activity;
-
-    invoke-virtual {v2, v3}, Lcom/applovin/mediation/MaxAdFormat;->getAdaptiveSize(Landroid/app/Activity;)Lcom/applovin/sdk/AppLovinSdkUtils$Size;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/applovin/sdk/AppLovinSdkUtils$Size;->getWidth()I
-
-    move-result v2
-
-    invoke-virtual {p0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    sub-int/2addr v3, v2
-
-    int-to-float v2, v3
-
-    invoke-virtual {p0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    const/4 v4, 0x1
-
-    const/high16 v5, 0x42400000    # 48.0f
-
-    invoke-static {v4, v5, v3}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
-
-    move-result v3
-
-    const/16 v4, 0x8
-
-    const/4 v5, 0x0
-
-    const-string v6, "binding"
-
-    cmpl-float v2, v2, v3
-
-    if-ltz v2, :cond_3
-
-    iget-object v2, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
-
-    if-nez v2, :cond_1
-
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object v2, v5
-
-    :cond_1
-    iget-object v2, v2, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->adClose2:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v2, p1}, Landroid/widget/FrameLayout;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
-
-    if-nez p1, :cond_2
-
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object p1, v5
-
-    :cond_2
-    iget-object p1, p1, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->adClose:Landroid/widget/LinearLayout;
-
-    invoke-virtual {p1, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v2, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
-
-    if-nez v2, :cond_4
-
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object v2, v5
-
-    :cond_4
-    iget-object v2, v2, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->adClose2:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v2, v4}, Landroid/widget/FrameLayout;->setVisibility(I)V
-
-    iget-object v2, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
-
-    if-nez v2, :cond_5
-
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object v2, v5
-
-    :cond_5
-    iget-object v2, v2, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->adClose:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v2, p1}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    :goto_0
-    new-instance p1, Landroidx/constraintlayout/widget/ConstraintSet;
-
-    invoke-direct {p1}, Landroidx/constraintlayout/widget/ConstraintSet;-><init>()V
-
-    iget-object v2, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
-
-    if-nez v2, :cond_6
-
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object v2, v5
-
-    :cond_6
-    iget-object v2, v2, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->container:Landroidx/constraintlayout/widget/ConstraintLayout;
-
-    invoke-virtual {p1, v2}, Landroidx/constraintlayout/widget/ConstraintSet;->clone(Landroidx/constraintlayout/widget/ConstraintLayout;)V
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const v4, 0x7f0a0290
-
-    invoke-virtual {p1, v4, v2, v0, v3}, Landroidx/constraintlayout/widget/ConstraintSet;->connect(IIII)V
-
-    const v0, 0x7f0a01b5
-
-    invoke-virtual {p0, v0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/constraintlayout/widget/ConstraintLayout;
-
-    invoke-virtual {p1, v0}, Landroidx/constraintlayout/widget/ConstraintSet;->applyTo(Landroidx/constraintlayout/widget/ConstraintLayout;)V
-
-    invoke-virtual {v1}, Lcom/applovin/mediation/ads/MaxAdView;->bringToFront()V
-
-    iget-object p1, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
-
-    if-nez p1, :cond_7
-
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :cond_7
-    move-object v5, p1
-
-    :goto_1
-    iget-object p1, v5, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->adClose:Landroid/widget/LinearLayout;
-
-    invoke-virtual {p1}, Landroid/widget/LinearLayout;->bringToFront()V
+    invoke-virtual {p0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->hideBanner()V
 
     return-void
 .end method
