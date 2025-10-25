@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backButtonTitle">Tilbake</string>
+    <string name="ccpaSalesDisclosure">Merk deg at noen av disse datautvekslingene med våre partnere, utgjør «salg» av personopplysninger i henhold til gjeldende lover.</string>
+    <string name="changeInSettings">Hvis du skulle ombestemme deg, så kan du når som helst endre valget ditt ved å gå til appens innstillinger.</string>
+    <string name="confirmChoiceButtonText">Jeg bekrefter</string>
+    <string name="customiseChoicesTitle">Tilpass svarene</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText1">Google og andre partnere</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText2">Finn ut mer.</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText3">Vilkår og betingelser</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText4">Personvernerklæring</string>
+    <string name="dialogPersonalizedAdsBodyPart1">Denne appen tilpasser markedsføringen mot deg gjennom Google og andre partnere. Ved å akseptere, vil du se annonser som er mer relevante for deg. Våre partnere kan samle inn og behandle dine personlige opplysninger, avhengig av dine personverninnstillinger. Finn ut mer.</string>
+    <string name="dialogPersonalizedAdsBodyPart2Sentence1">Ved å akseptere, bekrefter du at du er over 16 år.</string>
+    <string name="dialogPersonalizedAdsBodyPart2Sentence2">Ved å fortsette samtykker du i vilkår og betingelser og personvernerklæringen.</string>
+    <string name="explanationTitle">Forklaring</string>
+    <string name="generalTitle">Personverninnstillinger</string>
+    <string name="payChoiceButtonText">Kjøp reklamefri versjon</string>
+    <string name="personalTitle">Personlig tilpasset annonsering</string>
+    <string name="saveAndConfirmButtonTitle">Lagre og bekreft</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#ffd5e4f8" />
+            <size android:height="48.0dip" android:width="48.0dip" />
+        </shape>
+    </item>
+    <item android:gravity="center" android:id="@id/diamond" android:drawable="@drawable/outline_diamond_24" />
+</layer-list>

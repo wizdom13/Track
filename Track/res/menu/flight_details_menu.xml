@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@id/first">
+        <item android:icon="@drawable/ic_share_black_24dp" android:id="@id/flight_details_share" android:title="@string/share_flight_info" />
+        <item android:icon="@drawable/ic_account_balance_wallet_black_24dp" android:id="@id/flight_details_scanpass" android:title="@string/boardingpass.scan" />
+    </group>
+</menu>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/nav_settings" app:startDestination="@id/settingsPreferenceFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="FlightDetailsV2Fragment" android:name="com.impalastudios.theflighttracker.features.flightdetails.FlightDetailsV2Fragment" android:id="@id/flightDetailsV2Fragment">
+        <action android:id="@id/action_flightDetailsV2Fragment_to_cameraFragment" app:destination="@id/cameraFragment" />
+        <action android:id="@id/action_flightDetailsV2Fragment_to_boardingPassFragment" app:destination="@id/boardingPassFragment" />
+    </fragment>
+    <fragment android:label="FlightDetailLayoverFragment" android:name="com.impalastudios.theflighttracker.features.flightdetails.FlightDetailLayoverFragment" android:id="@id/flightDetailLayoverFragment" />
+    <fragment android:label="SettingsPreferenceFragment" android:name="com.impalastudios.theflighttracker.features.settings.SettingsPreferenceFragment" android:id="@id/settingsPreferenceFragment">
+        <action android:id="@id/action_settingsPreferenceFragment_to_tripItFragment" app:destination="@id/tripItFragment" />
+        <action android:id="@id/action_settingsPreferenceFragment_self" app:destination="@id/settingsPreferenceFragment" />
+    </fragment>
+    <fragment android:label="BoardingPassFragment" android:name="com.impalastudios.theflighttracker.features.boardingpass.BoardingPassFragment" android:id="@id/boardingPassFragment" />
+    <fragment android:label="list_fragment_tripit" android:name="com.impalastudios.theflighttracker.features.tripit.TripItFragment" android:id="@id/tripItFragment" />
+    <action android:id="@id/action_global_flightDetailLayoverFragment" app:destination="@id/flightDetailLayoverFragment" />
+    <action android:id="@id/action_global_flightDetailsV2Fragment" app:destination="@id/flightDetailsV2Fragment" />
+    <fragment android:label="CameraFragment" android:name="com.impalastudios.theflighttracker.features.boardingpass.CameraFragment" android:id="@id/cameraFragment" />
+    <fragment android:label="FAQFragment" android:name="com.impalastudios.theflighttracker.features.faq.FAQFragment" android:id="@id/faqFragment" />
+    <action android:id="@id/action_global_FAQFragment" app:destination="@id/faqFragment" />
+    <action android:id="@id/action_global_settingsPreferenceFragment" app:destination="@id/settingsPreferenceFragment" />
+</navigation>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/IAMHalfScreenRoot" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="300.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/IAMHalfScreenHeader" layout="@layout/iam_halfscreen_header" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/IAMHalfScreenHeader">
+        <ImageView android:id="@id/IAMBodyImage" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_weight="0.58" app:srcCompat="@drawable/phone" />
+        <LinearLayout android:orientation="vertical" android:id="@id/IAM_checks_layout" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="0.42">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:id="@id/IAMMark1" android:layout_width="@dimen/iam_halfscreen_check_size" android:layout_height="@dimen/iam_halfscreen_check_size" app:srcCompat="@drawable/check" />
+                <TextView android:textSize="@dimen/iam_halfscreen_check_text_size" android:textColor="#ff666666" android:id="@id/IAMHalfScreenText1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/iam_halfscreen_check_text_margin" android:layout_marginRight="@dimen/iam_halfscreen_check_text_margin" android:text="Superawesome!" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:id="@id/IAMMark2" android:layout_width="@dimen/iam_halfscreen_check_size" android:layout_height="@dimen/iam_halfscreen_check_size" app:srcCompat="@drawable/check" />
+                <TextView android:textSize="@dimen/iam_halfscreen_check_text_size" android:textColor="#ff666666" android:id="@id/IAMHalfScreenText2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/iam_halfscreen_check_text_margin" android:layout_marginRight="@dimen/iam_halfscreen_check_text_margin" android:text="Superawesome!" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:id="@id/IAMMark3" android:layout_width="@dimen/iam_halfscreen_check_size" android:layout_height="@dimen/iam_halfscreen_check_size" app:srcCompat="@drawable/check" />
+                <TextView android:textSize="@dimen/iam_halfscreen_check_text_size" android:textColor="#ff666666" android:id="@id/IAMHalfScreenText3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/iam_halfscreen_check_text_margin" android:layout_marginRight="@dimen/iam_halfscreen_check_text_margin" android:text="Superawesome!" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:id="@id/IAMMark4" android:layout_width="@dimen/iam_halfscreen_check_size" android:layout_height="@dimen/iam_halfscreen_check_size" app:srcCompat="@drawable/check" />
+                <TextView android:textSize="@dimen/iam_halfscreen_check_text_size" android:textColor="#ff666666" android:id="@id/IAMHalfScreenText4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/iam_halfscreen_check_text_margin" android:layout_marginRight="@dimen/iam_halfscreen_check_text_margin" android:text="Superawesome!" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

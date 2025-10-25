@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="adapty_day">
+        <item quantity="other">%d días</item>
+        <item quantity="one">%d día</item>
+    </plurals>
+    <plurals name="adapty_month">
+        <item quantity="other">%d meses</item>
+        <item quantity="one">%d mes</item>
+    </plurals>
+    <plurals name="adapty_week">
+        <item quantity="other">%d semanas</item>
+        <item quantity="one">%d semana</item>
+    </plurals>
+    <plurals name="adapty_year">
+        <item quantity="other">%d años</item>
+        <item quantity="one">%d año</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d notificaciones nuevas</item>
+        <item quantity="one">%d notificación nueva</item>
+    </plurals>
+</resources>

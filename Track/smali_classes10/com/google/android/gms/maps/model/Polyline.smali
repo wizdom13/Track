@@ -1,0 +1,812 @@
+.class public final Lcom/google/android/gms/maps/model/Polyline;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-maps@@19.0.0"
+
+
+# instance fields
+.field private final zza:Lcom/google/android/gms/internal/maps/zzap;
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/gms/internal/maps/zzap;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/gms/internal/maps/zzap;
+
+    iput-object p1, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    instance-of v0, p1, Lcom/google/android/gms/maps/model/Polyline;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    check-cast p1, Lcom/google/android/gms/maps/model/Polyline;
+
+    iget-object p1, p1, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0, p1}, Lcom/google/android/gms/internal/maps/zzap;->zzD(Lcom/google/android/gms/internal/maps/zzap;)Z
+
+    move-result p1
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p1
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v0
+.end method
+
+.method public getColor()I
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/maps/zzap;->zzf()I
+
+    move-result v0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
+.end method
+
+.method public getEndCap()Lcom/google/android/gms/maps/model/Cap;
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/maps/zzap;->zzj()Lcom/google/android/gms/maps/model/Cap;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/android/gms/maps/model/Cap;->zza()Lcom/google/android/gms/maps/model/Cap;
+
+    move-result-object v0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
+.end method
+
+.method public getId()Ljava/lang/String;
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/maps/zzap;->zzl()Ljava/lang/String;
+
+    move-result-object v0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
+.end method
+
+.method public getJointType()I
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/maps/zzap;->zzg()I
+
+    move-result v0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
+.end method
+
+.method public getPattern()Ljava/util/List;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Lcom/google/android/gms/maps/model/PatternItem;",
+            ">;"
+        }
+    .end annotation
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/maps/zzap;->zzm()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/google/android/gms/maps/model/PatternItem;->zza(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
+.end method
+
+.method public getPoints()Ljava/util/List;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Lcom/google/android/gms/maps/model/LatLng;",
+            ">;"
+        }
+    .end annotation
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/maps/zzap;->zzn()Ljava/util/List;
+
+    move-result-object v0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
+.end method
+
+.method public getSpans()Ljava/util/List;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Lcom/google/android/gms/maps/model/StyleSpan;",
+            ">;"
+        }
+    .end annotation
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/maps/zzap;->zzo()Ljava/util/List;
+
+    move-result-object v0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
+.end method
+
+.method public getStartCap()Lcom/google/android/gms/maps/model/Cap;
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/maps/zzap;->zzk()Lcom/google/android/gms/maps/model/Cap;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/android/gms/maps/model/Cap;->zza()Lcom/google/android/gms/maps/model/Cap;
+
+    move-result-object v0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
+.end method
+
+.method public getTag()Ljava/lang/Object;
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/maps/zzap;->zzi()Lcom/google/android/gms/dynamic/IObjectWrapper;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/google/android/gms/dynamic/ObjectWrapper;->unwrap(Lcom/google/android/gms/dynamic/IObjectWrapper;)Ljava/lang/Object;
+
+    move-result-object v0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
+.end method
+
+.method public getWidth()F
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/maps/zzap;->zzd()F
+
+    move-result v0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
+.end method
+
+.method public getZIndex()F
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/maps/zzap;->zze()F
+
+    move-result v0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
+.end method
+
+.method public hashCode()I
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/maps/zzap;->zzh()I
+
+    move-result v0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
+.end method
+
+.method public isClickable()Z
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/maps/zzap;->zzE()Z
+
+    move-result v0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
+.end method
+
+.method public isGeodesic()Z
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/maps/zzap;->zzF()Z
+
+    move-result v0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
+.end method
+
+.method public isVisible()Z
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/maps/zzap;->zzG()Z
+
+    move-result v0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
+.end method
+
+.method public remove()V
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/maps/zzap;->zzp()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
+.end method
+
+.method public setClickable(Z)V
+    .locals 1
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0, p1}, Lcom/google/android/gms/internal/maps/zzap;->zzq(Z)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v0
+.end method
+
+.method public setColor(I)V
+    .locals 1
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0, p1}, Lcom/google/android/gms/internal/maps/zzap;->zzr(I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v0
+.end method
+
+.method public setEndCap(Lcom/google/android/gms/maps/model/Cap;)V
+    .locals 1
+
+    const-string v0, "endCap must not be null"
+
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0, p1}, Lcom/google/android/gms/internal/maps/zzap;->zzs(Lcom/google/android/gms/maps/model/Cap;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v0
+.end method
+
+.method public setGeodesic(Z)V
+    .locals 1
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0, p1}, Lcom/google/android/gms/internal/maps/zzap;->zzt(Z)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v0
+.end method
+
+.method public setJointType(I)V
+    .locals 1
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0, p1}, Lcom/google/android/gms/internal/maps/zzap;->zzu(I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v0
+.end method
+
+.method public setPattern(Ljava/util/List;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/google/android/gms/maps/model/PatternItem;",
+            ">;)V"
+        }
+    .end annotation
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0, p1}, Lcom/google/android/gms/internal/maps/zzap;->zzv(Ljava/util/List;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v0
+.end method
+
+.method public setPoints(Ljava/util/List;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/google/android/gms/maps/model/LatLng;",
+            ">;)V"
+        }
+    .end annotation
+
+    const-string v0, "points must not be null"
+
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0, p1}, Lcom/google/android/gms/internal/maps/zzap;->zzw(Ljava/util/List;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v0
+.end method
+
+.method public setSpans(Ljava/util/List;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/google/android/gms/maps/model/StyleSpan;",
+            ">;)V"
+        }
+    .end annotation
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0, p1}, Lcom/google/android/gms/internal/maps/zzap;->zzx(Ljava/util/List;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v0
+.end method
+
+.method public setStartCap(Lcom/google/android/gms/maps/model/Cap;)V
+    .locals 1
+
+    const-string v0, "startCap must not be null"
+
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0, p1}, Lcom/google/android/gms/internal/maps/zzap;->zzy(Lcom/google/android/gms/maps/model/Cap;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v0
+.end method
+
+.method public setTag(Ljava/lang/Object;)V
+    .locals 1
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-static {p1}, Lcom/google/android/gms/dynamic/ObjectWrapper;->wrap(Ljava/lang/Object;)Lcom/google/android/gms/dynamic/IObjectWrapper;
+
+    move-result-object p1
+
+    invoke-interface {v0, p1}, Lcom/google/android/gms/internal/maps/zzap;->zzz(Lcom/google/android/gms/dynamic/IObjectWrapper;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v0
+.end method
+
+.method public setVisible(Z)V
+    .locals 1
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0, p1}, Lcom/google/android/gms/internal/maps/zzap;->zzA(Z)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v0
+.end method
+
+.method public setWidth(F)V
+    .locals 1
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0, p1}, Lcom/google/android/gms/internal/maps/zzap;->zzB(F)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v0
+.end method
+
+.method public setZIndex(F)V
+    .locals 1
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/Polyline;->zza:Lcom/google/android/gms/internal/maps/zzap;
+
+    invoke-interface {v0, p1}, Lcom/google/android/gms/internal/maps/zzap;->zzC(F)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Lcom/google/android/gms/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v0
+.end method

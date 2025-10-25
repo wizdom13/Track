@@ -1,0 +1,124 @@
+.class public final Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier$b;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnLayoutChangeListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;->a(Landroid/view/ViewGroup;Lcom/fyber/inneractive/sdk/config/global/s;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+
+# instance fields
+.field public final synthetic a:Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;
+
+
+# direct methods
+.method public constructor <init>(Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier$b;->a:Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
+    .locals 0
+
+    iget-object p1, p0, Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier$b;->a:Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;
+
+    iget-object p2, p1, Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;->b:Landroid/view/View;
+
+    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
+
+    move-result p2
+
+    iget-object p3, p0, Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier$b;->a:Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;
+
+    iget-object p3, p3, Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;->b:Landroid/view/View;
+
+    invoke-virtual {p3}, Landroid/view/View;->getWidth()I
+
+    move-result p3
+
+    add-int/2addr p3, p2
+
+    int-to-float p2, p3
+
+    iput p2, p1, Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;->f:F
+
+    iget-object p1, p0, Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier$b;->a:Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;
+
+    iget-object p2, p1, Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;->c:Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier$Corner;
+
+    sget-object p3, Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier$Corner;->TOP_LEFT:Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier$Corner;
+
+    if-eq p2, p3, :cond_0
+
+    sget-object p3, Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier$Corner;->BOTTOM_LEFT:Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier$Corner;
+
+    if-ne p2, p3, :cond_1
+
+    :cond_0
+    iget p2, p1, Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;->f:F
+
+    const/high16 p3, -0x40800000    # -1.0f
+
+    mul-float p2, p2, p3
+
+    iput p2, p1, Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;->f:F
+
+    :cond_1
+    iget-object p2, p1, Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;->b:Landroid/view/View;
+
+    iget p1, p1, Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;->f:F
+
+    invoke-virtual {p2, p1}, Landroid/view/View;->setTranslationX(F)V
+
+    iget-object p1, p0, Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier$b;->a:Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;
+
+    iget-boolean p2, p1, Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;->d:Z
+
+    if-eqz p2, :cond_2
+
+    const/4 p2, 0x0
+
+    iput-boolean p2, p1, Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;->d:Z
+
+    iget-object p2, p1, Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;->b:Landroid/view/View;
+
+    const/4 p3, 0x0
+
+    invoke-virtual {p2, p3}, Landroid/view/View;->setTranslationX(F)V
+
+    iget-object p2, p1, Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;->a:Landroid/widget/ImageView;
+
+    sget p3, Lcom/fyber/inneractive/sdk/R$drawable;->fyber_info_button:I
+
+    invoke-virtual {p2, p3}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    iget-object p2, p1, Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;->e:Landroid/animation/Animator;
+
+    if-eqz p2, :cond_2
+
+    invoke-virtual {p2}, Landroid/animation/Animator;->removeAllListeners()V
+
+    const/4 p2, 0x0
+
+    iput-object p2, p1, Lcom/fyber/inneractive/sdk/ui/FyberAdIdentifier;->e:Landroid/animation/Animator;
+
+    :cond_2
+    return-void
+.end method

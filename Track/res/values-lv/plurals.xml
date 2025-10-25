@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="adapty_day">
+        <item quantity="other">%d dienas</item>
+        <item quantity="zero">%d dienu</item>
+        <item quantity="one">%d diena</item>
+    </plurals>
+    <plurals name="adapty_month">
+        <item quantity="other">%d mēneši</item>
+        <item quantity="zero">%d mēnešu</item>
+        <item quantity="one">%d mēnesis</item>
+    </plurals>
+    <plurals name="adapty_week">
+        <item quantity="other">%d nedēļas</item>
+        <item quantity="zero">%d nedēļu</item>
+        <item quantity="one">%d nedēļa</item>
+    </plurals>
+    <plurals name="adapty_year">
+        <item quantity="other">%d gadi</item>
+        <item quantity="zero">%d gadu</item>
+        <item quantity="one">%d gads</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d jauni paziņojumi</item>
+        <item quantity="zero">%d jaunu paziņojumu</item>
+        <item quantity="one">%d jauns paziņojums</item>
+    </plurals>
+</resources>

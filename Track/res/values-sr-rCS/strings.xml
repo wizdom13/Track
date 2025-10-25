@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backButtonTitle">Nazad</string>
+    <string name="ccpaSalesDisclosure">Imajte u vidu da se neke od tih razmena podataka sa našim partnerima smatraju „prodajom“ ličnih podataka prema važećem zakonu.</string>
+    <string name="changeInSettings">Ako se u bilo kom trenutku predomislite, možete promeniti svoj izbor u podešavanjima ove aplikacije.</string>
+    <string name="confirmChoiceButtonText">Potvrđujem</string>
+    <string name="customiseChoicesTitle">Prilagodite izbore</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText1">Google i drugim partnerima</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText2">Saznajte više.</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText3">Uslovi i odredbe</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText4">Politika privatnosti</string>
+    <string name="dialogPersonalizedAdsBodyPart1">Ova aplikacija personalizuje vaše iskustvo sa reklamama u saradnji sa kompanijom Google i drugim partnerima. Ako prihvatite, prikazivaće vam se relevantnije reklame. U zavisnosti od vaših podešavanja privatnosti, naši partneri mogu prikupljati i obrađivati lične podatke. Saznajte više.</string>
+    <string name="dialogPersonalizedAdsBodyPart2Sentence1">Ako prihvatite, potvrđujete da ste stariji od 16 godina.</string>
+    <string name="dialogPersonalizedAdsBodyPart2Sentence2">Ako nastavite, prihvatate naše Uslove i odredbe i Politiku privatnosti.</string>
+    <string name="explanationTitle">Objašnjenje</string>
+    <string name="generalTitle">Postavke privatnosti</string>
+    <string name="payChoiceButtonText">Kupite verziju bez reklama</string>
+    <string name="personalTitle">Personalizovane reklame</string>
+    <string name="saveAndConfirmButtonTitle">Sačuvaj i potvrdi</string>
+</resources>

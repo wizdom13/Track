@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dialogPersonalizedAdsBodyLinkableText1">Google og andre partnere</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText2">Finn ut mer.</string>
+    <string name="gdpr_anonconsent_ads_accepted_body">Flott. Våre annonsepartnere vil ikke samle inn dine opplysninger gjennom denne appen for persontilpasset reklame. Du vil fortsatt se annonser, men de vil kanskje ikke være relevant til dine interesser.</string>
+    <string name="gdpr_anonconsent_ads_body">For å kunne gi deg en gratis og funksjonell app, vil du kunne se annonser, men de vil kanskje ikke være like relevant for din interesse. Ingen online profiler vil bli opprettet.</string>
+    <string name="gdpr_anonconsent_ads_body_two">Ved å godta, bekrefter du at du er over 16 år og aksepterer ikke-personlig tilpasset reklame.</string>
+    <string name="gdpr_anonconsent_ads_reject">Nei takk. Jeg vil betale</string>
+    <string name="gdpr_anonconsent_ads_title">Ingen problem – vi har ikke personlig tilpasset reklame</string>
+    <string name="gdpr_consent_ads_accept">Ja, jeg aksepterer vilkårene</string>
+    <string name="gdpr_consent_ads_accepted_accept">Lukk</string>
+    <string name="gdpr_consent_ads_accepted_body">Flott! Vi håper du blir fornøyd med din brukertilpassede opplevelse. Hvis du skulle endre mening, kan du alltid gå til innstillingene for denne appen.</string>
+    <string name="gdpr_consent_ads_accepted_title">Tilpasset opplevelse akseptert</string>
+    <string name="gdpr_consent_ads_body">Denne appen tilpasser markedsføringen mot deg gjennom Google og andre partnere. Ved å akseptere, vil du se annonser som er mer relevante for deg. Våre partnere kan samle inn og behandle dine personlige opplysninger, avhengig av dine personverninnstillinger. Finn ut mer.</string>
+    <string name="gdpr_consent_ads_body_two">Ved å akseptere, bekrefter du at du er over 16 år og ønsker en tilpasset brukeropplevelse.</string>
+    <string name="gdpr_consent_ads_reject">Nei takk</string>
+    <string name="gdpr_consent_ads_title">Tilpass brukeropplevelsen din</string>
+    <string name="gdpr_paidconsent_ads_accept">Få betalversjon</string>
+    <string name="gdpr_paidconsent_ads_accept_inapp">Få oppgradering</string>
+    <string name="gdpr_paidconsent_ads_accept_subscription">Få abonnement</string>
+    <string name="gdpr_paidconsent_ads_accepted_accept">Lukk</string>
+    <string name="gdpr_paidconsent_ads_accepted_title">Akseptert ikke-personlig tilpasset reklame</string>
+    <string name="gdpr_paidconsent_ads_body">Vi elsker også appen uten reklame! Du har muligheten til en annonsefri opplevelse ved å oppgradere til betalversjonen av appen.</string>
+    <string name="gdpr_paidconsent_ads_body_two">Hvis du ikke vil betale for denne appen, ber vi om forståelse for at vi trenger din tillatelse til å vise deg annonser.</string>
+    <string name="gdpr_paidconsent_ads_reject">Nei takk. Jeg vil se annonser</string>
+    <string name="gdpr_paidconsent_ads_title">Kjøp Reklamefri versjon</string>
+</resources>
