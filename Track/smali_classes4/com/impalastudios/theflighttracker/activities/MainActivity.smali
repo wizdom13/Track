@@ -2324,11 +2324,11 @@
 
     invoke-super/range {p0 .. p1}, Landroidx/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
 
-    new-instance v1, Lcom/impalastudios/theflighttracker/features/splashscreen/SplashScreenFragment;
-
-    invoke-direct {v1}, Lcom/impalastudios/theflighttracker/features/splashscreen/SplashScreenFragment;-><init>()V
-
     invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object v2
 
