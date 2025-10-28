@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backButtonTitle">Zpět</string>
+    <string name="ccpaSalesDisclosure">Upozorňujeme, že podle platných zákonů některé z těchto výměn dat s našimi partnery představují „prodej“ osobních údajů.</string>
+    <string name="changeInSettings">Pokud změníte názor, můžete svou volbu změnit v nastavení této aplikace.</string>
+    <string name="confirmChoiceButtonText">Potvrzuji</string>
+    <string name="customiseChoicesTitle">Přizpůsobit volby</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText1">Google a dalších partnerů</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText2">Další informace.</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText3">Podmínky a ujednání</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText4">Zásady ochrany osobních údajů</string>
+    <string name="dialogPersonalizedAdsBodyPart1">Tato aplikace přizpůsobuje zobrazované reklamy prostřednictvím společnosti Google a dalších partnerů. Pokud s tím souhlasíte, uvidíte reklamy, které jsou pro vás relevantnější. V závislosti na nastavení ochrany osobních údajů mohou naši partneři shromažďovat a zpracovávat osobní údaje. Další informace.</string>
+    <string name="dialogPersonalizedAdsBodyPart2Sentence1">Vyjádřením souhlasu potvrzujete, že jste starší než 16 let.</string>
+    <string name="dialogPersonalizedAdsBodyPart2Sentence2">Pokud budete pokračovat, vyjadřujete souhlas s podmínkami a ujednáními a zásadami ochrany osobních údajů.</string>
+    <string name="explanationTitle">Vysvětlení</string>
+    <string name="generalTitle">Nastavení soukromí</string>
+    <string name="payChoiceButtonText">Koupit verzi bez reklam</string>
+    <string name="personalTitle">Personalizované reklamy</string>
+    <string name="saveAndConfirmButtonTitle">Uložit a potvrdit</string>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backButtonTitle">Til baka</string>
+    <string name="ccpaSalesDisclosure">Athugaðu að sumar gagnafærslur með samstarfsaðilum okkar eru skilgreindar sem sala á persónulegum gögnum samkvæmd viðeigandi lögum.</string>
+    <string name="changeInSettings">Ef þú skiptir um skoðun getur þú breytt vali þínu með því að fara í stillingarnar í þessu appi.</string>
+    <string name="confirmChoiceButtonText">Ég staðfesti</string>
+    <string name="customiseChoicesTitle">Sérsníða valkosti</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText1">Google og aðra samstarfsaðila</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText2">Frekari upplýsingar.</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText3">Skilmálar</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText4">Persónuverndarstefna</string>
+    <string name="dialogPersonalizedAdsBodyPart1">Þetta app sérstillir auglýsingaupplifun þína í gegnum Google og aðra samstarfsaðila. Með því að samþykkja muntu sjá auglýsingar sem passa betur við þig. Eftir því hverjar friðhelgisstillingar þínar eru, gætu samstarfsaðilar okkar safnað persónulegum gögnum og unnið úr þeim. Frekari upplýsingar.</string>
+    <string name="dialogPersonalizedAdsBodyPart2Sentence1">Með því að samþykkja staðfestir þú að þú sért eldri en 16 ára.</string>
+    <string name="dialogPersonalizedAdsBodyPart2Sentence2">Með því að halda áfram samþykkir þú skilmálana og persónuverndarstefnuna.</string>
+    <string name="explanationTitle">Útskýring</string>
+    <string name="generalTitle">Persónuverndarstillingar</string>
+    <string name="payChoiceButtonText">Kaupa útgáfu án auglýsinga</string>
+    <string name="personalTitle">Sérsniðnar auglýsingar</string>
+    <string name="saveAndConfirmButtonTitle">Vista og staðfesta</string>
+</resources>

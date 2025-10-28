@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="duration_days">
+        <item quantity="other">%d días</item>
+        <item quantity="one">%d día</item>
+        <item quantity="many">%d días</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d horas</item>
+        <item quantity="one">%d hora</item>
+        <item quantity="many">%d horas</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d minutos</item>
+        <item quantity="one">%d minuto</item>
+        <item quantity="many">%d minutos</item>
+    </plurals>
+    <plurals name="duration_months">
+        <item quantity="other">%d meses</item>
+        <item quantity="one">%d mes</item>
+        <item quantity="many">%d meses</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d segundos</item>
+        <item quantity="one">%d segundo</item>
+        <item quantity="many">%d segundos</item>
+    </plurals>
+    <plurals name="duration_years">
+        <item quantity="other">%d años</item>
+        <item quantity="one">%d año</item>
+        <item quantity="many">%d años</item>
+    </plurals>
+    <plurals name="layovers">
+        <item quantity="other">Escalas: %d</item>
+        <item quantity="one">Escalas: %d</item>
+        <item quantity="many">Escalas: %d</item>
+    </plurals>
+    <plurals name="month">
+        <item quantity="other">Meses</item>
+        <item quantity="one">Mes</item>
+        <item quantity="many">Meses</item>
+    </plurals>
+    <plurals name="old_flights">
+        <item quantity="other">%d vuelos anteriores.</item>
+        <item quantity="one">%d vuelo anterior.</item>
+        <item quantity="many">%d vuelos anteriores.</item>
+    </plurals>
+    <plurals name="trip_count">
+        <item quantity="other">%d viajes</item>
+        <item quantity="one">%d viaje</item>
+        <item quantity="many">%d viajes</item>
+    </plurals>
+    <plurals name="trip_flightcount_text">
+        <item quantity="other">%d vuelos</item>
+        <item quantity="one">%d vuelo</item>
+        <item quantity="many">%d vuelos</item>
+    </plurals>
+    <plurals name="tripit_import_button_text">
+        <item quantity="other">IMPORTAR ( %d seleccionado)</item>
+        <item quantity="one">IMPORTAR ( %d seleccionado)</item>
+        <item quantity="many">IMPORTAR ( %d seleccionado)</item>
+    </plurals>
+</resources>

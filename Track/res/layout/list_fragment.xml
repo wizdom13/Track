@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_optimizationLevel="direct|barrier|chains|dimensions">
+        <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@id/list_container" android:background="#ffe6eaee" android:paddingTop="8.0dip" android:clipToPadding="false" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <ProgressBar android:id="@id/data_progressBar" android:visibility="invisible" android:layout_width="343.0dip" android:layout_height="31.0dip" android:layout_marginTop="32.0dip" android:layout_marginBottom="8.0dip" app:layout_constraintBottom_toBottomOf="@id/list_container" app:layout_constraintHorizontal_bias="0.512" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="adapty_day">
+        <item quantity="other">%d dygn</item>
+        <item quantity="one">%d dygn</item>
+    </plurals>
+    <plurals name="adapty_month">
+        <item quantity="other">%d månader</item>
+        <item quantity="one">%d månad</item>
+    </plurals>
+    <plurals name="adapty_week">
+        <item quantity="other">%d veckor</item>
+        <item quantity="one">%d vecka</item>
+    </plurals>
+    <plurals name="adapty_year">
+        <item quantity="other">%d år</item>
+        <item quantity="one">%d år</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nya aviseringar</item>
+        <item quantity="one">%d ny avisering</item>
+    </plurals>
+</resources>

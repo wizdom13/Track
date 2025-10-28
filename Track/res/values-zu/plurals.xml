@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="adapty_day">
+        <item quantity="other">%d izinsuku</item>
+        <item quantity="one">%d usuku</item>
+    </plurals>
+    <plurals name="adapty_month">
+        <item quantity="other">%d izinyanga</item>
+        <item quantity="one">%d inyanga</item>
+    </plurals>
+    <plurals name="adapty_week">
+        <item quantity="other">%d amaviki</item>
+        <item quantity="one">%d iviki</item>
+    </plurals>
+    <plurals name="adapty_year">
+        <item quantity="other">%d y</item>
+        <item quantity="one">%d y</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d izaziso ezintsha</item>
+        <item quantity="one">%d izaziso ezintsha</item>
+    </plurals>
+</resources>

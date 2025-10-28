@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_distance_type_entries">
+        <item>km</item>
+        <item>mi</item>
+    </string-array>
+    <string-array name="pref_distance_type_values">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="pref_flights_to_import_type_entries">
+        <item>Ihre Flüge</item>
+        <item>Flüge Ihrer Freunde</item>
+        <item>Alle</item>
+    </string-array>
+    <string-array name="pref_flights_to_import_type_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="pref_maps_type_entries">
+        <item>Normal</item>
+        <item>Hybrid</item>
+        <item>Satellit</item>
+        <item>Gelände</item>
+    </string-array>
+    <string-array name="pref_maps_type_values">
+        <item>1</item>
+        <item>4</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="pref_sync_delete_flight_entries">
+        <item>Niemals</item>
+        <item>1 Stunde nach der Landung</item>
+        <item>2 Stunden nach der Landung</item>
+        <item>6 Stunden nach der Landung</item>
+        <item>12 Stunden nach der Landung</item>
+        <item>1 Tag nach der Landung</item>
+        <item>2 Tage nach der Landung</item>
+        <item>7 Tage nach der Landung</item>
+        <item>1 Monat nach der Landung</item>
+    </string-array>
+    <string-array name="pref_sync_delete_flight_values">
+        <item>0</item>
+        <item>3.600.000</item>
+        <item>7.200.000</item>
+        <item>21.600.000</item>
+        <item>43.200.000</item>
+        <item>86.400.000</item>
+        <item>172.800.000</item>
+        <item>604.800.000</item>
+        <item>2.592.000.000</item>
+    </string-array>
+    <string-array name="pref_sync_reminder_entries">
+        <item>Keine Erinnerung</item>
+        <item>15 Minuten</item>
+        <item>30 Minuten</item>
+        <item>45 Minuten</item>
+        <item>1 Stunde</item>
+        <item>2 Stunden</item>
+        <item>3 Stunden</item>
+        <item>4 Stunden</item>
+    </string-array>
+    <string-array name="pref_sync_reminder_values">
+        <item>0</item>
+        <item>15</item>
+        <item>30</item>
+        <item>40</item>
+        <item>60</item>
+        <item>120</item>
+        <item>180</item>
+        <item>240</item>
+    </string-array>
+    <string-array name="pref_temperature_type_entries">
+        <item>@string/celsius</item>
+        <item>@string/fahrenheit</item>
+    </string-array>
+    <string-array name="pref_temperature_type_values">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+</resources>

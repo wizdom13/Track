@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/nav_iab" app:startDestination="@id/IABPopup"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="IABInitialLayer" android:name="com.impalastudios.iab.IABInitialLayer" android:id="@id/IABInitialLayer">
+        <action android:id="@id/action_IABInitialLayer_to_IABSecondaryLayer" app:destination="@id/IABSecondaryLayer" />
+    </fragment>
+    <fragment android:label="IABSecondaryLayer" android:name="com.impalastudios.iab.IABSecondaryLayer" android:id="@id/IABSecondaryLayer">
+        <action android:id="@id/action_IABSecondaryLayer_to_IABDetailLayer" app:destination="@id/IABDetailLayer" />
+    </fragment>
+    <fragment android:label="iab_detail_layer" android:name="com.impalastudios.iab.IABDetailLayer" android:id="@id/IABDetailLayer" />
+    <dialog android:label="IABPopup" android:name="com.impalastudios.iab.IABPopup" android:id="@id/IABPopup">
+        <action android:id="@id/action_IABPopup_to_IABInitialLayer" app:destination="@id/IABInitialLayer" app:popUpToInclusive="false" />
+    </dialog>
+    <action android:id="@id/action_global_IABPopup" app:destination="@id/IABPopup" />
+</navigation>

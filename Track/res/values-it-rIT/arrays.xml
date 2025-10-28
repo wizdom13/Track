@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_distance_type_entries">
+        <item>km</item>
+        <item>mi</item>
+    </string-array>
+    <string-array name="pref_distance_type_values">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="pref_flights_to_import_type_entries">
+        <item>I tuoi voli</item>
+        <item>I voli dei tuoi amici</item>
+        <item>Tutti</item>
+    </string-array>
+    <string-array name="pref_flights_to_import_type_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="pref_maps_type_entries">
+        <item>Normale</item>
+        <item>Ibrido</item>
+        <item>Satellitare</item>
+        <item>Terreno</item>
+    </string-array>
+    <string-array name="pref_maps_type_values">
+        <item>1</item>
+        <item>4</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="pref_sync_delete_flight_entries">
+        <item>Mai</item>
+        <item>"1 ora dopo l'atterraggio"</item>
+        <item>"2 ore dopo l'atterraggio"</item>
+        <item>"6 ore dopo l'atterraggio"</item>
+        <item>"12 ore dopo l'atterraggio"</item>
+        <item>"1 giorno dopo l'atterraggio"</item>
+        <item>"2 giorni dopo l'atterraggio"</item>
+        <item>"7 giorni dopo l'atterraggio"</item>
+        <item>"1 mese dopo l'atterraggio"</item>
+    </string-array>
+    <string-array name="pref_sync_delete_flight_values">
+        <item>0</item>
+        <item>3600000</item>
+        <item>7200000</item>
+        <item>21600000</item>
+        <item>43200000</item>
+        <item>86400000</item>
+        <item>172800000</item>
+        <item>604800000</item>
+        <item>2592000000</item>
+    </string-array>
+    <string-array name="pref_sync_reminder_entries">
+        <item>Nessun promemoria</item>
+        <item>15 minuti</item>
+        <item>30 minuti</item>
+        <item>45 minuti</item>
+        <item>1 ora</item>
+        <item>2 ore</item>
+        <item>3 ore</item>
+        <item>4 ore</item>
+    </string-array>
+    <string-array name="pref_sync_reminder_values">
+        <item>0</item>
+        <item>15</item>
+        <item>30</item>
+        <item>40</item>
+        <item>60</item>
+        <item>120</item>
+        <item>180</item>
+        <item>240</item>
+    </string-array>
+    <string-array name="pref_temperature_type_entries">
+        <item>@string/celsius</item>
+        <item>@string/fahrenheit</item>
+    </string-array>
+    <string-array name="pref_temperature_type_values">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+</resources>

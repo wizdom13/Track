@@ -1,0 +1,65 @@
+.class public final Lcom/google/android/gms/internal/ads/zzayl;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads@@23.5.0"
+
+
+# instance fields
+.field public final zza:Z
+
+.field public final zzb:I
+
+.field public final zzc:Landroid/graphics/Rect;
+
+.field public final zzd:Landroid/graphics/Rect;
+
+.field public final zze:Landroid/graphics/Rect;
+
+.field public final zzf:Z
+
+.field public final zzg:Landroid/graphics/Rect;
+
+.field public final zzh:Z
+
+.field public final zzi:Landroid/graphics/Rect;
+
+.field public final zzj:Z
+
+.field public final zzk:Ljava/util/List;
+
+
+# direct methods
+.method public constructor <init>(JZZILandroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;ZLandroid/graphics/Rect;ZJLandroid/graphics/Rect;FZLjava/util/List;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p4, p0, Lcom/google/android/gms/internal/ads/zzayl;->zza:Z
+
+    iput p5, p0, Lcom/google/android/gms/internal/ads/zzayl;->zzb:I
+
+    iput-object p6, p0, Lcom/google/android/gms/internal/ads/zzayl;->zzc:Landroid/graphics/Rect;
+
+    iput-object p7, p0, Lcom/google/android/gms/internal/ads/zzayl;->zzd:Landroid/graphics/Rect;
+
+    iput-object p8, p0, Lcom/google/android/gms/internal/ads/zzayl;->zze:Landroid/graphics/Rect;
+
+    iput-boolean p9, p0, Lcom/google/android/gms/internal/ads/zzayl;->zzf:Z
+
+    iput-object p10, p0, Lcom/google/android/gms/internal/ads/zzayl;->zzg:Landroid/graphics/Rect;
+
+    iput-boolean p11, p0, Lcom/google/android/gms/internal/ads/zzayl;->zzh:Z
+
+    move-object v0, p14
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/ads/zzayl;->zzi:Landroid/graphics/Rect;
+
+    move/from16 v0, p16
+
+    iput-boolean v0, p0, Lcom/google/android/gms/internal/ads/zzayl;->zzj:Z
+
+    move-object/from16 v0, p17
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/ads/zzayl;->zzk:Ljava/util/List;
+
+    return-void
+.end method
