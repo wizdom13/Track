@@ -10,7 +10,6 @@
 .implements Lcom/impalastudios/framework/core/inAppPurchases/InAppProductsListener;
 .implements Lcom/impalastudios/networkingframework/networkstatus/InternetConnectivityListener;
 .implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
-.implements Lcom/impalastudios/advertfwk/AdReceiver;
 
 
 # annotations
@@ -39,7 +38,6 @@
         "Lcom/impalastudios/framework/core/inAppPurchases/InAppProductsListener;",
         "Lcom/impalastudios/networkingframework/networkstatus/InternetConnectivityListener;",
         "Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;",
-        "Lcom/impalastudios/advertfwk/AdReceiver;",
         "<init>",
         "()V",
         "binding",
@@ -1214,24 +1212,6 @@
     return v0
 .end method
 
-.method public getTestDevices()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-
-    invoke-static {p0}, Lcom/impalastudios/advertfwk/AdReceiver$DefaultImpls;->getTestDevices(Lcom/impalastudios/advertfwk/AdReceiver;)Ljava/util/List;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public final hideBanner()V
     .locals 7
 
@@ -1724,89 +1704,6 @@
 
     :cond_2
     :goto_0
-    return-void
-.end method
-
-.method public onAdClicked(Ljava/lang/String;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/impalastudios/advertfwk/AdReceiver$DefaultImpls;->onAdClicked(Lcom/impalastudios/advertfwk/AdReceiver;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onAdFailedToLoad(Ljava/lang/String;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/impalastudios/advertfwk/AdReceiver$DefaultImpls;->onAdFailedToLoad(Lcom/impalastudios/advertfwk/AdReceiver;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onAdLoaded(Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/impalastudios/advertfwk/AdReceiver$DefaultImpls;->onAdLoaded(Lcom/impalastudios/advertfwk/AdReceiver;Ljava/lang/Object;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onAdOpened(Ljava/lang/String;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/impalastudios/advertfwk/AdReceiver$DefaultImpls;->onAdOpened(Lcom/impalastudios/advertfwk/AdReceiver;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onAdShown(Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 2
-
-    const-string v0, "adId"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-static {p0, p1, p2}, Lcom/impalastudios/advertfwk/AdReceiver$DefaultImpls;->onAdShown(Lcom/impalastudios/advertfwk/AdReceiver;Ljava/lang/Object;Ljava/lang/String;)V
-
-    const p1, 0x7f140044
-
-    invoke-virtual {p0, p1}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    move-object p1, p0
-
-    check-cast p1, Landroid/content/Context;
-
-    invoke-static {p1}, Lcom/impalastudios/theflighttracker/util/PrefManKt;->PrefMan(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object p1
-
-    const-string p2, "PrefMan(...)"
-
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object p1
-
-    const-string p2, "startup_interstitial_countdown"
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    invoke-interface {p1, p2, v0, v1}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
-
-    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    :cond_0
     return-void
 .end method
 
@@ -3820,236 +3717,6 @@
     return-void
 .end method
 
-.method protected onStart()V
-    .locals 4
-
-    invoke-super {p0}, Landroidx/appcompat/app/AppCompatActivity;->onStart()V
-
-    move-object v0, p0
-
-    check-cast v0, Landroid/content/Context;
-
-    invoke-static {v0}, Landroidx/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    move-object v1, p0
-
-    check-cast v1, Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
-
-    invoke-interface {v0, v1}, Landroid/content/SharedPreferences;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
-
-    sget-object v0, Lcom/impalastudios/theflighttracker/App;->Companion:Lcom/impalastudios/theflighttracker/App$Companion;
-
-    invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/App$Companion;->getInAppPurchaseManagerNew()Lcom/impalastudios/framework/core/inAppPurchases/adapty/InAppPurchaseManagerAdapty;
-
-    move-result-object v0
-
-    move-object v1, p0
-
-    check-cast v1, Lcom/impalastudios/framework/core/inAppPurchases/InAppProductsListener;
-
-    invoke-virtual {v0, v1}, Lcom/impalastudios/framework/core/inAppPurchases/adapty/InAppPurchaseManagerAdapty;->addListener(Lcom/impalastudios/framework/core/inAppPurchases/InAppProductsListener;)Z
-
-    sget-object v0, Lcom/impalastudios/theflighttracker/App;->Companion:Lcom/impalastudios/theflighttracker/App$Companion;
-
-    invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/App$Companion;->getAdvertisementManager()Lcom/impalastudios/advertfwk/AdvertisementManager;
-
-    move-result-object v0
-
-    move-object v1, p0
-
-    check-cast v1, Lcom/impalastudios/advertfwk/AdReceiver;
-
-    const v2, 0x7f140044
-
-    invoke-virtual {p0, v2}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "getString(...)"
-
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1, v2}, Lcom/impalastudios/advertfwk/AdvertisementManager;->addObserver(Lcom/impalastudios/advertfwk/AdReceiver;Ljava/lang/String;)Z
-
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-virtual {p0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    new-instance v1, Lcom/impalastudios/theflighttracker/activities/MainActivity$$ExternalSyntheticLambda0;
-
-    invoke-direct {v1, p0}, Lcom/impalastudios/theflighttracker/activities/MainActivity$$ExternalSyntheticLambda0;-><init>(Lcom/impalastudios/theflighttracker/activities/MainActivity;)V
-
-    const-wide/16 v2, 0x3e8
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    iget-object v0, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->receiver:Lcom/impalastudios/networkingframework/networkstatus/ConnectivityChangeReceiver;
-
-    if-eqz v0, :cond_0
-
-    check-cast v0, Landroid/content/BroadcastReceiver;
-
-    invoke-virtual {p0, v0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
-
-    :cond_0
-    new-instance v0, Landroid/content/IntentFilter;
-
-    const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
-
-    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
-
-    new-instance v1, Lcom/impalastudios/networkingframework/networkstatus/ConnectivityChangeReceiver;
-
-    invoke-direct {v1}, Lcom/impalastudios/networkingframework/networkstatus/ConnectivityChangeReceiver;-><init>()V
-
-    iput-object v1, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->receiver:Lcom/impalastudios/networkingframework/networkstatus/ConnectivityChangeReceiver;
-
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
-
-    invoke-virtual {v1}, Lcom/impalastudios/networkingframework/networkstatus/ConnectivityChangeReceiver;->getInternetConnectivityListeners()Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v1, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->receiver:Lcom/impalastudios/networkingframework/networkstatus/ConnectivityChangeReceiver;
-
-    check-cast v1, Landroid/content/BroadcastReceiver;
-
-    invoke-virtual {p0, v1, v0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    return-void
-.end method
-
-.method protected onStop()V
-    .locals 4
-
-    invoke-super {p0}, Landroidx/appcompat/app/AppCompatActivity;->onStop()V
-
-    move-object v0, p0
-
-    check-cast v0, Landroid/content/Context;
-
-    invoke-static {v0}, Landroidx/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    move-object v1, p0
-
-    check-cast v1, Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
-
-    invoke-interface {v0, v1}, Landroid/content/SharedPreferences;->unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
-
-    sget-object v0, Lcom/impalastudios/theflighttracker/App;->Companion:Lcom/impalastudios/theflighttracker/App$Companion;
-
-    invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/App$Companion;->getInAppPurchaseManagerNew()Lcom/impalastudios/framework/core/inAppPurchases/adapty/InAppPurchaseManagerAdapty;
-
-    move-result-object v0
-
-    move-object v1, p0
-
-    check-cast v1, Lcom/impalastudios/framework/core/inAppPurchases/InAppProductsListener;
-
-    invoke-virtual {v0, v1}, Lcom/impalastudios/framework/core/inAppPurchases/adapty/InAppPurchaseManagerAdapty;->removeListener(Lcom/impalastudios/framework/core/inAppPurchases/InAppProductsListener;)Z
-
-    sget-object v0, Lcom/impalastudios/theflighttracker/App;->Companion:Lcom/impalastudios/theflighttracker/App$Companion;
-
-    invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/App$Companion;->getAdvertisementManager()Lcom/impalastudios/advertfwk/AdvertisementManager;
-
-    move-result-object v0
-
-    move-object v1, p0
-
-    check-cast v1, Lcom/impalastudios/advertfwk/AdReceiver;
-
-    const v2, 0x7f140044
-
-    invoke-virtual {p0, v2}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "getString(...)"
-
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1, v2}, Lcom/impalastudios/advertfwk/AdvertisementManager;->removeObserver(Lcom/impalastudios/advertfwk/AdReceiver;Ljava/lang/String;)Z
-
-    iget-object v0, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->receiver:Lcom/impalastudios/networkingframework/networkstatus/ConnectivityChangeReceiver;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
-
-    invoke-virtual {v0}, Lcom/impalastudios/networkingframework/networkstatus/ConnectivityChangeReceiver;->getInternetConnectivityListeners()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->receiver:Lcom/impalastudios/networkingframework/networkstatus/ConnectivityChangeReceiver;
-
-    check-cast v0, Landroid/content/BroadcastReceiver;
-
-    invoke-virtual {p0, v0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->receiver:Lcom/impalastudios/networkingframework/networkstatus/ConnectivityChangeReceiver;
-
-    sget-object v1, Lcom/impalastudios/theflighttracker/features/subscription/SubscriptionAlertPopup;->INSTANCE:Lcom/impalastudios/theflighttracker/features/subscription/SubscriptionAlertPopup;
-
-    invoke-virtual {v1}, Lcom/impalastudios/theflighttracker/features/subscription/SubscriptionAlertPopup;->isShowingPopup()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    sget-object v1, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->INSTANCE:Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;
-
-    invoke-virtual {v1}, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->getFirebaseInstance()Lcom/google/firebase/analytics/FirebaseAnalytics;
-
-    move-result-object v1
-
-    const-string v2, "subscription_promo_alert_dismissed"
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1, v2, v0}, Lcom/google/firebase/analytics/FirebaseAnalytics;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    :cond_1
-    sget-object v1, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->INSTANCE:Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;
-
-    invoke-virtual {v1, v2, v0}, Lcom/impalastudios/impalaanalyticsframework/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    :cond_2
-    return-void
-.end method
-
-.method public onSupportNavigateUp()Z
-    .locals 1
-
-    invoke-super {p0}, Landroidx/appcompat/app/AppCompatActivity;->onSupportNavigateUp()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public productInfoUpdated()V
-    .locals 0
-
-    return-void
-.end method
-
 .method public purchase(Ljava/lang/String;)V
     .locals 2
 
@@ -5110,14 +4777,4 @@
     invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
 
     return-void
-.end method
-
-.method public showPersonalizedAds()Z
-    .locals 1
-
-    invoke-static {p0}, Lcom/impalastudios/advertfwk/AdReceiver$DefaultImpls;->showPersonalizedAds(Lcom/impalastudios/advertfwk/AdReceiver;)Z
-
-    move-result v0
-
-    return v0
 .end method
