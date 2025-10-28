@@ -2324,6 +2324,262 @@
 
     invoke-super/range {p0 .. p1}, Landroidx/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
 
+    move-object v2, v0
+
+    check-cast v2, Landroidx/lifecycle/LifecycleOwner;
+
+    invoke-static {v2}, Landroidx/lifecycle/LifecycleOwnerKt;->getLifecycleScope(Landroidx/lifecycle/LifecycleOwner;)Landroidx/lifecycle/LifecycleCoroutineScope;
+
+    move-result-object v3
+
+    move-object v4, v3
+
+    check-cast v4, Lkotlinx/coroutines/CoroutineScope;
+
+    invoke-static {}, Lkotlinx/coroutines/Dispatchers;->getIO()Lkotlinx/coroutines/CoroutineDispatcher;
+
+    move-result-object v3
+
+    move-object v5, v3
+
+    check-cast v5, Lkotlin/coroutines/CoroutineContext;
+
+    new-instance v3, Lcom/impalastudios/theflighttracker/activities/MainActivity$onCreate$1;
+
+    const/4 v10, 0x0
+
+    invoke-direct {v3, v1, v10}, Lcom/impalastudios/theflighttracker/activities/MainActivity$onCreate$1;-><init>(Lcom/impalastudios/theflighttracker/features/splashscreen/SplashScreenFragment;Lkotlin/coroutines/Continuation;)V
+
+    move-object v7, v3
+
+    check-cast v7, Lkotlin/jvm/functions/Function2;
+
+    const/4 v8, 0x2
+
+    const/4 v9, 0x0
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v4 .. v9}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
+
+    invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+
+    move-result-object v1
+
+    new-instance v3, Lcom/impalastudios/advertfwk/AdsAppLifeCycleObserver;
+
+    move-object v4, v0
+
+    check-cast v4, Landroid/app/Activity;
+
+    invoke-direct {v3, v4}, Lcom/impalastudios/advertfwk/AdsAppLifeCycleObserver;-><init>(Landroid/app/Activity;)V
+
+    check-cast v3, Landroidx/lifecycle/LifecycleObserver;
+
+    invoke-virtual {v1, v3}, Landroidx/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
+
+    new-instance v1, Lcom/impalastudios/theflighttracker/util/updater/UpdateChecker;
+
+    invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+
+    move-result-object v3
+
+    invoke-direct {v1, v4, v3}, Lcom/impalastudios/theflighttracker/util/updater/UpdateChecker;-><init>(Landroid/app/Activity;Landroidx/lifecycle/Lifecycle;)V
+
+    invoke-virtual {v1}, Lcom/impalastudios/theflighttracker/util/updater/UpdateChecker;->enable()V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->setRequestedOrientation(I)V
+
+    new-instance v3, Lcom/impalastudios/theflighttracker/util/SoftKeyboardState;
+
+    invoke-direct {v3, v4}, Lcom/impalastudios/theflighttracker/util/SoftKeyboardState;-><init>(Landroid/app/Activity;)V
+
+    iput-object v3, v0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->softKeyboardState:Lcom/impalastudios/theflighttracker/util/SoftKeyboardState;
+
+    invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getStatusBarHeight()I
+
+    move-result v3
+
+    sput v3, Lcom/impalastudios/theflighttracker/activities/MainActivity;->status_bar_height:I
+
+    invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->inflate(Landroid/view/LayoutInflater;)Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
+
+    move-result-object v3
+
+    iput-object v3, v0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
+
+    const-string v5, "binding"
+
+    if-nez v3, :cond_0
+
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    move-object v3, v10
+
+    :cond_0
+    iget-object v3, v3, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->root:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    check-cast v3, Landroid/view/View;
+
+    invoke-virtual {v0, v3}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->setContentView(Landroid/view/View;)V
+
+    sget-object v3, Lcom/impalastudios/theflighttracker/App;->Companion:Lcom/impalastudios/theflighttracker/App$Companion;
+
+    invoke-virtual {v3}, Lcom/impalastudios/theflighttracker/App$Companion;->getAdvertisementManager()Lcom/impalastudios/advertfwk/AdvertisementManager;
+
+    move-result-object v3
+
+    const v6, 0x7f140041
+
+    invoke-virtual {v0, v6}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    const-string v7, "getString(...)"
+
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v3, v6}, Lcom/impalastudios/advertfwk/AdvertisementManager;->getAdViewForAd(Ljava/lang/String;)Lcom/applovin/mediation/ads/MaxAdView;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/applovin/mediation/ads/MaxAdView;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v6
+
+    if-eqz v6, :cond_1
+
+    invoke-virtual {v3}, Lcom/applovin/mediation/ads/MaxAdView;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v6
+
+    const-string v7, "null cannot be cast to non-null type android.view.ViewGroup"
+
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v6, Landroid/view/ViewGroup;
+
+    move-object v7, v3
+
+    check-cast v7, Landroid/view/View;
+
+    invoke-virtual {v6, v7}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+    :cond_1
+    iget-object v6, v0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
+
+    if-nez v6, :cond_2
+
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    move-object v6, v10
+
+    :cond_2
+    iget-object v5, v6, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->container:Landroidx/constraintlayout/widget/ConstraintLayout;
+
+    move-object v6, v3
+
+    check-cast v6, Landroid/view/View;
+
+    new-instance v7, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
+
+    const/16 v8, 0x32
+
+    invoke-static {v8}, Lcom/impalastudios/theflighttracker/util/ConversionUtilsKt;->getDp(I)I
+
+    move-result v8
+
+    const/4 v9, 0x0
+
+    invoke-direct {v7, v9, v8}, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;-><init>(II)V
+
+    check-cast v7, Landroid/view/ViewGroup$LayoutParams;
+
+    invoke-virtual {v5, v6, v7}, Landroidx/constraintlayout/widget/ConstraintLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    new-instance v5, Lcom/impalastudios/theflighttracker/activities/MainActivity$onCreate$2;
+
+    invoke-direct {v5, v0, v3}, Lcom/impalastudios/theflighttracker/activities/MainActivity$onCreate$2;-><init>(Lcom/impalastudios/theflighttracker/activities/MainActivity;Lcom/applovin/mediation/ads/MaxAdView;)V
+
+    check-cast v5, Lcom/applovin/mediation/MaxAdViewAdListener;
+
+    invoke-virtual {v3, v5}, Lcom/applovin/mediation/ads/MaxAdView;->setListener(Lcom/applovin/mediation/MaxAdViewAdListener;)V
+
+    sget-object v5, Lcom/applovin/mediation/MaxAdFormat;->BANNER:Lcom/applovin/mediation/MaxAdFormat;
+
+    invoke-virtual {v5, v4}, Lcom/applovin/mediation/MaxAdFormat;->getAdaptiveSize(Landroid/app/Activity;)Lcom/applovin/sdk/AppLovinSdkUtils$Size;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/applovin/sdk/AppLovinSdkUtils$Size;->getHeight()I
+
+    move-result v4
+
+    invoke-static {v4}, Lcom/impalastudios/theflighttracker/util/ConversionUtilsKt;->getDp(I)I
+
+    invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_5
+
+    check-cast v4, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
+
+    check-cast v4, Landroid/view/ViewGroup$LayoutParams;
+
+    move-object v5, v4
+
+    check-cast v5, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
+
+    iput-boolean v9, v5, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->constrainedHeight:Z
+
+    const v7, 0x7f0a03df
+
+    iput v7, v5, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->bottomToTop:I
+
+    const v8, 0x7f0a008f
+
+    iput v8, v5, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->endToStart:I
+
+    const/4 v11, 0x2
+
+    iput v11, v5, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->horizontalChainStyle:I
+
+    const v12, 0x7f0a01b5
+
+    iput v12, v5, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->startToStart:I
+
+    invoke-virtual {v6, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    sget-object v4, Lcom/impalastudios/theflighttracker/App;->Companion:Lcom/impalastudios/theflighttracker/App$Companion;
+
+    invoke-virtual {v4}, Lcom/impalastudios/theflighttracker/App$Companion;->getInAppPurchaseManagerNew()Lcom/impalastudios/framework/core/inAppPurchases/adapty/InAppPurchaseManagerAdapty;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/impalastudios/framework/core/inAppPurchases/adapty/InAppPurchaseManagerAdapty;->isAdFree()Z
+
+    move-result v4
+
+    if-nez v4, :cond_3
+
+    invoke-virtual {v3}, Lcom/applovin/mediation/ads/MaxAdView;->startAutoRefresh()V
+
+    :cond_3
+    invoke-virtual {v0, v7}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v3
+
+    move-object v12, v3
+
+    check-cast v12, Lcom/google/android/material/bottomnavigation/BottomNavigationView;
+
     const v3, 0x7f110005
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
