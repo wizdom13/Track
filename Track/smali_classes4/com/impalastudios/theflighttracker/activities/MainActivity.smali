@@ -2344,34 +2344,34 @@
     :cond_1
     iget-object v6, v0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
 
-    if-nez v6, :cond_2
+    #if-nez v6, :cond_2
 
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+    #invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
-    move-object v6, v10
+    #move-object v6, v10
 
-    :cond_2
-    iget-object v5, v6, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->container:Landroidx/constraintlayout/widget/ConstraintLayout;
+    #:cond_2
+    #iget-object v5, v6, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->container:Landroidx/constraintlayout/widget/ConstraintLayout;
 
-    move-object v6, v3
+    #move-object v6, v3
 
-    check-cast v6, Landroid/view/View;
+    #check-cast v6, Landroid/view/View;
 
-    new-instance v7, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
+    #new-instance v7, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
 
-    const/16 v8, 0x32
+    #const/16 v8, 0x32
 
-    invoke-static {v8}, Lcom/impalastudios/theflighttracker/util/ConversionUtilsKt;->getDp(I)I
+    #invoke-static {v8}, Lcom/impalastudios/theflighttracker/util/ConversionUtilsKt;->getDp(I)I
 
-    move-result v8
+    #move-result v8
 
-    const/4 v9, 0x0
+    #const/4 v9, 0x0
 
-    invoke-direct {v7, v9, v8}, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;-><init>(II)V
+    #invoke-direct {v7, v9, v8}, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;-><init>(II)V
 
-    check-cast v7, Landroid/view/ViewGroup$LayoutParams;
+    #check-cast v7, Landroid/view/ViewGroup$LayoutParams;
 
-    invoke-virtual {v5, v6, v7}, Landroidx/constraintlayout/widget/ConstraintLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    #invoke-virtual {v5, v6, v7}, Landroidx/constraintlayout/widget/ConstraintLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     #new-instance v5, Lcom/impalastudios/theflighttracker/activities/MainActivity$onCreate$2;
 
