@@ -9,7 +9,6 @@
 .implements Lcom/impalastudios/gdpr/GDPRConsentListener;
 .implements Lcom/impalastudios/framework/core/inAppPurchases/InAppProductsListener;
 .implements Lcom/impalastudios/networkingframework/networkstatus/InternetConnectivityListener;
-.implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
 
 
 # annotations
@@ -37,7 +36,6 @@
         "Lcom/impalastudios/gdpr/GDPRConsentListener;",
         "Lcom/impalastudios/framework/core/inAppPurchases/InAppProductsListener;",
         "Lcom/impalastudios/networkingframework/networkstatus/InternetConnectivityListener;",
-        "Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;",
         "<init>",
         "()V",
         "binding",
@@ -155,7 +153,6 @@
         "Lcom/impalastudios/networkingframework/networkstatus/InternetConnectivityListener$InternetStatus;",
         "showMyFlightTutorialIfNeeded",
         "showMyFlightTutorial",
-        "onSharedPreferenceChanged",
         "sharedPreferences",
         "Landroid/content/SharedPreferences;",
         "key",
@@ -247,14 +244,6 @@
     .locals 0
 
     invoke-static {p0, p1}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->mOnItemReselectedListener$lambda$2(Lcom/impalastudios/theflighttracker/activities/MainActivity;Landroid/view/MenuItem;)V
-
-    return-void
-.end method
-
-.method public static synthetic $r8$lambda$ETIs15x8m64Tu0zcxm11NmlkJT8(Z)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->permissionResultHandler$lambda$0(Z)V
 
     return-void
 .end method
@@ -3496,174 +3485,6 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    return-void
-.end method
-
-.method public onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
-    .locals 3
-
-    if-nez p2, :cond_0
-
-    return-void
-
-    :cond_0
-    if-nez p1, :cond_1
-
-    return-void
-
-    :cond_1
-    invoke-static {}, Lcom/impalastudios/privacy/Regulation;->getEntries()Lkotlin/enums/EnumEntries;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/Collection;
-
-    const/4 v0, 0x0
-
-    new-array v1, v0, [Lcom/impalastudios/privacy/Regulation;
-
-    invoke-interface {p1, v1}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    array-length v1, p1
-
-    :goto_0
-    if-ge v0, v1, :cond_7
-
-    aget-object v2, p1, v0
-
-    check-cast v2, Lcom/impalastudios/privacy/Regulation;
-
-    invoke-virtual {v2}, Lcom/impalastudios/privacy/Regulation;->getConsentKey()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2, p2}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_6
-
-    sget-object p1, Lcom/impalastudios/privacy/PrivacyManager;->INSTANCE:Lcom/impalastudios/privacy/PrivacyManager;
-
-    move-object p2, p0
-
-    check-cast p2, Landroid/content/Context;
-
-    sget-object v0, Lcom/impalastudios/privacy/Regulation;->GDPR:Lcom/impalastudios/privacy/Regulation;
-
-    invoke-virtual {p1, p2, v0}, Lcom/impalastudios/privacy/PrivacyManager;->hasConsentedTo(Landroid/content/Context;Lcom/impalastudios/privacy/Regulation;)Z
-
-    move-result p1
-
-    invoke-static {p1, p2}, Lcom/applovin/sdk/AppLovinPrivacySettings;->setHasUserConsent(ZLandroid/content/Context;)V
-
-    sget-object p1, Lcom/impalastudios/privacy/PrivacyManager;->INSTANCE:Lcom/impalastudios/privacy/PrivacyManager;
-
-    sget-object v0, Lcom/impalastudios/privacy/Regulation;->CCPA:Lcom/impalastudios/privacy/Regulation;
-
-    invoke-virtual {p1, p2, v0}, Lcom/impalastudios/privacy/PrivacyManager;->hasConsentedTo(Landroid/content/Context;Lcom/impalastudios/privacy/Regulation;)Z
-
-    move-result p1
-
-    xor-int/lit8 p1, p1, 0x1
-
-    invoke-static {p1, p2}, Lcom/applovin/sdk/AppLovinPrivacySettings;->setDoNotSell(ZLandroid/content/Context;)V
-
-    sget-object p1, Lcom/impalastudios/privacy/PrivacyManager;->INSTANCE:Lcom/impalastudios/privacy/PrivacyManager;
-
-    invoke-virtual {p1, p2}, Lcom/impalastudios/privacy/PrivacyManager;->getRegulation(Landroid/content/Context;)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    check-cast p1, Ljava/lang/Iterable;
-
-    instance-of v0, p1, Ljava/util/Collection;
-
-    if-eqz v0, :cond_3
-
-    move-object v0, p1
-
-    check-cast v0, Ljava/util/Collection;
-
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/impalastudios/privacy/Regulation;
-
-    sget-object v1, Lcom/impalastudios/privacy/PrivacyManager;->INSTANCE:Lcom/impalastudios/privacy/PrivacyManager;
-
-    invoke-virtual {v1, p2, v0}, Lcom/impalastudios/privacy/PrivacyManager;->getConsentStatusForRegulation(Landroid/content/Context;Lcom/impalastudios/privacy/Regulation;)Lcom/impalastudios/privacy/ConsentStatus;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/impalastudios/privacy/ConsentStatus;->Unknown:Lcom/impalastudios/privacy/ConsentStatus;
-
-    if-ne v0, v1, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    :goto_2
-    sget-object p1, Lcom/impalastudios/theflighttracker/App;->Companion:Lcom/impalastudios/theflighttracker/App$Companion;
-
-    invoke-virtual {p1}, Lcom/impalastudios/theflighttracker/App$Companion;->getAdvertisementManager()Lcom/impalastudios/advertfwk/AdvertisementManager;
-
-    move-result-object p1
-
-    const p2, 0x7f140041
-
-    invoke-virtual {p0, p2}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object p2
-
-    const-string v0, "getString(...)"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {p1, p2}, Lcom/impalastudios/advertfwk/AdvertisementManager;->requestAd(Ljava/lang/String;)V
-
-    :cond_5
-    :goto_3
-    return-void
-
-    :cond_6
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_7
     return-void
 .end method
 
