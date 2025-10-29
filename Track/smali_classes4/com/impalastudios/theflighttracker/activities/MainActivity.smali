@@ -96,8 +96,6 @@
         "beta_feedback",
         "s",
         "onResume",
-        "onPause",
-        "onDestroy",
         "onRestoreInstanceState",
         "persistentState",
         "Landroid/os/PersistableBundle;",
@@ -2755,14 +2753,6 @@
     throw v1
 .end method
 
-.method protected onDestroy()V
-    .locals 0
-
-    invoke-super {p0}, Landroidx/appcompat/app/AppCompatActivity;->onDestroy()V
-
-    return-void
-.end method
-
 .method public onLocationSelected(Lcom/impalastudios/flightsframework/models/Location;Ljava/lang/String;)V
     .locals 6
 
@@ -2991,14 +2981,6 @@
 
     :cond_2
     :goto_0
-    return-void
-.end method
-
-.method protected onPause()V
-    .locals 0
-
-    invoke-super {p0}, Landroidx/appcompat/app/AppCompatActivity;->onPause()V
-
     return-void
 .end method
 
