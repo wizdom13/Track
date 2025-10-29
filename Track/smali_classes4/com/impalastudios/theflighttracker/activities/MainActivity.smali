@@ -743,12 +743,6 @@
     return-void
 .end method
 
-.method private static final permissionResultHandler$lambda$0(Z)V
-    .locals 0
-
-    return-void
-.end method
-
 .method private final processIntent(Landroid/content/Intent;)V
     .locals 8
 
