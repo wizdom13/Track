@@ -2337,46 +2337,6 @@
 
     sget-object v3, Lcom/impalastudios/theflighttracker/App;->Companion:Lcom/impalastudios/theflighttracker/App$Companion;
 
-    invoke-virtual {v3}, Lcom/impalastudios/theflighttracker/App$Companion;->getAdvertisementManager()Lcom/impalastudios/advertfwk/AdvertisementManager;
-
-    move-result-object v3
-
-    const v6, 0x7f140041
-
-    invoke-virtual {v0, v6}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v6
-
-    const-string v7, "getString(...)"
-
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v3, v6}, Lcom/impalastudios/advertfwk/AdvertisementManager;->getAdViewForAd(Ljava/lang/String;)Lcom/applovin/mediation/ads/MaxAdView;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/applovin/mediation/ads/MaxAdView;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_1
-
-    invoke-virtual {v3}, Lcom/applovin/mediation/ads/MaxAdView;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v6
-
-    const-string v7, "null cannot be cast to non-null type android.view.ViewGroup"
-
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast v6, Landroid/view/ViewGroup;
-
-    move-object v7, v3
-
-    check-cast v7, Landroid/view/View;
-
-    invoke-virtual {v6, v7}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
-
     :cond_1
     iget-object v6, v0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
 
