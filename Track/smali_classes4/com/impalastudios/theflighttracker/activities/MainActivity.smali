@@ -2315,6 +2315,12 @@
 
     check-cast v6, Landroid/view/View;
 
+    new-instance v7, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
+
+    const/16 v8, 0x32
+
+    invoke-static {v8}, Lcom/impalastudios/theflighttracker/util/ConversionUtilsKt;->getDp(I)I
+
     invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v4
