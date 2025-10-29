@@ -232,14 +232,6 @@
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$6tiL2dYIoiZC2NUyT9X1Vz9jSWQ(Lcom/impalastudios/theflighttracker/activities/MainActivity;Landroid/view/View;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->onCreate$lambda$6$lambda$5(Lcom/impalastudios/theflighttracker/activities/MainActivity;Landroid/view/View;)V
-
-    return-void
-.end method
-
 .method public static synthetic $r8$lambda$EDxeiIzDiVRoL1513UTNmFX-OCY(Lcom/impalastudios/theflighttracker/activities/MainActivity;Landroid/view/MenuItem;)V
     .locals 0
 
@@ -652,28 +644,6 @@
 
     :cond_6
     return v0
-.end method
-
-.method private static final onCreate$lambda$6$lambda$5(Lcom/impalastudios/theflighttracker/activities/MainActivity;Landroid/view/View;)V
-    .locals 1
-
-    sget-object p1, Lcom/impalastudios/theflighttracker/features/subscription/SubscriptionDialogFragmentNew;->Companion:Lcom/impalastudios/theflighttracker/features/subscription/SubscriptionDialogFragmentNew$Companion;
-
-    const-string v0, "banner"
-
-    invoke-virtual {p1, v0}, Lcom/impalastudios/theflighttracker/features/subscription/SubscriptionDialogFragmentNew$Companion;->newInstance(Ljava/lang/String;)Lcom/impalastudios/theflighttracker/features/subscription/SubscriptionDialogFragmentNew;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
-
-    move-result-object p0
-
-    const-string v0, "Subscription"
-
-    invoke-virtual {p1, p0, v0}, Lcom/impalastudios/theflighttracker/features/subscription/SubscriptionDialogFragmentNew;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
-
-    return-void
 .end method
 
 .method private static final onNewIntent$lambda$9(Lcom/impalastudios/theflighttracker/activities/MainActivity;Ljava/lang/Object;)V
