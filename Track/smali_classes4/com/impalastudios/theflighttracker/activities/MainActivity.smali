@@ -2323,73 +2323,47 @@
 
     move-result-object v6
 
-    if-eqz v6, :cond_1
-
-    invoke-virtual {v3}, Lcom/applovin/mediation/ads/MaxAdView;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v6
-
-    const-string v7, "null cannot be cast to non-null type android.view.ViewGroup"
-
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast v6, Landroid/view/ViewGroup;
-
-    move-object v7, v3
-
-    check-cast v7, Landroid/view/View;
-
-    invoke-virtual {v6, v7}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
-
-    :cond_1
     iget-object v6, v0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
 
-    #if-nez v6, :cond_2
+    iget-object v5, v6, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->container:Landroidx/constraintlayout/widget/ConstraintLayout;
 
-    #invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+    move-object v6, v3
 
-    #move-object v6, v10
+    check-cast v6, Landroid/view/View;
 
-    #:cond_2
-    #iget-object v5, v6, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->container:Landroidx/constraintlayout/widget/ConstraintLayout;
+    new-instance v7, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
 
-    #move-object v6, v3
+    const/16 v8, 0x32
 
-    #check-cast v6, Landroid/view/View;
+    invoke-static {v8}, Lcom/impalastudios/theflighttracker/util/ConversionUtilsKt;->getDp(I)I
 
-    #new-instance v7, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
+    move-result v8
 
-    #const/16 v8, 0x32
+    const/4 v9, 0x0
 
-    #invoke-static {v8}, Lcom/impalastudios/theflighttracker/util/ConversionUtilsKt;->getDp(I)I
+    invoke-direct {v7, v9, v8}, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;-><init>(II)V
 
-    #move-result v8
+    check-cast v7, Landroid/view/ViewGroup$LayoutParams;
 
-    #const/4 v9, 0x0
+    invoke-virtual {v5, v6, v7}, Landroidx/constraintlayout/widget/ConstraintLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    #invoke-direct {v7, v9, v8}, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;-><init>(II)V
+    new-instance v5, Lcom/impalastudios/theflighttracker/activities/MainActivity$onCreate$2;
 
-    #check-cast v7, Landroid/view/ViewGroup$LayoutParams;
+    invoke-direct {v5, v0, v3}, Lcom/impalastudios/theflighttracker/activities/MainActivity$onCreate$2;-><init>(Lcom/impalastudios/theflighttracker/activities/MainActivity;Lcom/applovin/mediation/ads/MaxAdView;)V
 
-    #invoke-virtual {v5, v6, v7}, Landroidx/constraintlayout/widget/ConstraintLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    check-cast v5, Lcom/applovin/mediation/MaxAdViewAdListener;
 
-    #new-instance v5, Lcom/impalastudios/theflighttracker/activities/MainActivity$onCreate$2;
+    invoke-virtual {v3, v5}, Lcom/applovin/mediation/ads/MaxAdView;->setListener(Lcom/applovin/mediation/MaxAdViewAdListener;)V
 
-    #invoke-direct {v5, v0, v3}, Lcom/impalastudios/theflighttracker/activities/MainActivity$onCreate$2;-><init>(Lcom/impalastudios/theflighttracker/activities/MainActivity;Lcom/applovin/mediation/ads/MaxAdView;)V
+    sget-object v5, Lcom/applovin/mediation/MaxAdFormat;->BANNER:Lcom/applovin/mediation/MaxAdFormat;
 
-    #check-cast v5, Lcom/applovin/mediation/MaxAdViewAdListener;
+    invoke-virtual {v5, v4}, Lcom/applovin/mediation/MaxAdFormat;->getAdaptiveSize(Landroid/app/Activity;)Lcom/applovin/sdk/AppLovinSdkUtils$Size;
 
-    #invoke-virtual {v3, v5}, Lcom/applovin/mediation/ads/MaxAdView;->setListener(Lcom/applovin/mediation/MaxAdViewAdListener;)V
+    move-result-object v4
 
-    #sget-object v5, Lcom/applovin/mediation/MaxAdFormat;->BANNER:Lcom/applovin/mediation/MaxAdFormat;
+    invoke-virtual {v4}, Lcom/applovin/sdk/AppLovinSdkUtils$Size;->getHeight()I
 
-    #invoke-virtual {v5, v4}, Lcom/applovin/mediation/MaxAdFormat;->getAdaptiveSize(Landroid/app/Activity;)Lcom/applovin/sdk/AppLovinSdkUtils$Size;
-
-    #move-result-object v4
-
-    #invoke-virtual {v4}, Lcom/applovin/sdk/AppLovinSdkUtils$Size;->getHeight()I
-
-    #move-result v4
+    move-result v4
 
     invoke-static {v4}, Lcom/impalastudios/theflighttracker/util/ConversionUtilsKt;->getDp(I)I
 
