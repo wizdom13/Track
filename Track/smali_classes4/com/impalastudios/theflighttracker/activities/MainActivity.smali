@@ -10,7 +10,6 @@
 .implements Lcom/impalastudios/framework/core/inAppPurchases/InAppProductsListener;
 .implements Lcom/impalastudios/networkingframework/networkstatus/InternetConnectivityListener;
 .implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
-.implements Lcom/impalastudios/advertfwk/AdReceiver;
 
 
 # annotations
@@ -39,7 +38,6 @@
         "Lcom/impalastudios/framework/core/inAppPurchases/InAppProductsListener;",
         "Lcom/impalastudios/networkingframework/networkstatus/InternetConnectivityListener;",
         "Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;",
-        "Lcom/impalastudios/advertfwk/AdReceiver;",
         "<init>",
         "()V",
         "binding",
@@ -99,7 +97,6 @@
         "s",
         "onResume",
         "onPause",
-        "onStop",
         "onDestroy",
         "onRestoreInstanceState",
         "persistentState",
@@ -1213,24 +1210,6 @@
     return v0
 .end method
 
-.method public getTestDevices()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-
-    invoke-static {p0}, Lcom/impalastudios/advertfwk/AdReceiver$DefaultImpls;->getTestDevices(Lcom/impalastudios/advertfwk/AdReceiver;)Ljava/util/List;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public final hideBanner()V
     .locals 7
 
@@ -1723,89 +1702,6 @@
 
     :cond_2
     :goto_0
-    return-void
-.end method
-
-.method public onAdClicked(Ljava/lang/String;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/impalastudios/advertfwk/AdReceiver$DefaultImpls;->onAdClicked(Lcom/impalastudios/advertfwk/AdReceiver;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onAdFailedToLoad(Ljava/lang/String;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/impalastudios/advertfwk/AdReceiver$DefaultImpls;->onAdFailedToLoad(Lcom/impalastudios/advertfwk/AdReceiver;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onAdLoaded(Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/impalastudios/advertfwk/AdReceiver$DefaultImpls;->onAdLoaded(Lcom/impalastudios/advertfwk/AdReceiver;Ljava/lang/Object;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onAdOpened(Ljava/lang/String;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/impalastudios/advertfwk/AdReceiver$DefaultImpls;->onAdOpened(Lcom/impalastudios/advertfwk/AdReceiver;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onAdShown(Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 2
-
-    const-string v0, "adId"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-static {p0, p1, p2}, Lcom/impalastudios/advertfwk/AdReceiver$DefaultImpls;->onAdShown(Lcom/impalastudios/advertfwk/AdReceiver;Ljava/lang/Object;Ljava/lang/String;)V
-
-    const p1, 0x7f140044
-
-    invoke-virtual {p0, p1}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    move-object p1, p0
-
-    check-cast p1, Landroid/content/Context;
-
-    invoke-static {p1}, Lcom/impalastudios/theflighttracker/util/PrefManKt;->PrefMan(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object p1
-
-    const-string p2, "PrefMan(...)"
-
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object p1
-
-    const-string p2, "startup_interstitial_countdown"
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    invoke-interface {p1, p2, v0, v1}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
-
-    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    :cond_0
     return-void
 .end method
 
@@ -4879,14 +4775,4 @@
     invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
 
     return-void
-.end method
-
-.method public showPersonalizedAds()Z
-    .locals 1
-
-    invoke-static {p0}, Lcom/impalastudios/advertfwk/AdReceiver$DefaultImpls;->showPersonalizedAds(Lcom/impalastudios/advertfwk/AdReceiver;)Z
-
-    move-result v0
-
-    return v0
 .end method
