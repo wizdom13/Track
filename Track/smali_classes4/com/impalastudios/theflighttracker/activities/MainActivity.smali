@@ -2373,9 +2373,9 @@
 
     invoke-virtual {v5, v6, v7}, Landroidx/constraintlayout/widget/ConstraintLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance v5, Lcom/impalastudios/theflighttracker/activities/MainActivity$onCreate$2;
+    #new-instance v5, Lcom/impalastudios/theflighttracker/activities/MainActivity$onCreate$2;
 
-    invoke-direct {v5, v0, v3}, Lcom/impalastudios/theflighttracker/activities/MainActivity$onCreate$2;-><init>(Lcom/impalastudios/theflighttracker/activities/MainActivity;Lcom/applovin/mediation/ads/MaxAdView;)V
+    #invoke-direct {v5, v0, v3}, Lcom/impalastudios/theflighttracker/activities/MainActivity$onCreate$2;-><init>(Lcom/impalastudios/theflighttracker/activities/MainActivity;Lcom/applovin/mediation/ads/MaxAdView;)V
 
     check-cast v5, Lcom/applovin/mediation/MaxAdViewAdListener;
 
