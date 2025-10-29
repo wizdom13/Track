@@ -2321,6 +2321,12 @@
 
     invoke-static {v8}, Lcom/impalastudios/theflighttracker/util/ConversionUtilsKt;->getDp(I)I
 
+    move-result v8
+
+    const/4 v9, 0x0
+
+    invoke-direct {v7, v9, v8}, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;-><init>(II)V
+
     invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v4
