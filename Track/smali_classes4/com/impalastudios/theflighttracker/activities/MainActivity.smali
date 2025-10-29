@@ -2307,6 +2307,18 @@
 
     move-result-object v1
 
+    new-instance v3, Lcom/impalastudios/advertfwk/AdsAppLifeCycleObserver;
+
+    move-object v4, v0
+
+    check-cast v4, Landroid/app/Activity;
+
+    invoke-direct {v3, v4}, Lcom/impalastudios/advertfwk/AdsAppLifeCycleObserver;-><init>(Landroid/app/Activity;)V
+
+    check-cast v3, Landroidx/lifecycle/LifecycleObserver;
+
+    invoke-virtual {v1, v3}, Landroidx/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
+
     new-instance v1, Lcom/impalastudios/theflighttracker/util/updater/UpdateChecker;
 
     invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getLifecycle()Landroidx/lifecycle/Lifecycle;
