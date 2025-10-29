@@ -2347,14 +2347,6 @@
 
     invoke-virtual {v5, v6, v7}, Landroidx/constraintlayout/widget/ConstraintLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance v5, Lcom/impalastudios/theflighttracker/activities/MainActivity$onCreate$2;
-
-    invoke-direct {v5, v0, v3}, Lcom/impalastudios/theflighttracker/activities/MainActivity$onCreate$2;-><init>(Lcom/impalastudios/theflighttracker/activities/MainActivity;Lcom/applovin/mediation/ads/MaxAdView;)V
-
-    check-cast v5, Lcom/applovin/mediation/MaxAdViewAdListener;
-
-    invoke-virtual {v3, v5}, Lcom/applovin/mediation/ads/MaxAdView;->setListener(Lcom/applovin/mediation/MaxAdViewAdListener;)V
-
     invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v4
