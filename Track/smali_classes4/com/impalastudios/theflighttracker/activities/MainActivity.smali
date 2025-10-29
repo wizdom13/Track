@@ -2653,36 +2653,6 @@
 
     move-result-object v1
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_4
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/Number;
-
-    invoke-virtual {v4}, Ljava/lang/Number;->intValue()I
-
-    move-result v4
-
-    invoke-virtual {v0, v4}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v4
-
-    new-instance v5, Lcom/impalastudios/theflighttracker/activities/MainActivity$$ExternalSyntheticLambda1;
-
-    invoke-direct {v5, v0}, Lcom/impalastudios/theflighttracker/activities/MainActivity$$ExternalSyntheticLambda1;-><init>(Lcom/impalastudios/theflighttracker/activities/MainActivity;)V
-
-    invoke-virtual {v4, v5}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    goto :goto_0
-
-    :cond_4
     sget-object v1, Lcom/impalastudios/theflighttracker/bll/flights/ServerNotificationsRepository;->INSTANCE:Lcom/impalastudios/theflighttracker/bll/flights/ServerNotificationsRepository;
 
     invoke-virtual {v1}, Lcom/impalastudios/theflighttracker/bll/flights/ServerNotificationsRepository;->scheduleAlertWork()V
