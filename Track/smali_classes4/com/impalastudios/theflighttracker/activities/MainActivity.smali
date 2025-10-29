@@ -2377,19 +2377,19 @@
 
     #invoke-direct {v5, v0, v3}, Lcom/impalastudios/theflighttracker/activities/MainActivity$onCreate$2;-><init>(Lcom/impalastudios/theflighttracker/activities/MainActivity;Lcom/applovin/mediation/ads/MaxAdView;)V
 
-    check-cast v5, Lcom/applovin/mediation/MaxAdViewAdListener;
+    #check-cast v5, Lcom/applovin/mediation/MaxAdViewAdListener;
 
-    invoke-virtual {v3, v5}, Lcom/applovin/mediation/ads/MaxAdView;->setListener(Lcom/applovin/mediation/MaxAdViewAdListener;)V
+    #invoke-virtual {v3, v5}, Lcom/applovin/mediation/ads/MaxAdView;->setListener(Lcom/applovin/mediation/MaxAdViewAdListener;)V
 
-    sget-object v5, Lcom/applovin/mediation/MaxAdFormat;->BANNER:Lcom/applovin/mediation/MaxAdFormat;
+    #sget-object v5, Lcom/applovin/mediation/MaxAdFormat;->BANNER:Lcom/applovin/mediation/MaxAdFormat;
 
-    invoke-virtual {v5, v4}, Lcom/applovin/mediation/MaxAdFormat;->getAdaptiveSize(Landroid/app/Activity;)Lcom/applovin/sdk/AppLovinSdkUtils$Size;
+    #invoke-virtual {v5, v4}, Lcom/applovin/mediation/MaxAdFormat;->getAdaptiveSize(Landroid/app/Activity;)Lcom/applovin/sdk/AppLovinSdkUtils$Size;
 
-    move-result-object v4
+    #move-result-object v4
 
-    invoke-virtual {v4}, Lcom/applovin/sdk/AppLovinSdkUtils$Size;->getHeight()I
+    #invoke-virtual {v4}, Lcom/applovin/sdk/AppLovinSdkUtils$Size;->getHeight()I
 
-    move-result v4
+    #move-result v4
 
     invoke-static {v4}, Lcom/impalastudios/theflighttracker/util/ConversionUtilsKt;->getDp(I)I
 
