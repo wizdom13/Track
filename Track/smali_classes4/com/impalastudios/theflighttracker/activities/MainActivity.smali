@@ -2435,19 +2435,7 @@
 
     sget-object v4, Lcom/impalastudios/theflighttracker/App;->Companion:Lcom/impalastudios/theflighttracker/App$Companion;
 
-    invoke-virtual {v4}, Lcom/impalastudios/theflighttracker/App$Companion;->getInAppPurchaseManagerNew()Lcom/impalastudios/framework/core/inAppPurchases/adapty/InAppPurchaseManagerAdapty;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Lcom/impalastudios/framework/core/inAppPurchases/adapty/InAppPurchaseManagerAdapty;->isAdFree()Z
-
-    move-result v4
-
-    if-nez v4, :cond_3
-
-    invoke-virtual {v3}, Lcom/applovin/mediation/ads/MaxAdView;->startAutoRefresh()V
-
-    :cond_3
+    :wisso
     invoke-virtual {v0, v7}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
