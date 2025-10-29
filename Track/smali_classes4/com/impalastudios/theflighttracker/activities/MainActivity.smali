@@ -2589,44 +2589,6 @@
 
     check-cast v3, Landroid/content/Context;
 
-    invoke-static {v3}, Landroidx/work/WorkManager;->getInstance(Landroid/content/Context;)Landroidx/work/WorkManager;
-
-    move-result-object v3
-
-    const-string v4, "getInstance(...)"
-
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    sget-object v4, Lcom/impalastudios/theflighttracker/jobs/AnalyticsTriggerWorker;->Companion:Lcom/impalastudios/theflighttracker/jobs/AnalyticsTriggerWorker$Companion;
-
-    invoke-virtual {v4}, Lcom/impalastudios/theflighttracker/jobs/AnalyticsTriggerWorker$Companion;->getTAG()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Landroidx/work/WorkManager;->cancelUniqueWork(Ljava/lang/String;)Landroidx/work/Operation;
-
-    new-instance v4, Landroidx/work/PeriodicWorkRequest$Builder;
-
-    const-class v5, Lcom/impalastudios/theflighttracker/jobs/UpdateFlightsWorkerV2;
-
-    const-wide/16 v6, 0xf
-
-    sget-object v13, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
-
-    invoke-direct {v4, v5, v6, v7, v13}, Landroidx/work/PeriodicWorkRequest$Builder;-><init>(Ljava/lang/Class;JLjava/util/concurrent/TimeUnit;)V
-
-    invoke-virtual {v4}, Landroidx/work/PeriodicWorkRequest$Builder;->build()Landroidx/work/WorkRequest;
-
-    move-result-object v4
-
-    check-cast v4, Landroidx/work/PeriodicWorkRequest;
-
-    const-string v5, "Update_Flights"
-
-    sget-object v6, Landroidx/work/ExistingPeriodicWorkPolicy;->KEEP:Landroidx/work/ExistingPeriodicWorkPolicy;
-
-    invoke-virtual {v3, v5, v6, v4}, Landroidx/work/WorkManager;->enqueueUniquePeriodicWork(Ljava/lang/String;Landroidx/work/ExistingPeriodicWorkPolicy;Landroidx/work/PeriodicWorkRequest;)Landroidx/work/Operation;
-
     const v4, 0x7f0a008e
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
