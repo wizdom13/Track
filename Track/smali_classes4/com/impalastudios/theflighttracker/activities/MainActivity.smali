@@ -2347,10 +2347,6 @@
 
     iput-boolean v9, v5, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->constrainedHeight:Z
 
-    const v7, 0x7f0a03df
-
-    iput v7, v5, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->bottomToTop:I
-
     const/4 v11, 0x2
 
     iput v11, v5, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->horizontalChainStyle:I
