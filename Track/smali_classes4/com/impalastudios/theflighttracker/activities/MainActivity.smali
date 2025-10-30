@@ -2355,10 +2355,6 @@
 
     iput v8, v5, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->endToStart:I
 
-    const/4 v11, 0x2
-
-    iput v11, v5, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->horizontalChainStyle:I
-
     :wisso
     invoke-virtual {v0, v7}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->findViewById(I)Landroid/view/View;
 
