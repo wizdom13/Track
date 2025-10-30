@@ -2363,10 +2363,6 @@
 
     iput v12, v5, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->startToStart:I
 
-    invoke-virtual {v6, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget-object v4, Lcom/impalastudios/theflighttracker/App;->Companion:Lcom/impalastudios/theflighttracker/App$Companion;
-
     :wisso
     invoke-virtual {v0, v7}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->findViewById(I)Landroid/view/View;
 
