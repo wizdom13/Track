@@ -2154,24 +2154,6 @@
 
     const-string v7, "getString(...)"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v3, v6}, Lcom/impalastudios/advertfwk/AdvertisementManager;->getAdViewForAd(Ljava/lang/String;)Lcom/applovin/mediation/ads/MaxAdView;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/applovin/mediation/ads/MaxAdView;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v6
-
-    iget-object v6, v0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
-
-    iget-object v5, v6, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->container:Landroidx/constraintlayout/widget/ConstraintLayout;
-
-    move-object v6, v3
-
-    check-cast v6, Landroid/view/View;
-
     new-instance v7, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
 
     const/16 v8, 0x32
