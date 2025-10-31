@@ -10,9 +10,6 @@
 .implements Lcom/impalastudios/framework/core/inAppPurchases/InAppProductsListener;
 .implements Lcom/impalastudios/networkingframework/networkstatus/InternetConnectivityListener;
 .implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
-.implements Lcom/impalastudios/advertfwk/AdReceiver;
-
-
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
@@ -583,7 +580,7 @@
 
     sget-object v2, Lcom/impalastudios/theflighttracker/App;->Companion:Lcom/impalastudios/theflighttracker/App$Companion;
 
-    invoke-virtual {v2}, Lcom/impalastudios/theflighttracker/App$Companion;->getAdvertisementManager()Lcom/impalastudios/advertfwk/AdvertisementManager;
+    invoke-virtual {v2}, Lcom/impalastudios/theflighttracker/App$Companion;->getAdvertisementManager()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -596,8 +593,6 @@
     const-string v5, "getString(...)"
 
     invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v2, v4, v3}, Lcom/impalastudios/advertfwk/AdvertisementManager;->triggerInterstitial(Ljava/lang/String;Z)Lkotlin/Unit;
 
     :cond_1
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
@@ -1216,44 +1211,33 @@
 
 .method public getTestDevices()Ljava/util/List;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
 
-    invoke-static {p0}, Lcom/impalastudios/advertfwk/AdReceiver$DefaultImpls;->getTestDevices(Lcom/impalastudios/advertfwk/AdReceiver;)Ljava/util/List;
-
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
     move-result-object v0
-
     return-object v0
 .end method
+
 
 .method public final hideBanner()V
     .locals 7
 
-    const v0, 0x7f0a0089
+    
+    const/16 v1, 0x8
+const v0, 0x7f0a0089
 
     invoke-virtual {p0, v0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/applovin/mediation/ads/MaxAdView;
+    check-cast v0, Landroid/view/View;
 
     const-string v1, "allow_pause_auto_refresh_immediately"
 
     const-string v2, "true"
 
-    invoke-virtual {v0, v1, v2}, Lcom/applovin/mediation/ads/MaxAdView;->setExtraParameter(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lcom/applovin/mediation/ads/MaxAdView;->stopAutoRefresh()V
-
     const/16 v1, 0x8
 
-    invoke-virtual {v0, v1}, Lcom/applovin/mediation/ads/MaxAdView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
 
@@ -1730,85 +1714,37 @@
 .method public onAdClicked(Ljava/lang/String;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/impalastudios/advertfwk/AdReceiver$DefaultImpls;->onAdClicked(Lcom/impalastudios/advertfwk/AdReceiver;Ljava/lang/String;)V
-
     return-void
 .end method
+
 
 .method public onAdFailedToLoad(Ljava/lang/String;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/impalastudios/advertfwk/AdReceiver$DefaultImpls;->onAdFailedToLoad(Lcom/impalastudios/advertfwk/AdReceiver;Ljava/lang/String;)V
-
     return-void
 .end method
+
 
 .method public onAdLoaded(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lcom/impalastudios/advertfwk/AdReceiver$DefaultImpls;->onAdLoaded(Lcom/impalastudios/advertfwk/AdReceiver;Ljava/lang/Object;Ljava/lang/String;)V
-
     return-void
 .end method
+
 
 .method public onAdOpened(Ljava/lang/String;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/impalastudios/advertfwk/AdReceiver$DefaultImpls;->onAdOpened(Lcom/impalastudios/advertfwk/AdReceiver;Ljava/lang/String;)V
-
     return-void
 .end method
+
 
 .method public onAdShown(Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 2
+    .locals 0
 
-    const-string v0, "adId"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-static {p0, p1, p2}, Lcom/impalastudios/advertfwk/AdReceiver$DefaultImpls;->onAdShown(Lcom/impalastudios/advertfwk/AdReceiver;Ljava/lang/Object;Ljava/lang/String;)V
-
-    const p1, 0x7f140044
-
-    invoke-virtual {p0, p1}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    move-object p1, p0
-
-    check-cast p1, Landroid/content/Context;
-
-    invoke-static {p1}, Lcom/impalastudios/theflighttracker/util/PrefManKt;->PrefMan(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object p1
-
-    const-string p2, "PrefMan(...)"
-
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object p1
-
-    const-string p2, "startup_interstitial_countdown"
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    invoke-interface {p1, p2, v0, v1}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
-
-    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    :cond_0
     return-void
 .end method
+
 
 .method public onAirlineSelected(Lcom/impalastudios/flightsframework/models/Airline;I)V
     .locals 5
@@ -2386,21 +2322,6 @@
 
     invoke-static/range {v4 .. v9}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
 
-    invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getLifecycle()Landroidx/lifecycle/Lifecycle;
-
-    move-result-object v1
-
-    new-instance v3, Lcom/impalastudios/advertfwk/AdsAppLifeCycleObserver;
-
-    move-object v4, v0
-
-    check-cast v4, Landroid/app/Activity;
-
-    invoke-direct {v3, v4}, Lcom/impalastudios/advertfwk/AdsAppLifeCycleObserver;-><init>(Landroid/app/Activity;)V
-
-    check-cast v3, Landroidx/lifecycle/LifecycleObserver;
-
-    invoke-virtual {v1, v3}, Landroidx/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
 
     new-instance v1, Lcom/impalastudios/theflighttracker/util/updater/UpdateChecker;
 
@@ -2455,7 +2376,7 @@
 
     sget-object v3, Lcom/impalastudios/theflighttracker/App;->Companion:Lcom/impalastudios/theflighttracker/App$Companion;
 
-    invoke-virtual {v3}, Lcom/impalastudios/theflighttracker/App$Companion;->getAdvertisementManager()Lcom/impalastudios/advertfwk/AdvertisementManager;
+    invoke-virtual {v3}, Lcom/impalastudios/theflighttracker/App$Companion;->getAdvertisementManager()Ljava/lang/Object;
 
     move-result-object v3
 
@@ -2468,139 +2389,6 @@
     const-string v7, "getString(...)"
 
     invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v3, v6}, Lcom/impalastudios/advertfwk/AdvertisementManager;->getAdViewForAd(Ljava/lang/String;)Lcom/applovin/mediation/ads/MaxAdView;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/applovin/mediation/ads/MaxAdView;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_1
-
-    invoke-virtual {v3}, Lcom/applovin/mediation/ads/MaxAdView;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v6
-
-    const-string v7, "null cannot be cast to non-null type android.view.ViewGroup"
-
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast v6, Landroid/view/ViewGroup;
-
-    move-object v7, v3
-
-    check-cast v7, Landroid/view/View;
-
-    invoke-virtual {v6, v7}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
-
-    :cond_1
-    iget-object v6, v0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
-
-    if-nez v6, :cond_2
-
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object v6, v10
-
-    :cond_2
-    iget-object v5, v6, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->container:Landroidx/constraintlayout/widget/ConstraintLayout;
-
-    move-object v6, v3
-
-    check-cast v6, Landroid/view/View;
-
-    new-instance v7, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
-
-    const/16 v8, 0x32
-
-    invoke-static {v8}, Lcom/impalastudios/theflighttracker/util/ConversionUtilsKt;->getDp(I)I
-
-    move-result v8
-
-    const/4 v9, 0x0
-
-    invoke-direct {v7, v9, v8}, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;-><init>(II)V
-
-    check-cast v7, Landroid/view/ViewGroup$LayoutParams;
-
-    invoke-virtual {v5, v6, v7}, Landroidx/constraintlayout/widget/ConstraintLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance v5, Lcom/impalastudios/theflighttracker/activities/MainActivity$onCreate$2;
-
-    invoke-direct {v5, v0, v3}, Lcom/impalastudios/theflighttracker/activities/MainActivity$onCreate$2;-><init>(Lcom/impalastudios/theflighttracker/activities/MainActivity;Lcom/applovin/mediation/ads/MaxAdView;)V
-
-    check-cast v5, Lcom/applovin/mediation/MaxAdViewAdListener;
-
-    invoke-virtual {v3, v5}, Lcom/applovin/mediation/ads/MaxAdView;->setListener(Lcom/applovin/mediation/MaxAdViewAdListener;)V
-
-    sget-object v5, Lcom/applovin/mediation/MaxAdFormat;->BANNER:Lcom/applovin/mediation/MaxAdFormat;
-
-    invoke-virtual {v5, v4}, Lcom/applovin/mediation/MaxAdFormat;->getAdaptiveSize(Landroid/app/Activity;)Lcom/applovin/sdk/AppLovinSdkUtils$Size;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Lcom/applovin/sdk/AppLovinSdkUtils$Size;->getHeight()I
-
-    move-result v4
-
-    invoke-static {v4}, Lcom/impalastudios/theflighttracker/util/ConversionUtilsKt;->getDp(I)I
-
-    invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_5
-
-    check-cast v4, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
-
-    check-cast v4, Landroid/view/ViewGroup$LayoutParams;
-
-    move-object v5, v4
-
-    check-cast v5, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
-
-    iput-boolean v9, v5, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->constrainedHeight:Z
-
-    const v7, 0x7f0a03df
-
-    iput v7, v5, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->bottomToTop:I
-
-    const v8, 0x7f0a008f
-
-    iput v8, v5, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->endToStart:I
-
-    const/4 v11, 0x2
-
-    iput v11, v5, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->horizontalChainStyle:I
-
-    const v12, 0x7f0a01b5
-
-    iput v12, v5, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->startToStart:I
-
-    invoke-virtual {v6, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget-object v4, Lcom/impalastudios/theflighttracker/App;->Companion:Lcom/impalastudios/theflighttracker/App$Companion;
-
-    invoke-virtual {v4}, Lcom/impalastudios/theflighttracker/App$Companion;->getInAppPurchaseManagerNew()Lcom/impalastudios/framework/core/inAppPurchases/adapty/InAppPurchaseManagerAdapty;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Lcom/impalastudios/framework/core/inAppPurchases/adapty/InAppPurchaseManagerAdapty;->isAdFree()Z
-
-    move-result v4
-
-    if-nez v4, :cond_3
-
-    invoke-virtual {v3}, Lcom/applovin/mediation/ads/MaxAdView;->startAutoRefresh()V
-
-    :cond_3
-    invoke-virtual {v0, v7}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    move-object v12, v3
 
     check-cast v12, Lcom/google/android/material/bottomnavigation/BottomNavigationView;
 
@@ -3381,7 +3169,7 @@
     :goto_1
     sget-object v0, Lcom/impalastudios/theflighttracker/App;->Companion:Lcom/impalastudios/theflighttracker/App$Companion;
 
-    invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/App$Companion;->getAdvertisementManager()Lcom/impalastudios/advertfwk/AdvertisementManager;
+    invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/App$Companion;->getAdvertisementManager()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -3392,8 +3180,6 @@
     move-result-object v4
 
     invoke-static {v4, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v4}, Lcom/impalastudios/advertfwk/AdvertisementManager;->requestAd(Ljava/lang/String;)V
 
     goto :goto_3
 
@@ -3710,8 +3496,6 @@
 
     move-result p1
 
-    invoke-static {p1, p2}, Lcom/applovin/sdk/AppLovinPrivacySettings;->setHasUserConsent(ZLandroid/content/Context;)V
-
     sget-object p1, Lcom/impalastudios/privacy/PrivacyManager;->INSTANCE:Lcom/impalastudios/privacy/PrivacyManager;
 
     sget-object v0, Lcom/impalastudios/privacy/Regulation;->CCPA:Lcom/impalastudios/privacy/Regulation;
@@ -3721,8 +3505,6 @@
     move-result p1
 
     xor-int/lit8 p1, p1, 0x1
-
-    invoke-static {p1, p2}, Lcom/applovin/sdk/AppLovinPrivacySettings;->setDoNotSell(ZLandroid/content/Context;)V
 
     sget-object p1, Lcom/impalastudios/privacy/PrivacyManager;->INSTANCE:Lcom/impalastudios/privacy/PrivacyManager;
 
@@ -3791,7 +3573,7 @@
     :goto_2
     sget-object p1, Lcom/impalastudios/theflighttracker/App;->Companion:Lcom/impalastudios/theflighttracker/App$Companion;
 
-    invoke-virtual {p1}, Lcom/impalastudios/theflighttracker/App$Companion;->getAdvertisementManager()Lcom/impalastudios/advertfwk/AdvertisementManager;
+    invoke-virtual {p1}, Lcom/impalastudios/theflighttracker/App$Companion;->getAdvertisementManager()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -3804,8 +3586,6 @@
     const-string v0, "getString(...)"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {p1, p2}, Lcom/impalastudios/advertfwk/AdvertisementManager;->requestAd(Ljava/lang/String;)V
 
     :cond_5
     :goto_3
@@ -3853,13 +3633,11 @@
 
     sget-object v0, Lcom/impalastudios/theflighttracker/App;->Companion:Lcom/impalastudios/theflighttracker/App$Companion;
 
-    invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/App$Companion;->getAdvertisementManager()Lcom/impalastudios/advertfwk/AdvertisementManager;
+    invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/App$Companion;->getAdvertisementManager()Ljava/lang/Object;
 
     move-result-object v0
 
     move-object v1, p0
-
-    check-cast v1, Lcom/impalastudios/advertfwk/AdReceiver;
 
     const v2, 0x7f140044
 
@@ -3870,8 +3648,6 @@
     const-string v3, "getString(...)"
 
     invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1, v2}, Lcom/impalastudios/advertfwk/AdvertisementManager;->addObserver(Lcom/impalastudios/advertfwk/AdReceiver;Ljava/lang/String;)Z
 
     new-instance v0, Landroid/os/Handler;
 
@@ -3960,13 +3736,11 @@
 
     sget-object v0, Lcom/impalastudios/theflighttracker/App;->Companion:Lcom/impalastudios/theflighttracker/App$Companion;
 
-    invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/App$Companion;->getAdvertisementManager()Lcom/impalastudios/advertfwk/AdvertisementManager;
+    invoke-virtual {v0}, Lcom/impalastudios/theflighttracker/App$Companion;->getAdvertisementManager()Ljava/lang/Object;
 
     move-result-object v0
 
     move-object v1, p0
-
-    check-cast v1, Lcom/impalastudios/advertfwk/AdReceiver;
 
     const v2, 0x7f140044
 
@@ -3977,8 +3751,6 @@
     const-string v3, "getString(...)"
 
     invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1, v2}, Lcom/impalastudios/advertfwk/AdvertisementManager;->removeObserver(Lcom/impalastudios/advertfwk/AdReceiver;Ljava/lang/String;)Z
 
     iget-object v0, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->receiver:Lcom/impalastudios/networkingframework/networkstatus/ConnectivityChangeReceiver;
 
@@ -4185,13 +3957,13 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/applovin/mediation/ads/MaxAdView;
+    check-cast p1, Landroid/view/View;
 
     const-string p4, "getString(...)"
 
     if-eqz p1, :cond_f
 
-    invoke-virtual {p1}, Lcom/applovin/mediation/ads/MaxAdView;->getVisibility()I
+    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
 
     move-result v1
 
@@ -4217,13 +3989,13 @@
     const/4 v1, 0x0
 
     :goto_2
-    invoke-virtual {p1, v1}, Lcom/applovin/mediation/ads/MaxAdView;->setVisibility(I)V
+    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
     if-eqz v2, :cond_5
 
     sget-object v1, Lcom/impalastudios/theflighttracker/App;->Companion:Lcom/impalastudios/theflighttracker/App$Companion;
 
-    invoke-virtual {v1}, Lcom/impalastudios/theflighttracker/App$Companion;->getAdvertisementManager()Lcom/impalastudios/advertfwk/AdvertisementManager;
+    invoke-virtual {v1}, Lcom/impalastudios/theflighttracker/App$Companion;->getAdvertisementManager()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -4235,10 +4007,7 @@
 
     invoke-static {v2, p4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Lcom/impalastudios/advertfwk/AdvertisementManager;->requestAd(Ljava/lang/String;)V
-
     :cond_5
-    invoke-virtual {p1}, Lcom/applovin/mediation/ads/MaxAdView;->getAdFormat()Lcom/applovin/mediation/MaxAdFormat;
 
     move-result-object p1
 
@@ -4246,11 +4015,7 @@
 
     check-cast v1, Landroid/app/Activity;
 
-    invoke-virtual {p1, v1}, Lcom/applovin/mediation/MaxAdFormat;->getAdaptiveSize(Landroid/app/Activity;)Lcom/applovin/sdk/AppLovinSdkUtils$Size;
-
     move-result-object p1
-
-    invoke-virtual {p1}, Lcom/applovin/sdk/AppLovinSdkUtils$Size;->getWidth()I
 
     move-result p1
 
@@ -4267,6 +4032,8 @@
     move-result-object v2
 
     iget v2, v2, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    const/4 p1, 0x0
 
     sub-int/2addr v2, p1
 
@@ -4377,7 +4144,7 @@
 
     sget-object p1, Lcom/impalastudios/theflighttracker/App;->Companion:Lcom/impalastudios/theflighttracker/App$Companion;
 
-    invoke-virtual {p1}, Lcom/impalastudios/theflighttracker/App$Companion;->getAdvertisementManager()Lcom/impalastudios/advertfwk/AdvertisementManager;
+    invoke-virtual {p1}, Lcom/impalastudios/theflighttracker/App$Companion;->getAdvertisementManager()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -4388,8 +4155,6 @@
     move-result-object v1
 
     invoke-static {v1, p4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {p1, v1}, Lcom/impalastudios/advertfwk/AdvertisementManager;->cancelAd(Ljava/lang/String;)Lkotlin/Unit;
 
     :cond_10
     invoke-virtual {p0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -4695,192 +4460,13 @@
 .end method
 
 .method public final showBanner(Z)V
-    .locals 7
+    .locals 0
 
-    const v0, 0x7f0a0089
-
-    invoke-virtual {p0, v0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/applovin/mediation/ads/MaxAdView;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {v1}, Lcom/applovin/mediation/ads/MaxAdView;->startAutoRefresh()V
-
-    :cond_0
-    const/4 p1, 0x0
-
-    invoke-virtual {v1, p1}, Lcom/applovin/mediation/ads/MaxAdView;->setVisibility(I)V
-
-    invoke-virtual {v1}, Lcom/applovin/mediation/ads/MaxAdView;->getAdFormat()Lcom/applovin/mediation/MaxAdFormat;
-
-    move-result-object v2
-
-    move-object v3, p0
-
-    check-cast v3, Landroid/app/Activity;
-
-    invoke-virtual {v2, v3}, Lcom/applovin/mediation/MaxAdFormat;->getAdaptiveSize(Landroid/app/Activity;)Lcom/applovin/sdk/AppLovinSdkUtils$Size;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/applovin/sdk/AppLovinSdkUtils$Size;->getWidth()I
-
-    move-result v2
-
-    invoke-virtual {p0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    sub-int/2addr v3, v2
-
-    int-to-float v2, v3
-
-    invoke-virtual {p0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    const/4 v4, 0x1
-
-    const/high16 v5, 0x42400000    # 48.0f
-
-    invoke-static {v4, v5, v3}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
-
-    move-result v3
-
-    const/16 v4, 0x8
-
-    const/4 v5, 0x0
-
-    const-string v6, "binding"
-
-    cmpl-float v2, v2, v3
-
-    if-ltz v2, :cond_3
-
-    iget-object v2, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
-
-    if-nez v2, :cond_1
-
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object v2, v5
-
-    :cond_1
-    iget-object v2, v2, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->adClose2:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v2, p1}, Landroid/widget/FrameLayout;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
-
-    if-nez p1, :cond_2
-
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object p1, v5
-
-    :cond_2
-    iget-object p1, p1, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->adClose:Landroid/widget/LinearLayout;
-
-    invoke-virtual {p1, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v2, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
-
-    if-nez v2, :cond_4
-
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object v2, v5
-
-    :cond_4
-    iget-object v2, v2, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->adClose2:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v2, v4}, Landroid/widget/FrameLayout;->setVisibility(I)V
-
-    iget-object v2, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
-
-    if-nez v2, :cond_5
-
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object v2, v5
-
-    :cond_5
-    iget-object v2, v2, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->adClose:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v2, p1}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    :goto_0
-    new-instance p1, Landroidx/constraintlayout/widget/ConstraintSet;
-
-    invoke-direct {p1}, Landroidx/constraintlayout/widget/ConstraintSet;-><init>()V
-
-    iget-object v2, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
-
-    if-nez v2, :cond_6
-
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object v2, v5
-
-    :cond_6
-    iget-object v2, v2, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->container:Landroidx/constraintlayout/widget/ConstraintLayout;
-
-    invoke-virtual {p1, v2}, Landroidx/constraintlayout/widget/ConstraintSet;->clone(Landroidx/constraintlayout/widget/ConstraintLayout;)V
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const v4, 0x7f0a0290
-
-    invoke-virtual {p1, v4, v2, v0, v3}, Landroidx/constraintlayout/widget/ConstraintSet;->connect(IIII)V
-
-    const v0, 0x7f0a01b5
-
-    invoke-virtual {p0, v0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/constraintlayout/widget/ConstraintLayout;
-
-    invoke-virtual {p1, v0}, Landroidx/constraintlayout/widget/ConstraintSet;->applyTo(Landroidx/constraintlayout/widget/ConstraintLayout;)V
-
-    invoke-virtual {v1}, Lcom/applovin/mediation/ads/MaxAdView;->bringToFront()V
-
-    iget-object p1, p0, Lcom/impalastudios/theflighttracker/activities/MainActivity;->binding:Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;
-
-    if-nez p1, :cond_7
-
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :cond_7
-    move-object v5, p1
-
-    :goto_1
-    iget-object p1, v5, Lcom/impalastudios/theflighttracker/databinding/ActivityMainBinding;->adClose:Landroid/widget/LinearLayout;
-
-    invoke-virtual {p1}, Landroid/widget/LinearLayout;->bringToFront()V
+    invoke-virtual {p0}, Lcom/impalastudios/theflighttracker/activities/MainActivity;->hideBanner()V
 
     return-void
 .end method
+
 
 .method public final showBottombar()V
     .locals 2
@@ -5115,9 +4701,7 @@
 .method public showPersonalizedAds()Z
     .locals 1
 
-    invoke-static {p0}, Lcom/impalastudios/advertfwk/AdReceiver$DefaultImpls;->showPersonalizedAds(Lcom/impalastudios/advertfwk/AdReceiver;)Z
-
-    move-result v0
-
+    const/4 v0, 0x0
     return v0
 .end method
+
