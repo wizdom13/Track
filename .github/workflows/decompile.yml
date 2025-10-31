@@ -33,7 +33,7 @@ jobs:
       # 4. Runs your decompile command
       #    This assumes 'apktool.jar' and 'TheFlightTracker.apk' are in the root of your repo
       - name: Decompile APK
-        run: java -jar apktool.jar d TheFlightTracker.apk -o Track
+        run: java -jar apktool.jar d TheFlightTracker.apk -o Track -f
 
       # 5. Commits the 'Track' directory back to your repository
       - name: Commit decompiled files
