@@ -157,7 +157,7 @@ To remove your personal data shared with our advertising partners, please view o
     <string name="al_exo_track_surround_7_point_1">7.1 surround sound</string>
     <string name="al_exo_track_unknown">Unknown</string>
     <string name="androidx_startup">androidx.startup</string>
-    <string name="app_name">Wisso</string>
+    <string name="app_name">The Flight Tracker</string>
     <string name="appbar_dummy_scroll">com.impalastudios.theflighttracker.shared.view.behaviours.DummyBehaviour</string>
     <string name="appbar_layout_appbar_detailed_flight">com.impalastudios.theflighttracker.shared.view.behaviours.AppBarLayoutBehavior</string>
     <string name="appbar_layout_detailed_airport">com.impalastudios.theflighttracker.shared.view.behaviours.ToolbarPinBehaviour2</string>
