@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/bottom_sheet" android:background="@color/White" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.bottomsheet.BottomSheetDragHandleView android:id="@id/drag_handle" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent" />
-    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintTop_toBottomOf="@id/drag_handle">
-        <TextView android:textStyle="bold" android:textColor="@color/Black" android:layout_gravity="start" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="10.0dip" style="@style/TextAppearance.Material3.TitleLarge" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
-</androidx.constraintlayout.widget.ConstraintLayout>

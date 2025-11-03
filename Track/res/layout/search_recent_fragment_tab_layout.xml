@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.tabs.TabLayout android:id="@id/search_recent_tabs" android:background="@color/colorPrimary" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintEnd_toStartOf="@id/scan_by_pass_frame" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:tabGravity="fill" app:tabIndicatorColor="@color/White" app:tabMaxWidth="0.0dip" app:tabMode="fixed" app:tabSelectedTextColor="@color/White" app:tabTextColor="@color/inactive_tab_recentsearch"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.tabs.TabItem android:id="@id/tab1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/search_tab_byroute" />
-    <com.google.android.material.tabs.TabItem android:id="@id/tab2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/search_tab_flightcode" />
-</com.google.android.material.tabs.TabLayout>

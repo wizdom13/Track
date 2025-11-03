@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:textSize="12.0sp" android:textStyle="normal" android:textColor="#ff768595" android:id="@id/location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sans-serif" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <TextView android:textSize="16.0sp" android:textStyle="normal" android:textColor="#ff373c40" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:fontFamily="sans-serif-medium" app:layout_constraintStart_toStartOf="@id/location" app:layout_constraintTop_toBottomOf="@id/location" />
-    <TextView android:textSize="13.0sp" android:textStyle="normal" android:textColor="#ff373c40" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sans-serif" app:layout_constraintStart_toStartOf="@id/time" app:layout_constraintTop_toBottomOf="@id/time" />
-</androidx.constraintlayout.widget.ConstraintLayout>

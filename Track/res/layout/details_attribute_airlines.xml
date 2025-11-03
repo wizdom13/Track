@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:orientation="horizontal" android:id="@id/details_attribute_root" android:layout_width="fill_parent" android:layout_height="30.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="13.0sp" android:textStyle="normal" android:textColor="#ff6d7b89" android:layout_gravity="center_vertical" android:id="@id/details_attribute_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="18.0sp" android:textAllCaps="true" android:fontFamily="sans-serif-medium" android:layout_marginStart="8.0dip" android:letterSpacing="0.07" />
-    <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ff4a4a4a" android:gravity="end" android:layout_gravity="end|center" android:id="@id/details_attribute_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="18.0sp" android:textAllCaps="true" android:fontFamily="sans-serif" android:layout_marginEnd="8.0dip" android:letterSpacing="0.07" />
-</FrameLayout>

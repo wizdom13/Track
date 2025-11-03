@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/subscribe_months_layout" android:background="@drawable/subscription_month_background_hack" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="40.0sp" android:textStyle="normal" android:textColor="#ff294e76" android:gravity="center_horizontal" android:id="@id/sub_item_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sans-serif-medium" android:letterSpacing="-0.05" />
-    <TextView android:textSize="14.0sp" android:textStyle="normal" android:textColor="#ff8c9cae" android:gravity="center_horizontal" android:id="@id/sub_item_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sans-serif" />
-    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff294e76" android:gravity="center_horizontal" android:id="@id/sub_item_full_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sans-serif" />
-    <TextView android:textSize="12.0sp" android:textColor="#ff294e76" android:gravity="center_horizontal" android:id="@id/sub_item_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sans-serif" />
-</LinearLayout>

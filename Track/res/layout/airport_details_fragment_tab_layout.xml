@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.tabs.TabLayout android:id="@id/airport_details_flightboard_tablayout" android:background="@color/White" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/separator" app:tabGravity="fill" app:tabIndicatorColor="@color/colorPrimary" app:tabMaxWidth="0.0dip" app:tabSelectedTextColor="@color/colorPrimary" app:tabTextColor="#ffa1aeb8"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.tabs.TabItem android:id="@id/tab1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/flightBoard.segment.departures.title" />
-    <com.google.android.material.tabs.TabItem android:id="@id/tab2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/flightBoard.segment.arrivals.title" />
-</com.google.android.material.tabs.TabLayout>
