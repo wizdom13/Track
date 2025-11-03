@@ -1,0 +1,29 @@
+.class public final Lcom/fyber/inneractive/sdk/R$anim;
+.super Ljava/lang/Object;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/fyber/inneractive/sdk/R;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "anim"
+.end annotation
+
+
+# static fields
+.field public static final store_promo_appear_anim:I = 0x7f01003e
+
+.field public static final store_promo_disappear_anim:I = 0x7f01003f
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

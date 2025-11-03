@@ -1,0 +1,282 @@
+.class public abstract Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;
+.super Ljava/lang/Object;
+.source "com.google.android.play:feature-delivery@@2.1.0"
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static create(IIIJJLjava/util/List;Ljava/util/List;)Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;
+    .locals 13
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(IIIJJ",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;"
+        }
+    .end annotation
+
+    const/16 v0, 0x8
+
+    if-eq p1, v0, :cond_0
+
+    .line 1
+    new-instance v1, Lcom/google/android/play/core/splitinstall/zza;
+
+    const/4 v11, 0x0
+
+    const/4 v12, 0x0
+
+    move v2, p0
+
+    move v3, p1
+
+    move v4, p2
+
+    move-wide/from16 v5, p3
+
+    move-wide/from16 v7, p5
+
+    move-object/from16 v9, p7
+
+    move-object/from16 v10, p8
+
+    invoke-direct/range {v1 .. v12}, Lcom/google/android/play/core/splitinstall/zza;-><init>(IIIJJLjava/util/List;Ljava/util/List;Landroid/app/PendingIntent;Ljava/util/List;)V
+
+    return-object v1
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "REQUIRES_USER_CONFIRMATION state not supported."
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static zzd(Landroid/os/Bundle;)Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;
+    .locals 12
+
+    .line 1
+    new-instance v0, Lcom/google/android/play/core/splitinstall/zza;
+
+    const-string v1, "session_id"
+
+    invoke-virtual {p0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+
+    move-result v1
+
+    .line 2
+    const-string/jumbo v2, "status"
+
+    invoke-virtual {p0, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+
+    move-result v2
+
+    .line 3
+    const-string v3, "error_code"
+
+    invoke-virtual {p0, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+
+    move-result v3
+
+    .line 4
+    const-string v4, "bytes_downloaded"
+
+    invoke-virtual {p0, v4}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
+
+    move-result-wide v4
+
+    .line 5
+    const-string/jumbo v6, "total_bytes_to_download"
+
+    invoke-virtual {p0, v6}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
+
+    move-result-wide v6
+
+    .line 6
+    const-string v8, "module_names"
+
+    invoke-virtual {p0, v8}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v8
+
+    .line 7
+    const-string v9, "languages"
+
+    invoke-virtual {p0, v9}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v9
+
+    .line 8
+    const-string/jumbo v10, "user_confirmation_intent"
+
+    invoke-virtual {p0, v10}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object v10
+
+    check-cast v10, Landroid/app/PendingIntent;
+
+    const-string/jumbo v11, "split_file_intents"
+
+    .line 9
+    invoke-virtual {p0, v11}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v11
+
+    invoke-direct/range {v0 .. v11}, Lcom/google/android/play/core/splitinstall/zza;-><init>(IIIJJLjava/util/List;Ljava/util/List;Landroid/app/PendingIntent;Ljava/util/List;)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public abstract bytesDownloaded()J
+.end method
+
+.method public abstract errorCode()I
+.end method
+
+.method public hasTerminalStatus()Z
+    .locals 2
+
+    .line 1
+    invoke-virtual {p0}, Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;->status()I
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v1, 0x5
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v1, 0x6
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v1, 0x7
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public languages()Ljava/util/List;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;->zza()Ljava/util/List;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-virtual {p0}, Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;->zza()Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    return-object v0
+.end method
+
+.method public moduleNames()Ljava/util/List;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;->zzb()Ljava/util/List;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-virtual {p0}, Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;->zzb()Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/ArrayList;
+
+    .line 2
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    return-object v0
+.end method
+
+.method public abstract resolutionIntent()Landroid/app/PendingIntent;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end method
+
+.method public abstract sessionId()I
+.end method
+
+.method public abstract status()I
+.end method
+
+.method public abstract totalBytesToDownload()J
+.end method
+
+.method abstract zza()Ljava/util/List;
+.end method
+
+.method abstract zzb()Ljava/util/List;
+.end method
+
+.method abstract zzc()Ljava/util/List;
+.end method

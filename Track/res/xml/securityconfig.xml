@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    <debug-overrides>
+        <trust-anchors>
+            <certificates overridePins="true" src="user" />
+        </trust-anchors>
+    </debug-overrides>
+    <domain-config>
+        <domain includeSubdomains="true">*.api.impalastudios.com</domain>
+        <domain includeSubdomains="true">*.cdn.impalastudios.com</domain>
+        <domain includeSubdomains="true">*.accounts.impalastudios.com</domain>
+        <pin-set>
+            <pin digest="SHA-256">J62vd6NB7B1RAx0mMgenspqMshgLWOW0Va3m18xQmiY=</pin>
+        </pin-set>
+    </domain-config>
+</network-security-config>

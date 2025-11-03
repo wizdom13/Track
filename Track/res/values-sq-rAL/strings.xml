@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backButtonTitle">Prapa</string>
+    <string name="ccpaSalesDisclosure">Vini re se disa nga këto shkëmbime të dhënash me partnerët tanë përbëjnë shitje të të dhënave personale sipas ligjit në fuqi.</string>
+    <string name="changeInSettings">Nëse ndryshoni ndonjëherë mendje, mund të ndryshoni zgjedhjen tuaj duke shkuar te cilësimet e kësaj aplikacioni.</string>
+    <string name="confirmChoiceButtonText">Unë konfirmoj</string>
+    <string name="customiseChoicesTitle">Personalizo Zgjedhjet</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText1">Google dhe partnerëve të tjerë</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText2">Mëso më shumë.</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText3">Kushtet dhe Afatet</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText4">Politikën e Privatësisë</string>
+    <string name="dialogPersonalizedAdsBodyPart1">Ky aplikacion personalizon eksperiencën tuaj të reklamave nëpërmjet Google dhe partnerëve të tjerë. Duke pranuar ju do të shikoni reklama që kanë më shumë rëndësi për ju. Në varësi të cilësimeve tuaja të privatësisë partnerët tanë mund të mbledhin dhe të përpunojnë të dhënat personale. Mëso më shumë.</string>
+    <string name="dialogPersonalizedAdsBodyPart2Sentence1">Duke pranuar, ju konfirmoni që jeni mbi moshën 16 vjeç.</string>
+    <string name="dialogPersonalizedAdsBodyPart2Sentence2">Duke vazhduar, ju pranoni Kushtet dhe Afatet dhe Politikën e Privatësisë.</string>
+    <string name="explanationTitle">Shpjegimi</string>
+    <string name="generalTitle">Cilësimet e Privatësisë</string>
+    <string name="payChoiceButtonText">Bleni versionin pa reklama</string>
+    <string name="personalTitle">Reklama të personalizuara</string>
+    <string name="saveAndConfirmButtonTitle">Ruaj dhe Konfirmo</string>
+</resources>

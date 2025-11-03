@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/divider2" android:background="#ffc3c8d6" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/note_root" android:background="#fff3fafe" android:layout_width="fill_parent" android:layout_height="65.0dip" android:layout_marginLeft="16.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip">
+        <View android:background="@drawable/rounded_corners_flightdetails_note" android:layout_width="4.0dip" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="12.0dip" android:paddingEnd="12.0dip">
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff3b4145" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/details.noteCell.title" android:fontFamily="sans-serif" />
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.impalastudios.theflighttracker.shared.view.MultiLineFadeTextView android:textSize="13.0sp" android:textColor="#ff3b4145" android:id="@id/flight_details_note" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="4.0dip" app:lastLineOverDrawColor="#fff3fafe" app:textViewFadeOutSize="100.0dip" />
+                <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ff347cff" android:gravity="end" android:layout_gravity="end|bottom" android:id="@id/flight_details_note_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.5dip" android:text="@string/airportDetails.about.more" android:textAllCaps="true" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton android:textColor="#ff347cff" android:gravity="center" android:layout_gravity="center" android:id="@id/note_button" android:layout_width="wrap_content" android:layout_height="56.0dip" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:textAllCaps="true" android:fontFamily="sans-serif-medium" app:backgroundTint="#fff0f0f7" app:cornerRadius="4.0dip" app:icon="@drawable/ic_memo_outlined" app:iconGravity="textStart" app:iconSize="16.0dip" app:iconTint="#ff347cff" app:rippleColor="@color/ripplecolor" app:strokeColor="#80d0e0ea" app:strokeWidth="0.5dip" style="@style/Widget.MaterialComponents.Button" />
+</LinearLayout>

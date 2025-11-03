@@ -1,0 +1,455 @@
+.class public abstract Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant;
+.super Lnet/bytebuddy/implementation/bytecode/StackManipulation$AbstractBase;
+.source "MethodConstant.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$CachedConstructor;,
+        Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$CachedMethod;,
+        Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$PrivilegedLookup;,
+        Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$ForConstructor;,
+        Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$ForMethod;,
+        Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$CanCache;,
+        Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$CanCacheIllegal;
+    }
+.end annotation
+
+
+# static fields
+.field protected static final DO_PRIVILEGED:Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;
+    .annotation runtime Lnet/bytebuddy/utility/nullability/MaybeNull;
+    .end annotation
+.end field
+
+
+# instance fields
+.field protected final methodDescription:Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    .line 52
+    invoke-static {}, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant;->doPrivileged()Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;
+
+    move-result-object v0
+
+    sput-object v0, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant;->DO_PRIVILEGED:Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;
+
+    return-void
+.end method
+
+.method protected constructor <init>(Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;)V
+    .locals 0
+
+    .line 90
+    invoke-direct {p0}, Lnet/bytebuddy/implementation/bytecode/StackManipulation$AbstractBase;-><init>()V
+
+    .line 91
+    iput-object p1, p0, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant;->methodDescription:Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;
+
+    return-void
+.end method
+
+.method private static doPrivileged()Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;
+    .locals 5
+    .annotation runtime Lnet/bytebuddy/utility/nullability/MaybeNull;
+    .end annotation
+
+    const/4 v0, 0x0
+
+    .line 65
+    :try_start_0
+    new-instance v1, Lnet/bytebuddy/description/method/MethodDescription$ForLoadedMethod;
+
+    const-string v2, "java.security.AccessController"
+
+    invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v2
+
+    const-string v3, "doPrivileged"
+
+    const-class v4, Ljava/security/PrivilegedExceptionAction;
+
+    filled-new-array {v4}, [Ljava/lang/Class;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v3, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Lnet/bytebuddy/description/method/MethodDescription$ForLoadedMethod;-><init>(Ljava/lang/reflect/Method;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+
+    .line 67
+    :try_start_1
+    const-string v2, "net.bytebuddy.securitymanager"
+
+    const-string v3, "true"
+
+    invoke-static {v2, v3}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
+
+    move-result v2
+    :try_end_1
+    .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :catch_0
+    :cond_0
+    move-object v0, v1
+
+    :catch_1
+    :goto_0
+    return-object v0
+.end method
+
+.method public static of(Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;)Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$CanCache;
+    .locals 1
+
+    .line 101
+    invoke-interface {p0}, Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;->isTypeInitializer()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 102
+    sget-object p0, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$CanCacheIllegal;->INSTANCE:Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$CanCacheIllegal;
+
+    return-object p0
+
+    .line 103
+    :cond_0
+    invoke-interface {p0}, Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;->isConstructor()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 104
+    new-instance v0, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$ForConstructor;
+
+    invoke-direct {v0, p0}, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$ForConstructor;-><init>(Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;)V
+
+    return-object v0
+
+    .line 106
+    :cond_1
+    new-instance v0, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$ForMethod;
+
+    invoke-direct {v0, p0}, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$ForMethod;-><init>(Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;)V
+
+    return-object v0
+.end method
+
+.method public static ofPrivileged(Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;)Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$CanCache;
+    .locals 1
+
+    .line 119
+    sget-object v0, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant;->DO_PRIVILEGED:Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;
+
+    if-nez v0, :cond_0
+
+    .line 120
+    invoke-static {p0}, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant;->of(Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;)Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$CanCache;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 122
+    :cond_0
+    invoke-interface {p0}, Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;->isTypeInitializer()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 123
+    sget-object p0, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$CanCacheIllegal;->INSTANCE:Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$CanCacheIllegal;
+
+    return-object p0
+
+    .line 124
+    :cond_1
+    invoke-interface {p0}, Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;->isConstructor()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 125
+    new-instance v0, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$ForConstructor;
+
+    invoke-direct {v0, p0}, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$ForConstructor;-><init>(Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;)V
+
+    invoke-virtual {v0}, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$ForConstructor;->withPrivilegedLookup()Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$CanCache;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 127
+    :cond_2
+    new-instance v0, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$ForMethod;
+
+    invoke-direct {v0, p0}, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$ForMethod;-><init>(Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;)V
+
+    invoke-virtual {v0}, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$ForMethod;->withPrivilegedLookup()Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$CanCache;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method protected static typeConstantsFor(Ljava/util/List;)Ljava/util/List;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lnet/bytebuddy/description/type/TypeDescription;",
+            ">;)",
+            "Ljava/util/List<",
+            "Lnet/bytebuddy/implementation/bytecode/StackManipulation;",
+            ">;"
+        }
+    .end annotation
+
+    .line 139
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    .line 140
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lnet/bytebuddy/description/type/TypeDescription;
+
+    .line 141
+    invoke-static {v1}, Lnet/bytebuddy/implementation/bytecode/constant/ClassConstant;->of(Lnet/bytebuddy/description/type/TypeDescription;)Lnet/bytebuddy/implementation/bytecode/StackManipulation;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_0
+    return-object v0
+.end method
+
+
+# virtual methods
+.method protected abstract accessorMethod()Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;
+.end method
+
+.method public apply(Lnet/bytebuddy/jar/asm/MethodVisitor;Lnet/bytebuddy/implementation/Implementation$Context;)Lnet/bytebuddy/implementation/bytecode/StackManipulation$Size;
+    .locals 4
+
+    .line 150
+    new-instance v0, Lnet/bytebuddy/implementation/bytecode/StackManipulation$Compound;
+
+    const/4 v1, 0x4
+
+    new-array v1, v1, [Lnet/bytebuddy/implementation/bytecode/StackManipulation;
+
+    iget-object v2, p0, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant;->methodDescription:Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;
+
+    .line 151
+    invoke-interface {v2}, Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;->getDeclaringType()Lnet/bytebuddy/description/type/TypeDescription;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lnet/bytebuddy/implementation/bytecode/constant/ClassConstant;->of(Lnet/bytebuddy/description/type/TypeDescription;)Lnet/bytebuddy/implementation/bytecode/StackManipulation;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    aput-object v2, v1, v3
+
+    const/4 v2, 0x1
+
+    .line 152
+    invoke-virtual {p0}, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant;->methodName()Lnet/bytebuddy/implementation/bytecode/StackManipulation;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    const-class v2, Ljava/lang/Class;
+
+    .line 153
+    invoke-static {v2}, Lnet/bytebuddy/description/type/TypeDescription$Generic$OfNonGenericType$ForLoadedType;->of(Ljava/lang/Class;)Lnet/bytebuddy/description/type/TypeDescription$Generic;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lnet/bytebuddy/implementation/bytecode/collection/ArrayFactory;->forType(Lnet/bytebuddy/description/type/TypeDescription$Generic;)Lnet/bytebuddy/implementation/bytecode/collection/ArrayFactory;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant;->methodDescription:Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;
+
+    .line 154
+    invoke-interface {v3}, Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;->getParameters()Lnet/bytebuddy/description/method/ParameterList;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lnet/bytebuddy/description/method/ParameterList;->asTypeList()Lnet/bytebuddy/description/type/TypeList$Generic;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lnet/bytebuddy/description/type/TypeList$Generic;->asErasures()Lnet/bytebuddy/description/type/TypeList;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant;->typeConstantsFor(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lnet/bytebuddy/implementation/bytecode/collection/ArrayFactory;->withValues(Ljava/util/List;)Lnet/bytebuddy/implementation/bytecode/StackManipulation;
+
+    move-result-object v2
+
+    const/4 v3, 0x2
+
+    aput-object v2, v1, v3
+
+    .line 155
+    invoke-virtual {p0}, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant;->accessorMethod()Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lnet/bytebuddy/implementation/bytecode/member/MethodInvocation;->invoke(Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;)Lnet/bytebuddy/implementation/bytecode/member/MethodInvocation$WithImplicitInvocationTargetType;
+
+    move-result-object v2
+
+    const/4 v3, 0x3
+
+    aput-object v2, v1, v3
+
+    invoke-direct {v0, v1}, Lnet/bytebuddy/implementation/bytecode/StackManipulation$Compound;-><init>([Lnet/bytebuddy/implementation/bytecode/StackManipulation;)V
+
+    .line 156
+    invoke-virtual {v0, p1, p2}, Lnet/bytebuddy/implementation/bytecode/StackManipulation$Compound;->apply(Lnet/bytebuddy/jar/asm/MethodVisitor;Lnet/bytebuddy/implementation/Implementation$Context;)Lnet/bytebuddy/implementation/bytecode/StackManipulation$Size;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 2
+    .param p1    # Ljava/lang/Object;
+        .annotation runtime Lnet/bytebuddy/utility/nullability/MaybeNull;
+        .end annotation
+    .end param
+
+    if-ne p0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    if-eqz p1, :cond_2
+
+    .line 191
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    if-eq v0, v1, :cond_1
+
+    goto :goto_0
+
+    .line 194
+    :cond_1
+    check-cast p1, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant;
+
+    .line 195
+    iget-object v0, p0, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant;->methodDescription:Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;
+
+    iget-object p1, p1, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant;->methodDescription:Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_2
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public hashCode()I
+    .locals 1
+
+    .line 184
+    iget-object v0, p0, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant;->methodDescription:Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method protected abstract methodName()Lnet/bytebuddy/implementation/bytecode/StackManipulation;
+.end method
+
+.method protected withPrivilegedLookup()Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$CanCache;
+    .locals 3
+
+    .line 165
+    new-instance v0, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$PrivilegedLookup;
+
+    iget-object v1, p0, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant;->methodDescription:Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;
+
+    invoke-virtual {p0}, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant;->methodName()Lnet/bytebuddy/implementation/bytecode/StackManipulation;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$PrivilegedLookup;-><init>(Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;Lnet/bytebuddy/implementation/bytecode/StackManipulation;)V
+
+    return-object v0
+.end method

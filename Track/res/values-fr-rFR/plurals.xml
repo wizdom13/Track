@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="duration_days">
+        <item quantity="other">%d jours</item>
+        <item quantity="one">%d jour</item>
+        <item quantity="many">%d jours</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d heures</item>
+        <item quantity="one">%d heure</item>
+        <item quantity="many">%d heures</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d minute</item>
+        <item quantity="many">%d minutes</item>
+    </plurals>
+    <plurals name="duration_months">
+        <item quantity="other">%d mois</item>
+        <item quantity="one">%d mois</item>
+        <item quantity="many">%d mois</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d secondes</item>
+        <item quantity="one">%d seconde</item>
+        <item quantity="many">%d secondes</item>
+    </plurals>
+    <plurals name="duration_years">
+        <item quantity="other">%d ans</item>
+        <item quantity="one">%d an</item>
+        <item quantity="many">%d ans</item>
+    </plurals>
+    <plurals name="layovers">
+        <item quantity="other">Escales : %d</item>
+        <item quantity="one">Escale : %d</item>
+        <item quantity="many">Escales : %d</item>
+    </plurals>
+    <plurals name="month">
+        <item quantity="other">Mois</item>
+        <item quantity="one">Mois</item>
+        <item quantity="many">Mois</item>
+    </plurals>
+    <plurals name="old_flights">
+        <item quantity="other">%d anciens vols.</item>
+        <item quantity="one">%d ancien vol.</item>
+        <item quantity="many">%d anciens vols.</item>
+    </plurals>
+    <plurals name="trip_count">
+        <item quantity="other">%d voyages</item>
+        <item quantity="one">%d voyage</item>
+        <item quantity="many">%d voyages</item>
+    </plurals>
+    <plurals name="trip_flightcount_text">
+        <item quantity="other">%d vols</item>
+        <item quantity="one">%d vol</item>
+        <item quantity="many">%d vols</item>
+    </plurals>
+    <plurals name="tripit_import_button_text">
+        <item quantity="other">IMPORTER ( %d sélectionnés)</item>
+        <item quantity="one">IMPORTER ( %d sélectionné)</item>
+        <item quantity="many">IMPORTER ( %d sélectionnés)</item>
+    </plurals>
+</resources>

@@ -1,0 +1,918 @@
+.class public Lnet/bytebuddy/asm/ModifierAdjustment;
+.super Lnet/bytebuddy/asm/AsmVisitorWrapper$AbstractBase;
+.source "ModifierAdjustment.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lnet/bytebuddy/asm/ModifierAdjustment$ModifierAdjustingClassVisitor;,
+        Lnet/bytebuddy/asm/ModifierAdjustment$Adjustment;
+    }
+.end annotation
+
+.annotation runtime Lnet/bytebuddy/build/HashCodeAndEqualsPlugin$Enhance;
+.end annotation
+
+
+# instance fields
+.field private final fieldAdjustments:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lnet/bytebuddy/asm/ModifierAdjustment$Adjustment<",
+            "Lnet/bytebuddy/description/field/FieldDescription$InDefinedShape;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field private final methodAdjustments:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lnet/bytebuddy/asm/ModifierAdjustment$Adjustment<",
+            "Lnet/bytebuddy/description/method/MethodDescription;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field private final typeAdjustments:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lnet/bytebuddy/asm/ModifierAdjustment$Adjustment<",
+            "Lnet/bytebuddy/description/type/TypeDescription;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 3
+
+    .line 73
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    .line 74
+    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    .line 75
+    sget-object v2, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    .line 73
+    invoke-direct {p0, v0, v1, v2}, Lnet/bytebuddy/asm/ModifierAdjustment;-><init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method protected constructor <init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lnet/bytebuddy/asm/ModifierAdjustment$Adjustment<",
+            "Lnet/bytebuddy/description/type/TypeDescription;",
+            ">;>;",
+            "Ljava/util/List<",
+            "Lnet/bytebuddy/asm/ModifierAdjustment$Adjustment<",
+            "Lnet/bytebuddy/description/field/FieldDescription$InDefinedShape;",
+            ">;>;",
+            "Ljava/util/List<",
+            "Lnet/bytebuddy/asm/ModifierAdjustment$Adjustment<",
+            "Lnet/bytebuddy/description/method/MethodDescription;",
+            ">;>;)V"
+        }
+    .end annotation
+
+    .line 87
+    invoke-direct {p0}, Lnet/bytebuddy/asm/AsmVisitorWrapper$AbstractBase;-><init>()V
+
+    .line 88
+    iput-object p1, p0, Lnet/bytebuddy/asm/ModifierAdjustment;->typeAdjustments:Ljava/util/List;
+
+    .line 89
+    iput-object p2, p0, Lnet/bytebuddy/asm/ModifierAdjustment;->fieldAdjustments:Ljava/util/List;
+
+    .line 90
+    iput-object p3, p0, Lnet/bytebuddy/asm/ModifierAdjustment;->methodAdjustments:Ljava/util/List;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public equals(Ljava/lang/Object;)Z
+    .locals 4
+    .param p1    # Ljava/lang/Object;
+        .annotation runtime Lnet/bytebuddy/utility/nullability/MaybeNull;
+        .end annotation
+    .end param
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-nez p1, :cond_1
+
+    return v1
+
+    :cond_1
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_2
+
+    return v1
+
+    :cond_2
+    iget-object v2, p0, Lnet/bytebuddy/asm/ModifierAdjustment;->typeAdjustments:Ljava/util/List;
+
+    check-cast p1, Lnet/bytebuddy/asm/ModifierAdjustment;
+
+    iget-object v3, p1, Lnet/bytebuddy/asm/ModifierAdjustment;->typeAdjustments:Ljava/util/List;
+
+    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    return v1
+
+    :cond_3
+    iget-object v2, p0, Lnet/bytebuddy/asm/ModifierAdjustment;->fieldAdjustments:Ljava/util/List;
+
+    iget-object v3, p1, Lnet/bytebuddy/asm/ModifierAdjustment;->fieldAdjustments:Ljava/util/List;
+
+    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    return v1
+
+    :cond_4
+    iget-object v2, p0, Lnet/bytebuddy/asm/ModifierAdjustment;->methodAdjustments:Ljava/util/List;
+
+    iget-object p1, p1, Lnet/bytebuddy/asm/ModifierAdjustment;->methodAdjustments:Ljava/util/List;
+
+    invoke-virtual {v2, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    return v1
+
+    :cond_5
+    return v0
+.end method
+
+.method public hashCode()I
+    .locals 2
+
+    invoke-virtual {p0}, Lnet/bytebuddy/asm/ModifierAdjustment;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lnet/bytebuddy/asm/ModifierAdjustment;->typeAdjustments:Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lnet/bytebuddy/asm/ModifierAdjustment;->fieldAdjustments:Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lnet/bytebuddy/asm/ModifierAdjustment;->methodAdjustments:Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public withConstructorModifiers(Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "+",
+            "Lnet/bytebuddy/description/modifier/ModifierContributor$ForMethod;",
+            ">;)",
+            "Lnet/bytebuddy/asm/ModifierAdjustment;"
+        }
+    .end annotation
+
+    .line 244
+    invoke-static {}, Lnet/bytebuddy/matcher/ElementMatchers;->any()Lnet/bytebuddy/matcher/ElementMatcher$Junction;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0, p1}, Lnet/bytebuddy/asm/ModifierAdjustment;->withConstructorModifiers(Lnet/bytebuddy/matcher/ElementMatcher;Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public withConstructorModifiers(Lnet/bytebuddy/matcher/ElementMatcher;Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lnet/bytebuddy/matcher/ElementMatcher<",
+            "-",
+            "Lnet/bytebuddy/description/method/MethodDescription;",
+            ">;",
+            "Ljava/util/List<",
+            "+",
+            "Lnet/bytebuddy/description/modifier/ModifierContributor$ForMethod;",
+            ">;)",
+            "Lnet/bytebuddy/asm/ModifierAdjustment;"
+        }
+    .end annotation
+
+    .line 268
+    invoke-static {}, Lnet/bytebuddy/matcher/ElementMatchers;->isConstructor()Lnet/bytebuddy/matcher/ElementMatcher$Junction;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lnet/bytebuddy/matcher/ElementMatcher$Junction;->and(Lnet/bytebuddy/matcher/ElementMatcher;)Lnet/bytebuddy/matcher/ElementMatcher$Junction;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1, p2}, Lnet/bytebuddy/asm/ModifierAdjustment;->withInvokableModifiers(Lnet/bytebuddy/matcher/ElementMatcher;Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public varargs withConstructorModifiers(Lnet/bytebuddy/matcher/ElementMatcher;[Lnet/bytebuddy/description/modifier/ModifierContributor$ForMethod;)Lnet/bytebuddy/asm/ModifierAdjustment;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lnet/bytebuddy/matcher/ElementMatcher<",
+            "-",
+            "Lnet/bytebuddy/description/method/MethodDescription;",
+            ">;[",
+            "Lnet/bytebuddy/description/modifier/ModifierContributor$ForMethod;",
+            ")",
+            "Lnet/bytebuddy/asm/ModifierAdjustment;"
+        }
+    .end annotation
+
+    .line 256
+    invoke-static {p2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p1, p2}, Lnet/bytebuddy/asm/ModifierAdjustment;->withConstructorModifiers(Lnet/bytebuddy/matcher/ElementMatcher;Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public varargs withConstructorModifiers([Lnet/bytebuddy/description/modifier/ModifierContributor$ForMethod;)Lnet/bytebuddy/asm/ModifierAdjustment;
+    .locals 0
+
+    .line 234
+    invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lnet/bytebuddy/asm/ModifierAdjustment;->withConstructorModifiers(Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public withFieldModifiers(Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "+",
+            "Lnet/bytebuddy/description/modifier/ModifierContributor$ForField;",
+            ">;)",
+            "Lnet/bytebuddy/asm/ModifierAdjustment;"
+        }
+    .end annotation
+
+    .line 155
+    invoke-static {}, Lnet/bytebuddy/matcher/ElementMatchers;->any()Lnet/bytebuddy/matcher/ElementMatcher$Junction;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0, p1}, Lnet/bytebuddy/asm/ModifierAdjustment;->withFieldModifiers(Lnet/bytebuddy/matcher/ElementMatcher;Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public withFieldModifiers(Lnet/bytebuddy/matcher/ElementMatcher;Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lnet/bytebuddy/matcher/ElementMatcher<",
+            "-",
+            "Lnet/bytebuddy/description/field/FieldDescription$InDefinedShape;",
+            ">;",
+            "Ljava/util/List<",
+            "+",
+            "Lnet/bytebuddy/description/modifier/ModifierContributor$ForField;",
+            ">;)",
+            "Lnet/bytebuddy/asm/ModifierAdjustment;"
+        }
+    .end annotation
+
+    .line 179
+    new-instance v0, Lnet/bytebuddy/asm/ModifierAdjustment;
+
+    iget-object v1, p0, Lnet/bytebuddy/asm/ModifierAdjustment;->typeAdjustments:Ljava/util/List;
+
+    new-instance v2, Lnet/bytebuddy/asm/ModifierAdjustment$Adjustment;
+
+    .line 180
+    invoke-static {p2}, Lnet/bytebuddy/description/modifier/ModifierContributor$Resolver;->of(Ljava/util/Collection;)Lnet/bytebuddy/description/modifier/ModifierContributor$Resolver;
+
+    move-result-object p2
+
+    invoke-direct {v2, p1, p2}, Lnet/bytebuddy/asm/ModifierAdjustment$Adjustment;-><init>(Lnet/bytebuddy/matcher/ElementMatcher;Lnet/bytebuddy/description/modifier/ModifierContributor$Resolver;)V
+
+    iget-object p1, p0, Lnet/bytebuddy/asm/ModifierAdjustment;->fieldAdjustments:Ljava/util/List;
+
+    .line 179
+    invoke-static {v2, p1}, Lnet/bytebuddy/utility/CompoundList;->of(Ljava/lang/Object;Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lnet/bytebuddy/asm/ModifierAdjustment;->methodAdjustments:Ljava/util/List;
+
+    invoke-direct {v0, v1, p1, p2}, Lnet/bytebuddy/asm/ModifierAdjustment;-><init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+
+    return-object v0
+.end method
+
+.method public varargs withFieldModifiers(Lnet/bytebuddy/matcher/ElementMatcher;[Lnet/bytebuddy/description/modifier/ModifierContributor$ForField;)Lnet/bytebuddy/asm/ModifierAdjustment;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lnet/bytebuddy/matcher/ElementMatcher<",
+            "-",
+            "Lnet/bytebuddy/description/field/FieldDescription$InDefinedShape;",
+            ">;[",
+            "Lnet/bytebuddy/description/modifier/ModifierContributor$ForField;",
+            ")",
+            "Lnet/bytebuddy/asm/ModifierAdjustment;"
+        }
+    .end annotation
+
+    .line 167
+    invoke-static {p2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p1, p2}, Lnet/bytebuddy/asm/ModifierAdjustment;->withFieldModifiers(Lnet/bytebuddy/matcher/ElementMatcher;Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public varargs withFieldModifiers([Lnet/bytebuddy/description/modifier/ModifierContributor$ForField;)Lnet/bytebuddy/asm/ModifierAdjustment;
+    .locals 0
+
+    .line 145
+    invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lnet/bytebuddy/asm/ModifierAdjustment;->withFieldModifiers(Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public withInvokableModifiers(Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "+",
+            "Lnet/bytebuddy/description/modifier/ModifierContributor$ForMethod;",
+            ">;)",
+            "Lnet/bytebuddy/asm/ModifierAdjustment;"
+        }
+    .end annotation
+
+    .line 288
+    invoke-static {}, Lnet/bytebuddy/matcher/ElementMatchers;->any()Lnet/bytebuddy/matcher/ElementMatcher$Junction;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0, p1}, Lnet/bytebuddy/asm/ModifierAdjustment;->withInvokableModifiers(Lnet/bytebuddy/matcher/ElementMatcher;Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public withInvokableModifiers(Lnet/bytebuddy/matcher/ElementMatcher;Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lnet/bytebuddy/matcher/ElementMatcher<",
+            "-",
+            "Lnet/bytebuddy/description/method/MethodDescription;",
+            ">;",
+            "Ljava/util/List<",
+            "+",
+            "Lnet/bytebuddy/description/modifier/ModifierContributor$ForMethod;",
+            ">;)",
+            "Lnet/bytebuddy/asm/ModifierAdjustment;"
+        }
+    .end annotation
+
+    .line 312
+    new-instance v0, Lnet/bytebuddy/asm/ModifierAdjustment;
+
+    iget-object v1, p0, Lnet/bytebuddy/asm/ModifierAdjustment;->typeAdjustments:Ljava/util/List;
+
+    iget-object v2, p0, Lnet/bytebuddy/asm/ModifierAdjustment;->fieldAdjustments:Ljava/util/List;
+
+    new-instance v3, Lnet/bytebuddy/asm/ModifierAdjustment$Adjustment;
+
+    .line 313
+    invoke-static {p2}, Lnet/bytebuddy/description/modifier/ModifierContributor$Resolver;->of(Ljava/util/Collection;)Lnet/bytebuddy/description/modifier/ModifierContributor$Resolver;
+
+    move-result-object p2
+
+    invoke-direct {v3, p1, p2}, Lnet/bytebuddy/asm/ModifierAdjustment$Adjustment;-><init>(Lnet/bytebuddy/matcher/ElementMatcher;Lnet/bytebuddy/description/modifier/ModifierContributor$Resolver;)V
+
+    iget-object p1, p0, Lnet/bytebuddy/asm/ModifierAdjustment;->methodAdjustments:Ljava/util/List;
+
+    .line 312
+    invoke-static {v3, p1}, Lnet/bytebuddy/utility/CompoundList;->of(Ljava/lang/Object;Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-direct {v0, v1, v2, p1}, Lnet/bytebuddy/asm/ModifierAdjustment;-><init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+
+    return-object v0
+.end method
+
+.method public varargs withInvokableModifiers(Lnet/bytebuddy/matcher/ElementMatcher;[Lnet/bytebuddy/description/modifier/ModifierContributor$ForMethod;)Lnet/bytebuddy/asm/ModifierAdjustment;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lnet/bytebuddy/matcher/ElementMatcher<",
+            "-",
+            "Lnet/bytebuddy/description/method/MethodDescription;",
+            ">;[",
+            "Lnet/bytebuddy/description/modifier/ModifierContributor$ForMethod;",
+            ")",
+            "Lnet/bytebuddy/asm/ModifierAdjustment;"
+        }
+    .end annotation
+
+    .line 300
+    invoke-static {p2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p1, p2}, Lnet/bytebuddy/asm/ModifierAdjustment;->withInvokableModifiers(Lnet/bytebuddy/matcher/ElementMatcher;Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public varargs withInvokableModifiers([Lnet/bytebuddy/description/modifier/ModifierContributor$ForMethod;)Lnet/bytebuddy/asm/ModifierAdjustment;
+    .locals 0
+
+    .line 278
+    invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lnet/bytebuddy/asm/ModifierAdjustment;->withInvokableModifiers(Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public withMethodModifiers(Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "+",
+            "Lnet/bytebuddy/description/modifier/ModifierContributor$ForMethod;",
+            ">;)",
+            "Lnet/bytebuddy/asm/ModifierAdjustment;"
+        }
+    .end annotation
+
+    .line 200
+    invoke-static {}, Lnet/bytebuddy/matcher/ElementMatchers;->any()Lnet/bytebuddy/matcher/ElementMatcher$Junction;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0, p1}, Lnet/bytebuddy/asm/ModifierAdjustment;->withMethodModifiers(Lnet/bytebuddy/matcher/ElementMatcher;Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public withMethodModifiers(Lnet/bytebuddy/matcher/ElementMatcher;Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lnet/bytebuddy/matcher/ElementMatcher<",
+            "-",
+            "Lnet/bytebuddy/description/method/MethodDescription;",
+            ">;",
+            "Ljava/util/List<",
+            "+",
+            "Lnet/bytebuddy/description/modifier/ModifierContributor$ForMethod;",
+            ">;)",
+            "Lnet/bytebuddy/asm/ModifierAdjustment;"
+        }
+    .end annotation
+
+    .line 224
+    invoke-static {}, Lnet/bytebuddy/matcher/ElementMatchers;->isMethod()Lnet/bytebuddy/matcher/ElementMatcher$Junction;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lnet/bytebuddy/matcher/ElementMatcher$Junction;->and(Lnet/bytebuddy/matcher/ElementMatcher;)Lnet/bytebuddy/matcher/ElementMatcher$Junction;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1, p2}, Lnet/bytebuddy/asm/ModifierAdjustment;->withInvokableModifiers(Lnet/bytebuddy/matcher/ElementMatcher;Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public varargs withMethodModifiers(Lnet/bytebuddy/matcher/ElementMatcher;[Lnet/bytebuddy/description/modifier/ModifierContributor$ForMethod;)Lnet/bytebuddy/asm/ModifierAdjustment;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lnet/bytebuddy/matcher/ElementMatcher<",
+            "-",
+            "Lnet/bytebuddy/description/method/MethodDescription;",
+            ">;[",
+            "Lnet/bytebuddy/description/modifier/ModifierContributor$ForMethod;",
+            ")",
+            "Lnet/bytebuddy/asm/ModifierAdjustment;"
+        }
+    .end annotation
+
+    .line 212
+    invoke-static {p2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p1, p2}, Lnet/bytebuddy/asm/ModifierAdjustment;->withMethodModifiers(Lnet/bytebuddy/matcher/ElementMatcher;Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public varargs withMethodModifiers([Lnet/bytebuddy/description/modifier/ModifierContributor$ForMethod;)Lnet/bytebuddy/asm/ModifierAdjustment;
+    .locals 0
+
+    .line 190
+    invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lnet/bytebuddy/asm/ModifierAdjustment;->withMethodModifiers(Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public withTypeModifiers(Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "+",
+            "Lnet/bytebuddy/description/modifier/ModifierContributor$ForType;",
+            ">;)",
+            "Lnet/bytebuddy/asm/ModifierAdjustment;"
+        }
+    .end annotation
+
+    .line 110
+    invoke-static {}, Lnet/bytebuddy/matcher/ElementMatchers;->any()Lnet/bytebuddy/matcher/ElementMatcher$Junction;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0, p1}, Lnet/bytebuddy/asm/ModifierAdjustment;->withTypeModifiers(Lnet/bytebuddy/matcher/ElementMatcher;Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public withTypeModifiers(Lnet/bytebuddy/matcher/ElementMatcher;Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lnet/bytebuddy/matcher/ElementMatcher<",
+            "-",
+            "Lnet/bytebuddy/description/type/TypeDescription;",
+            ">;",
+            "Ljava/util/List<",
+            "+",
+            "Lnet/bytebuddy/description/modifier/ModifierContributor$ForType;",
+            ">;)",
+            "Lnet/bytebuddy/asm/ModifierAdjustment;"
+        }
+    .end annotation
+
+    .line 134
+    new-instance v0, Lnet/bytebuddy/asm/ModifierAdjustment;
+
+    new-instance v1, Lnet/bytebuddy/asm/ModifierAdjustment$Adjustment;
+
+    .line 135
+    invoke-static {p2}, Lnet/bytebuddy/description/modifier/ModifierContributor$Resolver;->of(Ljava/util/Collection;)Lnet/bytebuddy/description/modifier/ModifierContributor$Resolver;
+
+    move-result-object p2
+
+    invoke-direct {v1, p1, p2}, Lnet/bytebuddy/asm/ModifierAdjustment$Adjustment;-><init>(Lnet/bytebuddy/matcher/ElementMatcher;Lnet/bytebuddy/description/modifier/ModifierContributor$Resolver;)V
+
+    iget-object p1, p0, Lnet/bytebuddy/asm/ModifierAdjustment;->typeAdjustments:Ljava/util/List;
+
+    .line 134
+    invoke-static {v1, p1}, Lnet/bytebuddy/utility/CompoundList;->of(Ljava/lang/Object;Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lnet/bytebuddy/asm/ModifierAdjustment;->fieldAdjustments:Ljava/util/List;
+
+    iget-object v1, p0, Lnet/bytebuddy/asm/ModifierAdjustment;->methodAdjustments:Ljava/util/List;
+
+    invoke-direct {v0, p1, p2, v1}, Lnet/bytebuddy/asm/ModifierAdjustment;-><init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+
+    return-object v0
+.end method
+
+.method public varargs withTypeModifiers(Lnet/bytebuddy/matcher/ElementMatcher;[Lnet/bytebuddy/description/modifier/ModifierContributor$ForType;)Lnet/bytebuddy/asm/ModifierAdjustment;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lnet/bytebuddy/matcher/ElementMatcher<",
+            "-",
+            "Lnet/bytebuddy/description/type/TypeDescription;",
+            ">;[",
+            "Lnet/bytebuddy/description/modifier/ModifierContributor$ForType;",
+            ")",
+            "Lnet/bytebuddy/asm/ModifierAdjustment;"
+        }
+    .end annotation
+
+    .line 122
+    invoke-static {p2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p1, p2}, Lnet/bytebuddy/asm/ModifierAdjustment;->withTypeModifiers(Lnet/bytebuddy/matcher/ElementMatcher;Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public varargs withTypeModifiers([Lnet/bytebuddy/description/modifier/ModifierContributor$ForType;)Lnet/bytebuddy/asm/ModifierAdjustment;
+    .locals 0
+
+    .line 100
+    invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lnet/bytebuddy/asm/ModifierAdjustment;->withTypeModifiers(Ljava/util/List;)Lnet/bytebuddy/asm/ModifierAdjustment;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public wrap(Lnet/bytebuddy/description/type/TypeDescription;Lnet/bytebuddy/jar/asm/ClassVisitor;Lnet/bytebuddy/implementation/Implementation$Context;Lnet/bytebuddy/pool/TypePool;Lnet/bytebuddy/description/field/FieldList;Lnet/bytebuddy/description/method/MethodList;II)Lnet/bytebuddy/asm/ModifierAdjustment$ModifierAdjustingClassVisitor;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lnet/bytebuddy/description/type/TypeDescription;",
+            "Lnet/bytebuddy/jar/asm/ClassVisitor;",
+            "Lnet/bytebuddy/implementation/Implementation$Context;",
+            "Lnet/bytebuddy/pool/TypePool;",
+            "Lnet/bytebuddy/description/field/FieldList<",
+            "Lnet/bytebuddy/description/field/FieldDescription$InDefinedShape;",
+            ">;",
+            "Lnet/bytebuddy/description/method/MethodList<",
+            "*>;II)",
+            "Lnet/bytebuddy/asm/ModifierAdjustment$ModifierAdjustingClassVisitor;"
+        }
+    .end annotation
+
+    .line 327
+    new-instance p7, Ljava/util/HashMap;
+
+    invoke-direct {p7}, Ljava/util/HashMap;-><init>()V
+
+    .line 328
+    invoke-interface {p5}, Lnet/bytebuddy/description/field/FieldList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p3
+
+    :goto_0
+    invoke-interface {p3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p4
+
+    if-eqz p4, :cond_0
+
+    invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p4
+
+    check-cast p4, Lnet/bytebuddy/description/field/FieldDescription$InDefinedShape;
+
+    .line 329
+    new-instance p5, Ljava/lang/StringBuilder;
+
+    invoke-direct {p5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-interface {p4}, Lnet/bytebuddy/description/field/FieldDescription$InDefinedShape;->getInternalName()Ljava/lang/String;
+
+    move-result-object p8
+
+    invoke-virtual {p5, p8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {p4}, Lnet/bytebuddy/description/field/FieldDescription$InDefinedShape;->getDescriptor()Ljava/lang/String;
+
+    move-result-object p8
+
+    invoke-virtual {p5, p8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p5
+
+    invoke-interface {p7, p5, p4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    .line 331
+    :cond_0
+    new-instance p8, Ljava/util/HashMap;
+
+    invoke-direct {p8}, Ljava/util/HashMap;-><init>()V
+
+    .line 332
+    new-instance p3, Lnet/bytebuddy/description/method/MethodDescription$Latent$TypeInitializer;
+
+    invoke-direct {p3, p1}, Lnet/bytebuddy/description/method/MethodDescription$Latent$TypeInitializer;-><init>(Lnet/bytebuddy/description/type/TypeDescription;)V
+
+    invoke-static {p6, p3}, Lnet/bytebuddy/utility/CompoundList;->of(Ljava/util/List;Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p3
+
+    invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p3
+
+    :goto_1
+    invoke-interface {p3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p4
+
+    if-eqz p4, :cond_1
+
+    invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p4
+
+    check-cast p4, Lnet/bytebuddy/description/method/MethodDescription;
+
+    .line 333
+    new-instance p5, Ljava/lang/StringBuilder;
+
+    invoke-direct {p5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-interface {p4}, Lnet/bytebuddy/description/method/MethodDescription;->getInternalName()Ljava/lang/String;
+
+    move-result-object p6
+
+    invoke-virtual {p5, p6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {p4}, Lnet/bytebuddy/description/method/MethodDescription;->getDescriptor()Ljava/lang/String;
+
+    move-result-object p6
+
+    invoke-virtual {p5, p6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p5
+
+    invoke-interface {p8, p5, p4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_1
+
+    .line 335
+    :cond_1
+    new-instance p3, Lnet/bytebuddy/asm/ModifierAdjustment$ModifierAdjustingClassVisitor;
+
+    move-object p6, p1
+
+    move-object p1, p3
+
+    iget-object p3, p0, Lnet/bytebuddy/asm/ModifierAdjustment;->typeAdjustments:Ljava/util/List;
+
+    iget-object p4, p0, Lnet/bytebuddy/asm/ModifierAdjustment;->fieldAdjustments:Ljava/util/List;
+
+    iget-object p5, p0, Lnet/bytebuddy/asm/ModifierAdjustment;->methodAdjustments:Ljava/util/List;
+
+    invoke-direct/range {p1 .. p8}, Lnet/bytebuddy/asm/ModifierAdjustment$ModifierAdjustingClassVisitor;-><init>(Lnet/bytebuddy/jar/asm/ClassVisitor;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lnet/bytebuddy/description/type/TypeDescription;Ljava/util/Map;Ljava/util/Map;)V
+
+    return-object p1
+.end method
+
+.method public bridge synthetic wrap(Lnet/bytebuddy/description/type/TypeDescription;Lnet/bytebuddy/jar/asm/ClassVisitor;Lnet/bytebuddy/implementation/Implementation$Context;Lnet/bytebuddy/pool/TypePool;Lnet/bytebuddy/description/field/FieldList;Lnet/bytebuddy/description/method/MethodList;II)Lnet/bytebuddy/jar/asm/ClassVisitor;
+    .locals 0
+
+    .line 51
+    invoke-virtual/range {p0 .. p8}, Lnet/bytebuddy/asm/ModifierAdjustment;->wrap(Lnet/bytebuddy/description/type/TypeDescription;Lnet/bytebuddy/jar/asm/ClassVisitor;Lnet/bytebuddy/implementation/Implementation$Context;Lnet/bytebuddy/pool/TypePool;Lnet/bytebuddy/description/field/FieldList;Lnet/bytebuddy/description/method/MethodList;II)Lnet/bytebuddy/asm/ModifierAdjustment$ModifierAdjustingClassVisitor;
+
+    move-result-object p1
+
+    return-object p1
+.end method

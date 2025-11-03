@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="@style/Theme.Material3.Light.NoActionBar">
+        <item name="android:background">@null</item>
+        <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/ripplecolor</item>
+        <item name="colorOnSurface">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorSecondaryContainer">@color/White</item>
+        <item name="colorSurface">@color/colorPrimary</item>
+        <item name="popupMenuBackground">@color/White</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+        <item name="snackbarStyle">@style/snackbar_style</item>
+    </style>
+</resources>

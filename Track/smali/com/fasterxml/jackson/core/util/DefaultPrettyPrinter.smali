@@ -1,0 +1,1095 @@
+.class public Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+.super Ljava/lang/Object;
+.source "DefaultPrettyPrinter.java"
+
+# interfaces
+.implements Lcom/fasterxml/jackson/core/PrettyPrinter;
+.implements Lcom/fasterxml/jackson/core/util/Instantiatable;
+.implements Ljava/io/Serializable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$FixedSpaceIndenter;,
+        Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$NopIndenter;,
+        Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/fasterxml/jackson/core/PrettyPrinter;",
+        "Lcom/fasterxml/jackson/core/util/Instantiatable<",
+        "Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;",
+        ">;",
+        "Ljava/io/Serializable;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final DEFAULT_ROOT_VALUE_SEPARATOR:Lcom/fasterxml/jackson/core/io/SerializedString;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
+
+.field private static final serialVersionUID:J = 0x1L
+
+
+# instance fields
+.field protected _arrayEmptySeparator:Ljava/lang/String;
+
+.field protected _arrayIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+.field protected _arrayValueSeparator:Ljava/lang/String;
+
+.field protected transient _nesting:I
+
+.field protected _objectEmptySeparator:Ljava/lang/String;
+
+.field protected _objectEntrySeparator:Ljava/lang/String;
+
+.field protected _objectFieldValueSeparatorWithSpaces:Ljava/lang/String;
+
+.field protected _objectIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+.field protected _rootSeparator:Lcom/fasterxml/jackson/core/SerializableString;
+
+.field protected _separators:Lcom/fasterxml/jackson/core/util/Separators;
+
+.field protected _spacesInObjectEntries:Z
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    .line 39
+    new-instance v0, Lcom/fasterxml/jackson/core/io/SerializedString;
+
+    const-string v1, " "
+
+    invoke-direct {v0, v1}, Lcom/fasterxml/jackson/core/io/SerializedString;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->DEFAULT_ROOT_VALUE_SEPARATOR:Lcom/fasterxml/jackson/core/io/SerializedString;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    .line 141
+    sget-object v0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->DEFAULT_SEPARATORS:Lcom/fasterxml/jackson/core/util/Separators;
+
+    invoke-direct {p0, v0}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;-><init>(Lcom/fasterxml/jackson/core/util/Separators;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/fasterxml/jackson/core/SerializableString;)V
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 168
+    sget-object v0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->DEFAULT_SEPARATORS:Lcom/fasterxml/jackson/core/util/Separators;
+
+    invoke-interface {p1}, Lcom/fasterxml/jackson/core/SerializableString;->getValue()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/core/util/Separators;->withRootSeparator(Ljava/lang/String;)Lcom/fasterxml/jackson/core/util/Separators;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;-><init>(Lcom/fasterxml/jackson/core/util/Separators;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;)V
+    .locals 1
+
+    .line 214
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 63
+    sget-object v0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$FixedSpaceIndenter;->instance:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$FixedSpaceIndenter;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    .line 71
+    sget-object v0, Lcom/fasterxml/jackson/core/util/DefaultIndenter;->SYSTEM_LINEFEED_INSTANCE:Lcom/fasterxml/jackson/core/util/DefaultIndenter;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    const/4 v0, 0x1
+
+    .line 87
+    iput-boolean v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_spacesInObjectEntries:Z
+
+    .line 215
+    iget-object v0, p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_rootSeparator:Lcom/fasterxml/jackson/core/SerializableString;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_rootSeparator:Lcom/fasterxml/jackson/core/SerializableString;
+
+    .line 217
+    iget-object v0, p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    .line 218
+    iget-object v0, p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    .line 219
+    iget-boolean v0, p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_spacesInObjectEntries:Z
+
+    iput-boolean v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_spacesInObjectEntries:Z
+
+    .line 220
+    iget v0, p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_nesting:I
+
+    iput v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_nesting:I
+
+    .line 222
+    iget-object v0, p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_separators:Lcom/fasterxml/jackson/core/util/Separators;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_separators:Lcom/fasterxml/jackson/core/util/Separators;
+
+    .line 223
+    iget-object v0, p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectFieldValueSeparatorWithSpaces:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectFieldValueSeparatorWithSpaces:Ljava/lang/String;
+
+    .line 224
+    iget-object v0, p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectEntrySeparator:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectEntrySeparator:Ljava/lang/String;
+
+    .line 225
+    iget-object v0, p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectEmptySeparator:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectEmptySeparator:Ljava/lang/String;
+
+    .line 226
+    iget-object v0, p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayValueSeparator:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayValueSeparator:Ljava/lang/String;
+
+    .line 227
+    iget-object p1, p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayEmptySeparator:Ljava/lang/String;
+
+    iput-object p1, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayEmptySeparator:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;Lcom/fasterxml/jackson/core/SerializableString;)V
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 177
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 63
+    sget-object v0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$FixedSpaceIndenter;->instance:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$FixedSpaceIndenter;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    .line 71
+    sget-object v0, Lcom/fasterxml/jackson/core/util/DefaultIndenter;->SYSTEM_LINEFEED_INSTANCE:Lcom/fasterxml/jackson/core/util/DefaultIndenter;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    const/4 v0, 0x1
+
+    .line 87
+    iput-boolean v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_spacesInObjectEntries:Z
+
+    .line 178
+    iget-object v0, p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    .line 179
+    iget-object v0, p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    .line 180
+    iget-boolean v0, p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_spacesInObjectEntries:Z
+
+    iput-boolean v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_spacesInObjectEntries:Z
+
+    .line 181
+    iget v0, p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_nesting:I
+
+    iput v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_nesting:I
+
+    .line 183
+    iget-object v0, p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_separators:Lcom/fasterxml/jackson/core/util/Separators;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_separators:Lcom/fasterxml/jackson/core/util/Separators;
+
+    .line 184
+    iget-object v0, p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectFieldValueSeparatorWithSpaces:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectFieldValueSeparatorWithSpaces:Ljava/lang/String;
+
+    .line 185
+    iget-object v0, p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectEntrySeparator:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectEntrySeparator:Ljava/lang/String;
+
+    .line 186
+    iget-object v0, p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectEmptySeparator:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectEmptySeparator:Ljava/lang/String;
+
+    .line 187
+    iget-object v0, p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayValueSeparator:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayValueSeparator:Ljava/lang/String;
+
+    .line 188
+    iget-object p1, p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayEmptySeparator:Ljava/lang/String;
+
+    iput-object p1, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayEmptySeparator:Ljava/lang/String;
+
+    .line 190
+    iput-object p2, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_rootSeparator:Lcom/fasterxml/jackson/core/SerializableString;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/fasterxml/jackson/core/util/Separators;)V
+    .locals 2
+
+    .line 197
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 63
+    sget-object v0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$FixedSpaceIndenter;->instance:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$FixedSpaceIndenter;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    .line 71
+    sget-object v0, Lcom/fasterxml/jackson/core/util/DefaultIndenter;->SYSTEM_LINEFEED_INSTANCE:Lcom/fasterxml/jackson/core/util/DefaultIndenter;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    const/4 v0, 0x1
+
+    .line 87
+    iput-boolean v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_spacesInObjectEntries:Z
+
+    .line 198
+    iput-object p1, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_separators:Lcom/fasterxml/jackson/core/util/Separators;
+
+    .line 200
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/util/Separators;->getRootSeparator()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lcom/fasterxml/jackson/core/io/SerializedString;
+
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/util/Separators;->getRootSeparator()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/fasterxml/jackson/core/io/SerializedString;-><init>(Ljava/lang/String;)V
+
+    :goto_0
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_rootSeparator:Lcom/fasterxml/jackson/core/SerializableString;
+
+    .line 201
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/util/Separators;->getObjectFieldValueSpacing()Lcom/fasterxml/jackson/core/util/Separators$Spacing;
+
+    move-result-object v0
+
+    .line 202
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/util/Separators;->getObjectFieldValueSeparator()C
+
+    move-result v1
+
+    .line 201
+    invoke-virtual {v0, v1}, Lcom/fasterxml/jackson/core/util/Separators$Spacing;->apply(C)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectFieldValueSeparatorWithSpaces:Ljava/lang/String;
+
+    .line 203
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/util/Separators;->getObjectEntrySpacing()Lcom/fasterxml/jackson/core/util/Separators$Spacing;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/util/Separators;->getObjectEntrySeparator()C
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/fasterxml/jackson/core/util/Separators$Spacing;->apply(C)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectEntrySeparator:Ljava/lang/String;
+
+    .line 204
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/util/Separators;->getObjectEmptySeparator()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectEmptySeparator:Ljava/lang/String;
+
+    .line 205
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/util/Separators;->getArrayValueSpacing()Lcom/fasterxml/jackson/core/util/Separators$Spacing;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/util/Separators;->getArrayValueSeparator()C
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/fasterxml/jackson/core/util/Separators$Spacing;->apply(C)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayValueSeparator:Ljava/lang/String;
+
+    .line 206
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/util/Separators;->getArrayEmptySeparator()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayEmptySeparator:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    .line 156
+    :cond_0
+    new-instance v0, Lcom/fasterxml/jackson/core/io/SerializedString;
+
+    invoke-direct {v0, p1}, Lcom/fasterxml/jackson/core/io/SerializedString;-><init>(Ljava/lang/String;)V
+
+    move-object p1, v0
+
+    :goto_0
+    invoke-direct {p0, p1}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;-><init>(Lcom/fasterxml/jackson/core/SerializableString;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected _withSpaces(Z)Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+    .locals 2
+
+    .line 326
+    iget-boolean v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_spacesInObjectEntries:Z
+
+    if-ne v0, p1, :cond_0
+
+    return-object p0
+
+    .line 330
+    :cond_0
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_separators:Lcom/fasterxml/jackson/core/util/Separators;
+
+    if-eqz p1, :cond_1
+
+    sget-object v1, Lcom/fasterxml/jackson/core/util/Separators$Spacing;->BOTH:Lcom/fasterxml/jackson/core/util/Separators$Spacing;
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v1, Lcom/fasterxml/jackson/core/util/Separators$Spacing;->NONE:Lcom/fasterxml/jackson/core/util/Separators$Spacing;
+
+    :goto_0
+    invoke-virtual {v0, v1}, Lcom/fasterxml/jackson/core/util/Separators;->withObjectFieldValueSpacing(Lcom/fasterxml/jackson/core/util/Separators$Spacing;)Lcom/fasterxml/jackson/core/util/Separators;
+
+    move-result-object v0
+
+    .line 331
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->withSeparators(Lcom/fasterxml/jackson/core/util/Separators;)Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+
+    move-result-object v0
+
+    .line 332
+    iput-boolean p1, v0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_spacesInObjectEntries:Z
+
+    return-object v0
+.end method
+
+.method public beforeArrayValues(Lcom/fasterxml/jackson/core/JsonGenerator;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 460
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    iget v1, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_nesting:I
+
+    invoke-interface {v0, p1, v1}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;->writeIndentation(Lcom/fasterxml/jackson/core/JsonGenerator;I)V
+
+    return-void
+.end method
+
+.method public beforeObjectEntries(Lcom/fasterxml/jackson/core/JsonGenerator;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 401
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    iget v1, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_nesting:I
+
+    invoke-interface {v0, p1, v1}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;->writeIndentation(Lcom/fasterxml/jackson/core/JsonGenerator;I)V
+
+    return-void
+.end method
+
+.method public createInstance()Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+    .locals 3
+
+    .line 368
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    const-class v1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+
+    if-ne v0, v1, :cond_0
+
+    .line 372
+    new-instance v0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+
+    invoke-direct {v0, p0}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;-><init>(Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;)V
+
+    return-object v0
+
+    .line 369
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Failed `createInstance()`: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, " does not override method; it has to"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public bridge synthetic createInstance()Ljava/lang/Object;
+    .locals 1
+
+    .line 24
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->createInstance()Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public indentArraysWith(Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;)V
+    .locals 0
+
+    if-nez p1, :cond_0
+
+    .line 259
+    sget-object p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$NopIndenter;->instance:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$NopIndenter;
+
+    :cond_0
+    iput-object p1, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    return-void
+.end method
+
+.method public indentObjectsWith(Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;)V
+    .locals 0
+
+    if-nez p1, :cond_0
+
+    .line 263
+    sget-object p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$NopIndenter;->instance:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$NopIndenter;
+
+    :cond_0
+    iput-object p1, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    return-void
+.end method
+
+.method public withArrayIndenter(Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;)Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+    .locals 1
+
+    if-nez p1, :cond_0
+
+    .line 269
+    sget-object p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$NopIndenter;->instance:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$NopIndenter;
+
+    .line 271
+    :cond_0
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    if-ne v0, p1, :cond_1
+
+    return-object p0
+
+    .line 274
+    :cond_1
+    new-instance v0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+
+    invoke-direct {v0, p0}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;-><init>(Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;)V
+
+    .line 275
+    iput-object p1, v0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    return-object v0
+.end method
+
+.method public withObjectIndenter(Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;)Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+    .locals 1
+
+    if-nez p1, :cond_0
+
+    .line 282
+    sget-object p1, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$NopIndenter;->instance:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$NopIndenter;
+
+    .line 284
+    :cond_0
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    if-ne v0, p1, :cond_1
+
+    return-object p0
+
+    .line 287
+    :cond_1
+    new-instance v0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+
+    invoke-direct {v0, p0}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;-><init>(Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;)V
+
+    .line 288
+    iput-object p1, v0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    return-object v0
+.end method
+
+.method public withRootSeparator(Lcom/fasterxml/jackson/core/SerializableString;)Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 236
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_rootSeparator:Lcom/fasterxml/jackson/core/SerializableString;
+
+    if-eq v0, p1, :cond_2
+
+    if-eqz p1, :cond_0
+
+    .line 237
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_1
+
+    .line 240
+    :cond_0
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_separators:Lcom/fasterxml/jackson/core/util/Separators;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_1
+    invoke-interface {p1}, Lcom/fasterxml/jackson/core/SerializableString;->getValue()Ljava/lang/String;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/core/util/Separators;->withRootSeparator(Ljava/lang/String;)Lcom/fasterxml/jackson/core/util/Separators;
+
+    move-result-object p1
+
+    .line 241
+    new-instance v0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+
+    invoke-direct {v0, p0}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;-><init>(Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;)V
+
+    .line 242
+    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->withSeparators(Lcom/fasterxml/jackson/core/util/Separators;)Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_2
+    :goto_1
+    return-object p0
+.end method
+
+.method public withRootSeparator(Ljava/lang/String;)Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    .line 255
+    :cond_0
+    new-instance v0, Lcom/fasterxml/jackson/core/io/SerializedString;
+
+    invoke-direct {v0, p1}, Lcom/fasterxml/jackson/core/io/SerializedString;-><init>(Ljava/lang/String;)V
+
+    move-object p1, v0
+
+    :goto_0
+    invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->withRootSeparator(Lcom/fasterxml/jackson/core/SerializableString;)Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public withSeparators(Lcom/fasterxml/jackson/core/util/Separators;)Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+    .locals 3
+
+    .line 346
+    new-instance v0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+
+    invoke-direct {v0, p0}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;-><init>(Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;)V
+
+    .line 347
+    iput-object p1, v0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_separators:Lcom/fasterxml/jackson/core/util/Separators;
+
+    .line 349
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/util/Separators;->getRootSeparator()Ljava/lang/String;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v1, Lcom/fasterxml/jackson/core/io/SerializedString;
+
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/util/Separators;->getRootSeparator()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Lcom/fasterxml/jackson/core/io/SerializedString;-><init>(Ljava/lang/String;)V
+
+    :goto_0
+    iput-object v1, v0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_rootSeparator:Lcom/fasterxml/jackson/core/SerializableString;
+
+    .line 350
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/util/Separators;->getObjectFieldValueSpacing()Lcom/fasterxml/jackson/core/util/Separators$Spacing;
+
+    move-result-object v1
+
+    .line 351
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/util/Separators;->getObjectFieldValueSeparator()C
+
+    move-result v2
+
+    .line 350
+    invoke-virtual {v1, v2}, Lcom/fasterxml/jackson/core/util/Separators$Spacing;->apply(C)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectFieldValueSeparatorWithSpaces:Ljava/lang/String;
+
+    .line 352
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/util/Separators;->getObjectEntrySpacing()Lcom/fasterxml/jackson/core/util/Separators$Spacing;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/util/Separators;->getObjectEntrySeparator()C
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Lcom/fasterxml/jackson/core/util/Separators$Spacing;->apply(C)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectEntrySeparator:Ljava/lang/String;
+
+    .line 353
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/util/Separators;->getObjectEmptySeparator()Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectEmptySeparator:Ljava/lang/String;
+
+    .line 354
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/util/Separators;->getArrayValueSpacing()Lcom/fasterxml/jackson/core/util/Separators$Spacing;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/util/Separators;->getArrayValueSeparator()C
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Lcom/fasterxml/jackson/core/util/Separators$Spacing;->apply(C)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayValueSeparator:Ljava/lang/String;
+
+    .line 355
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/util/Separators;->getArrayEmptySeparator()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, v0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayEmptySeparator:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public withSpacesInObjectEntries()Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    const/4 v0, 0x1
+
+    .line 305
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_withSpaces(Z)Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public withoutSpacesInObjectEntries()Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    const/4 v0, 0x0
+
+    .line 321
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_withSpaces(Z)Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public writeArrayValueSeparator(Lcom/fasterxml/jackson/core/JsonGenerator;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 475
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayValueSeparator:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeRaw(Ljava/lang/String;)V
+
+    .line 476
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    iget v1, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_nesting:I
+
+    invoke-interface {v0, p1, v1}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;->writeIndentation(Lcom/fasterxml/jackson/core/JsonGenerator;I)V
+
+    return-void
+.end method
+
+.method public writeEndArray(Lcom/fasterxml/jackson/core/JsonGenerator;I)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 482
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    invoke-interface {v0}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;->isInline()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 483
+    iget v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_nesting:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_nesting:I
+
+    :cond_0
+    if-lez p2, :cond_1
+
+    .line 486
+    iget-object p2, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    iget v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_nesting:I
+
+    invoke-interface {p2, p1, v0}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;->writeIndentation(Lcom/fasterxml/jackson/core/JsonGenerator;I)V
+
+    goto :goto_0
+
+    .line 488
+    :cond_1
+    iget-object p2, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayEmptySeparator:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeRaw(Ljava/lang/String;)V
+
+    :goto_0
+    const/16 p2, 0x5d
+
+    .line 490
+    invoke-virtual {p1, p2}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeRaw(C)V
+
+    return-void
+.end method
+
+.method public writeEndObject(Lcom/fasterxml/jackson/core/JsonGenerator;I)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 438
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    invoke-interface {v0}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;->isInline()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 439
+    iget v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_nesting:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_nesting:I
+
+    :cond_0
+    if-lez p2, :cond_1
+
+    .line 442
+    iget-object p2, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    iget v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_nesting:I
+
+    invoke-interface {p2, p1, v0}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;->writeIndentation(Lcom/fasterxml/jackson/core/JsonGenerator;I)V
+
+    goto :goto_0
+
+    .line 444
+    :cond_1
+    iget-object p2, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectEmptySeparator:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeRaw(Ljava/lang/String;)V
+
+    :goto_0
+    const/16 p2, 0x7d
+
+    .line 446
+    invoke-virtual {p1, p2}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeRaw(C)V
+
+    return-void
+.end method
+
+.method public writeObjectEntrySeparator(Lcom/fasterxml/jackson/core/JsonGenerator;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 431
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectEntrySeparator:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeRaw(Ljava/lang/String;)V
+
+    .line 432
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    iget v1, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_nesting:I
+
+    invoke-interface {v0, p1, v1}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;->writeIndentation(Lcom/fasterxml/jackson/core/JsonGenerator;I)V
+
+    return-void
+.end method
+
+.method public writeObjectFieldValueSeparator(Lcom/fasterxml/jackson/core/JsonGenerator;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 416
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectFieldValueSeparatorWithSpaces:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeRaw(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public writeRootValueSeparator(Lcom/fasterxml/jackson/core/JsonGenerator;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 384
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_rootSeparator:Lcom/fasterxml/jackson/core/SerializableString;
+
+    if-eqz v0, :cond_0
+
+    .line 385
+    invoke-virtual {p1, v0}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeRaw(Lcom/fasterxml/jackson/core/SerializableString;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public writeStartArray(Lcom/fasterxml/jackson/core/JsonGenerator;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 452
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_arrayIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    invoke-interface {v0}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;->isInline()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 453
+    iget v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_nesting:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_nesting:I
+
+    :cond_0
+    const/16 v0, 0x5b
+
+    .line 455
+    invoke-virtual {p1, v0}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeRaw(C)V
+
+    return-void
+.end method
+
+.method public writeStartObject(Lcom/fasterxml/jackson/core/JsonGenerator;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    const/16 v0, 0x7b
+
+    .line 392
+    invoke-virtual {p1, v0}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeRaw(C)V
+
+    .line 393
+    iget-object p1, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_objectIndenter:Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;
+
+    invoke-interface {p1}, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter$Indenter;->isInline()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    .line 394
+    iget p1, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_nesting:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Lcom/fasterxml/jackson/core/util/DefaultPrettyPrinter;->_nesting:I
+
+    :cond_0
+    return-void
+.end method

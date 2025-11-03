@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ff1c1c1e" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/journey_flight_cancelled" />
+    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="12.0dip" android:text="@string/journey.canceledflight" />
+    <TextView android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/link" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="12.0dip" android:text="@string/journey.airlineWebsiteLink" android:drawableRight="@drawable/arrow_right" android:drawablePadding="12.0dip" />
+</LinearLayout>

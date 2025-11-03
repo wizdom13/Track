@@ -1,0 +1,36 @@
+.class public final synthetic Lcom/impalastudios/theflighttracker/features/settings/ImportOldFlightsPreference$$ExternalSyntheticLambda1;
+.super Ljava/lang/Object;
+.source "D8$$SyntheticClass"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field public final synthetic f$0:Lcom/impalastudios/theflighttracker/features/settings/ImportOldFlightsPreference;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/impalastudios/theflighttracker/features/settings/ImportOldFlightsPreference;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/impalastudios/theflighttracker/features/settings/ImportOldFlightsPreference$$ExternalSyntheticLambda1;->f$0:Lcom/impalastudios/theflighttracker/features/settings/ImportOldFlightsPreference;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Lcom/impalastudios/theflighttracker/features/settings/ImportOldFlightsPreference$$ExternalSyntheticLambda1;->f$0:Lcom/impalastudios/theflighttracker/features/settings/ImportOldFlightsPreference;
+
+    invoke-static {v0, p1}, Lcom/impalastudios/theflighttracker/features/settings/ImportOldFlightsPreference;->$r8$lambda$Q9BOY74ULii4ikWXTnIXQBSer0k(Lcom/impalastudios/theflighttracker/features/settings/ImportOldFlightsPreference;Landroid/view/View;)V
+
+    return-void
+.end method

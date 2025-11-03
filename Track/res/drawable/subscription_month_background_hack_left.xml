@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/substroke" android:drawable="@drawable/subscription_month_stroke" />
+    <item android:id="@id/subbody" android:drawable="@drawable/subscription_month_background" android:left="3.0dip" android:top="3.0dip" android:right="1.5dip" android:bottom="3.0dip" />
+</layer-list>
