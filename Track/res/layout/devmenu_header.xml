@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:background="#33000000" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:textColor="#ff00aaff" android:layout_gravity="left|top" android:id="@id/headertext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Impala Dev Menu" android:layout_weight="0.0" />
-    <ImageView android:layout_gravity="right|center" android:id="@id/imageView16" android:layout_width="fill_parent" android:layout_height="fill_parent" android:tint="#ffeeeeee" android:layout_weight="1.0" app:srcCompat="@drawable/ic_search_close" />
-</LinearLayout>

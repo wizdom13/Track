@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginBottom="8.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:textSize="15.0sp" android:textStyle="normal" android:textColor="#ff7c8b9a" android:layout_gravity="center_vertical" android:id="@id/recent_search_header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/search.recents.title" android:lineSpacingExtra="1.0sp" android:fontFamily="sans-serif" android:layout_marginStart="16.0dip" />
-</FrameLayout>

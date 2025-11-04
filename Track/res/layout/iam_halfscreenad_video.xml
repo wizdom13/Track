@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/IAMHalfScreenRoot" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include android:id="@id/IAMHalfScreenHeader" layout="@layout/iam_halfscreen_header" />
-    <FrameLayout android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/IAMHalfScreenHeader" android:layout_alignParentBottom="true">
-        <VideoView android:layout_gravity="center|bottom" android:id="@id/IAMVideoContainer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-        <ProgressBar android:layout_gravity="center" android:id="@id/IAMProgressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    </FrameLayout>
-</RelativeLayout>

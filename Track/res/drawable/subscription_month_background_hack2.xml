@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<layer-list
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@id/substroke" android:drawable="@drawable/subscription_selected_gradient" />
-    <item android:id="@id/subbody" android:drawable="@drawable/subscription_month_background2" android:left="3.0dip" android:top="3.0dip" android:right="3.0dip" android:bottom="3.0dip" />
-</layer-list>

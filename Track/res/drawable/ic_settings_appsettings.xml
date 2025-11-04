@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<vector android:height="@dimen/settings_icons_size" android:width="@dimen/settings_icons_size" android:viewportWidth="50.0" android:viewportHeight="50.0"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="#ffffffff" android:pathData="M25,25m-25,0a25,25 0,1 1,50 0a25,25 0,1 1,-50 0" />
-    <path android:fillColor="#00000000" android:pathData="M36.9,26.5a10.91,10.91 0,0 0,0 -3l-3.21,-0.82a8.93,8.93 0,0 0,-0.9 -2.18l1.69,-2.85a10.91,10.91 0,0 0,-2.12 -2.12L29.5,17.21a8.93,8.93 0,0 0,-2.18 -0.9L26.5,13.1a10.91,10.91 0,0 0,-3 0l-0.82,3.21a8.93,8.93 0,0 0,-2.18 0.9l-2.85,-1.69a10.91,10.91 0,0 0,-2.12 2.12l1.69,2.85a8.93,8.93 0,0 0,-0.9 2.18l-3.21,0.82a10.91,10.91 0,0 0,0 3l3.21,0.82a8.93,8.93 0,0 0,0.9 2.18l-1.69,2.85a10.9,10.9 0,0 0,2.12 2.12l2.85,-1.69a8.93,8.93 0,0 0,2.18 0.9l0.82,3.21a10.91,10.91 0,0 0,3 0l0.82,-3.21a8.93,8.93 0,0 0,2.18 -0.9l2.85,1.69a10.9,10.9 0,0 0,2.12 -2.12L32.79,29.5a8.93,8.93 0,0 0,0.9 -2.18ZM20,25a5,5 0,1 1,5 5A5,5 0,0 1,20 25Z" android:strokeColor="#ff0a79ff" android:strokeWidth="1.0" />
-</vector>
