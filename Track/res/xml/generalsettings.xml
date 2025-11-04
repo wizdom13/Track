@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.impalastudios.theflighttracker.features.settings.PreferenceCategoryHeader android:enabled="true" android:layout="@layout/preference_header" android:title="The Flight Tracker" android:key="pref_key_application_settings" />
+    <com.impalastudios.theflighttracker.features.settings.ImportOldFlightsPreference android:layout="@layout/settings_import_oldflights" android:title="Retrieve old Flights" android:key="pref_import_oldflights" android:summary="Import flights that may have been lost since the update." />
+    <PreferenceScreen android:title="@string/settings_category_application_title" android:key="pref_application_settings">
+        <Preference android:title="@string/item.clearRecentSearches.title" android:key="pref_application_clear_recent_searches" android:summary="@string/settings_category_application_clear_summary" />
+        <SwitchPreference android:title="@string/settings_layover_title" android:key="pref_application_show_layovers" android:summary="@string/settings_layover_summary" android:defaultValue="true" />
+        <SwitchPreference android:title="@string/settings_trips_title" android:key="pref_application_show_trips" android:summary="@string/settings_trips_summary" android:defaultValue="true" />
+        <SwitchPreference android:title="@string/settings_calendar_title" android:key="pref_application_calendar_sync" android:summary="@string/settings_calendar_subtitle" android:defaultValue="false" />
+        <ListPreference android:entries="@array/pref_maps_type_entries" android:title="@string/settings_category_application_maptype_title" android:key="pref_application_maps_type" android:defaultValue="1" android:entryValues="@array/pref_maps_type_values" />
+        <ListPreference android:entries="@array/pref_temperature_type_entries" android:title="@string/item.temperatureUnitItem.title" android:key="pref_application_temperature_unit" android:defaultValue="0" android:entryValues="@array/pref_temperature_type_values" />
+        <ListPreference android:entries="@array/pref_distance_type_entries" android:title="@string/item.distanceUnitItem.title" android:key="pref_application_distance_unit" android:defaultValue="0" android:entryValues="@array/pref_distance_type_values" />
+        <ListPreference android:entries="@array/pref_sync_delete_flight_entries" android:title="@string/item.autoDeleteFlights.title" android:key="pref_application_auto_delete_flights" android:defaultValue="0" android:entryValues="@array/pref_sync_delete_flight_values" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/item.defaultAlertSettings.title" android:key="pref_alert_settings">
+        <PreferenceCategory android:title="@string/settings_category_alert_notifications_category_title" android:key="pref_alert_notification">
+            <SwitchPreference android:title="@string/settings_category_alert_travel_reminders" android:key="pref_alert_travel_reminders" android:summary="@string/settings.travel.reminders.subtitle" android:defaultValue="false" />
+            <SwitchPreference android:title="@string/settings_category_alert_flightstatus_changes" android:key="pref_alert_status" android:summary="@string/subtext_status_updates" android:defaultValue="false" />
+            <Preference android:title="@string/settings_category_alert_reset" android:key="pref_key_default_alerts" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/settings.item.title" android:key="pref_tripit">
+        <PreferenceCategory android:title="@string/tripit.navigation.title" android:key="pref_tripit_settings">
+            <Preference android:title="@string/item.signin.title" android:key="pref_key_login_tripit" />
+            <Preference android:title="@string/settings_category_tripit_import_title" android:key="pref_key_import_flights" />
+            <ListPreference android:entries="@array/pref_flights_to_import_type_entries" android:title="@string/syncSettings.sectionHeader.title" android:key="pref_key_flights_to_import" android:defaultValue="1" android:entryValues="@array/pref_flights_to_import_type_values" />
+            <CheckBoxPreference android:title="@string/settings_category_tripit_autoimport_title" android:key="pref_key_auto_import_flights" android:defaultValue="false" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/settings_category_privacy_title" android:key="pref_privacy">
+        <PreferenceCategory android:title="@string/settings_category_privacy_category_title" android:key="pref_privacy_settings">
+            <PreferenceScreen android:title="@string/PrivacySettings_GDPRPermissionNavigationTitle" android:key="pref_gdpr" android:summary="@string/PrivacySettings_DataPermissionDetail">
+                <PreferenceCategory android:title="@string/PrivacySettings_DataPermission" android:key="pref_gdpr_settings">
+                    <SwitchPreference android:title="@string/PrivacySettings_PermissionCellTitle" android:key="gdpr_iab_consent_ads_toggle" />
+                </PreferenceCategory>
+            </PreferenceScreen>
+            <PreferenceScreen android:title="@string/PrivacySettings_CCPAPermissionNavigationTitle" android:key="pref_ccpa" android:summary="@string/PrivacySettings_PersonalInformationDetail">
+                <PreferenceCategory android:title="@string/PrivacySettings_CCPAPermissionNavigationTitle" android:key="pref_ccpa_settings">
+                    <SwitchPreference android:title="@string/PrivacySettings_PermissionCellTitle" android:key="ccpa_consent_ads_toggle" />
+                    <Preference android:persistent="false" android:selectable="false" android:key="ccpa_consent_description" android:summary="@string/PrivacySettings_CCPAPermissionFootnote" />
+                </PreferenceCategory>
+            </PreferenceScreen>
+            <PreferenceCategory android:title="@string/PrivacySettings_SectionHeaderMiscellaneous" android:key="pref_privacy_generalsettings" />
+            <Preference android:id="@id/privacypolicy" android:title="@string/PrivacySettings_PrivacyPolicy" android:key="pref_key_website_privacypolicy" android:summary="@string/settings_category_privacy_privacypolicy_summary">
+                <intent android:action="android.intent.action.VIEW" android:data="https://impalastudios.com/inappprivacy" />
+            </Preference>
+            <Preference android:id="@id/pref_key_privacy_termsandconditions" android:title="@string/PrivacySettings_TermsAndConditions" android:key="pref_key_website_termsandconditions" android:summary="@string/settings_category_privacy_termsnconditions_summary">
+                <intent android:action="android.intent.action.VIEW" android:data="https://impalastudios.com/inappterms" />
+            </Preference>
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <Preference android:title="@string/settings_subscribe_title" android:key="pref_subscription" android:summary="@string/settings_subscribe_summary" />
+    <Preference android:id="@id/support" android:title="@string/settings_faq_title" android:key="pref_support" android:summary="FAQ" />
+    <Preference android:title="@string/settings_licensing_title" android:key="pref_application_open_source_licenses" android:summary="@string/settings_licensing_summary" />
+</PreferenceScreen>

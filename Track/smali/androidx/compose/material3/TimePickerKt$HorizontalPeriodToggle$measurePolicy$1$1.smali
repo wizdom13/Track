@@ -1,0 +1,327 @@
+.class final Landroidx/compose/material3/TimePickerKt$HorizontalPeriodToggle$measurePolicy$1$1;
+.super Ljava/lang/Object;
+.source "TimePicker.kt"
+
+# interfaces
+.implements Landroidx/compose/ui/layout/MeasurePolicy;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroidx/compose/material3/TimePickerKt;->HorizontalPeriodToggle(Landroidx/compose/ui/Modifier;Landroidx/compose/material3/TimePickerState;Landroidx/compose/material3/TimePickerColors;Landroidx/compose/runtime/Composer;I)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/SourceDebugExtension;
+    value = "SMAP\nTimePicker.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TimePicker.kt\nandroidx/compose/material3/TimePickerKt$HorizontalPeriodToggle$measurePolicy$1$1\n+ 2 ListUtils.kt\nandroidx/compose/ui/util/ListUtilsKt\n*L\n1#1,2117:1\n544#2,2:2118\n33#2,6:2120\n546#2:2126\n235#2,3:2127\n33#2,4:2130\n238#2,2:2134\n38#2:2136\n240#2:2137\n151#2,3:2138\n33#2,4:2141\n154#2,2:2145\n38#2:2147\n156#2:2148\n*S KotlinDebug\n*F\n+ 1 TimePicker.kt\nandroidx/compose/material3/TimePickerKt$HorizontalPeriodToggle$measurePolicy$1$1\n*L\n1189#1:2118,2\n1189#1:2120,6\n1189#1:2126\n1200#1:2127,3\n1200#1:2130,4\n1200#1:2134,2\n1200#1:2136\n1200#1:2137\n1201#1:2138,3\n1201#1:2141,4\n1201#1:2145,2\n1201#1:2147\n1201#1:2148\n*E\n"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u001e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u00022\u000c\u0010\u0003\u001a\u0008\u0012\u0004\u0012\u00020\u00050\u00042\u0006\u0010\u0006\u001a\u00020\u0007H\n\u00a2\u0006\u0004\u0008\u0008\u0010\t"
+    }
+    d2 = {
+        "<anonymous>",
+        "Landroidx/compose/ui/layout/MeasureResult;",
+        "Landroidx/compose/ui/layout/MeasureScope;",
+        "measurables",
+        "",
+        "Landroidx/compose/ui/layout/Measurable;",
+        "constraints",
+        "Landroidx/compose/ui/unit/Constraints;",
+        "measure-3p2s80s",
+        "(Landroidx/compose/ui/layout/MeasureScope;Ljava/util/List;J)Landroidx/compose/ui/layout/MeasureResult;"
+    }
+    k = 0x3
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final INSTANCE:Landroidx/compose/material3/TimePickerKt$HorizontalPeriodToggle$measurePolicy$1$1;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Landroidx/compose/material3/TimePickerKt$HorizontalPeriodToggle$measurePolicy$1$1;
+
+    invoke-direct {v0}, Landroidx/compose/material3/TimePickerKt$HorizontalPeriodToggle$measurePolicy$1$1;-><init>()V
+
+    sput-object v0, Landroidx/compose/material3/TimePickerKt$HorizontalPeriodToggle$measurePolicy$1$1;->INSTANCE:Landroidx/compose/material3/TimePickerKt$HorizontalPeriodToggle$measurePolicy$1$1;
+
+    return-void
+.end method
+
+.method constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final measure-3p2s80s(Landroidx/compose/ui/layout/MeasureScope;Ljava/util/List;J)Landroidx/compose/ui/layout/MeasureResult;
+    .locals 20
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/compose/ui/layout/MeasureScope;",
+            "Ljava/util/List<",
+            "+",
+            "Landroidx/compose/ui/layout/Measurable;",
+            ">;J)",
+            "Landroidx/compose/ui/layout/MeasureResult;"
+        }
+    .end annotation
+
+    move-object/from16 v0, p2
+
+    .line 2121
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    if-ge v3, v1, :cond_4
+
+    .line 2122
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    .line 2119
+    check-cast v4, Landroidx/compose/ui/layout/Measurable;
+
+    .line 1189
+    invoke-static {v4}, Landroidx/compose/ui/layout/LayoutIdKt;->getLayoutId(Landroidx/compose/ui/layout/Measurable;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    const-string v6, "Spacer"
+
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    .line 1194
+    sget-object v1, Landroidx/compose/material3/tokens/TimePickerTokens;->INSTANCE:Landroidx/compose/material3/tokens/TimePickerTokens;
+
+    invoke-virtual {v1}, Landroidx/compose/material3/tokens/TimePickerTokens;->getPeriodSelectorOutlineWidth-D9Ej5fM()F
+
+    move-result v1
+
+    move-object/from16 v7, p1
+
+    invoke-interface {v7, v1}, Landroidx/compose/ui/layout/MeasureScope;->roundToPx-0680j_4(F)I
+
+    move-result v11
+
+    const/16 v14, 0xc
+
+    const/4 v15, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    move-wide/from16 v8, p3
+
+    .line 1192
+    invoke-static/range {v8 .. v15}, Landroidx/compose/ui/unit/Constraints;->copy-Zbe2FdA$default(JIIIIILjava/lang/Object;)J
+
+    move-result-wide v10
+
+    .line 1191
+    invoke-interface {v4, v10, v11}, Landroidx/compose/ui/layout/Measurable;->measure-BRTryo0(J)Landroidx/compose/ui/layout/Placeable;
+
+    move-result-object v1
+
+    .line 2128
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    invoke-direct {v3, v4}, Ljava/util/ArrayList;-><init>(I)V
+
+    .line 2131
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    move v5, v2
+
+    :goto_1
+    if-ge v5, v4, :cond_1
+
+    .line 2132
+    invoke-interface {v0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v8
+
+    .line 2134
+    move-object v9, v8
+
+    check-cast v9, Landroidx/compose/ui/layout/Measurable;
+
+    .line 1200
+    invoke-static {v9}, Landroidx/compose/ui/layout/LayoutIdKt;->getLayoutId(Landroidx/compose/ui/layout/Measurable;)Ljava/lang/Object;
+
+    move-result-object v9
+
+    invoke-static {v9, v6}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_0
+
+    .line 2134
+    move-object v9, v3
+
+    check-cast v9, Ljava/util/Collection;
+
+    invoke-interface {v9, v8}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_1
+
+    .line 2137
+    :cond_1
+    check-cast v3, Ljava/util/List;
+
+    .line 2139
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    invoke-direct {v0, v4}, Ljava/util/ArrayList;-><init>(I)V
+
+    .line 2142
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    :goto_2
+    if-ge v2, v4, :cond_2
+
+    .line 2143
+    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    .line 2145
+    move-object v6, v0
+
+    check-cast v6, Ljava/util/Collection;
+
+    check-cast v5, Landroidx/compose/ui/layout/Measurable;
+
+    .line 1203
+    invoke-static/range {p3 .. p4}, Landroidx/compose/ui/unit/Constraints;->getMaxWidth-impl(J)I
+
+    move-result v8
+
+    div-int/lit8 v15, v8, 0x2
+
+    const/16 v18, 0xc
+
+    const/16 v19, 0x0
+
+    const/4 v14, 0x0
+
+    const/16 v16, 0x0
+
+    const/16 v17, 0x0
+
+    move-wide/from16 v12, p3
+
+    invoke-static/range {v12 .. v19}, Landroidx/compose/ui/unit/Constraints;->copy-Zbe2FdA$default(JIIIIILjava/lang/Object;)J
+
+    move-result-wide v8
+
+    .line 1202
+    invoke-interface {v5, v8, v9}, Landroidx/compose/ui/layout/Measurable;->measure-BRTryo0(J)Landroidx/compose/ui/layout/Placeable;
+
+    move-result-object v5
+
+    .line 2145
+    invoke-interface {v6, v5}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_2
+
+    .line 2148
+    :cond_2
+    check-cast v0, Ljava/util/List;
+
+    .line 1207
+    invoke-static/range {p3 .. p4}, Landroidx/compose/ui/unit/Constraints;->getMaxWidth-impl(J)I
+
+    move-result v8
+
+    invoke-static/range {p3 .. p4}, Landroidx/compose/ui/unit/Constraints;->getMaxHeight-impl(J)I
+
+    move-result v9
+
+    new-instance v2, Landroidx/compose/material3/TimePickerKt$HorizontalPeriodToggle$measurePolicy$1$1$1;
+
+    invoke-direct {v2, v0, v1}, Landroidx/compose/material3/TimePickerKt$HorizontalPeriodToggle$measurePolicy$1$1$1;-><init>(Ljava/util/List;Landroidx/compose/ui/layout/Placeable;)V
+
+    move-object v11, v2
+
+    check-cast v11, Lkotlin/jvm/functions/Function1;
+
+    const/4 v12, 0x4
+
+    const/4 v13, 0x0
+
+    const/4 v10, 0x0
+
+    invoke-static/range {v7 .. v13}, Landroidx/compose/ui/layout/MeasureScope;->layout$default(Landroidx/compose/ui/layout/MeasureScope;IILjava/util/Map;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Landroidx/compose/ui/layout/MeasureResult;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_3
+    add-int/lit8 v3, v3, 0x1
+
+    goto/16 :goto_0
+
+    .line 2126
+    :cond_4
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    const-string v1, "Collection contains no element matching the predicate."
+
+    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method

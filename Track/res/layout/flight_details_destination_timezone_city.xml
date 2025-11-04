@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView android:id="@id/flagcontainer" android:background="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" app:cardBackgroundColor="#fff6f7fb" app:cardCornerRadius="12.0dip" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" style="?materialCardViewFilledStyle">
+        <TextView android:textSize="20.0sp" android:id="@id/flag" android:layout_width="24.0dip" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:adjustViewBounds="true" />
+    </com.google.android.material.card.MaterialCardView>
+    <TextView android:textSize="16.0sp" android:id="@id/city" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="Amsterdam" app:layout_constraintLeft_toRightOf="@id/flagcontainer" app:layout_constraintTop_toTopOf="@id/flagcontainer" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/Black" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00 PM" android:drawableLeft="@drawable/ic_layover_clock" android:drawablePadding="4.0dip" app:layout_constraintLeft_toLeftOf="@id/city" app:layout_constraintTop_toBottomOf="@id/city" />
+</androidx.constraintlayout.widget.ConstraintLayout>

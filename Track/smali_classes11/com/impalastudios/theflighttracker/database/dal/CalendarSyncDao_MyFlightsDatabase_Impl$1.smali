@@ -1,0 +1,162 @@
+.class Lcom/impalastudios/theflighttracker/database/dal/CalendarSyncDao_MyFlightsDatabase_Impl$1;
+.super Landroidx/room/EntityInsertAdapter;
+.source "CalendarSyncDao_MyFlightsDatabase_Impl.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/impalastudios/theflighttracker/database/dal/CalendarSyncDao_MyFlightsDatabase_Impl;-><init>(Landroidx/room/RoomDatabase;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroidx/room/EntityInsertAdapter<",
+        "Lcom/impalastudios/theflighttracker/util/CalendarEvent;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lcom/impalastudios/theflighttracker/database/dal/CalendarSyncDao_MyFlightsDatabase_Impl;
+
+
+# direct methods
+.method constructor <init>(Lcom/impalastudios/theflighttracker/database/dal/CalendarSyncDao_MyFlightsDatabase_Impl;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
+
+    .line 35
+    iput-object p1, p0, Lcom/impalastudios/theflighttracker/database/dal/CalendarSyncDao_MyFlightsDatabase_Impl$1;->this$0:Lcom/impalastudios/theflighttracker/database/dal/CalendarSyncDao_MyFlightsDatabase_Impl;
+
+    invoke-direct {p0}, Landroidx/room/EntityInsertAdapter;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected bind(Landroidx/sqlite/SQLiteStatement;Lcom/impalastudios/theflighttracker/util/CalendarEvent;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10,
+            0x10
+        }
+        names = {
+            "statement",
+            "entity"
+        }
+    .end annotation
+
+    const/4 v0, 0x1
+
+    .line 45
+    invoke-virtual {p2}, Lcom/impalastudios/theflighttracker/util/CalendarEvent;->getId()J
+
+    move-result-wide v1
+
+    invoke-interface {p1, v0, v1, v2}, Landroidx/sqlite/SQLiteStatement;->bindLong(IJ)V
+
+    const/4 v0, 0x2
+
+    .line 46
+    invoke-virtual {p2}, Lcom/impalastudios/theflighttracker/util/CalendarEvent;->getEventId()J
+
+    move-result-wide v1
+
+    invoke-interface {p1, v0, v1, v2}, Landroidx/sqlite/SQLiteStatement;->bindLong(IJ)V
+
+    .line 47
+    invoke-virtual {p2}, Lcom/impalastudios/theflighttracker/util/CalendarEvent;->getReminderId()Ljava/lang/Long;
+
+    move-result-object v0
+
+    const/4 v1, 0x3
+
+    if-nez v0, :cond_0
+
+    .line 48
+    invoke-interface {p1, v1}, Landroidx/sqlite/SQLiteStatement;->bindNull(I)V
+
+    goto :goto_0
+
+    .line 50
+    :cond_0
+    invoke-virtual {p2}, Lcom/impalastudios/theflighttracker/util/CalendarEvent;->getReminderId()Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    invoke-interface {p1, v1, v2, v3}, Landroidx/sqlite/SQLiteStatement;->bindLong(IJ)V
+
+    .line 52
+    :goto_0
+    invoke-virtual {p2}, Lcom/impalastudios/theflighttracker/util/CalendarEvent;->getFlightId()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x4
+
+    if-nez v0, :cond_1
+
+    .line 53
+    invoke-interface {p1, v1}, Landroidx/sqlite/SQLiteStatement;->bindNull(I)V
+
+    return-void
+
+    .line 55
+    :cond_1
+    invoke-virtual {p2}, Lcom/impalastudios/theflighttracker/util/CalendarEvent;->getFlightId()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-interface {p1, v1, p2}, Landroidx/sqlite/SQLiteStatement;->bindText(ILjava/lang/String;)V
+
+    return-void
+.end method
+
+.method protected bridge synthetic bind(Landroidx/sqlite/SQLiteStatement;Ljava/lang/Object;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010,
+            0x1010
+        }
+        names = {
+            "statement",
+            "entity"
+        }
+    .end annotation
+
+    .line 35
+    check-cast p2, Lcom/impalastudios/theflighttracker/util/CalendarEvent;
+
+    invoke-virtual {p0, p1, p2}, Lcom/impalastudios/theflighttracker/database/dal/CalendarSyncDao_MyFlightsDatabase_Impl$1;->bind(Landroidx/sqlite/SQLiteStatement;Lcom/impalastudios/theflighttracker/util/CalendarEvent;)V
+
+    return-void
+.end method
+
+.method protected createQuery()Ljava/lang/String;
+    .locals 1
+
+    .line 39
+    const-string v0, "INSERT OR REPLACE INTO `CalendarEvent` (`id`,`eventId`,`reminderId`,`flightId`) VALUES (nullif(?, 0),?,?,?)"
+
+    return-object v0
+.end method

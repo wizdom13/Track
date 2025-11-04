@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_distance_type_entries">
+        <item>km</item>
+        <item>mi</item>
+    </string-array>
+    <string-array name="pref_distance_type_values">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="pref_flights_to_import_type_entries">
+        <item>自分のフライト</item>
+        <item>友達のフライト</item>
+        <item>すべて</item>
+    </string-array>
+    <string-array name="pref_flights_to_import_type_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="pref_maps_type_entries">
+        <item>普通</item>
+        <item>ハイブリッド</item>
+        <item>衛星</item>
+        <item>地形</item>
+    </string-array>
+    <string-array name="pref_maps_type_values">
+        <item>1</item>
+        <item>4</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="pref_sync_delete_flight_entries">
+        <item>しない</item>
+        <item>着陸後1時間</item>
+        <item>着陸後2時間</item>
+        <item>着陸後6時間</item>
+        <item>着陸後12時間</item>
+        <item>着陸後1日</item>
+        <item>着陸後2日</item>
+        <item>着陸後7日</item>
+        <item>着陸後1か月</item>
+    </string-array>
+    <string-array name="pref_sync_delete_flight_values">
+        <item>0</item>
+        <item>3600000</item>
+        <item>7200000</item>
+        <item>21600000</item>
+        <item>43200000</item>
+        <item>86400000</item>
+        <item>172800000</item>
+        <item>604800000</item>
+        <item>2592000000</item>
+    </string-array>
+    <string-array name="pref_sync_reminder_entries">
+        <item>通知なし</item>
+        <item>15分</item>
+        <item>30分</item>
+        <item>45分</item>
+        <item>1時間</item>
+        <item>2時間</item>
+        <item>3時間</item>
+        <item>4時間</item>
+    </string-array>
+    <string-array name="pref_sync_reminder_values">
+        <item>0</item>
+        <item>15</item>
+        <item>30</item>
+        <item>40</item>
+        <item>60</item>
+        <item>120</item>
+        <item>180</item>
+        <item>240</item>
+    </string-array>
+    <string-array name="pref_temperature_type_entries">
+        <item>@string/celsius</item>
+        <item>@string/fahrenheit</item>
+    </string-array>
+    <string-array name="pref_temperature_type_values">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+</resources>

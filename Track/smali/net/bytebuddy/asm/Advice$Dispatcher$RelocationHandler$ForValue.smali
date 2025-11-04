@@ -1,0 +1,589 @@
+.class public abstract enum Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+.super Ljava/lang/Enum;
+.source "Advice.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x4409
+    name = "ForValue"
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$Bound;,
+        Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$OfNonDefault;,
+        Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$OfDefault;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum<",
+        "Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field private static final synthetic $VALUES:[Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+.field public static final enum BOOLEAN:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+.field public static final enum BYTE:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+.field public static final enum CHARACTER:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+.field public static final enum DOUBLE:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+.field public static final enum FLOAT:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+.field public static final enum INTEGER:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+.field public static final enum LONG:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+.field public static final enum REFERENCE:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+.field public static final enum SHORT:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+
+# instance fields
+.field private final arrayLoad:I
+
+.field private final defaultJump:I
+
+.field private final load:I
+
+.field private final nonDefaultJump:I
+
+.field private final requiredSize:I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 16
+
+    .line 8159
+    new-instance v0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$1;
+
+    const/16 v6, 0x99
+
+    const/4 v7, 0x0
+
+    const-string v1, "BOOLEAN"
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0x15
+
+    const/16 v4, 0x33
+
+    const/16 v5, 0x9a
+
+    invoke-direct/range {v0 .. v7}, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$1;-><init>(Ljava/lang/String;IIIIII)V
+
+    sput-object v0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->BOOLEAN:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    .line 8169
+    new-instance v1, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$2;
+
+    const/16 v7, 0x99
+
+    const/4 v8, 0x0
+
+    const-string v2, "BYTE"
+
+    const/4 v3, 0x1
+
+    const/16 v4, 0x15
+
+    const/16 v5, 0x33
+
+    const/16 v6, 0x9a
+
+    invoke-direct/range {v1 .. v8}, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$2;-><init>(Ljava/lang/String;IIIIII)V
+
+    sput-object v1, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->BYTE:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    .line 8179
+    new-instance v2, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$3;
+
+    const/16 v8, 0x99
+
+    const/4 v9, 0x0
+
+    const-string v3, "SHORT"
+
+    const/4 v4, 0x2
+
+    const/16 v5, 0x15
+
+    const/16 v6, 0x35
+
+    const/16 v7, 0x9a
+
+    invoke-direct/range {v2 .. v9}, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$3;-><init>(Ljava/lang/String;IIIIII)V
+
+    sput-object v2, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->SHORT:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    .line 8189
+    new-instance v3, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$4;
+
+    const/16 v9, 0x99
+
+    const/4 v10, 0x0
+
+    const-string v4, "CHARACTER"
+
+    const/4 v5, 0x3
+
+    const/16 v6, 0x15
+
+    const/16 v7, 0x34
+
+    const/16 v8, 0x9a
+
+    invoke-direct/range {v3 .. v10}, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$4;-><init>(Ljava/lang/String;IIIIII)V
+
+    sput-object v3, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->CHARACTER:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    .line 8199
+    new-instance v4, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$5;
+
+    const/16 v10, 0x99
+
+    const/4 v11, 0x0
+
+    const-string v5, "INTEGER"
+
+    const/4 v6, 0x4
+
+    const/16 v7, 0x15
+
+    const/16 v8, 0x2e
+
+    const/16 v9, 0x9a
+
+    invoke-direct/range {v4 .. v11}, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$5;-><init>(Ljava/lang/String;IIIIII)V
+
+    sput-object v4, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->INTEGER:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    .line 8209
+    new-instance v5, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$6;
+
+    const/16 v11, 0x99
+
+    const/4 v12, 0x0
+
+    const-string v6, "LONG"
+
+    const/4 v7, 0x5
+
+    const/16 v8, 0x16
+
+    const/16 v9, 0x2f
+
+    const/16 v10, 0x9a
+
+    invoke-direct/range {v5 .. v12}, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$6;-><init>(Ljava/lang/String;IIIIII)V
+
+    sput-object v5, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->LONG:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    .line 8219
+    new-instance v6, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$7;
+
+    const/16 v12, 0x99
+
+    const/4 v13, 0x2
+
+    const-string v7, "FLOAT"
+
+    const/4 v8, 0x6
+
+    const/16 v9, 0x17
+
+    const/16 v10, 0x30
+
+    const/16 v11, 0x9a
+
+    invoke-direct/range {v6 .. v13}, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$7;-><init>(Ljava/lang/String;IIIIII)V
+
+    sput-object v6, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->FLOAT:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    .line 8230
+    new-instance v7, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$8;
+
+    const/16 v13, 0x99
+
+    const/4 v14, 0x4
+
+    const-string v8, "DOUBLE"
+
+    const/4 v9, 0x7
+
+    const/16 v10, 0x18
+
+    const/16 v11, 0x31
+
+    const/16 v12, 0x9a
+
+    invoke-direct/range {v7 .. v14}, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$8;-><init>(Ljava/lang/String;IIIIII)V
+
+    sput-object v7, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->DOUBLE:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    .line 8241
+    new-instance v8, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$9;
+
+    const/16 v14, 0xc6
+
+    const/4 v15, 0x0
+
+    const-string v9, "REFERENCE"
+
+    const/16 v10, 0x8
+
+    const/16 v11, 0x19
+
+    const/16 v12, 0x32
+
+    const/16 v13, 0xc7
+
+    invoke-direct/range {v8 .. v15}, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$9;-><init>(Ljava/lang/String;IIIIII)V
+
+    sput-object v8, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->REFERENCE:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    const/16 v9, 0x9
+
+    .line 8154
+    new-array v9, v9, [Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    const/4 v10, 0x0
+
+    aput-object v0, v9, v10
+
+    const/4 v0, 0x1
+
+    aput-object v1, v9, v0
+
+    const/4 v0, 0x2
+
+    aput-object v2, v9, v0
+
+    const/4 v0, 0x3
+
+    aput-object v3, v9, v0
+
+    const/4 v0, 0x4
+
+    aput-object v4, v9, v0
+
+    const/4 v0, 0x5
+
+    aput-object v5, v9, v0
+
+    const/4 v0, 0x6
+
+    aput-object v6, v9, v0
+
+    const/4 v0, 0x7
+
+    aput-object v7, v9, v0
+
+    const/16 v0, 0x8
+
+    aput-object v8, v9, v0
+
+    sput-object v9, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->$VALUES:[Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    return-void
+.end method
+
+.method private constructor <init>(Ljava/lang/String;IIIIII)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(IIIII)V"
+        }
+    .end annotation
+
+    .line 8282
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 8283
+    iput p3, p0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->load:I
+
+    .line 8284
+    iput p4, p0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->arrayLoad:I
+
+    .line 8285
+    iput p5, p0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->defaultJump:I
+
+    .line 8286
+    iput p6, p0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->nonDefaultJump:I
+
+    .line 8287
+    iput p7, p0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->requiredSize:I
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Ljava/lang/String;IIIIIILnet/bytebuddy/asm/Advice$1;)V
+    .locals 0
+
+    .line 8154
+    invoke-direct/range {p0 .. p7}, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;-><init>(Ljava/lang/String;IIIIII)V
+
+    return-void
+.end method
+
+.method static synthetic access$3300(Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;)I
+    .locals 0
+
+    .line 8154
+    iget p0, p0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->requiredSize:I
+
+    return p0
+.end method
+
+.method static synthetic access$3400(Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;)I
+    .locals 0
+
+    .line 8154
+    iget p0, p0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->load:I
+
+    return p0
+.end method
+
+.method static synthetic access$3500(Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;)I
+    .locals 0
+
+    .line 8154
+    iget p0, p0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->arrayLoad:I
+
+    return p0
+.end method
+
+.method static synthetic access$3600(Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;)I
+    .locals 0
+
+    .line 8154
+    iget p0, p0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->nonDefaultJump:I
+
+    return p0
+.end method
+
+.method static synthetic access$3700(Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;)I
+    .locals 0
+
+    .line 8154
+    iget p0, p0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->defaultJump:I
+
+    return p0
+.end method
+
+.method protected static of(Lnet/bytebuddy/description/type/TypeDefinition;IZ)Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler;
+    .locals 1
+
+    .line 8300
+    sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    invoke-interface {p0, v0}, Lnet/bytebuddy/description/type/TypeDefinition;->represents(Ljava/lang/reflect/Type;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 8301
+    sget-object p0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->BOOLEAN:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    goto :goto_0
+
+    .line 8302
+    :cond_0
+    sget-object v0, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
+
+    invoke-interface {p0, v0}, Lnet/bytebuddy/description/type/TypeDefinition;->represents(Ljava/lang/reflect/Type;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 8303
+    sget-object p0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->BYTE:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    goto :goto_0
+
+    .line 8304
+    :cond_1
+    sget-object v0, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
+
+    invoke-interface {p0, v0}, Lnet/bytebuddy/description/type/TypeDefinition;->represents(Ljava/lang/reflect/Type;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 8305
+    sget-object p0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->SHORT:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    goto :goto_0
+
+    .line 8306
+    :cond_2
+    sget-object v0, Ljava/lang/Character;->TYPE:Ljava/lang/Class;
+
+    invoke-interface {p0, v0}, Lnet/bytebuddy/description/type/TypeDefinition;->represents(Ljava/lang/reflect/Type;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 8307
+    sget-object p0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->CHARACTER:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    goto :goto_0
+
+    .line 8308
+    :cond_3
+    sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    invoke-interface {p0, v0}, Lnet/bytebuddy/description/type/TypeDefinition;->represents(Ljava/lang/reflect/Type;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 8309
+    sget-object p0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->INTEGER:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    goto :goto_0
+
+    .line 8310
+    :cond_4
+    sget-object v0, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+
+    invoke-interface {p0, v0}, Lnet/bytebuddy/description/type/TypeDefinition;->represents(Ljava/lang/reflect/Type;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    .line 8311
+    sget-object p0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->LONG:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    goto :goto_0
+
+    .line 8312
+    :cond_5
+    sget-object v0, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
+
+    invoke-interface {p0, v0}, Lnet/bytebuddy/description/type/TypeDefinition;->represents(Ljava/lang/reflect/Type;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    .line 8313
+    sget-object p0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->FLOAT:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    goto :goto_0
+
+    .line 8314
+    :cond_6
+    sget-object v0, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
+
+    invoke-interface {p0, v0}, Lnet/bytebuddy/description/type/TypeDefinition;->represents(Ljava/lang/reflect/Type;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    .line 8315
+    sget-object p0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->DOUBLE:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    goto :goto_0
+
+    .line 8316
+    :cond_7
+    sget-object v0, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
+
+    invoke-interface {p0, v0}, Lnet/bytebuddy/description/type/TypeDefinition;->represents(Ljava/lang/reflect/Type;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_9
+
+    .line 8319
+    sget-object p0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->REFERENCE:Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    :goto_0
+    if-eqz p2, :cond_8
+
+    .line 8321
+    new-instance p2, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$OfNonDefault;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-direct {p2, p0, p1}, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$OfNonDefault;-><init>(Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;I)V
+
+    return-object p2
+
+    :cond_8
+    new-instance p2, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$OfDefault;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-direct {p2, p0, p1}, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue$OfDefault;-><init>(Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;I)V
+
+    return-object p2
+
+    .line 8317
+    :cond_9
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "Cannot skip on default value for void return type"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+    .locals 1
+
+    .line 8154
+    const-class v0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    return-object p0
+.end method
+
+.method public static values()[Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+    .locals 1
+
+    .line 8154
+    sget-object v0, Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->$VALUES:[Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    invoke-virtual {v0}, [Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lnet/bytebuddy/asm/Advice$Dispatcher$RelocationHandler$ForValue;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method protected abstract convertValue(Lnet/bytebuddy/jar/asm/MethodVisitor;)V
+.end method

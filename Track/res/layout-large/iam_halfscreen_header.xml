@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/IAMHalfScreenHeader" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/IAMBodyImage" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_centerInParent="true" />
+    <ImageView android:id="@id/IAMIconImage" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginLeft="15.0dip" android:layout_marginTop="54.0dip" android:layout_marginBottom="15.0dip" app:srcCompat="@drawable/weathericon" />
+    <LinearLayout android:orientation="vertical" android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_toRightOf="@id/IAMIconImage" android:layout_alignTop="@id/IAMIconImage" android:layout_alignBottom="@id/IAMIconImage">
+        <com.impalastudios.framework.core.views.CrFontAutoResizeTextView android:textSize="26.0dip" android:textColor="#ff111111" android:id="@id/IAMTitle" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Weather+" android:singleLine="true" android:layout_weight="1.0" />
+        <TextView android:textSize="16.0dip" android:textColor="#ff666666" android:id="@id/IAMSubtitle" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="International travel weather calculator" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ImageView android:id="@id/IAMCloseButton" android:padding="16.0dip" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_alignParentRight="true" app:srcCompat="@drawable/iam_close" />
+    <RelativeLayout android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:layout_below="@id/IAMIconImage" android:layout_alignParentRight="true">
+        <com.impalastudios.framework.core.advertisement.inappmarketing.views.CrRatingView android:layout_gravity="center_vertical" android:id="@id/IAMRatingView" android:layout_width="90.0dip" android:layout_height="12.0dip" android:layout_marginLeft="16.0dip" android:layout_toRightOf="@id/IAMButton" android:layout_centerVertical="true" android:layout_toEndOf="@id/IAMButton" />
+        <Button android:textSize="18.0dip" android:textColor="#ffffffff" android:id="@id/IAMButton" android:background="#ff4dc120" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="34.0dip" android:text="Install" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
+    </RelativeLayout>
+</RelativeLayout>

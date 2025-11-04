@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.textfield.TextInputLayout android:textColorHint="#ffffffff" android:id="@id/inputLayout" android:layout_width="409.0dip" android:layout_height="wrap_content" app:hintTextAppearance="@android:style/TextAppearance.Medium" app:hintTextColor="#ffcccccc" app:layout_constraintBottom_toTopOf="@id/okButton" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed">
+        <com.google.android.material.textfield.TextInputEditText android:textColor="#ffcccccc" android:textColorHint="#ffcccccc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Your value here" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button android:id="@id/okButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="OK" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/inputLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

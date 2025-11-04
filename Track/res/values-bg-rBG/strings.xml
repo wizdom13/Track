@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backButtonTitle">Назад</string>
+    <string name="ccpaSalesDisclosure">Имайте предвид, че част от обмена на данни с нашите партньори представлява „продажба“ на лични данни съгласно приложимото законодателство.</string>
+    <string name="changeInSettings">Ако някога промените мнението си, можете да промените своя избор, като влезете в настройките на това приложение.</string>
+    <string name="confirmChoiceButtonText">Потвърждавам</string>
+    <string name="customiseChoicesTitle">Настройване на избраното</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText1">Google и други партньори</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText2">Научете повече.</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText3">Правилата и условията</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText4">Политиката за поверителност</string>
+    <string name="dialogPersonalizedAdsBodyPart1">Това приложение персонализира опита ви с рекламите през Google и други партньори. Като приемете, ще виждате по-подходящи за вас реклами. В зависимост от настройките за поверителност, нашите партньори могат да събират и обработват лични данни. Научете повече.</string>
+    <string name="dialogPersonalizedAdsBodyPart2Sentence1">Съгласявайки се, потвърждавате, че сте над 16-годишна възраст.</string>
+    <string name="dialogPersonalizedAdsBodyPart2Sentence2">Като продължавате, Вие се съгласявате с Правилата и условията и Политиката за поверителност.</string>
+    <string name="explanationTitle">Обяснение</string>
+    <string name="generalTitle">Настройки за поверителност</string>
+    <string name="payChoiceButtonText">Купи версия без реклами</string>
+    <string name="personalTitle">Персонализирани реклами</string>
+    <string name="saveAndConfirmButtonTitle">Запис и потвърждаване</string>
+</resources>
