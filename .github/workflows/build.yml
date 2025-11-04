@@ -56,9 +56,10 @@ jobs:
 
       - name: Send signed APK to Telegram
         run: |
+          UPLOAD_URL=$(curl -sf -T Flight-signed.apk https://transfer.sh)
           curl -sS -X POST "https://api.telegram.org/bot8378383410:AAF60AT5gqo_os-NgctdfqJepoiNO4KdadQ/sendDocument" \
             -F chat_id="-1002773769175" \
-            -F document="@Flight-signed.apk" \
+            -F document="$UPLOAD_URL" \
             -F caption="✅ New signed build" \
             -F parse_mode="Markdown"
       
