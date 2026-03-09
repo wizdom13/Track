@@ -1,4 +1,7 @@
 *.smali
+*.apk
+*.jar
+*.jks
 /Track/smali
 /Track/smali_classes2
 /Track/smali_classes3
