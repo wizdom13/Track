@@ -20,11 +20,21 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.wisso.skytrace.core.common.NoOpAdService
+import com.wisso.skytrace.core.common.NoOpPremiumAccessManager
+import com.wisso.skytrace.core.common.PremiumFeature
+import com.wisso.skytrace.core.common.PremiumGate
 
 @Composable
 fun FlightDetailsScreen() {
     var tracked by remember { mutableStateOf(true) }
     var note by remember { mutableStateOf("Ask agent about upgrade options.") }
+
+    val premiumAccess = NoOpPremiumAccessManager()
+    val liveUpdates = PremiumGate.evaluate(PremiumFeature.LiveUpdates, premiumAccess)
+    val seatMaps = PremiumGate.evaluate(PremiumFeature.SeatMaps, premiumAccess)
+    val adFree = PremiumGate.evaluate(PremiumFeature.AdFreeMode, premiumAccess)
+    val showAds = NoOpAdService().shouldShowAds(isPremium = adFree.enabled)
 
     LazyColumn(
         modifier = Modifier.fillMaxSize().padding(16.dp),
@@ -39,10 +49,18 @@ fun FlightDetailsScreen() {
             Card {
                 Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     Text("Live details", style = MaterialTheme.typography.titleMedium)
-                    Text("Gate B14 · Terminal 4 · Baggage 6")
+                    Text(if (liveUpdates.enabled) "Gate B14 · Terminal 4 · Baggage 6" else liveUpdates.reason)
                     Text("Departure 08:10 (sched 07:35)")
                     Text("Arrival 11:54 (sched 11:20)")
                     Text("Route: DCT HTO J174 PMM J60 LAX")
+                }
+            }
+        }
+        item {
+            Card {
+                Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text("Seat maps", style = MaterialTheme.typography.titleMedium)
+                    Text(if (seatMaps.enabled) "Interactive seat map coming soon." else seatMaps.reason)
                 }
             }
         }
@@ -66,6 +84,16 @@ fun FlightDetailsScreen() {
                 Column(Modifier.padding(16.dp)) {
                     Text("Provider fallback state", style = MaterialTheme.typography.titleMedium)
                     Text("Aircraft age unavailable. Showing core tracking fields only.")
+                }
+            }
+        }
+        if (showAds) {
+            item {
+                Card {
+                    Column(Modifier.padding(16.dp)) {
+                        Text("Ad placeholder")
+                        Text("Upgrade to Premium for ad-free mode.")
+                    }
                 }
             }
         }

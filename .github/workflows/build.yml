@@ -1,64 +1,41 @@
-name: Build, Zipalign, and Sign APK
+name: Android CI
 
 on:
-  workflow_dispatch:
+  pull_request:
   push:
-    branches: [ "main" ]
-    paths:
-      - "Track/**"
-      - ".github/workflows/build.yml"
+    branches: ["main"]
 
 jobs:
-  build-and-sign:
+  verify:
     runs-on: ubuntu-latest
+    env:
+      SKYTRACE_API_BASE_URL: ${{ secrets.SKYTRACE_API_BASE_URL }}
+      SKYTRACE_API_KEY: ${{ secrets.SKYTRACE_API_KEY }}
+      SKYTRACE_OAUTH_CLIENT_ID: ${{ secrets.SKYTRACE_OAUTH_CLIENT_ID }}
+      SKYTRACE_OAUTH_REDIRECT_SCHEME: ${{ secrets.SKYTRACE_OAUTH_REDIRECT_SCHEME }}
+      SKYTRACE_MAPS_API_KEY: ${{ secrets.SKYTRACE_MAPS_API_KEY }}
+      SKYTRACE_PRIVACY_POLICY_URL: ${{ secrets.SKYTRACE_PRIVACY_POLICY_URL }}
+      SKYTRACE_TERMS_URL: ${{ secrets.SKYTRACE_TERMS_URL }}
+      SKYTRACE_DATA_DELETION_URL: ${{ secrets.SKYTRACE_DATA_DELETION_URL }}
 
     steps:
-      - name: Check out repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
+          distribution: temurin
           java-version: '17'
-          distribution: 'temurin'
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-        with:
-          accept-android-sdk-licenses: true
-          packages: platform-tools platforms;android-34 build-tools;34.0.0
-          
-      - name: Build APK
-        run: java -jar apktool.jar b Track -o Flight.apk
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
 
-      - name: Add Android build-tools to PATH
-        run: echo "${ANDROID_HOME}/build-tools/34.0.0" >> $GITHUB_PATH
+      - name: Build debug
+        run: ./gradlew assembleDevDebug
 
-      - name: Verify tools exist
-        run: |
-          ls -al "${ANDROID_HOME}/build-tools/34.0.0"
-          which zipalign || true
-          which apksigner || true
+      - name: Lint
+        run: ./gradlew lintDevDebug
 
-      - name: Zipalign APK
-        run: |
-          zipalign -v 4 Flight.apk Flight-unsigned.apk
-          
-      - name: Sign APK
-        run: |
-          apksigner sign \
-            --ks wissam.jks \
-            --ks-key-alias wisso \
-            --ks-pass pass:qw1234QW## \
-            --key-pass pass:qw1234QW## \
-            --out Flight-signed.apk \
-            Flight-unsigned.apk
-            
-      - name: Upload APK as a build artifact
-        # This is the official and most reliable way to save your file
-        uses: actions/upload-artifact@v4
-        with:
-          name: Flight-APK
-          path: Flight-signed.apk
-
-
+      - name: Unit tests
+        run: ./gradlew testDevDebugUnitTest

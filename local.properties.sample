@@ -1,7 +1,7 @@
 # Android SDK path
 sdk.dir=/path/to/Android/Sdk
 
-# App secrets (placeholder values)
+# App secrets (placeholder values only)
 SKYTRACE_API_BASE_URL=https://api.example.com/
 SKYTRACE_API_KEY=replace_me
 
@@ -11,3 +11,8 @@ SKYTRACE_OAUTH_REDIRECT_SCHEME=com.wisso.skytrace
 
 # Maps provider
 SKYTRACE_MAPS_API_KEY=replace_me
+
+# Privacy links
+SKYTRACE_PRIVACY_POLICY_URL=https://example.com/privacy
+SKYTRACE_TERMS_URL=https://example.com/terms
+SKYTRACE_DATA_DELETION_URL=https://example.com/delete
