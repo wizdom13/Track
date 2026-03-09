@@ -9,7 +9,12 @@ plugins {
 android {
     namespace = "com.wisso.skytrace.core.network"
     compileSdk = 35
-    defaultConfig { minSdk = 26 }
+    defaultConfig {
+        minSdk = 26
+        val apiBaseUrl = providers.gradleProperty("SKYTRACE_API_BASE_URL").orElse("https://api.placeholder.local/")
+        buildConfigField("String", "API_BASE_URL", "\"${apiBaseUrl.get()}\"")
+    }
+    buildFeatures { buildConfig = true }
     compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
     kotlinOptions { jvmTarget = "17" }
 }

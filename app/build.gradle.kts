@@ -68,6 +68,7 @@ dependencies {
     implementation(project(":core:network"))
     implementation(project(":core:database"))
     implementation(project(":core:preferences"))
+    implementation(project(":core:data"))
     implementation(project(":sync"))
     implementation(project(":feature:search"))
     implementation(project(":feature:flightdetails"))

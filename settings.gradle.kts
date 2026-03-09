@@ -25,6 +25,7 @@ include(
     ":core:database",
     ":core:model",
     ":core:preferences",
+    ":core:data",
     ":feature:search",
     ":feature:flightdetails",
     ":feature:airportdetails",
