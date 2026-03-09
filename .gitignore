@@ -16,3 +16,9 @@
 /Track/smali_classes11
 /Track/lib
 /Track/original
+
+.gradle/
+local.properties
+.idea/
+/build/
+**/build/
