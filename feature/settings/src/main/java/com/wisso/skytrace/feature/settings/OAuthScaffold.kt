@@ -1,12 +1,13 @@
 package com.wisso.skytrace.feature.settings
 
-import net.openid.appauth.AuthorizationServiceConfiguration
+import com.wisso.skytrace.core.platform.oauth.OAuthProvider
+import com.wisso.skytrace.core.platform.oauth.OAuthProviderConfig
+import net.openid.appauth.AuthorizationRequest
 
-object OAuthScaffold {
-    fun createConfiguration(authEndpoint: String, tokenEndpoint: String): AuthorizationServiceConfiguration {
-        return AuthorizationServiceConfiguration(
-            android.net.Uri.parse(authEndpoint),
-            android.net.Uri.parse(tokenEndpoint),
-        )
+class OAuthScaffold(
+    private val provider: OAuthProvider,
+) {
+    fun buildRequest(config: OAuthProviderConfig): AuthorizationRequest {
+        return provider.buildAuthorizationRequest(config)
     }
 }

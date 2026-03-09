@@ -18,10 +18,32 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.wisso.skytrace.core.common.FeatureFlags
 
 @Composable
 fun BoardingPassScreen() {
-    AircraftDetailsScreen()
+    if (FeatureFlags.boardingPassScanEnabled) {
+        BoardingPassScanScreen()
+    } else {
+        AircraftDetailsScreen()
+    }
+}
+
+@Composable
+fun BoardingPassScanScreen() {
+    var granted by remember { mutableStateOf(false) }
+    var payload by remember { mutableStateOf("DOE/JOHN|DL123|JFK|LAX|12A|B12") }
+
+    Column(
+        modifier = Modifier.fillMaxSize().padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp),
+    ) {
+        Text("Boarding pass scan", style = MaterialTheme.typography.headlineSmall)
+        Text("CameraX scanner scaffold enabled. Permission state: ${if (granted) "granted" else "not granted"}")
+        Button(onClick = { granted = true }) { Text("Grant camera permission") }
+        OutlinedTextField(value = payload, onValueChange = { payload = it }, label = { Text("Mock barcode/QR payload") }, modifier = Modifier.fillMaxWidth())
+        Card { Text("Parsed payload routes into flight import workflow when scanner is active.", modifier = Modifier.padding(16.dp)) }
+    }
 }
 
 @Composable

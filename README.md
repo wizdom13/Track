@@ -22,9 +22,15 @@ Production-ready Kotlin Android scaffold for a neutral flight-tracking experienc
 Secrets are read from Gradle properties/local.properties and injected via `BuildConfig`:
 - `SKYTRACE_API_BASE_URL`
 - `SKYTRACE_API_KEY`
+- `SKYTRACE_OAUTH_CLIENT_ID`
+- `SKYTRACE_OAUTH_REDIRECT_SCHEME`
+- `SKYTRACE_MAPS_API_KEY`
 
 Do **not** commit real keys.
 
 ## Flavors
 - `dev`: development endpoints
 - `prod`: production endpoints
+
+
+See `docs/INTEGRATION_KEYS.md` for full integration credential and permission requirements.
