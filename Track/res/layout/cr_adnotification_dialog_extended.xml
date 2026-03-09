@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/CRAdNotificationRelativeLayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.impalastudios.framework.social.advertisement.CrCrundingNotificationImage android:id="@id/adImage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerInParent="true" android:layout_alignParentStart="false" android:layout_alignParentEnd="false" />
+    <TextView android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center_horizontal" android:id="@id/adTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Android Announcement" android:layout_alignLeft="@id/adImage" android:layout_alignTop="@id/adImage" android:layout_alignRight="@id/adImage" android:layout_alignParentStart="@id/adImage" android:layout_alignParentEnd="@id/adImage" />
+    <RelativeLayout android:id="@id/adTextContainer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@id/adImage" android:layout_alignRight="@id/adImage">
+        <TextView android:textStyle="bold" android:id="@id/adHeader" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:id="@id/adMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/adHeader" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" />
+        <TextView android:textStyle="bold" android:id="@id/adFooter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/adButtonContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="3.0" android:layout_alignLeft="@id/adImage" android:layout_alignRight="@id/adImage" android:layout_alignBottom="@id/adImage" android:layout_alignStart="@id/adImage" android:layout_alignEnd="@id/adImage">
+        <Button android:textStyle="bold" android:id="@id/adButtonCancel" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Cancel" android:layout_weight="1.0" />
+        <Button android:textStyle="bold" android:id="@id/adButtonDelay" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Remind Me" android:singleLine="true" android:layout_weight="1.0" />
+        <Button android:textStyle="bold" android:id="@id/adButtonStore" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="View in App Store" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

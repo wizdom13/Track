@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="duration_days">
+        <item quantity="other">%d д.</item>
+        <item quantity="one">%d д.</item>
+        <item quantity="few">%d д.</item>
+        <item quantity="many">%d д.</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d ч.</item>
+        <item quantity="one">%d ч.</item>
+        <item quantity="few">%d ч.</item>
+        <item quantity="many">%d ч.</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d мин.</item>
+        <item quantity="one">%d мин.</item>
+        <item quantity="few">%d мин.</item>
+        <item quantity="many">%d мин.</item>
+    </plurals>
+    <plurals name="duration_months">
+        <item quantity="other">%d мес.</item>
+        <item quantity="one">%d мес.</item>
+        <item quantity="few">%d мес.</item>
+        <item quantity="many">%d мес.</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d сек.</item>
+        <item quantity="one">%d сек.</item>
+        <item quantity="few">%d сек.</item>
+        <item quantity="many">%d сек.</item>
+    </plurals>
+    <plurals name="duration_years">
+        <item quantity="other">%d г.</item>
+        <item quantity="one">%d г.</item>
+        <item quantity="few">%d г.</item>
+        <item quantity="many">%d г.</item>
+    </plurals>
+    <plurals name="layovers">
+        <item quantity="other">Пересадки: %d</item>
+        <item quantity="one">Пересадка: %d</item>
+        <item quantity="few">Пересадки: %d</item>
+        <item quantity="many">Пересадки: %d</item>
+    </plurals>
+    <plurals name="month">
+        <item quantity="other">Месяцы</item>
+        <item quantity="one">Месяц</item>
+        <item quantity="few">Месяца</item>
+        <item quantity="many">Месяцев</item>
+    </plurals>
+    <plurals name="old_flights">
+        <item quantity="other">%d старые рейсы.</item>
+        <item quantity="one">%d старый рейс.</item>
+        <item quantity="few">%d старых рейса.</item>
+        <item quantity="many">%d старых рейсов.</item>
+    </plurals>
+    <plurals name="trip_count">
+        <item quantity="other">%d путешествия</item>
+        <item quantity="one">%d путешествие</item>
+        <item quantity="few">%d путешествия</item>
+        <item quantity="many">%d путешествий</item>
+    </plurals>
+    <plurals name="trip_flightcount_text">
+        <item quantity="other">%d рейсы</item>
+        <item quantity="one">%d рейс</item>
+        <item quantity="few">%d рейса</item>
+        <item quantity="many">%d рейсов</item>
+    </plurals>
+    <plurals name="tripit_import_button_text">
+        <item quantity="other">ИМПОРТ (выбрано %d рейсов)</item>
+        <item quantity="one">ИМПОРТ (выбран %d рейс)</item>
+        <item quantity="few">ИМПОРТ (выбрано %d рейса)</item>
+        <item quantity="many">ИМПОРТ (выбрано %d рейсов)</item>
+    </plurals>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backButtonTitle">Tagasi</string>
+    <string name="ccpaSalesDisclosure">Arvestage, et osa meie partneritega toimuvast andmevahetusest moodustab kohaldatava seaduse järgi isikuandmete \"müügi\".</string>
+    <string name="changeInSettings">Kui kunagi ümber mõtlete, siis saate oma valikut muuta, minnes selle rakenduse sätete ossa.</string>
+    <string name="confirmChoiceButtonText">Kinnitan</string>
+    <string name="customiseChoicesTitle">Kohanda valikuid</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText1">"Google'i ja teiste partnerite vahendusel"</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText2">Lugege lisaks.</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText3">kasutustingimuste</string>
+    <string name="dialogPersonalizedAdsBodyLinkableText4">privaatsuspoliitikaga</string>
+    <string name="dialogPersonalizedAdsBodyPart1">"See rakendus isikupärastab teie reklaamikogemust Google'i ja teiste partnerite vahendusel. Nõustudes näete te reklaame, mis arvestavad rohkem teie huvivaldkondadega. Sõltuvalt teie privaatsussätetest võivad meie partnerid teie isikuandmeid koguda ja töödelda. Lugege lisaks."</string>
+    <string name="dialogPersonalizedAdsBodyPart2Sentence1">Nõustudes kinnitate, et olete üle 16 aasta vana.</string>
+    <string name="dialogPersonalizedAdsBodyPart2Sentence2">Jätkates nõustute te kasutustingimuste ja privaatsuspoliitikaga.</string>
+    <string name="explanationTitle">Selgitus</string>
+    <string name="generalTitle">Privaatsussätted</string>
+    <string name="payChoiceButtonText">Osta reklaamivaba versioon</string>
+    <string name="personalTitle">Isikupärastatud reklaamid</string>
+    <string name="saveAndConfirmButtonTitle">Salvesta ja kinnita</string>
+</resources>

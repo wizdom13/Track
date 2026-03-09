@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="TextView" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/drilldown" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <ImageView android:textSize="32.0sp" android:id="@id/drilldown" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_baseline_navigate_next_24" android:tint="@color/actionBlue" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,86 @@
+.class final enum Lnet/bytebuddy/asm/MemberSubstitution$Substitution$Chain$Step$ForDelegation$OffsetMapping$ForOrigin$Sort$1;
+.super Lnet/bytebuddy/asm/MemberSubstitution$Substitution$Chain$Step$ForDelegation$OffsetMapping$ForOrigin$Sort;
+.source "MemberSubstitution.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lnet/bytebuddy/asm/MemberSubstitution$Substitution$Chain$Step$ForDelegation$OffsetMapping$ForOrigin$Sort;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x4008
+    name = null
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Ljava/lang/String;I)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 4914
+    invoke-direct {p0, p1, p2, v0}, Lnet/bytebuddy/asm/MemberSubstitution$Substitution$Chain$Step$ForDelegation$OffsetMapping$ForOrigin$Sort;-><init>(Ljava/lang/String;ILnet/bytebuddy/asm/MemberSubstitution$1;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected isRepresentable(Lnet/bytebuddy/description/ByteCodeElement$Member;)Z
+    .locals 1
+
+    .line 4917
+    instance-of v0, p1, Lnet/bytebuddy/description/method/MethodDescription;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lnet/bytebuddy/description/method/MethodDescription;
+
+    invoke-interface {p1}, Lnet/bytebuddy/description/method/MethodDescription;->isMethod()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method protected resolve(Lnet/bytebuddy/description/ByteCodeElement$Member;Ljava/util/List;Lnet/bytebuddy/description/type/TypeDescription;)Lnet/bytebuddy/implementation/bytecode/StackManipulation;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lnet/bytebuddy/description/ByteCodeElement$Member;",
+            "Ljava/util/List<",
+            "Lnet/bytebuddy/description/type/TypeDescription;",
+            ">;",
+            "Lnet/bytebuddy/description/type/TypeDescription;",
+            ")",
+            "Lnet/bytebuddy/implementation/bytecode/StackManipulation;"
+        }
+    .end annotation
+
+    .line 4922
+    check-cast p1, Lnet/bytebuddy/description/method/MethodDescription;
+
+    invoke-interface {p1}, Lnet/bytebuddy/description/method/MethodDescription;->asDefined()Lnet/bytebuddy/description/ByteCodeElement$TypeDependant;
+
+    move-result-object p1
+
+    check-cast p1, Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;
+
+    invoke-static {p1}, Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant;->of(Lnet/bytebuddy/description/method/MethodDescription$InDefinedShape;)Lnet/bytebuddy/implementation/bytecode/constant/MethodConstant$CanCache;
+
+    move-result-object p1
+
+    return-object p1
+.end method

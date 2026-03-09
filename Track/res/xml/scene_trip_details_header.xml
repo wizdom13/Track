@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition app:constraintSetEnd="@layout/trip_details_fragment2" app:constraintSetStart="@layout/trip_details_fragment">
+        <KeyFrameSet>
+            <KeyPosition app:framePosition="75" app:keyPositionType="pathRelative" app:motionTarget="@id/textView16" app:percentX="0.0" app:percentY="0.0" />
+            <KeyPosition app:framePosition="75" app:keyPositionType="pathRelative" app:motionTarget="@id/textView17" app:percentX="0.0" app:percentY="0.0" />
+            <KeyAttribute android:alpha="1.0" app:framePosition="75" app:motionTarget="@id/textView17" />
+        </KeyFrameSet>
+    </Transition>
+</MotionScene>

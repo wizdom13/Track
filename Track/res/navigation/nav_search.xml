@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/nav_search" app:startDestination="@id/searchFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="airport_details_terminal_maps" android:name="com.impalastudios.theflighttracker.features.airportdetails.TerminalMapsFragment" android:id="@id/terminalMapsFragment" />
+    <fragment android:label="BoardingPassFragment" android:name="com.impalastudios.theflighttracker.features.boardingpass.BoardingPassFragment" android:id="@id/boardingPassFragment" />
+    <fragment android:label="SearchFragment" android:name="com.impalastudios.theflighttracker.features.search.SearchFragment" android:id="@id/searchFragment">
+        <action android:id="@id/action_searchFragment_to_cameraFragment" app:destination="@id/cameraFragment" />
+    </fragment>
+    <fragment android:label="JourneyComponentFragment" android:name="com.impalastudios.theflighttracker.features.flightdetails.journeycomponent.JourneyComponentFragment" android:id="@id/journeyFragment" />
+    <fragment android:label="FlightDetailsV2Fragment" android:name="com.impalastudios.theflighttracker.features.flightdetails.FlightDetailsV2Fragment" android:id="@id/flightDetailsV2Fragment">
+        <action android:id="@id/action_flightDetailsV2Fragment_to_terminalMapsFragment" app:destination="@id/terminalMapsFragment" />
+        <action android:id="@id/action_flightDetailsV2Fragment_to_cameraFragment" app:destination="@id/cameraFragment" />
+        <action android:id="@id/action_flightDetailsV2Fragment_to_boardingPassFragment" app:destination="@id/boardingPassFragment" />
+        <action android:id="@id/action_flightDetailsV2Fragment_to_airlineDetailsFragment" app:destination="@id/airlineDetailsFragment" />
+        <action android:id="@id/action_flightDetailsV2Fragment_to_airportDetailsFragment" app:destination="@id/airportDetailsFragment" />
+        <action android:id="@id/action_flightDetailsV2Fragment_to_journeyFragment" app:destination="@id/journeyFragment" />
+    </fragment>
+    <action android:id="@id/action_global_flightDetailsV2Fragment" app:destination="@id/flightDetailsV2Fragment" />
+    <action android:id="@id/action_global_flightDetailLayoverFragment" app:destination="@id/flightDetailLayoverFragment" />
+    <action android:id="@id/action_global_cameraFragment" app:destination="@id/cameraFragment" />
+    <fragment android:label="airline_details_fragment" android:name="com.impalastudios.theflighttracker.features.airlinedetails.AirlineDetailsFragment" android:id="@id/airlineDetailsFragment" />
+    <fragment android:label="airport_details_fragment" android:name="com.impalastudios.theflighttracker.features.airportdetails.AirportDetailsFragment" android:id="@id/airportDetailsFragment" />
+    <fragment android:label="CameraFragment" android:name="com.impalastudios.theflighttracker.features.boardingpass.CameraFragment" android:id="@id/cameraFragment" />
+    <fragment android:label="FlightDetailLayoverFragment" android:name="com.impalastudios.theflighttracker.features.flightdetails.FlightDetailLayoverFragment" android:id="@id/flightDetailLayoverFragment" />
+</navigation>
