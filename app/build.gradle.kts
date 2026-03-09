@@ -21,6 +21,12 @@ android {
         val apiKey = providers.gradleProperty("SKYTRACE_API_KEY").orElse("replace_me")
         buildConfigField("String", "API_BASE_URL", "\"${apiBaseUrl.get()}\"")
         buildConfigField("String", "API_KEY", "\"${apiKey.get()}\"")
+        val oauthClientId = providers.gradleProperty("SKYTRACE_OAUTH_CLIENT_ID").orElse("replace_me")
+        val oauthRedirectScheme = providers.gradleProperty("SKYTRACE_OAUTH_REDIRECT_SCHEME").orElse("com.wisso.skytrace")
+        val mapsApiKey = providers.gradleProperty("SKYTRACE_MAPS_API_KEY").orElse("replace_me")
+        buildConfigField("String", "OAUTH_CLIENT_ID", "\"${oauthClientId.get()}\"")
+        buildConfigField("String", "OAUTH_REDIRECT_SCHEME", "\"${oauthRedirectScheme.get()}\"")
+        buildConfigField("String", "MAPS_API_KEY", "\"${mapsApiKey.get()}\"")
     }
 
     flavorDimensions += "environment"
@@ -69,6 +75,7 @@ dependencies {
     implementation(project(":core:database"))
     implementation(project(":core:preferences"))
     implementation(project(":core:data"))
+    implementation(project(":core:platform"))
     implementation(project(":sync"))
     implementation(project(":feature:search"))
     implementation(project(":feature:flightdetails"))
