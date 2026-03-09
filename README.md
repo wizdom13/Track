@@ -34,3 +34,12 @@ Do **not** commit real keys.
 
 
 See `docs/INTEGRATION_KEYS.md` for full integration credential and permission requirements.
+
+## Verification
+Run:
+
+```bash
+./gradlew lintDevDebug testDevDebugUnitTest assembleDevDebug
+```
+
+> Requires a local Android SDK configured via `local.properties` or `ANDROID_HOME`.
