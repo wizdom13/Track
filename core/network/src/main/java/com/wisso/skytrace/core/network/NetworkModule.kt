@@ -7,11 +7,11 @@ import com.wisso.skytrace.core.network.api.BoardingPassService
 import com.wisso.skytrace.core.network.api.FlightService
 import com.wisso.skytrace.core.network.api.SubscriptionService
 import com.wisso.skytrace.core.network.api.WeatherService
-import com.wisso.skytrace.core.network.fake.FakeRemoteProviders
 import com.wisso.skytrace.core.network.fake.AircraftRemoteDataSource
 import com.wisso.skytrace.core.network.fake.AirlineRemoteDataSource
 import com.wisso.skytrace.core.network.fake.AirportRemoteDataSource
 import com.wisso.skytrace.core.network.fake.BoardingPassRemoteDataSource
+import com.wisso.skytrace.core.network.fake.FakeRemoteProviders
 import com.wisso.skytrace.core.network.fake.FlightRemoteDataSource
 import com.wisso.skytrace.core.network.fake.SubscriptionRemoteDataSource
 import com.wisso.skytrace.core.network.fake.WeatherRemoteDataSource
@@ -20,6 +20,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import kotlinx.serialization.json.Json
+import okhttp3.CertificatePinner
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -35,10 +36,19 @@ class BuildConfigNetworkConfig : NetworkConfig {
     override val baseUrl: String = BuildConfig.API_BASE_URL
 }
 
+interface CertificatePinningConfig {
+    val pinsByHost: Map<String, List<String>>
+}
+
+class NoOpCertificatePinningConfig : CertificatePinningConfig {
+    override val pinsByHost: Map<String, List<String>> = emptyMap()
+}
+
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
     @Provides @Singleton fun provideNetworkConfig(): NetworkConfig = BuildConfigNetworkConfig()
+    @Provides @Singleton fun provideCertificatePinningConfig(): CertificatePinningConfig = NoOpCertificatePinningConfig()
 
     @Provides
     @Singleton
@@ -46,9 +56,16 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideOkHttpClient(): OkHttpClient = OkHttpClient.Builder()
-        .addInterceptor(HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BASIC })
-        .build()
+    fun provideOkHttpClient(certificatePinningConfig: CertificatePinningConfig): OkHttpClient {
+        val logging = HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.NONE }
+        val builder = OkHttpClient.Builder().addInterceptor(logging)
+        if (certificatePinningConfig.pinsByHost.isNotEmpty()) {
+            val pinnerBuilder = CertificatePinner.Builder()
+            certificatePinningConfig.pinsByHost.forEach { (host, pins) -> pins.forEach { pinnerBuilder.add(host, it) } }
+            builder.certificatePinner(pinnerBuilder.build())
+        }
+        return builder.build()
+    }
 
     @Provides
     @Singleton

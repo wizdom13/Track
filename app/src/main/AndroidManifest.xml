@@ -11,7 +11,9 @@
         android:icon="@android:drawable/ic_menu_compass"
         android:label="SkyTrace"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SkyTrace">
+        android:theme="@style/Theme.SkyTrace"
+        android:usesCleartextTraffic="false"
+        android:networkSecurityConfig="@xml/network_security_config">
 
         <service
             android:name=".messaging.SkyTraceMessagingService"
