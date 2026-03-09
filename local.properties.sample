@@ -1,0 +1,6 @@
+# Android SDK path
+sdk.dir=/path/to/Android/Sdk
+
+# App secrets (placeholder values)
+SKYTRACE_API_BASE_URL=https://api.example.com/
+SKYTRACE_API_KEY=replace_me
