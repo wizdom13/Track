@@ -9,11 +9,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.wisso.skytrace.feature.airlinedetails.AirlineDetailsScreen
 import com.wisso.skytrace.feature.airportdetails.AirportDetailsScreen
-import com.wisso.skytrace.feature.boardingpass.BoardingPassScreen
+import com.wisso.skytrace.feature.boardingpass.AircraftDetailsScreen
+import com.wisso.skytrace.feature.boardingpass.FlightNotesEditorScreen
 import com.wisso.skytrace.feature.flightdetails.FlightDetailsScreen
 import com.wisso.skytrace.feature.journey.JourneyScreen
 import com.wisso.skytrace.feature.myflights.MyFlightsScreen
 import com.wisso.skytrace.feature.search.SearchScreen
+import com.wisso.skytrace.feature.settings.PrivacyConsentScreen
 import com.wisso.skytrace.feature.settings.SettingsScreen
 import com.wisso.skytrace.feature.subscription.SubscriptionScreen
 import com.wisso.skytrace.feature.weather.WeatherScreen
@@ -30,11 +32,14 @@ fun SkyTraceNavHost(navController: NavHostController, padding: PaddingValues) {
         composable("flightdetails") { FlightDetailsScreen() }
         composable("airportdetails") { AirportDetailsScreen() }
         composable("airlinedetails") { AirlineDetailsScreen() }
+        composable("aircraftdetails") { AircraftDetailsScreen() }
         composable("myflights") { MyFlightsScreen() }
+        composable("tripdetails") { JourneyScreen() }
         composable("journey") { JourneyScreen() }
-        composable("boardingpass") { BoardingPassScreen() }
+        composable("flightnotes") { FlightNotesEditorScreen() }
         composable("weather") { WeatherScreen() }
         composable("settings") { SettingsScreen() }
+        composable("privacy") { PrivacyConsentScreen() }
         composable("subscription") { SubscriptionScreen() }
         composable("widgets") { WidgetsScreen() }
     }
