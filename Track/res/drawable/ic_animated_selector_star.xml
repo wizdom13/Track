@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<animated-selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_checked="true" android:id="@id/checked" android:drawable="@drawable/ic_animated_star_full" />
-    <item android:id="@id/regular" android:drawable="@drawable/ic_animated_star" />
-    <transition android:drawable="@drawable/ic_animated_star" android:toId="@id/checked" android:fromId="@id/regular" android:reversible="true" />
-</animated-selector>
